@@ -20,254 +20,361 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23FFD43B'/%3E%3Crect x='8' y='20' width='48' height='26' rx='3' fill='%23D3261D' transform='rotate(-6 32 33)'/%3E%3Ctext x='32' y='41' font-family='Arial Black,Arial' font-weight='900' font-size='20' fill='white' text-anchor='middle' transform='rotate(-6 32 33)'%3E%C2%BD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=Instrument+Sans:wght@400..700&display=swap">
 <style>
-/* Layout: a weekly shelf-ticket wall — sticky filter bar, standout strip, ticket grid, then store-wide promos and the calendar of what drops next. */
+/* Adelaide Deal Sheet: shelf-ticket design. Each card is a price ticket; the barcode strip is the item's price history (one bar per week, filled when on special). */
 :root{
-  --paper:#F2F4F1; --card:#FFFFFF; --ink:#15223A; --muted:#5B6577; --line:#D8DDD6;
-  --ticket:#FFD43B; --ticket-ink:#15223A; --sale:#D3261D; --sale-ink:#FFFFFF; --focus:#1D5FD1;
-  --coles:#D71920; --woolies:#178841; --aldi:#0B3D7A; --costco:#005DAA; --brand:#15223A; --mall:#7A4FB8; --on-c:#FFFFFF; --kmart:#D5002B; --target:#B3001B; --bigw:#0046BE; --jb:#A67C00; --uniqlo:#E60012; --hm:#C8102E; --rundle:#00838F; --westfield:#C2185B; --burnside:#2E7D32; --bunnings:#0D6B4E; --cw:#C2185B; --hs:#8E1B3A; --otr:#E8590C; --skechers:#1F4FA0; --hn:#0B5CAD; --amazon:#C45500;
-  --hl1:#FFC9D0; --hl2:#FFE27A; --hl3:#D9C8FF; --hl4:#B8F0CF; --tl1:93%; --tl2:80%; --pink:#E8457A; --teal:#0E9E9A;
-  --display:"Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
-  --body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --paper:#EDF0F4; --card:#FFFFFF; --ink:#14213D; --ink-2:#36435C; --muted:#5D6A7F; --line:#DAE0E8; --line-2:#C3CBD7;
+  --ticket:#FFD21F; --ticket-ink:#14213D; --sale:#DD2419; --sale-ink:#FFFFFF; --focus:#2457D6;
+  --board:#14213D; --board-ink:#FFFFFF; --board-muted:#AEB8CB;
+  --good:#0B7340; --good-bg:#D9F2E3; --warn:#8F4300; --warn-bg:#FFE7C7; --rare:#3B33A8; --rare-bg:#E5E3FB;
+  --coles:#D71920; --woolies:#178841; --aldi:#0B3D7A; --costco:#005DAA; --brand:#14213D; --mall:#7A4FB8; --on-c:#FFFFFF; --kmart:#D5002B; --target:#B3001B; --bigw:#0046BE; --jb:#8A6600; --uniqlo:#E60012; --hm:#C8102E; --rundle:#00737D; --westfield:#C2185B; --burnside:#2E7D32; --bunnings:#0D6B4E; --cw:#C2185B; --hs:#8E1B3A; --otr:#C94A06; --skechers:#1F4FA0; --hn:#0B5CAD; --amazon:#B84E00;
+  --tile-l1:94%; --tile-l2:84%;
+  --display:"Anybody","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#0E131B; --card:#161D29; --ink:#E7EBF1; --muted:#9AA4B4; --line:#283244;
-  --ticket:#F2C531; --ticket-ink:#15223A; --sale:#FF5C50; --sale-ink:#1A0E0D; --focus:#7FA8FF;
-  --coles:#FF5A5F; --woolies:#3CC172; --aldi:#6FA3E8; --costco:#5AA8F0; --brand:#E7EBF1; --mall:#B596E8; --on-c:#0E131B; --kmart:#FF5C7A; --target:#FF6B6B; --bigw:#6F9BFF; --jb:#F2C531; --uniqlo:#FF6B75; --hm:#FF6B80; --rundle:#4DD0DA; --westfield:#F06292; --burnside:#7BD47F; --bunnings:#4FC79A; --cw:#F06292; --hs:#E07A95; --otr:#FF9248; --skechers:#7FA6F0; --hn:#6FA8F5; --amazon:#FFA53D;  --hl1:#6B2633; --hl2:#6B5612; --hl3:#43356E; --hl4:#1F5A3B; --tl1:32%; --tl2:20%; --pink:#FF7AA6; --teal:#3FD3CD; color-scheme:dark}}
+  --paper:#0E1522; --card:#172133; --ink:#E9EDF3; --ink-2:#C5CEDB; --muted:#97A3B6; --line:#26324A; --line-2:#34425D;
+  --ticket:#F7C81B; --ticket-ink:#14213D; --sale:#FF5A4D; --sale-ink:#1A0A08; --focus:#86A9FF;
+  --board:#1C2943; --board-ink:#FFFFFF; --board-muted:#A9B5CA;
+  --good:#5CD594; --good-bg:#12382A; --warn:#FFB35C; --warn-bg:#3D2A12; --rare:#B3ADFF; --rare-bg:#27244F;
+  --coles:#FF5A5F; --woolies:#3CC172; --aldi:#6FA3E8; --costco:#5AA8F0; --brand:#E9EDF3; --mall:#B596E8; --on-c:#0E1522; --kmart:#FF5C7A; --target:#FF6B6B; --bigw:#6F9BFF; --jb:#F2C531; --uniqlo:#FF6B75; --hm:#FF6B80; --rundle:#4DD0DA; --westfield:#F06292; --burnside:#7BD47F; --bunnings:#4FC79A; --cw:#F06292; --hs:#E07A95; --otr:#FF9248; --skechers:#7FA6F0; --hn:#6FA8F5; --amazon:#FFA53D;
+  --tile-l1:30%; --tile-l2:21%; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --paper:#0E131B; --card:#161D29; --ink:#E7EBF1; --muted:#9AA4B4; --line:#283244;
-  --ticket:#F2C531; --ticket-ink:#15223A; --sale:#FF5C50; --sale-ink:#1A0E0D; --focus:#7FA8FF;
-  --coles:#FF5A5F; --woolies:#3CC172; --aldi:#6FA3E8; --costco:#5AA8F0; --brand:#E7EBF1; --mall:#B596E8; --on-c:#0E131B; --kmart:#FF5C7A; --target:#FF6B6B; --bigw:#6F9BFF; --jb:#F2C531; --uniqlo:#FF6B75; --hm:#FF6B80; --rundle:#4DD0DA; --westfield:#F06292; --burnside:#7BD47F; --bunnings:#4FC79A; --cw:#F06292; --hs:#E07A95; --otr:#FF9248; --skechers:#7FA6F0; --hn:#6FA8F5; --amazon:#FFA53D;  --hl1:#6B2633; --hl2:#6B5612; --hl3:#43356E; --hl4:#1F5A3B; --tl1:32%; --tl2:20%; --pink:#FF7AA6; --teal:#3FD3CD; color-scheme:dark}
+  --paper:#0E1522; --card:#172133; --ink:#E9EDF3; --ink-2:#C5CEDB; --muted:#97A3B6; --line:#26324A; --line-2:#34425D;
+  --ticket:#F7C81B; --ticket-ink:#14213D; --sale:#FF5A4D; --sale-ink:#1A0A08; --focus:#86A9FF;
+  --board:#1C2943; --board-ink:#FFFFFF; --board-muted:#A9B5CA;
+  --good:#5CD594; --good-bg:#12382A; --warn:#FFB35C; --warn-bg:#3D2A12; --rare:#B3ADFF; --rare-bg:#27244F;
+  --coles:#FF5A5F; --woolies:#3CC172; --aldi:#6FA3E8; --costco:#5AA8F0; --brand:#E9EDF3; --mall:#B596E8; --on-c:#0E1522; --kmart:#FF5C7A; --target:#FF6B6B; --bigw:#6F9BFF; --jb:#F2C531; --uniqlo:#FF6B75; --hm:#FF6B80; --rundle:#4DD0DA; --westfield:#F06292; --burnside:#7BD47F; --bunnings:#4FC79A; --cw:#F06292; --hs:#E07A95; --otr:#FF9248; --skechers:#7FA6F0; --hn:#6FA8F5; --amazon:#FFA53D;
+  --tile-l1:30%; --tile-l2:21%; color-scheme:dark}
 
 *{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+html{-webkit-text-size-adjust:100%}
+html:has(dialog[open]){overflow:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15.5px/1.5 var(--body)}
+.wrap{max-width:1220px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+h1,h2,h3{margin:0;text-wrap:balance}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 12px;border-radius:8px;z-index:50}
+.skip:focus{left:12px}
 
-/* masthead */
-header.mast{padding-block:28px 18px;border-bottom:3px solid var(--ink)}
-.mast-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px}
-h1{font-size:clamp(36px,7vw,68px);font-weight:900;font-stretch:72%;line-height:.92;letter-spacing:-.01em;text-transform:uppercase}
-h1 span{display:inline-block;background:var(--ticket);color:var(--ticket-ink);padding:0 .12em;transform:rotate(-1.5deg)}
-.week{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:18px}
-.week small{display:block;font-family:var(--body);font-weight:500;font-size:13px;color:var(--muted)}
-.facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;font-size:13px;color:var(--muted)}
-.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+/* ---------- header: the yellow ticket ---------- */
+.top{background:var(--ticket);color:var(--ticket-ink);position:relative;padding-bottom:14px}
+.top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:12px;
+  background:linear-gradient(135deg,var(--paper) 6px,transparent 0) 0 0/12px 12px repeat-x,linear-gradient(225deg,var(--paper) 6px,transparent 0) 0 0/12px 12px repeat-x}
+.top-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,390px);gap:32px;padding-block:30px 26px;align-items:start}
+h1.mark{font-family:var(--display);font-weight:900;font-stretch:58%;font-size:clamp(54px,10vw,118px);line-height:.84;letter-spacing:-.012em}
+h1.mark span{display:block}
+.week{margin:18px 0 0;font-weight:600;font-size:17px}
+.facts{margin:6px 0 0;max-width:58ch;font-size:15px;color:color-mix(in srgb,var(--ticket-ink) 82%,transparent)}
+.facts b{font-variant-numeric:tabular-nums}
+.hdr-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.btn-ink{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px;border-radius:999px;background:var(--ticket-ink);color:var(--ticket);text-decoration:none;font-weight:600;font-size:15px}
+.btn-ink:hover{background:var(--sale);color:#fff}
+.btn-ink svg{width:18px;height:18px}
 
-/* filter bar */
-.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
-.bar .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-block:12px}
-.chips{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;max-width:100%;padding-bottom:4px;scrollbar-width:thin}
-.chip{flex:none}
-.chip{appearance:none;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:600 13px var(--body);padding:6px 11px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
-.chip .dot{width:9px;height:9px;border-radius:50%;background:var(--c,var(--muted))}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.controls{display:flex;flex-wrap:wrap;gap:8px;margin-left:auto}
-.controls input[type=search],.controls select{font:500 14px var(--body);color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;min-width:0}
-.controls input[type=search]{width:190px}
-.toggle{display:inline-flex;align-items:center;gap:6px;font:600 13px var(--body);background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}
-.toggle input{accent-color:var(--sale)}
+.events{background:var(--board);color:var(--board-ink);border-radius:16px;padding:16px 18px 10px}
+.events h2{font-family:var(--display);font-weight:800;font-stretch:72%;font-size:24px;line-height:1.05}
+.events ol{list-style:none;margin:10px 0 0;padding:0}
+.events li{display:grid;grid-template-columns:1fr auto;gap:1px 12px;padding:9px 0;border-top:1px solid color-mix(in srgb,var(--board-ink) 14%,transparent)}
+.events .en{font-weight:600;font-size:15px;line-height:1.25}
+.events .ed{font-size:13px;color:var(--board-muted)}
+.events .ex{grid-column:1/-1;font-size:12.5px;color:var(--board-muted);line-height:1.35}
+.events .cd{grid-row:1/3;grid-column:2;align-self:center;background:var(--ticket);color:var(--ticket-ink);font:800 13px var(--display);font-stretch:80%;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.events .cd.now{background:#2BB673;color:#08281A}
 
-main section{padding-block:28px 8px}
-.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:14px}
-h2{font-size:28px;font-weight:850;font-stretch:78%;text-transform:uppercase;letter-spacing:.01em}
-.count{font-family:var(--mono);font-size:13px;color:var(--muted)}
+/* ---------- filter bar ---------- */
+.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;flex-direction:column;gap:10px;padding-block:12px}
+.row1{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.search{flex:1 1 280px;display:flex;align-items:center;gap:10px;height:46px;padding:0 14px;background:var(--card);border:1.5px solid var(--line-2);border-radius:12px}
+.search:focus-within{border-color:var(--focus)}
+.search svg{width:18px;height:18px;flex:none;color:var(--muted)}
+.search input{flex:1;min-width:0;border:0;background:transparent;font-size:16px;outline:none}
+.controls{display:flex;flex-wrap:wrap;gap:8px}
+.tog,.sel{height:46px;border:1.5px solid var(--line-2);border-radius:12px;background:var(--card);font-weight:600;font-size:14.5px}
+.tog{display:inline-flex;align-items:center;gap:8px;padding:0 14px;cursor:pointer;user-select:none}
+.tog input{position:absolute;opacity:0;pointer-events:none}
+.tog .box{width:18px;height:18px;border-radius:5px;border:2px solid var(--line-2);display:grid;place-items:center;flex:none}
+.tog:has(input:checked){background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tog:has(input:checked) .box{background:var(--ticket);border-color:var(--ticket)}
+.tog:has(input:checked) .box::after{content:"";width:9px;height:5px;border:2.5px solid var(--ticket-ink);border-top:0;border-right:0;transform:translateY(-1px) rotate(-45deg)}
+.tog:has(input:focus-visible){outline:2.5px solid var(--focus);outline-offset:2px}
+.sel{padding:0 34px 0 12px;appearance:none;-webkit-appearance:none;cursor:pointer;
+  background:var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%235D6A7F' stroke-width='2'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 12px center}
+.clear{height:46px;padding:0 16px;border-radius:12px;border:1.5px solid var(--sale);background:var(--sale);color:#fff;font-weight:600;font-size:14.5px;cursor:pointer}
+.clear:disabled{background:transparent;color:var(--muted);border-color:var(--line-2);cursor:default}
+.scroller{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px;margin-inline:-2px;padding-inline:2px}
+.grp{flex:none;display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 13px;border-radius:999px;cursor:pointer;font-weight:600;font-size:14px;
+  border:1.5px solid color-mix(in srgb,var(--g) 40%,var(--line));background:color-mix(in srgb,var(--g) 9%,var(--card))}
+.grp .ic{font-size:17px;line-height:1}
+.grp .n{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.grp[aria-pressed="true"]{background:var(--g);border-color:var(--g);color:#fff}
+.grp[aria-pressed="true"] .n{color:#fff;opacity:.85}
+.chip{flex:none;display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 11px;border-radius:999px;cursor:pointer;font-weight:600;font-size:13px;border:1.5px solid var(--line);background:var(--card)}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.chip .n{color:var(--muted);font-weight:500}
+.chip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:var(--on-c)}
+.chip[aria-pressed="true"] .dot{background:var(--on-c)}
+.chip[aria-pressed="true"] .n{color:inherit;opacity:.8}
+.chip[data-r="All"][aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chip[data-r="All"][aria-pressed="true"] .dot{background:var(--ticket)}
 
-/* ticket grid */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.deal{background:var(--card);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;overflow:hidden;min-width:0}
-.deal .top{display:flex;justify-content:space-between;gap:8px;padding:10px 12px 0;font-size:12px}
-.rt{font-weight:700;display:inline-flex;align-items:center;gap:6px}
-.rt .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
-.cat{color:var(--muted);text-align:right}
-.deal h3{font-family:var(--body);font-weight:600;font-size:15px;line-height:1.3;padding:6px 12px 10px;flex:1}
-.deal .note{font-size:12px;color:var(--muted);padding:0 12px 10px;margin-top:-6px}
-.tkt{background:var(--ticket);color:var(--ticket-ink);display:flex;align-items:flex-end;justify-content:space-between;gap:8px;padding:8px 12px 10px;position:relative}
-.price{font-family:var(--display);font-weight:900;font-stretch:75%;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
-.price sup{font-size:.5em;vertical-align:.7em;margin-right:1px}
-.price.txt{font-size:26px}
-.was{font-family:var(--mono);font-size:12px;text-align:right;line-height:1.35}
-.was s{opacity:.75}
-.flag{position:absolute;top:-11px;right:10px;background:var(--sale);color:var(--sale-ink);font-family:var(--display);font-weight:850;font-stretch:80%;font-size:13px;letter-spacing:.03em;padding:2px 8px;transform:rotate(2deg);text-transform:uppercase}
-.flag.sb{background:var(--ink);color:var(--paper)}
-.end{font-family:var(--mono);font-size:11px;color:var(--muted);padding:7px 12px;border-top:1px dashed var(--line)}
-.empty{padding:30px;text-align:center;color:var(--muted);border:1.5px dashed var(--line);border-radius:6px}
+/* ---------- sections ---------- */
+main{padding-bottom:56px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin:38px 0 14px}
+.sec-head h2{font-family:var(--display);font-weight:800;font-stretch:66%;font-size:clamp(30px,4.4vw,42px);line-height:1}
+.sec-head p{margin:0;color:var(--muted);font-size:14.5px}
 
 /* standouts */
-.stand{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
-.pick{border:2px solid var(--ink);border-radius:6px;padding:14px 14px 12px;background:var(--card);display:flex;flex-direction:column;gap:6px;min-width:0}
-.pick .big{font-family:var(--display);font-weight:900;font-stretch:75%;font-size:30px;line-height:1}
-.pick p{margin:0;font-size:14px;color:var(--muted)}
+.stand{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.pick{all:unset;box-sizing:border-box;display:grid;grid-template-columns:1fr auto;gap:6px 12px;background:var(--card);border:1.5px solid var(--line);border-left:6px solid var(--c);border-radius:14px;padding:14px 16px;cursor:default}
+button.pick{cursor:pointer}
+button.pick:hover{border-color:var(--c)}
+button.pick:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+.pick .st{font-size:13px;font-weight:700;color:var(--muted)}
+.pick .pp{grid-column:1;justify-self:start;background:var(--ticket);color:var(--ticket-ink);font:900 30px/1 var(--display);font-stretch:60%;padding:5px 10px 4px;border-radius:7px}
+.pick .emo{grid-column:2;grid-row:1/3;font-size:44px;line-height:1;align-self:start}
+.pick strong{grid-column:1/-1;font-size:16px;line-height:1.3}
+.pick p{grid-column:1/-1;margin:0;color:var(--muted);font-size:14px}
 
-/* promos */
-.promos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.store{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
-.store h3{font-size:22px;font-weight:850;font-stretch:80%;text-transform:uppercase;display:flex;align-items:center;gap:8px}
-.store h3 .dot{width:10px;height:10px;border-radius:50%;background:var(--c)}
-.store .where{font-size:12px;color:var(--muted);margin:2px 0 8px}
-.store ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-.store li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:7px 0;border-top:1px dashed var(--line);font-size:14px}
-.store li b{font-family:var(--display);font-stretch:80%;font-weight:850;font-size:16px;color:var(--sale);min-width:64px}
-.store li small{display:block;color:var(--muted);font-size:12px}
-
-/* calendar */
-.cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
-.when{border-left:4px solid var(--ticket);background:var(--card);padding:10px 12px;border-radius:0 6px 6px 0}
-.when .d{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.when .w{font-weight:600}
-
-.notes{font-size:13px;color:var(--muted);max-width:75ch}
-.src{columns:2 280px;column-gap:28px;font-size:13px;padding-left:18px}
-.src li{break-inside:avoid;margin-bottom:4px}
-footer{padding-block:24px 40px;border-top:3px solid var(--ink);margin-top:28px}
-
-@media (max-width:640px){
-  .controls{margin-left:0;width:100%}
-  .controls input[type=search]{flex:1 1 150px;width:auto}
-  h2{font-size:24px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
-
-/* ---------- colour layer ---------- */
-header.mast{background:var(--ticket);color:var(--ticket-ink);border-bottom:0;position:relative}
-header.mast .eyebrow,header.mast .week small,header.mast .facts{color:var(--ticket-ink);opacity:.8}
-header.mast .facts b{color:var(--ticket-ink)}
-h1 span{background:var(--sale);color:#fff;padding:0 .14em}
-h1 em{font-style:normal;color:var(--sale)}
-.ribbon{display:grid;grid-template-columns:repeat(8,1fr);height:8px}
-.ribbon i:nth-child(1){background:var(--coles)} .ribbon i:nth-child(2){background:var(--woolies)}
-.ribbon i:nth-child(3){background:var(--aldi)} .ribbon i:nth-child(4){background:var(--costco)}
-.ribbon i:nth-child(5){background:var(--pink)} .ribbon i:nth-child(6){background:var(--teal)}
-.ribbon i:nth-child(7){background:var(--mall)} .ribbon i:nth-child(8){background:var(--sale)}
-h2{display:inline;box-shadow:inset 0 -.38em 0 var(--hl,var(--hl2));padding:0 .1em}
-#standouts{--hl:var(--hl1)} #deals{--hl:var(--hl2)} #promos{--hl:var(--hl3)} #next{--hl:var(--hl4)}
-.chip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:var(--on-c)}
-.chip[data-r="All"][aria-pressed="true"]{color:var(--ticket-ink)}
-.chip[aria-pressed="true"] .dot{background:var(--on-c)}
-.deal{border:1.5px solid color-mix(in srgb,var(--c) 35%,var(--line));transition:transform .15s ease,box-shadow .15s ease}
-.deal:hover{transform:translateY(-3px);box-shadow:0 8px 20px -10px color-mix(in srgb,var(--c) 70%,transparent)}
-.rt.pill{background:var(--c);color:var(--on-c);padding:2px 9px 2px 7px;border-radius:999px;font-size:11.5px}
-.rt.pill .dot{background:var(--on-c);width:6px;height:6px}
-.pic{height:140px;margin:10px 12px 0;border-radius:6px;display:grid;place-items:center;overflow:hidden;position:relative;
-  background:radial-gradient(circle at 30% 25%,hsl(var(--h) 95% var(--tl1)),hsl(var(--h) 75% var(--tl2)))}
-.pic .emo{font-size:62px;line-height:1;filter:drop-shadow(0 4px 6px rgba(0,0,0,.18))}
+/* deal tickets */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(214px,1fr));gap:14px}
+.deal{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
+.deal:hover{border-color:color-mix(in srgb,var(--c) 70%,var(--line))}
+.deal:focus-within{outline:2.5px solid var(--focus);outline-offset:2px}
+.pic{position:relative;aspect-ratio:4/3;display:grid;place-items:center;overflow:hidden;
+  background:radial-gradient(120% 90% at 30% 20%,hsl(var(--h) 90% var(--tile-l1)),hsl(var(--h) 60% var(--tile-l2)))}
 .pic img{width:100%;height:100%;object-fit:contain;background:#fff}
-.pic .approx{position:absolute;right:6px;bottom:5px;font:500 10px var(--mono);color:var(--ink);opacity:.55}
-.pick{border:2px solid var(--c);background:color-mix(in srgb,var(--c) 13%,var(--card));flex-direction:row;align-items:flex-start;gap:12px}
-.pick .emo{font-size:46px;line-height:1;flex:none}
-.pick .txt{display:flex;flex-direction:column;gap:5px;min-width:0}
-.pick .big{color:var(--c)}
-.store{border-top:6px solid var(--c)}
-.store h3{color:var(--c)}
-.when:nth-child(4n+1){border-left-color:var(--coles)} .when:nth-child(4n+2){border-left-color:var(--woolies)}
-.when:nth-child(4n+3){border-left-color:var(--mall)} .when:nth-child(4n){border-left-color:var(--teal)}
-footer{border-top:8px solid var(--ticket)}
-@media (prefers-reduced-motion:reduce){.deal:hover{transform:none}}
+.pic .emo{font-size:clamp(42px,6vw,58px);line-height:1;filter:drop-shadow(0 6px 8px rgba(0,0,0,.16))}
+.sticker{position:absolute;left:8px;top:8px;z-index:1;display:inline-flex;align-items:center;gap:4px;font-weight:700;font-size:12px;line-height:1;padding:5px 9px 5px 7px;border-radius:999px;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.sticker svg{width:12px;height:12px}
+.s-low{background:var(--good-bg);color:var(--good)}
+.s-rare{background:var(--rare-bg);color:var(--rare)}
+.s-higher{background:var(--warn-bg);color:var(--warn)}
+.body{display:flex;flex-direction:column;gap:5px;padding:10px 12px 0;flex:1}
+.meta{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:12px;color:var(--muted)}
+.pill{display:inline-flex;align-items:center;max-width:100%;background:var(--c);color:var(--on-c);font-weight:700;font-size:11.5px;padding:2px 8px;border-radius:999px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meta .cat{text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.deal h3{font-size:15px;font-weight:600;line-height:1.3}
+.nm{all:unset;cursor:pointer}
+.nm::after{content:"";position:absolute;inset:0;z-index:2}
+.note{font-size:12.5px;color:var(--muted);line-height:1.35}
+.tkt .pr{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:0 8px}
+.tkt{margin:10px 10px 0;background:var(--ticket);color:var(--ticket-ink);border-radius:9px;padding:8px 13px 9px;
+  -webkit-mask:radial-gradient(circle 6px at 0 62%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 62%,#0000 97%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 6px at 0 62%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 62%,#0000 97%,#000) right/51% 100% no-repeat}
+.flag{display:inline-block;font:800 12.5px/1 var(--display);font-stretch:85%;background:var(--sale);color:#fff;padding:3px 7px;border-radius:4px;margin-bottom:3px}
+.flag.sb{background:var(--ticket-ink);color:var(--ticket)}
+.price{font:900 36px/.9 var(--display);font-stretch:58%;font-variant-numeric:tabular-nums;white-space:nowrap}
+.price sup{font-size:.5em;vertical-align:.78em;margin-left:1px}
+.price .cur{font-size:.55em;vertical-align:.62em;margin-right:1px}
+.was{margin-left:auto;text-align:right;font-size:12px;line-height:1.3;white-space:nowrap}
+.was s{opacity:.72}
+.foot{display:flex;flex-direction:column;gap:5px;padding:9px 12px 11px;font-size:12px;color:var(--muted)}
+.hist-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;color:var(--ink-2)}
+.barcode{display:block;flex:none}
+.end{line-height:1.3}
+.empty{grid-column:1/-1;padding:36px 20px;text-align:center;color:var(--muted);border:1.5px dashed var(--line-2);border-radius:14px}
+.empty button{margin-top:10px}
 
-/* store-type groups */
-.filters{display:flex;flex-direction:column;gap:8px;min-width:0;width:100%}
-.groups{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}
-.grp{flex:none;appearance:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;font:800 14px var(--display);font-stretch:85%;letter-spacing:.02em;text-transform:uppercase;
-  color:var(--ink);background:color-mix(in srgb,var(--g) 16%,var(--card));border:2px solid color-mix(in srgb,var(--g) 55%,transparent);border-radius:10px;padding:7px 12px}
-.grp .ic{font-size:18px;line-height:1}
-.grp .n{font:500 11px var(--mono);opacity:.75}
-.grp[aria-pressed="true"]{background:var(--g);border-color:var(--g);color:#fff}
-.grp[aria-pressed="true"] .n{opacity:.9}
-.chips .lbl{flex:none;align-self:center;font:500 11px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-right:2px}
-.pgroup{grid-column:1/-1;display:flex;align-items:center;gap:10px;margin-top:10px;font-family:var(--display);font-weight:850;font-stretch:80%;font-size:19px;text-transform:uppercase;color:var(--g)}
-.pgroup::after{content:"";flex:1;height:2px;background:color-mix(in srgb,var(--g) 40%,transparent)}
+/* store-wide offers */
+.promos{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;align-items:start}
+.pgroup{grid-column:1/-1;display:flex;align-items:center;gap:10px;margin-top:12px;font-family:var(--display);font-weight:800;font-stretch:72%;font-size:22px}
 .pgroup:first-child{margin-top:0}
+.pgroup::after{content:"";flex:1;height:2px;border-radius:2px;background:color-mix(in srgb,var(--g) 45%,transparent)}
+.store{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px 8px;min-width:0}
+.store h3{display:flex;align-items:center;gap:8px;font-size:17px;font-weight:700}
+.store h3 .dot{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}
+.store .where{margin:2px 0 6px;font-size:13px;color:var(--muted)}
+.store ul{list-style:none;margin:0;padding:0}
+.store li{display:grid;grid-template-columns:70px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.35}
+.store li b{font:900 20px/1.05 var(--display);font-stretch:62%;color:var(--sale)}
+.store li small{display:block;color:var(--muted);font-size:12.5px;margin-top:1px}
 
-/* events panel + clear button */
-.mast-row{align-items:stretch}
-.mast-main{display:flex;flex-direction:column;gap:10px;min-width:0;flex:1 1 380px}
-.mast-main .week{margin-top:2px}
-.events{flex:0 1 360px;min-width:0;background:var(--ink);color:var(--paper);border-radius:10px;padding:12px 14px;align-self:flex-start;box-shadow:4px 4px 0 var(--sale)}
-.ev-h{font-family:var(--display);font-weight:850;font-stretch:80%;font-size:17px;text-transform:uppercase;letter-spacing:.03em;color:var(--ticket);margin-bottom:6px}
-.events ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-.events li{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:7px 0;border-top:1px dashed color-mix(in srgb,var(--paper) 30%,transparent)}
-.events li:first-child{border-top:0}
-.events .en{font-weight:700;font-size:14px;line-height:1.25}
-.events .ed{grid-column:1;font:500 12px var(--mono);opacity:.8}
-.events .ex{grid-column:1/-1;font-size:11.5px;opacity:.7;line-height:1.35}
-.events .cd{grid-row:1/3;grid-column:2;align-self:center;font:800 12px var(--display);font-stretch:85%;text-transform:uppercase;letter-spacing:.03em;background:var(--sale);color:#fff;border-radius:999px;padding:3px 9px;white-space:nowrap}
-.events .cd.now{background:#1E8E3E}
-.clear{appearance:none;cursor:pointer;font:700 13px var(--body);border-radius:8px;padding:7px 12px;border:1.5px solid var(--sale);background:var(--sale);color:#fff}
-.clear:disabled{cursor:default;background:var(--card);color:var(--muted);border-color:var(--line)}
-@media (max-width:640px){.events{flex-basis:100%}}
-main{padding-bottom:40px}
-.trk{align-self:flex-start;display:inline-flex;gap:6px;align-items:center;font:700 14px var(--body);text-decoration:none;background:var(--ticket-ink);color:var(--ticket);padding:7px 14px;border-radius:999px}
-.trk span{font-weight:500;opacity:.85}
-.trk:hover{background:var(--sale);color:#fff}
+/* coming up */
+.cal{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));column-gap:28px}
+.cal li{display:grid;grid-template-columns:104px 1fr;gap:12px;padding:11px 0;border-top:1px solid var(--line-2)}
+.cal .d{font:800 17px/1.2 var(--display);font-stretch:72%}
+.cal .w{font-size:14.5px}
+
+/* floating filter shortcut (phones) */
+.fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:15;display:none;align-items:center;gap:8px;height:48px;padding:0 18px;border:0;border-radius:999px;background:var(--ink);color:var(--paper);font-weight:600;box-shadow:0 10px 24px -10px rgba(0,0,0,.5);cursor:pointer}
+.fab svg{width:18px;height:18px}
+.fab .badge{background:var(--ticket);color:var(--ticket-ink);border-radius:999px;font-size:12px;font-weight:700;padding:1px 7px}
+
+/* ---------- product sheet ---------- */
+dialog.sheet{padding:0;margin:0;border:0;background:transparent;width:100%;height:100%;max-width:none;max-height:none;color:var(--ink)}
+dialog.sheet::backdrop{background:rgba(8,13,26,.52)}
+.panel{position:fixed;top:0;right:0;bottom:0;width:min(500px,100%);background:var(--card);overflow-y:auto;overscroll-behavior:contain;box-shadow:-24px 0 48px -24px rgba(0,0,0,.45);animation:panelIn .32s cubic-bezier(.2,.8,.2,1)}
+@keyframes panelIn{from{transform:translateX(36px);opacity:0}}
+.sh-top{position:sticky;top:0;z-index:3;display:flex;align-items:center;gap:6px;padding:10px 12px;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.sh-top .pos{margin-right:auto;font-size:13px;color:var(--muted);padding-left:4px}
+.ibtn{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;border:1.5px solid var(--line-2);background:var(--card);cursor:pointer}
+.ibtn:disabled{opacity:.35;cursor:default}
+.ibtn svg{width:18px;height:18px}
+.sh-body{padding:18px 20px 28px;display:flex;flex-direction:column;gap:22px}
+.sh-hero{display:grid;grid-template-columns:112px minmax(0,1fr);gap:16px;align-items:start}
+.sh-hero .pic{aspect-ratio:1;border-radius:12px}
+.sh-hero .pic .emo{font-size:54px}
+.sh-hero .meta{justify-content:flex-start;flex-wrap:wrap}
+.sh-hero h2{font-size:21px;font-weight:700;line-height:1.25;margin-top:6px}
+.sh-hero .note{margin-top:6px;font-size:13.5px}
+.sh-tkt{display:grid;grid-template-columns:auto 1fr;align-items:end;gap:4px 14px;background:var(--ticket);color:var(--ticket-ink);border-radius:12px;padding:12px 18px 14px;
+  -webkit-mask:radial-gradient(circle 8px at 0 64%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 8px at 100% 64%,#0000 97%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 8px at 0 64%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 8px at 100% 64%,#0000 97%,#000) right/51% 100% no-repeat}
+.sh-tkt .flag{grid-column:1/-1;justify-self:start}
+.sh-tkt .price{font-size:58px}
+.sh-tkt .was{font-size:14px}
+.sh-tkt .end{grid-column:1/-1;font-size:13px;opacity:.85;margin-top:4px}
+.verdict{display:grid;grid-template-columns:28px 1fr;gap:2px 10px;padding:14px 16px;border-radius:12px;background:var(--paper)}
+.verdict .vi{grid-row:1/3;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--line);color:var(--ink)}
+.verdict .vi svg{width:16px;height:16px}
+.verdict strong{font-size:16px;line-height:1.3}
+.verdict p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.v-low{background:var(--good-bg)} .v-low .vi{background:var(--good);color:var(--card)}
+.v-rare{background:var(--rare-bg)} .v-rare .vi{background:var(--rare);color:var(--card)}
+.v-higher{background:var(--warn-bg)} .v-higher .vi{background:var(--warn);color:var(--card)}
+.sh-sec h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.sh-sec .sub{margin:-4px 0 10px;font-size:13px;color:var(--muted)}
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.chart .tip{position:absolute;pointer-events:none;transform:translate(-50%,calc(-100% - 10px));background:var(--ink);color:var(--paper);font-size:12.5px;line-height:1.35;padding:6px 9px;border-radius:8px;white-space:nowrap;box-shadow:0 6px 16px -8px rgba(0,0,0,.5)}
+.chart .tip b{font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:0;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.stats div{background:var(--card);padding:11px 14px}
+.stats dt{font-size:12.5px;color:var(--muted)}
+.stats dd{margin:2px 0 0;font:800 22px/1.1 var(--display);font-stretch:70%;font-variant-numeric:tabular-nums}
+.stats dd small{display:block;font:500 12.5px/1.3 var(--body);color:var(--muted);margin-top:2px}
+.tipline{margin:0;font-size:14.5px;line-height:1.5;padding-left:12px;border-left:3px solid var(--ticket)}
+.cmp{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp li+li{border-top:1px solid var(--line)}
+.cmp button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:10px 14px;cursor:pointer}
+.cmp button:hover{background:var(--paper)}
+.cmp button:focus-visible{outline:2.5px solid var(--focus);outline-offset:-3px}
+.cmp .cn{font-size:14px;line-height:1.3}
+.cmp .cp{grid-row:1/3;grid-column:2;align-self:center;font:900 22px/1 var(--display);font-stretch:62%;text-align:right}
+.cmp .cs{font-size:12.5px;color:var(--muted)}
+.cmp .best .cp::after{content:"Cheapest";display:block;font:700 11px/1.4 var(--body);color:var(--good)}
+.cmp .self{background:color-mix(in srgb,var(--ticket) 18%,var(--card))}
+details.weeks summary{cursor:pointer;font-weight:700;font-size:15px}
+.wk{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.wk span{border:1px solid var(--line);border-radius:8px;padding:4px 8px;font-size:13px;font-variant-numeric:tabular-nums}
+.wk span.cur{background:var(--ticket);border-color:var(--ticket);color:var(--ticket-ink)}
+.sh-actions{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:12px;border:1.5px solid var(--line-2);background:var(--card);font-weight:600;font-size:14.5px;text-decoration:none;cursor:pointer}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn svg{width:17px;height:17px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .top-in{grid-template-columns:minmax(0,1fr);gap:22px}
+}
+@media (max-width:719px){
+  .top-in{padding-block:22px 18px}
+  .events{padding:14px 0 12px;border-radius:14px}
+  .events h2{padding:0 16px;font-size:21px}
+  .events ol{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 16px 4px;scroll-padding-inline:16px}
+  .events li{flex:0 0 74%;scroll-snap-align:start;border:1px solid color-mix(in srgb,var(--board-ink) 16%,transparent);border-radius:12px;padding:10px 12px}
+  .pic{aspect-ratio:16/11}
+  .bar{position:static;backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper)}
+  .fab.show{display:inline-flex}
+  .controls{width:100%}
+  .controls .sel{flex:1 1 140px}
+  .stand{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:4px;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px}
+  .pick{flex:0 0 84%;scroll-snap-align:start}
+  .panel{top:auto;left:0;width:100%;max-height:92vh;border-radius:20px 20px 0 0;animation-name:sheetUp}
+  .sh-body{padding:16px 16px calc(28px + env(safe-area-inset-bottom,0px))}
+  .sh-hero{grid-template-columns:88px minmax(0,1fr)}
+  .sh-tkt .price{font-size:52px}
+}
+@keyframes sheetUp{from{transform:translateY(48px);opacity:0}}
+@media (max-width:540px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .deal h3{font-size:14px}
+  .price{font-size:31px}
+  .tkt{margin:8px 8px 0;padding:7px 10px 8px}
+  .body{padding:9px 10px 0}
+  .foot{padding:8px 10px 10px}
+  .was{font-size:11.5px}
+  .sticker{font-size:11px;padding:4px 7px 4px 6px}
+}
+@media (prefers-reduced-motion:reduce){.panel{animation:none}}
+@media (forced-colors:active){.tkt,.sh-tkt{border:2px solid CanvasText}}
 </style>
 
-<header class="mast"><div class="wrap">
-  <div class="mast-row">
-    <div class="mast-main">
-      <div class="eyebrow">Adelaide · South Australia · Weekly specials</div>
-      <h1>Adelaide <span>Deal Sheet</span></h1>
-      <div class="week">Week of Wed 21 – Tue 27 Oct 2026
-        <small>Compiled Wed 21 Oct 2026 · supermarket specials change every Wednesday</small>
-      </div>
-      <div class="facts" id="facts"></div>
-      <a class="trk" href="https://likku2019.github.io/Adelaide-deals/history.html">📈 Price tracker <span>— compare prices week to week</span></a>
+<a class="skip" href="#deals">Skip to the deals</a>
+<header class="top"><div class="wrap top-in">
+  <div class="brand">
+    <h1 class="mark"><span>Adelaide</span><span>Deal Sheet</span></h1>
+    <p class="week" id="week"></p>
+    <p class="facts" id="facts"></p>
+    <div class="hdr-links">
+      <a class="btn-ink" href="https://likku2019.github.io/Adelaide-deals/history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8"/><path d="M15 7h5v5"/></svg>Price tracker</a>
     </div>
-    <aside class="events" aria-labelledby="ev-h">
-      <div class="ev-h" id="ev-h">Big sales coming up</div>
-      <ol id="events"></ol>
-    </aside>
   </div>
-</div><div class="ribbon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></header>
+  <aside class="events" aria-labelledby="ev-h">
+    <h2 id="ev-h">Big sales coming up</h2>
+    <ol id="events"></ol>
+  </aside>
+</div></header>
 
-<div class="bar"><div class="wrap">
-  <div class="filters">
-    <div class="groups" id="groups" role="group" aria-label="Filter by store type"></div>
-    <div class="chips" id="chips" role="group" aria-label="Filter by retailer"></div>
+<div class="bar" id="bar"><div class="wrap bar-in">
+  <div class="row1">
+    <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" id="q" placeholder="Search deals, e.g. coffee or Samba" aria-label="Search deals" autocomplete="off"></label>
+    <div class="controls">
+      <label class="tog"><input type="checkbox" id="half"><span class="box" aria-hidden="true"></span>½ price or better</label>
+      <label class="tog"><input type="checkbox" id="low"><span class="box" aria-hidden="true"></span>Record lows</label>
+      <select class="sel" id="cat" aria-label="Category"></select>
+      <select class="sel" id="sort" aria-label="Sort deals">
+        <option value="save">Biggest % off</option>
+        <option value="dollars">Biggest $ saving</option>
+        <option value="low">Lowest price</option>
+        <option value="record">Record lows first</option>
+        <option value="store">By store</option>
+      </select>
+      <button type="button" class="clear" id="clear" disabled>Clear filters</button>
+    </div>
   </div>
-  <div class="controls">
-    <label class="toggle" for="half"><input type="checkbox" id="half"> ½ price &amp; better</label>
-    <select id="cat" aria-label="Category"></select>
-    <select id="sort" aria-label="Sort">
-      <option value="save">Biggest % off</option>
-      <option value="dollars">Biggest $ saving</option>
-      <option value="low">Lowest price</option>
-      <option value="store">By retailer</option>
-    </select>
-    <input type="search" id="q" placeholder="Search e.g. coffee, Samba" aria-label="Search deals">
-    <button type="button" class="clear" id="clear" disabled>✕ Clear all filters</button>
-  </div>
+  <div class="scroller" id="groups" role="group" aria-label="Filter by type of store"></div>
+  <div class="scroller" id="chips" role="group" aria-label="Filter by store"></div>
 </div></div>
 
 <main class="wrap">
-  <section id="standouts">
-    <div class="sec-head"><h2>This week's standouts</h2><span class="count">Hand-picked from all retailers</span></div>
+  <section id="standouts" aria-labelledby="st-h">
+    <div class="sec-head"><h2 id="st-h">This week's standouts</h2><p>Our picks from every store</p></div>
     <div class="stand" id="stand"></div>
   </section>
 
-  <section id="deals">
-    <div class="sec-head"><h2>All deals</h2><span class="count" id="count"></span></div>
+  <section id="deals" aria-labelledby="dl-h">
+    <div class="sec-head"><h2 id="dl-h">All deals</h2><p id="count" aria-live="polite"></p></div>
     <div class="grid" id="grid"></div>
   </section>
 
-  <section id="promos">
-    <div class="sec-head"><h2>Store-wide sales &amp; mall offers</h2><span class="count">Fashion, sport, department store &amp; outlets</span></div>
+  <section id="promos" aria-labelledby="pr-h">
+    <div class="sec-head"><h2 id="pr-h">Store-wide sales and centre offers</h2><p>Offers that cover a whole store or shopping centre</p></div>
     <div class="promos" id="promoGrid"></div>
   </section>
 
-  <section id="next">
-    <div class="sec-head"><h2>Coming up</h2><span class="count">Dates to plan around</span></div>
-    <div class="cal" id="cal"></div>
+  <section id="next" aria-labelledby="nx-h">
+    <div class="sec-head"><h2 id="nx-h">Coming up</h2><p>Dates worth planning around</p></div>
+    <ol class="cal" id="cal"></ol>
   </section>
-
 </main>
 
+<button class="fab" id="fab" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Search &amp; filter<span class="badge" id="fabBadge" hidden></span></button>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sh-title"><div class="panel" id="panel"></div></dialog>
+
 <script>
+// ---- this week (the Wednesday-to-Tuesday catalogue week)
+const WEEK = {start:"2026-10-21", end:"2026-10-27", label:"Wed 21 – Tue 27 Oct 2026", ends:"Tue 27 Oct", updated:"Wed 21 Oct 2026"};
+
 const RETAILERS = {
   "Coles":{c:"var(--coles)"}, "Woolworths":{c:"var(--woolies)"}, "ALDI":{c:"var(--aldi)"},
   "Costco":{c:"var(--costco)"}, "Nike":{c:"var(--brand)"}, "adidas":{c:"var(--brand)"},
@@ -280,7 +387,6 @@ const RETAILERS = {
   "Strandbags":{c:"var(--brand)"}, "Guess":{c:"var(--brand)"}, "New Balance":{c:"var(--brand)"}, "Puma":{c:"var(--brand)"},
   "Reebok":{c:"var(--brand)"}, "Skechers":{c:"var(--skechers)"}, "OTR":{c:"var(--otr)"}, "Harvey Norman":{c:"var(--hn)"}, "Amazon":{c:"var(--amazon)"}
 };
-const WK = "Ends Tue 27 Oct";
 // r = retailer, n = name, now/was = AUD, cat, end, tag ("sb" = ALDI Special Buy), note
 const DEALS = [
  // ---- Coles (½ price, 21–27 Oct)
@@ -686,52 +792,16 @@ const CAL = [
  ["Sat 26 Dec","Boxing Day sales"],
 ];
 
-const SOURCES = [
- ["OzBargain – Coles & Woolworths half-price report, 21–27 Oct 2026","https://www.ozbargain.com.au/node/979557"],
- ["OzBargain – Mayver's ½ price at Coles","https://www.ozbargain.com.au/node/979831"],
- ["ALDI – Special Buys from Wed 21 Oct","https://www.aldi.com.au/special-buys/2026-10-21"],
- ["ALDI – Special Buys from Sat 24 Oct","https://www.aldi.com.au/special-buys/2026-10-24"],
- ["Store Locator Tool – Costco live deals","https://storelocatortool.com/v3/australia/catalogues/costco/"],
- ["Nike AU – Sale","https://www.nike.com/au/w/sale-3yaep"],
- ["adidas AU – Outlet","https://www.adidas.com.au/outlet"],
- ["OzBargain – Myer deals","https://www.ozbargain.com.au/deals/myer.com.au"],
- ["RUSSH – Best online sales in October (Myer home sale)","https://www.russh.com/?p=304810"],
- ["Harbour Town Adelaide – Offers","https://www.harbourtownadelaide.com.au/offers"],
- ["Harbour Town Adelaide – Nike","https://www.harbourtownadelaide.com.au/stores/nike"],
- ["Store Locator Tool – Coles catalogue dates","https://storelocatortool.com/v3/australia/catalogues/coles/"],
- ["OzBargain – Kmart deals","https://www.ozbargain.com.au/deals/kmart.com.au"],
- ["OzBargain – Target deals","https://www.ozbargain.com.au/deals/target.com.au"],
- ["OzBargain – BIG W deals","https://www.ozbargain.com.au/deals/bigw.com.au"],
- ["OzBargain – JB Hi-Fi deals","https://www.ozbargain.com.au/deals/jbhifi.com.au"],
- ["OzBargain – Uniqlo deals","https://www.ozbargain.com.au/deals/uniqlo.com"],
- ["OzBargain – Sephora deals","https://www.ozbargain.com.au/deals/sephora.com.au"],
- ["Typo / Cotton On Group – Sale","https://cottonon.com/AU/sale/"],
- ["Marie Claire – H&M offers (updated 20 Oct)","https://www.marieclaire.com.au/discount-codes/hm.com/"],
- ["Better Homes & Gardens – MECCA offers","https://www.bhg.com.au/discount-codes/mecca.com.au"],
- ["ShopBack – Next Sephora sale","https://www.shopback.com.au/blog/beauty/next-sephora-australia-sale"],
- ["Westfield Tea Tree Plaza","https://www.westfield.com.au/teatreeplaza"],
- ["Westfield Marion","https://www.westfield.com.au/marion"],
- ["Rundle Mall – Offers","https://www.rundlemall.com/offers/"],
- ["Rundle Mall – What's on","https://www.rundlemall.com/"],
- ["OzBargain – Bunnings deals","https://www.ozbargain.com.au/deals/bunnings.com.au"],
- ["OzBargain – Chemist Warehouse deals","https://www.ozbargain.com.au/deals/chemistwarehouse.com.au"],
- ["OzBargain – Strandbags (Flylite suitcase)","https://www.ozbargain.com.au/deals/strandbags.com.au"],
- ["Harris Scarfe – Home page sale highlights","https://www.harrisscarfe.com.au/"],
- ["Strandbags – Sale","https://www.strandbags.com.au/collections/sale"],
- ["Guess – Handbag sale","https://www.guess.com.au/collections/handbags-sale"],
- ["New Balance – Clearance","https://www.newbalance.com.au/clearance-sale/"],
- ["Puma – Sale","https://au.puma.com/au/en/sale"],
- ["Reebok – Home page offers","https://www.reebok.com.au/"],
- ["Skechers – Sale","https://www.skechers.com.au/sale/"],
- ["OTR – Home page offers","https://www.otr.com.au/"],
- ["OzBargain – Harvey Norman deals","https://www.ozbargain.com.au/deals/harveynorman.com.au"],
- ["Click Frenzy – Black Friday 2026 dates","https://www.clickfrenzy.com.au/black-friday"],
- ["ShopBack – Black Friday 2026 calendar (retailer start dates, expected)","https://www.shopback.com.au/blog/finance/australia-black-friday-2026-sale-calendar"],
- ["Burnside Village – Offers","https://www.burnsidevillage.com.au/offers"],
+// ---- this week's standouts: [store, price text, title, why, emoji]
+const PICKS = [
+ ["Coles","$4.25","Mayver's Upside Down Peanut Butter","First half-price Mayver's in about two years. Was $8.50.","🥜"],
+ ["ALDI","$15.99","OMO Wonder Wash 1.94L","ALDI's Special Buy just beats Woolworths' half-price $16.","🧺"],
+ ["Woolworths","$6","Tegel Take Outs chicken","Half price for the first time in 12 weeks. Usually only drops to $10.","🍗"],
+ ["Coles","½ price","Sunscreen season stock-up","Banana Boat, Nivea and Bondi Sands SPF50+ all half price.","☀️"],
+ ["BIG W","$29","Cadbury Jumbo Box 1.56kg","Half price — 110 chocolates, handy for Christmas.","🍫"],
+ ["Harris Scarfe","$269.99","My Genie IQ500 robot vacuum","85% off the $1,799.99 regular price (HS Friends price).","🤖"],
 ];
 
-
-// ---- pictures: real photo when known, otherwise an illustrated tile matched by keyword
 const PICS = [
  [/outdoor lights/i,"💡"],[/camera case/i,"💼"],[/camera/i,"📷"],[/hair dryer/i,"💨"],[/charger/i,"🔌"],[/headset/i,"🎧"],[/gigabit/i,"🔌"],[/speaker/i,"🔊"],[/espresso/i,"☕"],[/frypan/i,"🍳"],[/microsd/i,"💾"],[/washing machine/i,"🫧"],[/nitro/i,"💻"],[/motorola|nxtpaper/i,"📱"],[/airtag/i,"🏷️"],
  [/bacon dog|hot dog/i,"🌭"],[/krispy|doughnut/i,"🍩"],[/eat slice/i,"🍰"],[/kamado/i,"🔥"],[/briquettes/i,"🔥"],[/fryer/i,"🍳"],[/trimmer/i,"🌿"],
@@ -760,16 +830,6 @@ const PICS = [
 ];
 const CAT_HUE = {"Pantry":32,"Household":195,"Drinks":5,"Meat & seafood":350,"Frozen":205,"Snacks":280,"Health & beauty":320,
  "Baby":170,"Pet":40,"Home":160,"Phone & SIM":230,"Clothing":260,"Liquor":15,"Tools & garden":110,"Kids & toys":50,"Electronics":220,"Footwear":190,"Gaming":250,"Sport":140,"Bags":300,"Food & coffee":25};
-const emojiFor = d => (PICS.find(([re]) => re.test(d.n)) || [0,"🛍️"])[1];
-function picHTML(d){
-  const h = CAT_HUE[d.cat] ?? 45;
-  const emo = `<span class="emo" aria-hidden="true">${emojiFor(d)}</span><span class="approx">illustration</span>`;
-  if (d.img) return `<div class="pic" style="--h:${h}"><img src="${d.img}" alt="${esc(d.n)}" loading="lazy" onerror="this.parentNode.innerHTML=this.parentNode.dataset.fb"></div>`.replace('class="pic"', `class="pic" data-fb='${emo.replace(/'/g,"&#39;")}'`);
-  return `<div class="pic" style="--h:${h}">${emo}</div>`;
-}
-
-
-// ---- store types (top filter row)
 const GROUPS = [
  {k:"Groceries",ic:"🛒",g:"#1E8E3E",r:["Coles","Woolworths","ALDI","Costco"]},
  {k:"Department stores",ic:"🏬",g:"#2563EB",r:["Myer","Kmart","Target","BIG W","Harris Scarfe"]},
@@ -784,7 +844,6 @@ const GROUPS = [
 ];
 const GROUP_OF = {}; GROUPS.forEach(G => G.r.forEach(r => GROUP_OF[r] = G.k));
 
-
 // ---- upcoming sale events (header panel)
 const EVENTS = [
  {n:"Click Frenzy Main Event",s:"2026-10-27",e:"2026-10-30",d:"Tue 27 – Fri 30 Oct",x:"Online sale across hundreds of retailers"},
@@ -794,118 +853,427 @@ const EVENTS = [
  {n:"Black Friday → Cyber Monday",s:"2026-11-27",e:"2026-11-30",d:"Fri 27 – Mon 30 Nov",x:"Biggest discounts of the year at most stores"},
  {n:"Boxing Day sales",s:"2026-12-26",e:"2026-12-31",d:"Sat 26 Dec",x:""},
 ];
-function renderEvents(){
-  const today = new Date(); today.setHours(0,0,0,0);
-  const day = iso => { const [y,m,d] = iso.split("-").map(Number); return new Date(y, m-1, d); };
-  const upcoming = EVENTS.filter(ev => day(ev.e) >= today).slice(0,5);
-  $("#events").innerHTML = upcoming.map(ev => {
-    const n = Math.round((day(ev.s) - today)/86400000);
-    const cd = n <= 0 ? `<span class="cd now">On now</span>` : `<span class="cd">${n===1?"Tomorrow":"In "+n+" days"}</span>`;
-    return `<li><span class="en">${esc(ev.n)}</span>${cd}<span class="ed">${esc(ev.d)}</span>${ev.x?`<span class="ex">${esc(ev.x)}</span>`:""}</li>`;
-  }).join("");
-}
 
-// ---------- render ----------
+// ======================================================================
+// Page code below. Weekly updates only change the data above this line.
+// ======================================================================
 const $ = s => document.querySelector(s);
-const money = v => v >= 100 ? "$" + (Number.isInteger(v) ? v : v.toFixed(2)) : "$" + v.toFixed(2);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money = v => "$" + (v >= 100 && Number.isInteger(v) ? v.toLocaleString("en-AU") : v.toLocaleString("en-AU",{minimumFractionDigits:2,maximumFractionDigits:2}));
 const pct = d => d.was ? Math.round((1 - d.now / d.was) * 100) : 0;
-const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-DEALS.forEach(d => { d.p = pct(d); d.save = d.was ? d.was - d.now : 0; if(!d.end) d.end = (d.r==="Coles"||d.r==="Woolworths") ? WK : "While stocks last"; });
+const slug = s => s.toLowerCase().normalize("NFKD").replace(/[^\w]+/g, "-").replace(/^-|-$/g, "");
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const toDate = w => { const [y,m,d] = w.split("-").map(Number); return new Date(y, m-1, d); };
+const isoOf = dt => `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,"0")}-${String(dt.getDate()).padStart(2,"0")}`;
+const dShort = w => { const t = toDate(w); return `${t.getDate()} ${MON[t.getMonth()]}`; };
+const dDay = w => { const t = toDate(w); return `${DOW[t.getDay()]} ${t.getDate()} ${MON[t.getMonth()]}`; };
+const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+const WK = "Ends " + WEEK.ends;
+const GROC = new Set(["Coles","Woolworths"]);
+const ICON = {
+  low:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>',
+  rare:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.6L21 9.3l-5 4.6 1.4 6.9L12 17.3 6.6 20.8 8 13.9 3 9.3l6.4-.7z"/></svg>',
+  higher:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 7v6M12 17h.01"/></svg>',
+  match:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>',
+  none:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 8h.01M12 11v6"/></svg>',
+  close:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+  prev:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+  next:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
+  share:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 002 2h10a2 2 0 002-2v-6"/></svg>',
+  trend:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8"/><path d="M15 7h5v5"/></svg>',
+};
+const STICKER = {low:"Lowest on record", rare:"Rare deal", higher:"Was cheaper"};
 
-let state = {g:"All", r:"All", half:false, cat:"All", sort:"save", q:""};
-try { const s = JSON.parse(localStorage.getItem("ads-state")||"null"); if (s) state = {...state, ...s, q:""}; } catch(e){}
-const persist = () => { try { localStorage.setItem("ads-state", JSON.stringify(state)); } catch(e){} };
+// ---- prepare deals
+DEALS.forEach((d, i) => {
+  d.i = i; d.p = pct(d); d.save = d.was ? d.was - d.now : 0; d.id = slug(d.r) + "--" + slug(d.n);
+  if (!d.end) d.end = GROC.has(d.r) ? WK : "While stocks last";
+  d.h = [{w:WEEK.start, p:d.now, was:d.was || null}]; d.I = null;
+});
 
+// ---- matching the same product across stores
+const STOP = new Set(["or","and","the","with","from","of","for","in","a","x","×","–","-","&","pack","pk","each","men's","women's"]);
+const toks = n => n.toLowerCase().replace(/[(),'"’]/g, " ").split(/\s+/).filter(t => t && !STOP.has(t) && (t.length > 1 || /\d/.test(t)));
+DEALS.forEach(d => { d.t = toks(d.n); d.sz = d.t.filter(t => /\d/.test(t)); });
+function alike(a, b){
+  if (a.t[0] !== b.t[0]) return 0;
+  if (a.sz.length && b.sz.length && !a.sz.some(s => b.sz.includes(s))) return 0;
+  const A = new Set(a.t), B = new Set(b.t); let n = 0; A.forEach(t => { if (B.has(t)) n++; });
+  return n / (A.size + B.size - n);
+}
+function sameElsewhere(d){
+  return DEALS.filter(o => o !== d && o.r !== d.r && alike(d, o) >= .5);
+}
+
+// ---- price history (data/prices.csv, saved every Wednesday)
+let HWEEKS = [WEEK.start], STORE_START = {}, HIST_OK = false;
+function parseCSV(t){
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < t.length; i++){
+    const c = t[i];
+    if (q){ if (c === '"'){ if (t[i+1] === '"'){ f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ","){ row.push(f); f = ""; }
+    else if (c === "\n"){ row.push(f); rows.push(row); row = []; f = ""; }
+    else if (c !== "\r") f += c;
+  }
+  if (f || row.length){ row.push(f); rows.push(row); }
+  const [head, ...body] = rows;
+  return body.filter(r => r.length > 1).map(r => Object.fromEntries(head.map((h,i) => [h, r[i] ?? ""])));
+}
+async function loadHistory(){
+  for (const u of ["data/prices.csv?v=" + Date.now(), "https://likku2019.github.io/Adelaide-deals/data/prices.csv"]){
+    try { const r = await fetch(u, {cache:"no-store"}); if (r.ok){ const t = await r.text(); if (t.startsWith("week,")) return parseCSV(t); } } catch(e){}
+  }
+  return null;
+}
+function applyHistory(rows){
+  const by = {};
+  rows.forEach(r => {
+    if (!STORE_START[r.retailer] || r.week < STORE_START[r.retailer]) STORE_START[r.retailer] = r.week;
+    if (r.week >= WEEK.start) return;
+    (by[r.id] ||= []).push({w:r.week, p:+r.price, was:r.was ? +r.was : null});
+  });
+  HWEEKS = [...new Set(rows.map(r => r.week).filter(w => w < WEEK.start)), WEEK.start].sort();
+  DEALS.forEach(d => { d.h = [...(by[d.id] || []).sort((a,b) => a.w.localeCompare(b.w)), {w:WEEK.start, p:d.now, was:d.was || null}]; });
+  HIST_OK = true;
+}
+
+// ---- what the history says about a deal
+function insight(d){
+  const start = STORE_START[d.r] && STORE_START[d.r] < WEEK.start ? STORE_START[d.r] : WEEK.start;
+  const weeks = HWEEKS.filter(w => w >= start);
+  const prev = d.h.slice(0, -1);
+  const count = d.h.length;
+  const usual = Math.max(0, ...d.h.map(e => e.was || 0)) || null;
+  let v = "none", minPrev = null, lowE = null, atMin = 0;
+  if (prev.length){
+    minPrev = Math.min(...prev.map(e => e.p));
+    const mins = prev.filter(e => Math.abs(e.p - minPrev) < .005); lowE = mins[mins.length-1]; atMin = mins.length;
+    v = d.now < minPrev - .005 ? "low" : d.now <= minPrev + .005 ? "match" : "higher";
+  } else if (GROC.has(d.r) && d.p >= 50 && weeks.length > 3) v = "rare";
+  const idx = d.h.map(e => weeks.indexOf(e.w)).filter(i => i >= 0);
+  const gaps = idx.slice(1).map((x, k) => x - idx[k]).sort((a,b) => a-b);
+  const gap = gaps.length ? gaps[Math.floor((gaps.length-1)/2)] : null;
+  return {v, prev, minPrev, lowE, atMin, count, weeks, start, usual, gap, tracked: weeks.length > 1};
+}
+const rankOf = d => d.I ? ({low:0, rare:1, match:2, higher:3, none:4})[d.I.v] : 4;
+
+// ---- pictures
+const emojiFor = d => (PICS.find(([re]) => re.test(d.n)) || [0,"🛍️"])[1];
+function pic(d){
+  const h = CAT_HUE[d.cat] ?? 45;
+  const emo = `<span class="emo" aria-hidden="true">${emojiFor(d)}</span>`;
+  const st = d.I && STICKER[d.I.v] ? `<span class="sticker s-${d.I.v}">${ICON[d.I.v]}${STICKER[d.I.v]}</span>` : "";
+  if (d.img) return `<div class="pic" style="--h:${h}" data-fb='${emo.replace(/'/g,"&#39;")}'>${st}<img src="${esc(d.img)}" alt="" loading="lazy" onerror="this.outerHTML=this.parentNode.dataset.fb"></div>`;
+  return `<div class="pic" style="--h:${h}">${st}${emo}</div>`;
+}
 function priceHTML(v){
-  const [a,b] = v.toFixed(2).split(".");
-  return `<span class="price"><sup>$</sup>${a}${b==="00" && v>=100 ? "" : `<sup>.${b}</sup>`}</span>`;
+  const [a, b] = v.toFixed(2).split(".");
+  const whole = Number(a).toLocaleString("en-AU");
+  return `<span class="price"><span class="cur">$</span>${whole}${b === "00" && v >= 100 ? "" : `<sup>.${b}</sup>`}</span>`;
 }
+function flagOf(d){
+  if (d.tag === "sb") return `<span class="flag sb">ALDI Special Buy</span>`;
+  if (d.p >= 50) return `<span class="flag">${d.p > 52 ? d.p + "% off" : "½ price"}</span>`;
+  if (d.p > 0) return `<span class="flag">${d.p}% off</span>`;
+  return "";
+}
+function barcode(d, I, h = 16){
+  const on = new Set(d.h.map(e => e.w));
+  const bw = 3, gap = 2, W = I.weeks.length * (bw + gap) - gap;
+  const bars = I.weeks.map((w, k) => {
+    const x = k * (bw + gap), cur = w === WEEK.start, hit = on.has(w);
+    return hit ? `<rect x="${x}" y="0" width="${bw}" height="${h}" rx="1" fill="${cur ? "var(--sale)" : "currentColor"}"/>` : `<rect x="${x}" y="${h-4}" width="${bw}" height="4" rx="1" fill="var(--line-2)"/>`;
+  }).join("");
+  return `<svg class="barcode" width="${W}" height="${h}" viewBox="0 0 ${W} ${h}" aria-hidden="true">${bars}</svg>`;
+}
+
+// ---- deal ticket
 function card(d){
-  const c = RETAILERS[d.r].c;
-  let flag = "";
-  if (d.tag==="sb") flag = `<span class="flag sb">Special Buy</span>`;
-  else if (d.p >= 50) flag = `<span class="flag">${d.p > 52 ? d.p+"% off" : "½ price"}</span>`;
-  else if (d.p > 0) flag = `<span class="flag">${d.p}% off</span>`;
-  const was = d.was ? `<s>was ${money(d.was)}</s><br>save ${money(d.save)}` : "";
+  const c = RETAILERS[d.r]?.c || "var(--brand)";
+  const was = d.was ? `<span class="was"><s>was ${money(d.was)}</s></span>` : "";
+  let hist = "";
+  if (d.I && d.I.tracked && (d.I.count > 1 || GROC.has(d.r)))
+    hist = `<div class="hist-row">${barcode(d, d.I)}<span title="On special in ${d.I.count} of the last ${d.I.weeks.length} weeks">On special ${d.I.count} of ${d.I.weeks.length} wks</span></div>`;
   return `<article class="deal" style="--c:${c}">
-    ${picHTML(d)}
-    <div class="top"><span class="rt pill" style="--c:${c}"><span class="dot"></span>${esc(d.r)}</span><span class="cat">${esc(d.cat)}</span></div>
-    <h3>${esc(d.n)}</h3>${d.note?`<div class="note">${esc(d.note)}</div>`:""}
-    <div class="tkt">${flag}${priceHTML(d.now)}<span class="was">${was}</span></div>
-    <div class="end">${esc(d.end)}</div></article>`;
+    ${pic(d)}
+    <div class="body">
+      <div class="meta"><span class="pill">${esc(d.r)}</span><span class="cat">${esc(d.cat)}</span></div>
+      <h3><button class="nm" type="button" data-i="${d.i}" aria-haspopup="dialog">${esc(d.n)}</button></h3>
+      ${d.note ? `<p class="note">${esc(d.note)}</p>` : ""}
+    </div>
+    <div class="tkt">${flagOf(d)}<div class="pr">${priceHTML(d.now)}${was}</div></div>
+    <div class="foot">${hist}<span class="end">${esc(d.end)}</span></div>
+  </article>`;
 }
+
+// ---- filters & list
+let state = {g:"All", r:"All", half:false, low:false, cat:"All", sort:"save", q:""};
+try { const s = JSON.parse(localStorage.getItem("ads-state") || "null"); if (s) state = {...state, ...s, q:""}; } catch(e){}
+const persist = () => { try { localStorage.setItem("ads-state", JSON.stringify(state)); } catch(e){} };
+let VIS = [];
 
 function renderGroups(){
-  const gc = {}; DEALS.forEach(d => { const g = GROUP_OF[d.r]; gc[g] = (gc[g]||0)+1; });
-  const tabs = [{k:"All",ic:"🛍️",g:"#15223A"}, ...GROUPS.filter(G => gc[G.k])];
-  $("#groups").innerHTML = tabs.map(G => `<button class="grp" type="button" data-g="${esc(G.k)}" aria-pressed="${state.g===G.k}" style="--g:${G.g}"><span class="ic" aria-hidden="true">${G.ic}</span>${G.k==="All"?"All stores":esc(G.k)}<span class="n">${G.k==="All"?DEALS.length:gc[G.k]}</span></button>`).join("");
+  const gc = {}; DEALS.forEach(d => { const g = GROUP_OF[d.r]; gc[g] = (gc[g] || 0) + 1; });
+  const tabs = [{k:"All", ic:"🛍️", g:"#14213D"}, ...GROUPS.filter(G => gc[G.k])];
+  $("#groups").innerHTML = tabs.map(G => `<button class="grp" type="button" data-g="${esc(G.k)}" aria-pressed="${state.g === G.k}" style="--g:${G.g}"><span class="ic" aria-hidden="true">${G.ic}</span>${G.k === "All" ? "All stores" : esc(G.k)}<span class="n">${G.k === "All" ? DEALS.length : gc[G.k]}</span></button>`).join("");
 }
 function renderChips(){
-  const counts = {}; DEALS.forEach(d => counts[d.r]=(counts[d.r]||0)+1);
-  const pool = state.g==="All" ? Object.keys(RETAILERS) : (GROUPS.find(G=>G.k===state.g)||{r:[]}).r;
-  const names = ["All", ...pool.filter(n=>counts[n])];
-  const label = state.g==="All" ? "Stores" : "In this group";
-  $("#chips").innerHTML = `<span class="lbl">${label}</span>` + names.map(n => `<button class="chip" type="button" data-r="${esc(n)}" aria-pressed="${state.r===n}" style="--c:${n==="All"?"var(--ticket)":RETAILERS[n].c}"><span class="dot"></span>${n==="All"?(state.g==="All"?"All":"All "+state.g.toLowerCase()):esc(n)}${counts[n]?` <span style="opacity:.6">${counts[n]}</span>`:""}</button>`).join("");
+  const counts = {}; DEALS.forEach(d => counts[d.r] = (counts[d.r] || 0) + 1);
+  const pool = state.g === "All" ? Object.keys(RETAILERS) : (GROUPS.find(G => G.k === state.g) || {r:[]}).r;
+  const names = ["All", ...pool.filter(n => counts[n])];
+  $("#chips").innerHTML = names.map(n => `<button class="chip" type="button" data-r="${esc(n)}" aria-pressed="${state.r === n}" style="--c:${n === "All" ? "var(--ink)" : RETAILERS[n].c}"><span class="dot" aria-hidden="true"></span>${n === "All" ? (state.g === "All" ? "Every store" : "All " + state.g.toLowerCase()) : esc(n)}${counts[n] ? ` <span class="n">${counts[n]}</span>` : ""}</button>`).join("");
 }
 function renderCats(){
-  const cats = ["All", ...[...new Set(DEALS.map(d=>d.cat))].sort()];
-  $("#cat").innerHTML = cats.map(c=>`<option value="${c}">${c==="All"?"All categories":c}</option>`).join("");
-  $("#cat").value = cats.includes(state.cat) ? state.cat : "All";
+  const cats = ["All", ...[...new Set(DEALS.map(d => d.cat))].sort()];
+  $("#cat").innerHTML = cats.map(c => `<option value="${esc(c)}">${c === "All" ? "All categories" : esc(c)}</option>`).join("");
+  $("#cat").value = cats.includes(state.cat) ? state.cat : (state.cat = "All");
 }
+const isActive = () => state.g !== "All" || state.r !== "All" || state.half || state.low || state.cat !== "All" || state.q.trim() !== "";
 function render(){
   const q = state.q.trim().toLowerCase();
-  let list = DEALS.filter(d =>
-    (state.g==="All" || GROUP_OF[d.r]===state.g) && (state.r==="All" || d.r===state.r) && (state.cat==="All" || d.cat===state.cat) &&
-    (!state.half || d.p>=50) && (!q || (d.n+" "+d.r+" "+d.cat).toLowerCase().includes(q)));
-  const by = {save:(a,b)=>b.p-a.p||b.save-a.save, dollars:(a,b)=>b.save-a.save, low:(a,b)=>a.now-b.now, store:(a,b)=>a.r.localeCompare(b.r)||b.p-a.p}[state.sort];
+  const list = DEALS.filter(d =>
+    (state.g === "All" || GROUP_OF[d.r] === state.g) && (state.r === "All" || d.r === state.r) && (state.cat === "All" || d.cat === state.cat) &&
+    (!state.half || d.p >= 50) && (!state.low || (d.I && d.I.v === "low")) && (!q || (d.n + " " + d.r + " " + d.cat).toLowerCase().includes(q)));
+  const by = {
+    save:(a,b) => b.p - a.p || b.save - a.save,
+    dollars:(a,b) => b.save - a.save,
+    low:(a,b) => a.now - b.now,
+    record:(a,b) => rankOf(a) - rankOf(b) || b.p - a.p,
+    store:(a,b) => a.r.localeCompare(b.r) || b.p - a.p}[state.sort] || ((a,b) => b.p - a.p);
   list.sort(by);
-  $("#grid").innerHTML = list.length ? list.map(card).join("") : `<div class="empty">No deals match. Try another retailer or clear the search.</div>`;
-  $("#count").textContent = `${list.length} of ${DEALS.length} deals`;
-  document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", b.dataset.r===state.r));
-  document.querySelectorAll(".grp").forEach(b => b.setAttribute("aria-pressed", b.dataset.g===state.g));
-  const active = state.g!=="All" || state.r!=="All" || state.half || state.cat!=="All" || q!=="";
+  VIS = list.map(d => d.i);
+  $("#grid").innerHTML = list.length ? list.map(card).join("")
+    : `<div class="empty"><p>No deals match these filters.</p><button class="btn" type="button" data-clear>Clear filters</button></div>`;
+  $("#count").textContent = list.length === DEALS.length ? `${DEALS.length} deals` : `${list.length} of ${DEALS.length} deals`;
+  document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", b.dataset.r === state.r));
+  document.querySelectorAll(".grp").forEach(b => b.setAttribute("aria-pressed", b.dataset.g === state.g));
+  const active = isActive();
   $("#standouts").hidden = active;
   $("#clear").disabled = !active;
+  const n = [state.g !== "All", state.r !== "All", state.half, state.low, state.cat !== "All", q !== ""].filter(Boolean).length;
+  $("#fabBadge").hidden = !n; $("#fabBadge").textContent = n;
   persist();
 }
-
-function renderStatic(){
-  const half = DEALS.filter(d=>d.p>=50).length;
-  const total = DEALS.reduce((s,d)=>s+d.save,0);
-  const end = new Date("2026-10-27T23:59:00+10:30");
-  const days = Math.max(0, Math.ceil((end - new Date())/86400000));
-  $("#facts").innerHTML = `<span><b>${DEALS.length}</b> deals across <b>${new Set([...DEALS.map(d=>d.r),...PROMOS.map(p=>p.r)]).size}</b> retailers &amp; centres</span>
-    <span><b>${half}</b> at half price or better</span>
-    <span>Coles &amp; Woolworths specials end Tue 27 Oct · <b>${days}</b> day${days===1?"":"s"} left</span>`;
-
-  const picks = [
-    ["Coles","$4.25","Mayver's Upside Down Peanut Butter","First half-price Mayver's in about two years. Was $8.50.","🥜"],
-    ["ALDI","$15.99","OMO Wonder Wash 1.94L","ALDI's Special Buy just beats Woolworths' half-price $16.","🧺"],
-    ["Woolworths","$6","Tegel Take Outs chicken","Half price for the first time in 12 weeks. Usually only drops to $10.","🍗"],
-    ["Coles","½ price","Sunscreen season stock-up","Banana Boat, Nivea and Bondi Sands SPF50+ all half price.","☀️"],
-    ["BIG W","$29","Cadbury Jumbo Box 1.56kg","Half price — 110 chocolates, handy for Christmas.","🍫"],
-    ["Harris Scarfe","$269.99","My Genie IQ500 robot vacuum","85% off the $1,799.99 regular price (HS Friends price).","🤖"],
-  ];
-  $("#stand").innerHTML = picks.map(([r,p,t,x,e]) => `<div class="pick" style="--c:${RETAILERS[r].c}"><span class="emo" aria-hidden="true">${e}</span><div class="txt"><span class="rt pill"><span class="dot"></span>${r}</span><div class="big">${p}</div><strong>${t}</strong><p>${x}</p></div></div>`).join("");
-
-  const storeCard = s => `<div class="store" style="--c:${RETAILERS[s.r].c}"><h3><span class="dot"></span>${s.r}</h3><div class="where">${esc(s.where)}</div><ul>${s.items.map(([a,b,c])=>`<li><b>${esc(a)}</b><span>${esc(b)}${c?`<small>${esc(c)}</small>`:""}</span></li>`).join("")}</ul></div>`;
-  $("#promoGrid").innerHTML = GROUPS.map(G => { const ps = PROMOS.filter(p => GROUP_OF[p.r]===G.k); return ps.length ? `<div class="pgroup" style="--g:${G.g}"><span aria-hidden="true">${G.ic}</span>${esc(G.k)}</div>` + ps.map(storeCard).join("") : ""; }).join("");
-  $("#cal").innerHTML = CAL.map(([d,w]) => `<div class="when"><div class="d">${d}</div><div class="w">${esc(w)}</div></div>`).join("");
+function clearAll(){
+  state = {...state, g:"All", r:"All", half:false, low:false, cat:"All", q:""};
+  $("#half").checked = false; $("#low").checked = false; $("#cat").value = "All"; $("#q").value = "";
+  renderChips(); render();
 }
 
-if (state.g!=="All" && !GROUPS.some(G=>G.k===state.g)) state.g="All";
+// ---- header, standouts, store offers, calendar
+function renderEvents(){
+  const today = new Date(); today.setHours(0,0,0,0);
+  const upcoming = EVENTS.filter(ev => toDate(ev.e) >= today).slice(0, 5);
+  $("#events").innerHTML = upcoming.map(ev => {
+    const n = Math.round((toDate(ev.s) - today) / 86400000);
+    const cd = n <= 0 ? `<span class="cd now">On now</span>` : `<span class="cd">${n === 1 ? "Tomorrow" : "In " + n + " days"}</span>`;
+    return `<li><span class="en">${esc(ev.n)}</span>${cd}<span class="ed">${esc(ev.d)}</span>${ev.x ? `<span class="ex">${esc(ev.x)}</span>` : ""}</li>`;
+  }).join("");
+}
+function renderStatic(){
+  const half = DEALS.filter(d => d.p >= 50).length;
+  const stores = new Set([...DEALS.map(d => d.r), ...PROMOS.map(p => p.r)]).size;
+  const end = new Date(WEEK.end + "T23:59:00+10:30");
+  const days = Math.max(0, Math.ceil((end - new Date()) / 86400000));
+  $("#week").textContent = `Week of ${WEEK.label}`;
+  $("#facts").innerHTML = `<b>${DEALS.length}</b> deals from <b>${stores}</b> stores and centres, <b>${half}</b> of them half price or better. Coles and Woolworths specials end ${esc(WEEK.ends)}${days ? `, <b>${days}</b> ${days === 1 ? "day" : "days"} from now` : ""}. Updated ${esc(WEEK.updated)}.`;
+  $("#stand").innerHTML = PICKS.map(([r, p, t, x, e]) => {
+    const m = DEALS.filter(d => d.r === r).map(d => [d, alike({t:toks(t), sz:[]}, {...d, sz:[]})]).sort((a,b) => b[1] - a[1])[0];
+    const di = m && m[1] >= .3 ? m[0].i : null;
+    const tag = di === null ? "div" : "button";
+    return `<${tag} class="pick" ${di === null ? "" : `type="button" data-i="${di}" aria-haspopup="dialog"`} style="--c:${RETAILERS[r]?.c || "var(--brand)"}"><span class="st">${esc(r)}</span><span class="emo" aria-hidden="true">${e}</span><span class="pp">${esc(p)}</span><strong>${esc(t)}</strong><p>${esc(x)}</p></${tag}>`;
+  }).join("");
+  const storeCard = s => `<div class="store" style="--c:${RETAILERS[s.r]?.c || "var(--brand)"}"><h3><span class="dot" aria-hidden="true"></span>${esc(s.r)}</h3><div class="where">${esc(s.where)}</div><ul>${s.items.map(([a,b,c]) => `<li><b>${esc(a)}</b><span>${esc(b)}${c ? `<small>${esc(c)}</small>` : ""}</span></li>`).join("")}</ul></div>`;
+  $("#promoGrid").innerHTML = GROUPS.map(G => { const ps = PROMOS.filter(p => GROUP_OF[p.r] === G.k); return ps.length ? `<h3 class="pgroup" style="--g:${G.g}"><span aria-hidden="true">${G.ic}</span>${esc(G.k)}</h3>` + ps.map(storeCard).join("") : ""; }).join("");
+  $("#cal").innerHTML = CAL.map(([d, w]) => `<li><span class="d">${esc(d)}</span><span class="w">${esc(w)}</span></li>`).join("");
+}
+
+// ---- product sheet
+const sheet = $("#sheet"), panel = $("#panel");
+let OPEN = null;
+function verdictOf(d, I){
+  const store = d.r;
+  if (!HIST_OK) return {v:"none", h:"Price history isn't available here", p:"Open the deal sheet website to see this item's price history."};
+  if (I.v === "low") return {v:"low", h:"Lowest price on record", p:`Cheaper than any week since ${dShort(I.start)}. The best price before this was ${money(I.minPrev)} on ${dShort(I.lowE.w)}.`};
+  if (I.v === "match") return {v:"match", h: I.atMin > 1 ? "Its usual special price" : "Matches its best price",
+    p: I.atMin > 1 ? `It has been ${money(d.now)} ${plural(I.atMin, "other time")} since ${dShort(I.start)}, most recently on ${dShort(I.lowE.w)}. It hasn't gone lower.` : `It was also ${money(d.now)} on ${dShort(I.lowE.w)}, and it hasn't been cheaper since ${dShort(I.start)}.`};
+  if (I.v === "higher") return {v:"higher", h:"Not its best price", p:`It was ${money(I.minPrev)} on ${dShort(I.lowE.w)}, ${money(d.now - I.minPrev)} less than this week.`};
+  if (I.v === "rare") return {v:"rare", h:"First half price since " + dShort(I.start), p:`It wasn't on half price at ${store} in any of the ${I.weeks.length - 1} earlier weeks we have.`};
+  if (!I.tracked) return {v:"none", h:"New to the sheet", p:`We started saving ${store} prices on ${dShort(I.start)}, so there's no history for this item yet.`};
+  return {v:"none", h:"First time on the sheet", p:`We've saved ${store} prices since ${dShort(I.start)} and this is the first time this deal has appeared.`};
+}
+function adviceOf(d, I){
+  if (!HIST_OK) return "";
+  const last = d.h[d.h.length-1].w;
+  if (I.count >= 3 && I.gap){
+    const next = new Date(toDate(last)); next.setDate(next.getDate() + 7 * I.gap);
+    const often = I.count / I.weeks.length >= .35;
+    return `This comes around about every ${plural(I.gap, "week")}, so the next one is likely around ${dDay(isoOf(next))} if the pattern holds. ` +
+      (often ? "No need to stock up: buy what you'll use until then." : "Worth buying a couple if you use it regularly.");
+  }
+  if (I.v === "rare" || (I.v === "low" && I.count <= 2)) return "Deals like this don't come around often. If it's something you use, this is a good week to stock up.";
+  if (I.count === 2) return `Seen on special twice so far: ${dShort(I.prev[0].w)} and this week.`;
+  return "";
+}
+function chartHTML(d, I){
+  const W = 360, H = 172, L = 10, R = 12, T = 26, B = 28;
+  const weeks = I.weeks, map = new Map(d.h.map(e => [e.w, e]));
+  const vals = d.h.map(e => e.p).concat(I.usual ? [I.usual] : []);
+  const lo = 0, hi = Math.max(...vals) * 1.12;
+  const x = k => L + (weeks.length === 1 ? (W - L - R) / 2 : k * (W - L - R) / (weeks.length - 1));
+  const y = v => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+  const base = H - B;
+  let out = `<line x1="${L}" x2="${W-R}" y1="${base}" y2="${base}" stroke="var(--line-2)" stroke-width="1"/>`;
+  if (I.usual){
+    const yu = y(I.usual);
+    out += `<line x1="${L}" x2="${W-R}" y1="${yu}" y2="${yu}" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text x="${W-R}" y="${yu - 7}" text-anchor="end" font-size="12" fill="var(--muted)">Usual price ${money(I.usual)}</text>`;
+  }
+  weeks.forEach((w, k) => { if (!map.has(w)) out += `<line x1="${x(k)}" x2="${x(k)}" y1="${base - 5}" y2="${base}" stroke="var(--line-2)" stroke-width="2" stroke-linecap="round"/>`; });
+  const pts = weeks.map((w, k) => map.has(w) ? [x(k), y(map.get(w).p), w, map.get(w).p] : null).filter(Boolean);
+  if (pts.length > 1) out += `<polyline points="${pts.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ")}" fill="none" stroke="var(--ink)" stroke-opacity=".55" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  const minP = Math.min(...d.h.map(e => e.p));
+  pts.forEach(([px, py, w, p]) => {
+    const cur = w === WEEK.start;
+    out += `<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="${cur ? 6 : 4.5}" fill="${cur ? "var(--sale)" : "var(--ink)"}" stroke="var(--card)" stroke-width="2"/>`;
+  });
+  const [cx, cy] = pts[pts.length-1];
+  const near = pts.slice(-3).map(p => p[1]);
+  out += `<text x="${cx}" y="${Math.min(...near) - 12}" text-anchor="end" font-size="13" font-weight="700" fill="var(--ink)">${money(d.now)} now</text>`;
+  const lowPt = pts.find(p => Math.abs(p[3] - minP) < .005 && p[2] !== WEEK.start);
+  if (lowPt && minP < d.now - .005) out += `<text x="${lowPt[0]}" y="${lowPt[1] + 20}" text-anchor="${lowPt[0] < W/2 ? "start" : "middle"}" font-size="12" fill="var(--muted)">${money(minP)} low</text>`;
+  let prevM = -1;
+  weeks.forEach((w, k) => { const m = toDate(w).getMonth(); if (m !== prevM){ prevM = m; out += `<text x="${x(k)}" y="${H - 8}" text-anchor="${k === 0 ? "start" : "middle"}" font-size="12" fill="var(--muted)">${MON[m]}</text>`; } });
+  const band = (W - L - R) / Math.max(1, weeks.length - 1);
+  out += weeks.map((w, k) => `<rect class="hit" data-k="${k}" x="${x(k) - band/2}" y="0" width="${band}" height="${H}" fill="transparent"/>`).join("");
+  const summary = `Price over ${weeks.length} weeks: on special ${I.count} times, lowest ${money(minP)}, this week ${money(d.now)}.`;
+  return `<div class="chart" data-i="${d.i}"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(summary)}" font-family="Instrument Sans, system-ui, sans-serif">${out}</svg><div class="tip" hidden></div></div>`;
+}
+function bindChart(d, I){
+  const box = panel.querySelector(".chart"); if (!box) return;
+  const svg = box.querySelector("svg"), tip = box.querySelector(".tip"), map = new Map(d.h.map(e => [e.w, e]));
+  const show = k => {
+    const w = I.weeks[k], e = map.get(w), r = svg.querySelector(`.hit[data-k="${k}"]`);
+    const bb = svg.getBoundingClientRect(), rb = r.getBoundingClientRect();
+    tip.innerHTML = e ? `${dShort(w)}${w === WEEK.start ? " (this week)" : ""}: <b>${money(e.p)}</b>${e.was ? ` <span style="opacity:.75">was ${money(e.was)}</span>` : ""}` : `${dShort(w)}: not on special`;
+    tip.hidden = false;
+    tip.style.left = Math.min(bb.width - 60, Math.max(60, rb.left - bb.left + rb.width / 2)) + "px";
+    tip.style.top = "8px";
+  };
+  svg.addEventListener("pointermove", e => { const r = e.target.closest(".hit"); if (r) show(+r.dataset.k); });
+  svg.addEventListener("pointerleave", () => tip.hidden = true);
+}
+function statsHTML(d, I){
+  const minP = Math.min(...d.h.map(e => e.p));
+  const lowW = [...d.h].reverse().find(e => Math.abs(e.p - minP) < .005).w;
+  const items = [
+    ["On special", `${I.count} of ${I.weeks.length}`, `weeks since ${dShort(I.start)}`],
+    ["Lowest seen", money(minP), lowW === WEEK.start ? "this week" : dShort(lowW)],
+    ["Usual price", I.usual ? money(I.usual) : "Not given", I.usual ? `you save ${money(I.usual - d.now)}` : "store didn't list one"],
+    I.gap && I.count >= 3 ? ["Comes back", `Every ${I.gap} wk${I.gap === 1 ? "" : "s"}`, "typical gap between specials"]
+      : ["Last time before this", I.prev.length ? dShort(I.prev[I.prev.length-1].w) : "None", I.prev.length ? money(I.prev[I.prev.length-1].p) : `since ${dShort(I.start)}`],
+  ];
+  return `<dl class="stats">${items.map(([a,b,c]) => `<div><dt>${a}</dt><dd>${b}<small>${c}</small></dd></div>`).join("")}</dl>`;
+}
+function compareHTML(d){
+  const others = sameElsewhere(d); if (!others.length) return "";
+  const all = [d, ...others].sort((a,b) => a.now - b.now);
+  const best = all[0].now;
+  return `<section class="sh-sec"><h3>Same item at other stores this week</h3><ul class="cmp">${all.map(o => `<li class="${o === d ? "self" : ""} ${o.now === best && all.length > 1 ? "best" : ""}"><button type="button" ${o === d ? "disabled" : `data-i="${o.i}"`}><span class="cn">${esc(o.n)}</span><span class="cs">${esc(o.r)}${o === d ? " (this one)" : ""}</span><span class="cp">${money(o.now)}</span></button></li>`).join("")}</ul></section>`;
+}
+function openDeal(i, push = true){
+  const d = DEALS[i]; if (!d) return;
+  OPEN = i;
+  const I = d.I || insight(d);
+  const vd = verdictOf(d, I), adv = adviceOf(d, I);
+  const pos = VIS.indexOf(i);
+  const c = RETAILERS[d.r]?.c || "var(--brand)";
+  const weekList = d.h.length > 1 ? `<details class="weeks"><summary>Every week we've recorded</summary><div class="wk">${[...d.h].reverse().map(e => `<span class="${e.w === WEEK.start ? "cur" : ""}">${dShort(e.w)}: <b>${money(e.p)}</b></span>`).join("")}</div></details>` : "";
+  const chart = HIST_OK && I.weeks.length > 1 && d.h.length > 1
+    ? `<section class="sh-sec"><h3>Price history</h3><p class="sub">Each dot is a week it was on special. Small ticks are weeks it wasn't.</p>${chartHTML(d, I)}</section>` : "";
+  panel.innerHTML = `
+    <div class="sh-top">
+      <span class="pos">${pos >= 0 ? `Deal ${pos + 1} of ${VIS.length}` : ""}</span>
+      <button class="ibtn" type="button" data-nav="-1" aria-label="Previous deal" ${pos <= 0 ? "disabled" : ""}>${ICON.prev}</button>
+      <button class="ibtn" type="button" data-nav="1" aria-label="Next deal" ${pos < 0 || pos >= VIS.length - 1 ? "disabled" : ""}>${ICON.next}</button>
+      <button class="ibtn" type="button" data-close aria-label="Close">${ICON.close}</button>
+    </div>
+    <div class="sh-body" style="--c:${c}">
+      <div class="sh-hero">${pic({...d, I:null})}<div><div class="meta"><span class="pill">${esc(d.r)}</span><span class="cat">${esc(d.cat)}</span></div><h2 id="sh-title">${esc(d.n)}</h2>${d.note ? `<p class="note">${esc(d.note)}</p>` : ""}</div></div>
+      <div class="sh-tkt">${flagOf(d)}${priceHTML(d.now)}${d.was ? `<span class="was"><s>was ${money(d.was)}</s><br>save ${money(d.save)}</span>` : "<span></span>"}<span class="end">${esc(d.end)}</span></div>
+      <div class="verdict v-${vd.v}"><span class="vi">${ICON[vd.v] || ICON.none}</span><strong>${esc(vd.h)}</strong><p>${esc(vd.p)}</p></div>
+      ${chart}
+      ${HIST_OK && I.tracked ? statsHTML(d, I) : ""}
+      ${adv ? `<p class="tipline">${esc(adv)}</p>` : ""}
+      ${compareHTML(d)}
+      ${weekList}
+      <div class="sh-actions">
+        <button class="btn primary" type="button" data-share>${ICON.share}Share this deal</button>
+        <a class="btn" href="https://likku2019.github.io/Adelaide-deals/history.html?q=${encodeURIComponent(d.n.split(" ").slice(0, 3).join(" "))}">${ICON.trend}Open in price tracker</a>
+      </div>
+    </div>`;
+  bindChart(d, I);
+  if (!sheet.open) sheet.showModal();
+  panel.scrollTop = 0;
+  panel.querySelector("[data-close]").focus({preventScroll:true});
+  if (push) try { history.replaceState(null, "", "#deal=" + d.id); } catch(e){}
+}
+function closeDeal(){ if (sheet.open) sheet.close(); }
+sheet.addEventListener("close", () => {
+  const i = OPEN; OPEN = null;
+  try { history.replaceState(null, "", location.pathname + location.search); } catch(e){}
+  const b = document.querySelector(`.nm[data-i="${i}"]`); if (b) b.focus({preventScroll:true});
+});
+sheet.addEventListener("click", e => { if (e.target === sheet) closeDeal(); });
+panel.addEventListener("click", async e => {
+  const t = e.target.closest("button,a"); if (!t) return;
+  if (t.hasAttribute("data-close")) return closeDeal();
+  if (t.dataset.nav){ const pos = VIS.indexOf(OPEN) + +t.dataset.nav; if (VIS[pos] !== undefined) openDeal(VIS[pos]); return; }
+  if (t.dataset.i) return openDeal(+t.dataset.i);
+  if (t.hasAttribute("data-share")){
+    const d = DEALS[OPEN], url = "https://likku2019.github.io/Adelaide-deals/#deal=" + d.id;
+    const text = `${d.n}: ${money(d.now)}${d.was ? ` (was ${money(d.was)})` : ""} at ${d.r}. ${d.end}.`;
+    try { if (navigator.share){ await navigator.share({title:"Adelaide Deal Sheet", text, url}); return; } } catch(err){ if (err && err.name === "AbortError") return; }
+    try { await navigator.clipboard.writeText(text + " " + url); toast("Link copied"); } catch(err){ toast("Couldn't copy. Long-press the address bar to copy the link."); }
+  }
+});
+sheet.addEventListener("keydown", e => {
+  if (e.key === "ArrowRight" || e.key === "ArrowLeft"){
+    if (e.target.closest("input,select,textarea,summary")) return;
+    const pos = VIS.indexOf(OPEN) + (e.key === "ArrowRight" ? 1 : -1);
+    if (VIS[pos] !== undefined){ e.preventDefault(); openDeal(VIS[pos]); }
+  }
+});
+function toast(msg){
+  const t = document.createElement("div"); t.className = "toast"; t.setAttribute("role","status"); t.textContent = msg;
+  (sheet.open ? sheet : document.body).appendChild(t); setTimeout(() => t.remove(), 2400);
+}
+
+// ---- start
+if (state.g !== "All" && !GROUPS.some(G => G.k === state.g)) state.g = "All";
 renderStatic(); renderEvents(); renderGroups(); renderChips(); renderCats();
-$("#half").checked = state.half; $("#sort").value = state.sort;
-$("#chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; state.r = b.dataset.r; render(); });
-$("#groups").addEventListener("click", e => { const b = e.target.closest(".grp"); if(!b) return; state.g = b.dataset.g; state.r = "All"; renderChips(); render(); });
+$("#half").checked = state.half; $("#low").checked = state.low; $("#sort").value = state.sort;
+$("#chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.r = b.dataset.r; render(); });
+$("#groups").addEventListener("click", e => { const b = e.target.closest(".grp"); if (!b) return; state.g = b.dataset.g; state.r = "All"; renderChips(); render(); });
 $("#half").addEventListener("change", e => { state.half = e.target.checked; render(); });
+$("#low").addEventListener("change", e => { state.low = e.target.checked; if (state.low && state.sort === "save") {} render(); });
 $("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
-$("#clear").addEventListener("click", () => {
-  state = {...state, g:"All", r:"All", half:false, cat:"All", q:""};
-  $("#half").checked = false; $("#cat").value = "All"; $("#q").value = "";
-  renderChips(); render(); $("#deals").scrollIntoView({block:"start"});
-});
+$("#clear").addEventListener("click", () => { clearAll(); $("#deals").scrollIntoView({block:"start"}); });
+$("#grid").addEventListener("click", e => { const b = e.target.closest(".nm"); if (b) return openDeal(+b.dataset.i); if (e.target.closest("[data-clear]")) clearAll(); });
+$("#stand").addEventListener("click", e => { const b = e.target.closest("button.pick"); if (b) openDeal(+b.dataset.i); });
+$("#fab").addEventListener("click", () => { $("#bar").scrollIntoView({block:"start"}); setTimeout(() => $("#q").focus({preventScroll:true}), 350); });
+new IntersectionObserver(([en]) => $("#fab").classList.toggle("show", !en.isIntersecting && en.boundingClientRect.top < 0)).observe($("#bar"));
 render();
+const fromHash = () => { const m = location.hash.match(/^#deal=(.+)$/); if (m){ const d = DEALS.find(x => x.id === decodeURIComponent(m[1])); if (d) openDeal(d.i, false); } };
+loadHistory().then(rows => {
+  if (rows){ applyHistory(rows); DEALS.forEach(d => d.I = insight(d)); render(); }
+  else DEALS.forEach(d => d.I = insight(d));
+  if (OPEN !== null) openDeal(OPEN, false); else fromHash();
+});
+window.addEventListener("hashchange", fromHash);
 </script>

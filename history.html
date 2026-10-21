@@ -17,14 +17,14 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23FFD43B'/%3E%3Crect x='8' y='20' width='48' height='26' rx='3' fill='%23D3261D' transform='rotate(-6 32 33)'/%3E%3Ctext x='32' y='41' font-family='Arial Black,Arial' font-weight='900' font-size='20' fill='white' text-anchor='middle' transform='rotate(-6 32 33)'%3E%C2%BD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=Instrument+Sans:wght@400..700&display=swap">
 <style>
 :root{
   --paper:#F2F4F1; --card:#FFFFFF; --ink:#15223A; --muted:#5B6577; --line:#D8DDD6;
   --ticket:#FFD43B; --ticket-ink:#15223A; --sale:#D3261D; --focus:#1D5FD1; --down:#1E8E3E; --up:#D3261D; --spark:#15223A;
-  --display:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;
-  --body:"Public Sans","Segoe UI",system-ui,-apple-system,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --display:"Anybody","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Instrument Sans",system-ui,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --paper:#0E131B; --card:#161D29; --ink:#E7EBF1; --muted:#9AA4B4; --line:#283244;
@@ -41,8 +41,7 @@ h1,h2{font-family:var(--display);margin:0;text-wrap:balance}
 header{background:var(--ticket);color:var(--ticket-ink);padding-block:22px 18px}
 .back{display:inline-block;font:600 13px var(--body);text-decoration:none;background:var(--ticket-ink);color:var(--ticket);padding:5px 11px;border-radius:999px;margin-bottom:12px}
 .eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.8}
-h1{font-size:clamp(34px,6.5vw,60px);font-weight:900;font-stretch:72%;line-height:.95;text-transform:uppercase}
-h1 span{display:inline-block;background:var(--sale);color:#fff;padding:0 .14em;transform:rotate(-1.5deg)}
+h1{font-size:clamp(48px,8vw,92px);font-weight:900;font-stretch:58%;line-height:.86;letter-spacing:-.012em}
 .sub{margin:10px 0 0;font-size:14px;max-width:70ch;opacity:.85}
 .facts{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:10px;font-size:13px}
 .facts b{font-variant-numeric:tabular-nums}
@@ -55,11 +54,11 @@ h1 span{display:inline-block;background:var(--sale);color:#fff;padding:0 .14em;t
 .dl{margin-left:auto;font:600 13px var(--body);text-decoration:none;border:1.5px solid var(--ink);border-radius:8px;padding:6px 11px}
 .notice{margin:18px 0 0;background:var(--card);border:1.5px dashed var(--line);border-radius:8px;padding:10px 14px;font-size:14px}
 .head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:22px 0 10px;flex-wrap:wrap}
-h2{font-size:26px;font-weight:850;font-stretch:78%;text-transform:uppercase;box-shadow:inset 0 -.38em 0 #FFE27A;padding:0 .1em;display:inline}
+h2{font-size:30px;font-weight:800;font-stretch:66%;box-shadow:inset 0 -.38em 0 #FFE27A;padding:0 .1em;display:inline}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) h2{box-shadow:inset 0 -.38em 0 #6B5612}}
 .count{font:500 13px var(--mono);color:var(--muted)}
 .cols,.row{display:grid;grid-template-columns:minmax(0,2.6fr) 1fr 1.1fr 1fr .8fr 120px;gap:12px;align-items:center}
-.cols{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:0 14px 6px}
+.cols{font:600 12.5px var(--body);color:var(--muted);padding:0 14px 6px}
 .list{display:flex;flex-direction:column;gap:6px;padding-bottom:40px}
 .item{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--c,var(--ink));border-radius:6px}
 .row{padding:10px 14px;cursor:pointer;width:100%;text-align:left;background:none;border:0;color:inherit;font:inherit}
@@ -77,7 +76,7 @@ h2{font-size:26px;font-weight:850;font-stretch:78%;text-transform:uppercase;box-
 .spark{width:120px;height:34px;display:block}
 .detail{display:none;padding:0 14px 14px;border-top:1px dashed var(--line)}
 .item.open .detail{display:block}
-.detail h3{font:800 14px var(--display);font-stretch:85%;text-transform:uppercase;letter-spacing:.03em;margin:12px 0 6px}
+.detail h3{font:700 14px var(--body);margin:12px 0 6px}
 .hist{display:flex;flex-wrap:wrap;gap:6px}
 .hist span{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:4px 8px;font:500 12.5px var(--mono)}
 .hist span b{font-family:var(--body)}
@@ -94,8 +93,7 @@ h2{font-size:26px;font-weight:850;font-stretch:78%;text-transform:uppercase;box-
 
 <header><div class="wrap">
   <a class="back" href="./">← This week's deals</a>
-  <div class="eyebrow">Adelaide Deal Sheet · price history</div>
-  <h1>Price <span>Tracker</span></h1>
+  <h1>Price tracker</h1>
   <p class="sub">Every price on the deal sheet is saved each Wednesday, and Coles &amp; Woolworths half-price history goes back to July 2026. Use this page to see whether a deal is really a good price, the lowest it has been, and how often it goes on special.</p>
   <div class="facts" id="facts"></div>
 </div></header>
@@ -155,6 +153,7 @@ function parseCSV(t){
 let ITEMS = [], WEEKS = [], LATEST = "";
 const state = {q:"", grp:"All", ret:"All", sort:"drop", now:false};
 try { Object.assign(state, JSON.parse(localStorage.getItem("ads-tracker") || "{}")); } catch(e){}
+try { const u = new URLSearchParams(location.search).get("q"); if (u){ Object.assign(state, {q:u, grp:"All", ret:"All", now:false}); } } catch(e){}
 const save = () => { try { localStorage.setItem("ads-tracker", JSON.stringify(state)); } catch(e){} };
 
 function build(rows){
