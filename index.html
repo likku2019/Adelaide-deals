@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en-AU">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adelaide Deal Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a weekly shelf-ticket wall — sticky filter bar, standout strip, ticket grid, then store-wide promos and the calendar of what drops next. */
+:root{
+  --paper:#F2F4F1; --card:#FFFFFF; --ink:#15223A; --muted:#5B6577; --line:#D8DDD6;
+  --ticket:#FFD43B; --ticket-ink:#15223A; --sale:#D3261D; --sale-ink:#FFFFFF; --focus:#1D5FD1;
+  --coles:#D71920; --woolies:#178841; --aldi:#0B3D7A; --costco:#005DAA; --brand:#15223A; --mall:#7A4FB8; --on-c:#FFFFFF; --kmart:#D5002B; --target:#B3001B; --bigw:#0046BE; --jb:#A67C00; --uniqlo:#E60012; --hm:#C8102E; --rundle:#00838F; --westfield:#C2185B; --burnside:#2E7D32; --bunnings:#0D6B4E; --cw:#C2185B; --hs:#8E1B3A; --otr:#E8590C; --skechers:#1F4FA0;
+  --hl1:#FFC9D0; --hl2:#FFE27A; --hl3:#D9C8FF; --hl4:#B8F0CF; --tl1:93%; --tl2:80%; --pink:#E8457A; --teal:#0E9E9A;
+  --display:"Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0E131B; --card:#161D29; --ink:#E7EBF1; --muted:#9AA4B4; --line:#283244;
+  --ticket:#F2C531; --ticket-ink:#15223A; --sale:#FF5C50; --sale-ink:#1A0E0D; --focus:#7FA8FF;
+  --coles:#FF5A5F; --woolies:#3CC172; --aldi:#6FA3E8; --costco:#5AA8F0; --brand:#E7EBF1; --mall:#B596E8; --on-c:#0E131B; --kmart:#FF5C7A; --target:#FF6B6B; --bigw:#6F9BFF; --jb:#F2C531; --uniqlo:#FF6B75; --hm:#FF6B80; --rundle:#4DD0DA; --westfield:#F06292; --burnside:#7BD47F; --bunnings:#4FC79A; --cw:#F06292; --hs:#E07A95; --otr:#FF9248; --skechers:#7FA6F0;  --hl1:#6B2633; --hl2:#6B5612; --hl3:#43356E; --hl4:#1F5A3B; --tl1:32%; --tl2:20%; --pink:#FF7AA6; --teal:#3FD3CD; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0E131B; --card:#161D29; --ink:#E7EBF1; --muted:#9AA4B4; --line:#283244;
+  --ticket:#F2C531; --ticket-ink:#15223A; --sale:#FF5C50; --sale-ink:#1A0E0D; --focus:#7FA8FF;
+  --coles:#FF5A5F; --woolies:#3CC172; --aldi:#6FA3E8; --costco:#5AA8F0; --brand:#E7EBF1; --mall:#B596E8; --on-c:#0E131B; --kmart:#FF5C7A; --target:#FF6B6B; --bigw:#6F9BFF; --jb:#F2C531; --uniqlo:#FF6B75; --hm:#FF6B80; --rundle:#4DD0DA; --westfield:#F06292; --burnside:#7BD47F; --bunnings:#4FC79A; --cw:#F06292; --hs:#E07A95; --otr:#FF9248; --skechers:#7FA6F0;  --hl1:#6B2633; --hl2:#6B5612; --hl3:#43356E; --hl4:#1F5A3B; --tl1:32%; --tl2:20%; --pink:#FF7AA6; --teal:#3FD3CD; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* masthead */
+header.mast{padding-block:28px 18px;border-bottom:3px solid var(--ink)}
+.mast-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px}
+h1{font-size:clamp(36px,7vw,68px);font-weight:900;font-stretch:72%;line-height:.92;letter-spacing:-.01em;text-transform:uppercase}
+h1 span{display:inline-block;background:var(--ticket);color:var(--ticket-ink);padding:0 .12em;transform:rotate(-1.5deg)}
+.week{font-family:var(--display);font-stretch:85%;font-weight:700;font-size:18px}
+.week small{display:block;font-family:var(--body);font-weight:500;font-size:13px;color:var(--muted)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* filter bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-block:12px}
+.chips{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;max-width:100%;padding-bottom:4px;scrollbar-width:thin}
+.chip{flex:none}
+.chip{appearance:none;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:600 13px var(--body);padding:6px 11px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip .dot{width:9px;height:9px;border-radius:50%;background:var(--c,var(--muted))}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin-left:auto}
+.controls input[type=search],.controls select{font:500 14px var(--body);color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;min-width:0}
+.controls input[type=search]{width:190px}
+.toggle{display:inline-flex;align-items:center;gap:6px;font:600 13px var(--body);background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}
+.toggle input{accent-color:var(--sale)}
+
+main section{padding-block:28px 8px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:14px}
+h2{font-size:28px;font-weight:850;font-stretch:78%;text-transform:uppercase;letter-spacing:.01em}
+.count{font-family:var(--mono);font-size:13px;color:var(--muted)}
+
+/* ticket grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.deal{background:var(--card);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.deal .top{display:flex;justify-content:space-between;gap:8px;padding:10px 12px 0;font-size:12px}
+.rt{font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.rt .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.cat{color:var(--muted);text-align:right}
+.deal h3{font-family:var(--body);font-weight:600;font-size:15px;line-height:1.3;padding:6px 12px 10px;flex:1}
+.deal .note{font-size:12px;color:var(--muted);padding:0 12px 10px;margin-top:-6px}
+.tkt{background:var(--ticket);color:var(--ticket-ink);display:flex;align-items:flex-end;justify-content:space-between;gap:8px;padding:8px 12px 10px;position:relative}
+.price{font-family:var(--display);font-weight:900;font-stretch:75%;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+.price sup{font-size:.5em;vertical-align:.7em;margin-right:1px}
+.price.txt{font-size:26px}
+.was{font-family:var(--mono);font-size:12px;text-align:right;line-height:1.35}
+.was s{opacity:.75}
+.flag{position:absolute;top:-11px;right:10px;background:var(--sale);color:var(--sale-ink);font-family:var(--display);font-weight:850;font-stretch:80%;font-size:13px;letter-spacing:.03em;padding:2px 8px;transform:rotate(2deg);text-transform:uppercase}
+.flag.sb{background:var(--ink);color:var(--paper)}
+.end{font-family:var(--mono);font-size:11px;color:var(--muted);padding:7px 12px;border-top:1px dashed var(--line)}
+.empty{padding:30px;text-align:center;color:var(--muted);border:1.5px dashed var(--line);border-radius:6px}
+
+/* standouts */
+.stand{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pick{border:2px solid var(--ink);border-radius:6px;padding:14px 14px 12px;background:var(--card);display:flex;flex-direction:column;gap:6px;min-width:0}
+.pick .big{font-family:var(--display);font-weight:900;font-stretch:75%;font-size:30px;line-height:1}
+.pick p{margin:0;font-size:14px;color:var(--muted)}
+
+/* promos */
+.promos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.store{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.store h3{font-size:22px;font-weight:850;font-stretch:80%;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.store h3 .dot{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.store .where{font-size:12px;color:var(--muted);margin:2px 0 8px}
+.store ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.store li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:7px 0;border-top:1px dashed var(--line);font-size:14px}
+.store li b{font-family:var(--display);font-stretch:80%;font-weight:850;font-size:16px;color:var(--sale);min-width:64px}
+.store li small{display:block;color:var(--muted);font-size:12px}
+
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.when{border-left:4px solid var(--ticket);background:var(--card);padding:10px 12px;border-radius:0 6px 6px 0}
+.when .d{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.when .w{font-weight:600}
+
+.notes{font-size:13px;color:var(--muted);max-width:75ch}
+.src{columns:2 280px;column-gap:28px;font-size:13px;padding-left:18px}
+.src li{break-inside:avoid;margin-bottom:4px}
+footer{padding-block:24px 40px;border-top:3px solid var(--ink);margin-top:28px}
+
+@media (max-width:640px){
+  .controls{margin-left:0;width:100%}
+  .controls input[type=search]{flex:1 1 150px;width:auto}
+  h2{font-size:24px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---------- colour layer ---------- */
+header.mast{background:var(--ticket);color:var(--ticket-ink);border-bottom:0;position:relative}
+header.mast .eyebrow,header.mast .week small,header.mast .facts{color:var(--ticket-ink);opacity:.8}
+header.mast .facts b{color:var(--ticket-ink)}
+h1 span{background:var(--sale);color:#fff;padding:0 .14em}
+h1 em{font-style:normal;color:var(--sale)}
+.ribbon{display:grid;grid-template-columns:repeat(8,1fr);height:8px}
+.ribbon i:nth-child(1){background:var(--coles)} .ribbon i:nth-child(2){background:var(--woolies)}
+.ribbon i:nth-child(3){background:var(--aldi)} .ribbon i:nth-child(4){background:var(--costco)}
+.ribbon i:nth-child(5){background:var(--pink)} .ribbon i:nth-child(6){background:var(--teal)}
+.ribbon i:nth-child(7){background:var(--mall)} .ribbon i:nth-child(8){background:var(--sale)}
+h2{display:inline;box-shadow:inset 0 -.38em 0 var(--hl,var(--hl2));padding:0 .1em}
+#standouts{--hl:var(--hl1)} #deals{--hl:var(--hl2)} #promos{--hl:var(--hl3)} #next{--hl:var(--hl4)}
+.chip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:var(--on-c)}
+.chip[data-r="All"][aria-pressed="true"]{color:var(--ticket-ink)}
+.chip[aria-pressed="true"] .dot{background:var(--on-c)}
+.deal{border:1.5px solid color-mix(in srgb,var(--c) 35%,var(--line));transition:transform .15s ease,box-shadow .15s ease}
+.deal:hover{transform:translateY(-3px);box-shadow:0 8px 20px -10px color-mix(in srgb,var(--c) 70%,transparent)}
+.rt.pill{background:var(--c);color:var(--on-c);padding:2px 9px 2px 7px;border-radius:999px;font-size:11.5px}
+.rt.pill .dot{background:var(--on-c);width:6px;height:6px}
+.pic{height:140px;margin:10px 12px 0;border-radius:6px;display:grid;place-items:center;overflow:hidden;position:relative;
+  background:radial-gradient(circle at 30% 25%,hsl(var(--h) 95% var(--tl1)),hsl(var(--h) 75% var(--tl2)))}
+.pic .emo{font-size:62px;line-height:1;filter:drop-shadow(0 4px 6px rgba(0,0,0,.18))}
+.pic img{width:100%;height:100%;object-fit:contain;background:#fff}
+.pic .approx{position:absolute;right:6px;bottom:5px;font:500 10px var(--mono);color:var(--ink);opacity:.55}
+.pick{border:2px solid var(--c);background:color-mix(in srgb,var(--c) 13%,var(--card));flex-direction:row;align-items:flex-start;gap:12px}
+.pick .emo{font-size:46px;line-height:1;flex:none}
+.pick .txt{display:flex;flex-direction:column;gap:5px;min-width:0}
+.pick .big{color:var(--c)}
+.store{border-top:6px solid var(--c)}
+.store h3{color:var(--c)}
+.when:nth-child(4n+1){border-left-color:var(--coles)} .when:nth-child(4n+2){border-left-color:var(--woolies)}
+.when:nth-child(4n+3){border-left-color:var(--mall)} .when:nth-child(4n){border-left-color:var(--teal)}
+footer{border-top:8px solid var(--ticket)}
+@media (prefers-reduced-motion:reduce){.deal:hover{transform:none}}
+
+/* store-type groups */
+.filters{display:flex;flex-direction:column;gap:8px;min-width:0;width:100%}
+.groups{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}
+.grp{flex:none;appearance:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;font:800 14px var(--display);font-stretch:85%;letter-spacing:.02em;text-transform:uppercase;
+  color:var(--ink);background:color-mix(in srgb,var(--g) 16%,var(--card));border:2px solid color-mix(in srgb,var(--g) 55%,transparent);border-radius:10px;padding:7px 12px}
+.grp .ic{font-size:18px;line-height:1}
+.grp .n{font:500 11px var(--mono);opacity:.75}
+.grp[aria-pressed="true"]{background:var(--g);border-color:var(--g);color:#fff}
+.grp[aria-pressed="true"] .n{opacity:.9}
+.chips .lbl{flex:none;align-self:center;font:500 11px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-right:2px}
+.pgroup{grid-column:1/-1;display:flex;align-items:center;gap:10px;margin-top:10px;font-family:var(--display);font-weight:850;font-stretch:80%;font-size:19px;text-transform:uppercase;color:var(--g)}
+.pgroup::after{content:"";flex:1;height:2px;background:color-mix(in srgb,var(--g) 40%,transparent)}
+.pgroup:first-child{margin-top:0}
+</style>
+
+<header class="mast"><div class="wrap">
+  <div class="mast-row">
+    <div>
+      <div class="eyebrow">Adelaide · South Australia · Weekly specials</div>
+      <h1>Adelaide <span>Deal Sheet</span></h1>
+    </div>
+    <div class="week">Week of Wed 21 – Tue 27 Oct 2026
+      <small>Compiled Wed 21 Oct 2026 · supermarket specials change every Wednesday</small>
+    </div>
+  </div>
+  <div class="facts" id="facts"></div>
+</div><div class="ribbon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></header>
+
+<div class="bar"><div class="wrap">
+  <div class="filters">
+    <div class="groups" id="groups" role="group" aria-label="Filter by store type"></div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by retailer"></div>
+  </div>
+  <div class="controls">
+    <label class="toggle" for="half"><input type="checkbox" id="half"> ½ price &amp; better</label>
+    <select id="cat" aria-label="Category"></select>
+    <select id="sort" aria-label="Sort">
+      <option value="save">Biggest % off</option>
+      <option value="dollars">Biggest $ saving</option>
+      <option value="low">Lowest price</option>
+      <option value="store">By retailer</option>
+    </select>
+    <input type="search" id="q" placeholder="Search e.g. coffee, Samba" aria-label="Search deals">
+  </div>
+</div></div>
+
+<main class="wrap">
+  <section id="standouts">
+    <div class="sec-head"><h2>This week's standouts</h2><span class="count">Hand-picked from all retailers</span></div>
+    <div class="stand" id="stand"></div>
+  </section>
+
+  <section id="deals">
+    <div class="sec-head"><h2>All deals</h2><span class="count" id="count"></span></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="promos">
+    <div class="sec-head"><h2>Store-wide sales &amp; mall offers</h2><span class="count">Fashion, sport, department store &amp; outlets</span></div>
+    <div class="promos" id="promoGrid"></div>
+  </section>
+
+  <section id="next">
+    <div class="sec-head"><h2>Coming up</h2><span class="count">Dates to plan around</span></div>
+    <div class="cal" id="cal"></div>
+  </section>
+
+  <footer>
+    <h2 style="font-size:20px;margin-bottom:8px">How this sheet is made</h2>
+    <p class="notes">Coles and Woolworths half-price lists come from the national weekly catalogue (published from the NSW edition). Half-price deals are almost always national, but some fresh and liquor prices differ in SA, so check the Coles or Woolworths app with your local store selected. ALDI Special Buys are while stocks last and can sell out on day one. Costco deals need a membership (Adelaide warehouse: Kilburn). Fashion prices are online prices on the day this was compiled and can change without notice. Kmart, Target, BIG W and JB Hi-Fi prices are from deals posted by shoppers on OzBargain in the past few weeks; they run while stocks last, so confirm in the app. H&M offers are as listed on Marie Claire's deals page. No current sale was found for Zara, MECCA or Cotton On's main brand. Harris Scarfe prices marked “HS Friends” need the free HS Friends membership. Laura Jones bags are sold through Strandbags. Bunnings and Chemist Warehouse prices are recent shopper-reported deals and can sell out.</p>
+    <h3 style="font-size:16px;margin:16px 0 8px;font-family:var(--body)">Sources</h3>
+    <ol class="src" id="src"></ol>
+  </footer>
+</main>
+
+<script>
+const RETAILERS = {
+  "Coles":{c:"var(--coles)"}, "Woolworths":{c:"var(--woolies)"}, "ALDI":{c:"var(--aldi)"},
+  "Costco":{c:"var(--costco)"}, "Nike":{c:"var(--brand)"}, "adidas":{c:"var(--brand)"},
+  "Myer":{c:"var(--brand)"}, "Kmart":{c:"var(--kmart)"}, "Target":{c:"var(--target)"}, "BIG W":{c:"var(--bigw)"},
+  "JB Hi-Fi":{c:"var(--jb)"}, "Uniqlo":{c:"var(--uniqlo)"}, "H&M":{c:"var(--hm)"}, "Cotton On / Typo":{c:"var(--brand)"},
+  "Zara":{c:"var(--brand)"}, "Sephora":{c:"var(--brand)"}, "MECCA":{c:"var(--brand)"},
+  "Harbour Town":{c:"var(--mall)"}, "Rundle Mall":{c:"var(--rundle)"}, "Westfield Tea Tree Plaza":{c:"var(--westfield)"},
+  "Westfield Marion":{c:"var(--westfield)"}, "Burnside Village":{c:"var(--burnside)"},
+  "Bunnings":{c:"var(--bunnings)"}, "Chemist Warehouse":{c:"var(--cw)"}, "Harris Scarfe":{c:"var(--hs)"},
+  "Strandbags":{c:"var(--brand)"}, "Guess":{c:"var(--brand)"}, "New Balance":{c:"var(--brand)"}, "Puma":{c:"var(--brand)"},
+  "Reebok":{c:"var(--brand)"}, "Skechers":{c:"var(--skechers)"}, "OTR":{c:"var(--otr)"}
+};
+const WK = "Ends Tue 27 Oct";
+// r = retailer, n = name, now/was = AUD, cat, end, tag ("sb" = ALDI Special Buy), note
+const DEALS = [
+ // ---- Coles (½ price, 21–27 Oct)
+ {r:"Coles",n:"Mayver's Upside Down Peanut Butter 450g (Smooth, Crunchy or Salted Caramel)",now:4.25,was:8.5,cat:"Pantry",note:"First ½-price Mayver's since 2024"},
+ {r:"Coles",n:"Fairy Platinum Dishwashing Tablets 52 pack",now:23,was:46,cat:"Household"},
+ {r:"Coles",n:"OMO Expert Wonder Wash Laundry Liquid 1.18L",now:10.5,was:21,cat:"Household"},
+ {r:"Coles",n:"Radiant Laundry Liquid 2L or Capsules 28 pack",now:11,was:22,cat:"Household"},
+ {r:"Coles",n:"Vanish NapiSan Oxi Action Gold Powder 2kg",now:18,was:36,cat:"Household"},
+ {r:"Coles",n:"Pine O Cleen Disinfectant Wipes 100 pack",now:6,was:12,cat:"Household"},
+ {r:"Coles",n:"Morning Fresh Dishwashing Liquid 400mL",now:3,was:6,cat:"Household"},
+ {r:"Coles",n:"Coca-Cola or Mt Franklin Sparkling 10 × 375mL",now:11.5,was:23,cat:"Drinks"},
+ {r:"Coles",n:"Coca-Cola, Fanta or Sprite 1.25L",now:2.25,was:4.5,cat:"Drinks"},
+ {r:"Coles",n:"Pepsi or Schweppes Sparkling Water 18 × 375mL",now:17.5,was:35,cat:"Drinks"},
+ {r:"Coles",n:"Red Bull Energy Drink 4 × 250mL",now:6.5,was:13,cat:"Drinks"},
+ {r:"Coles",n:"Twinings Tea Bags 80–100 pack or Sparkling Tea 4 pack",now:6.75,was:13.5,cat:"Drinks"},
+ {r:"Coles",n:"Nescafé Coffee Sachets 8–10 pack",now:4,was:8,cat:"Drinks"},
+ {r:"Coles",n:"I&J Raw Peeled Prawns Tail Off 500g",now:12,was:24,cat:"Meat & seafood"},
+ {r:"Coles",n:"Primo Middle Bacon (from the deli)",now:9.5,was:19,cat:"Meat & seafood"},
+ {r:"Coles",n:"KB's Tender Squid Chips or Salt & Pepper Squid 1kg",now:15.75,was:31.5,cat:"Frozen"},
+ {r:"Coles",n:"Birds Eye Air Baked Fish 250–380g",now:5.5,was:11,cat:"Frozen"},
+ {r:"Coles",n:"Peters Drumstick Cones 4–6 pack",now:4.95,was:9.9,cat:"Frozen"},
+ {r:"Coles",n:"Golden Fields Vegetable or Canola Oil 4L",now:17,was:34,cat:"Pantry"},
+ {r:"Coles",n:"Sharwood's Simmer Sauce 420g",now:2.5,was:5,cat:"Pantry"},
+ {r:"Coles",n:"Haldiram's Namkeens 200g",now:2.2,was:4.4,cat:"Pantry"},
+ {r:"Coles",n:"Doritos, Smith's Crinkle Cut or Red Rock Deli 290–380g",now:4.25,was:8.5,cat:"Snacks"},
+ {r:"Coles",n:"Arnott's Shapes 160–190g",now:2,was:4,cat:"Snacks"},
+ {r:"Coles",n:"Cadbury Favourites 686–700g",now:15,was:30,cat:"Snacks"},
+ {r:"Coles",n:"Cadbury Roses Tin 485g",now:15,was:30,cat:"Snacks"},
+ {r:"Coles",n:"Ferrero Collection Gift Box 24 pack",now:17.5,was:35,cat:"Snacks"},
+ {r:"Coles",n:"Maltesers 360g or Celebrations Gift Box 290g",now:7.75,was:15.5,cat:"Snacks"},
+ {r:"Coles",n:"Banana Boat Ultra Sunscreen Spray SPF50+ 175g",now:12,was:24,cat:"Health & beauty"},
+ {r:"Coles",n:"Nivea Sun Protect & Moisture SPF50+ 400mL",now:14,was:28,cat:"Health & beauty"},
+ {r:"Coles",n:"Bondi Sands Sunscreen Lotion SPF50+ 150mL",now:8.5,was:17,cat:"Health & beauty"},
+ {r:"Coles",n:"Head & Shoulders Shampoo or Conditioner 850mL",now:13.5,was:27,cat:"Health & beauty"},
+ {r:"Coles",n:"Colgate Advanced Whitening or Max Fresh Toothpaste 200g",now:5.5,was:11,cat:"Health & beauty"},
+ {r:"Coles",n:"Oral-B Vitality Pro Deep Clean Travel Toothbrush",now:45,was:90,cat:"Health & beauty"},
+ {r:"Coles",n:"Swisse Ultiboost Magnesium Glycinate 120 tablets",now:24.75,was:49.5,cat:"Health & beauty"},
+ {r:"Coles",n:"Ostelin Vitamin D3 1000IU 250 capsules",now:24.75,was:49.5,cat:"Health & beauty"},
+ {r:"Coles",n:"Huggies Baby Wipes 70–80 pack",now:2.75,was:5.5,cat:"Baby"},
+ {r:"Coles",n:"Fussy Cat Grainfree Dry Cat Food 2.5kg",now:13.25,was:26.5,cat:"Pet"},
+ {r:"Coles",n:"Sistema Nest It Meal Prep Containers 870mL 5 pack",now:8,was:16,cat:"Home"},
+ {r:"Coles",n:"NRG Batteries AA or AAA 24 pack",now:13.25,was:26.5,cat:"Home"},
+ {r:"Coles",n:"Telstra $54 SIM Kit",now:15,was:54,cat:"Phone & SIM"},
+ // ---- Woolworths (½ price, 21–27 Oct)
+ {r:"Woolworths",n:"Tegel Take Outs Buttermilk, Karaage or Korean Chicken 360–400g",now:6,was:12,cat:"Frozen",note:"Last ½ price 12 weeks ago"},
+ {r:"Woolworths",n:"OMO Wonder Wash Laundry Liquid 1.94L",now:16,was:32,cat:"Household"},
+ {r:"Woolworths",n:"Cold Power Liquid 2L, Powder 2kg or Capsules 29 pack",now:13,was:26,cat:"Household"},
+ {r:"Woolworths",n:"Fairy Platinum Dishwasher Tablets 52 pack",now:23,was:46,cat:"Household"},
+ {r:"Woolworths",n:"Morning Fresh Dishwashing Liquid 900mL",now:5,was:10,cat:"Household"},
+ {r:"Woolworths",n:"Domestos Multipurpose Bleach 1.25L",now:3.3,was:6.6,cat:"Household"},
+ {r:"Woolworths",n:"Quilton Classic 3 Ply Toilet Paper 8 pack",now:4.3,was:8.6,cat:"Household"},
+ {r:"Woolworths",n:"Coca-Cola Classic, Zero Sugar or Diet 12 × 300mL",now:12,was:24,cat:"Drinks"},
+ {r:"Woolworths",n:"Pepsi, Solo or Schweppes 10 × 375mL",now:10,was:20,cat:"Drinks"},
+ {r:"Woolworths",n:"V Energy Drink 4 × 250mL",now:6,was:12,cat:"Drinks"},
+ {r:"Woolworths",n:"Nescafé Blend 43 Coffee 140–150g",now:7.25,was:14.5,cat:"Drinks"},
+ {r:"Woolworths",n:"Moccona Coffee Sachets 8–10 pack",now:3.95,was:7.9,cat:"Drinks"},
+ {r:"Woolworths",n:"SunRice Jasmine Fragrant Rice 5kg",now:13.5,was:27,cat:"Pantry"},
+ {r:"Woolworths",n:"Alishaan Super Basmati Rice 5kg",now:16,was:32,cat:"Pantry"},
+ {r:"Woolworths",n:"La Gina Olive Oil 1L",now:13,was:26,cat:"Pantry"},
+ {r:"Woolworths",n:"Sanitarium Weet-Bix 575g",now:2.5,was:5,cat:"Pantry"},
+ {r:"Woolworths",n:"Uncle Tobys Plus or Nestlé Milo Cereal",now:4.75,was:9.5,cat:"Pantry"},
+ {r:"Woolworths",n:"Bibigo Dumplings or Bao Buns 279–320g",now:4.45,was:8.9,cat:"Frozen"},
+ {r:"Woolworths",n:"Bega Peanut Butter 470g",now:3.45,was:6.9,cat:"Pantry"},
+ {r:"Woolworths",n:"Maggi Noodle Cups 58–65g",now:1.25,was:2.5,cat:"Pantry"},
+ {r:"Woolworths",n:"Bulla Everyday or Variety Ice Cream Multipacks",now:5,was:10,cat:"Frozen"},
+ {r:"Woolworths",n:"Mars, Snickers or Twix Frozen Dessert Bars 5 pack",now:4.75,was:9.5,cat:"Frozen"},
+ {r:"Woolworths",n:"Cadbury Favourites 264–265g",now:7,was:14,cat:"Snacks"},
+ {r:"Woolworths",n:"Oreo Cookies 136–140g",now:1.6,was:3.2,cat:"Snacks"},
+ {r:"Woolworths",n:"Haribo Share Packs 200g",now:3,was:6,cat:"Snacks"},
+ {r:"Woolworths",n:"Blackmores Fish Oil 1000mg 400 capsules",now:30,was:60,cat:"Health & beauty"},
+ {r:"Woolworths",n:"Swisse Ultivite Men's or Women's Multivitamin 100 tablets",now:29.75,was:59.5,cat:"Health & beauty"},
+ {r:"Woolworths",n:"Centrum Advance 50+ Multivitamin 120 tablets",now:13.5,was:27,cat:"Health & beauty"},
+ {r:"Woolworths",n:"Dove Body Wash 1L",now:9.5,was:19,cat:"Health & beauty"},
+ {r:"Woolworths",n:"Dove Shampoo or Conditioner 850mL",now:9.75,was:19.5,cat:"Health & beauty"},
+ {r:"Woolworths",n:"Sukin Shampoo or Conditioner 1L",now:16,was:32,cat:"Health & beauty"},
+ {r:"Woolworths",n:"Neutrogena Hydro Boost Water Gel Moisturiser 50g",now:19,was:38,cat:"Health & beauty"},
+ {r:"Woolworths",n:"Oral-B Vitality Pro Rechargeable Toothbrush",now:34.5,was:69,cat:"Health & beauty"},
+ {r:"Woolworths",n:"Listerine Total Care Mouthwash 500mL",now:5,was:10,cat:"Health & beauty"},
+ {r:"Woolworths",n:"Huggies Baby Wipes 216–240 pack",now:7.25,was:14.5,cat:"Baby"},
+ {r:"Woolworths",n:"Bonds Men's Guy Front Trunk",now:12.5,was:25,cat:"Clothing"},
+ {r:"Woolworths",n:"Bonds Cushioned Socks 3 pack (men's or women's)",now:8,was:16,cat:"Clothing"},
+ {r:"Woolworths",n:"Vodafone $50 Starter Pack",now:17,was:50,cat:"Phone & SIM"},
+ // ---- ALDI Special Buys
+ {r:"ALDI",n:"Finish Dishwashing Tablets 70 pack",now:31.99,cat:"Household",tag:"sb",end:"From Wed 21 Oct · while stocks last"},
+ {r:"ALDI",n:"OMO Wonder Wash Laundry Liquid 1.94L",now:15.99,cat:"Household",tag:"sb",end:"From Wed 21 Oct · while stocks last",note:"4c under Woolworths' ½-price $16"},
+ {r:"ALDI",n:"Who Gives A Crap Toilet Tissue 12 pack",now:12.49,cat:"Household",tag:"sb",end:"From Wed 21 Oct · while stocks last"},
+ {r:"ALDI",n:"Febreze Fabric Refresher 800mL",now:7.49,cat:"Household",tag:"sb",end:"From Wed 21 Oct · while stocks last"},
+ {r:"ALDI",n:"Power Force Aluminium Foil 150m",now:15.99,cat:"Household",tag:"sb",end:"From Wed 21 Oct · while stocks last"},
+ {r:"ALDI",n:"The Fishmonger Fresh Salmon Skin On 720g",now:23.99,cat:"Meat & seafood",tag:"sb",end:"From Wed 21 Oct · while stocks last",note:"$33.32/kg"},
+ {r:"ALDI",n:"Perfecto RSPCA Marinated Butter Chicken Tenderloins 800g",now:11.99,cat:"Meat & seafood",tag:"sb",end:"From Wed 21 Oct · while stocks last",note:"$14.99/kg"},
+ {r:"ALDI",n:"Steggles Panko & Quinoa Chicken Schnitzel 4 pack 600g",now:8.99,cat:"Meat & seafood",tag:"sb",end:"From Wed 21 Oct · while stocks last"},
+ {r:"ALDI",n:"Basmati Rice 5kg",now:14.99,cat:"Pantry",tag:"sb",end:"From Wed 21 Oct · while stocks last",note:"Cheaper than Woolworths' ½-price Alishaan ($16)"},
+ {r:"ALDI",n:"Ferrero Rocher 200g",now:10.49,cat:"Snacks",tag:"sb",end:"From Wed 21 Oct · while stocks last"},
+ {r:"ALDI",n:"Aperol Spritz Gift Pack",now:44.99,cat:"Liquor",tag:"sb",end:"From Wed 21 Oct · while stocks last"},
+ {r:"ALDI",n:"Easy Home LED Ceiling Fan with Remote",now:139,cat:"Home",tag:"sb",end:"From Wed 21 Oct · while stocks last"},
+ {r:"ALDI",n:"Ferrex 20V Hammer Drill & Impact Driver Kit",now:99.99,cat:"Tools & garden",tag:"sb",end:"On sale Sat 24 Oct"},
+ {r:"ALDI",n:"Ferrex 20V Cordless Mower Kit (2 batteries)",now:229,cat:"Tools & garden",tag:"sb",end:"On sale Sat 24 Oct"},
+ {r:"ALDI",n:"Cordless Robotic Pool Cleaner",now:499,cat:"Tools & garden",tag:"sb",end:"On sale Sat 24 Oct"},
+ {r:"ALDI",n:"Power Force Cordless Pool Vacuum",now:99,cat:"Tools & garden",tag:"sb",end:"On sale Sat 24 Oct"},
+ {r:"ALDI",n:"Gardenline Irrigation Kits",now:24.99,cat:"Tools & garden",tag:"sb",end:"On sale Sat 24 Oct"},
+ {r:"ALDI",n:"Rocky Point Garden Fertiliser 6kg",now:19.99,cat:"Tools & garden",tag:"sb",end:"On sale Sat 24 Oct"},
+ {r:"ALDI",n:"Step2 Splash Table",now:99.99,cat:"Kids & toys",tag:"sb",end:"On sale Sat 24 Oct"},
+ {r:"ALDI",n:"Little Town Outdoor Mud Kitchen",now:49.99,cat:"Kids & toys",tag:"sb",end:"On sale Sat 24 Oct"},
+ // ---- Costco
+ {r:"Costco",n:"Sony WH-1000XM5 Noise Cancelling Headphones",now:299.99,cat:"Electronics",end:"Ends 29 Oct · delivered"},
+ {r:"Costco",n:"LG 34\" UltraGear 34G600A 160Hz Curved Monitor",now:449.99,cat:"Electronics",end:"Ends 22 Oct · delivered"},
+ {r:"Costco",n:"MacBook Air 15\" M5, 24GB RAM, 1TB",now:2999,cat:"Electronics",end:"While stocks last",note:"Officeworks will price-beat to about $2,850"},
+ {r:"Costco",n:"LEGO Pokémon Eevee 72151",now:39.99,cat:"Kids & toys",end:"Ends 26 Oct · in-store"},
+ {r:"Costco",n:"LEGO Scuderia Ferrari HP Helmet (Leclerc or Hamilton)",now:69.99,cat:"Kids & toys",end:"Ends 23 Nov · in-store"},
+ {r:"Costco",n:"adidas Originals Project Two Strap Watch",now:49.97,cat:"Clothing",end:"While stocks last · delivered"},
+ // ---- Nike (online sale, further markdowns)
+ {r:"Nike",n:"Nike SB Dunk Low Pro Skate Shoes",now:108,was:180,cat:"Footwear",end:"Online sale · while stocks last"},
+ {r:"Nike",n:"Nike Air Force 1 Older Kids' Shoes",now:90,was:150,cat:"Footwear",end:"Online sale · while stocks last"},
+ {r:"Nike",n:"Air Jordan 4 'Toro' Men's",now:203,was:290,cat:"Footwear",end:"Online sale · while stocks last"},
+ {r:"Nike",n:"Nike Metcon 10 Women's Training Shoes",now:140,was:200,cat:"Footwear",end:"Online sale · while stocks last"},
+ {r:"Nike",n:"Nike Free Metcon 7 Women's",now:133,was:190,cat:"Footwear",end:"Online sale · while stocks last"},
+ {r:"Nike",n:"Nike G.T. Cut 4 'Wembanyama' Basketball Shoes",now:156,was:260,cat:"Footwear",end:"Online sale · while stocks last"},
+ {r:"Nike",n:"Nike Air Max 95 Big Bubble Premium",now:182,was:260,cat:"Footwear",end:"Online sale · while stocks last"},
+ {r:"Nike",n:"Nike Pro Women's 2-in-1 Shorts",now:36,was:60,cat:"Clothing",end:"Online sale · while stocks last"},
+ {r:"Nike",n:"Nike Zenvy Women's High-Waisted Biker Shorts",now:51,was:85,cat:"Clothing",end:"Online sale · while stocks last"},
+ // ---- adidas outlet
+ {r:"adidas",n:"Handball Spezial Women's (red)",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/154f6391602c476b87dde3adf24c8a36_9366/Handball_Spezial_Shoes_Red_JR3607_00_plp_standard.jpg",now:85,was:170,cat:"Footwear",end:"Outlet · while stocks last"},
+ {r:"adidas",n:"Gazelle Lo Pro Women's",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/c14012cd00244a6185ba619e2d4d92ff_9366/Gazelle_Lo_Pro_Shoes_Red_JR5744_00_plp_standard.jpg",now:108,was:180,cat:"Footwear",end:"Outlet · while stocks last"},
+ {r:"adidas",n:"Samba OG Women's (silver)",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/a1bf1e42ec4147f28d7514413ad1a5b6_9366/SAMBA_OG_SHOES_Silver_KI9386_00_plp_standard.jpg",now:117,was:180,cat:"Footwear",end:"Outlet · while stocks last"},
+ {r:"adidas",n:"Samba OG Men's (brown)",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/b6415450d5b344eeb98ba3e9e4f8c57e_9366/Samba_OG_Shoes_Brown_JR0892_00_plp_standard.jpg",now:126,was:180,cat:"Footwear",end:"Outlet · while stocks last"},
+ {r:"adidas",n:"Copa Mundial Firm Ground Boots",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/8f2204188e544933ab681c1a847f8387_9366/Copa_Mundial_Firm_Ground_Boots_Black_JP6693_22_model.jpg",now:196,was:280,cat:"Footwear",end:"Outlet · while stocks last"},
+ {r:"adidas",n:"Galaxy 7 Women's Running Shoes",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/0ab206aad4114be4811c8c0fc87e4645_9366/Galaxy_7_Running_Shoes_Black_ID8764_HM1.jpg",now:70,was:100,cat:"Footwear",end:"Outlet · while stocks last"},
+ {r:"adidas",n:"Runfalcon 5 Men's Running Shoes",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/4003a918d1844ba99ae1f1c1217e1ae1_9366/Runfalcon_5_Running_Shoes_White_JQ6977_HM1.jpg",now:75,was:100,cat:"Footwear",end:"Outlet · while stocks last"},
+ {r:"adidas",n:"Adilette Comfort Slides",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/48134fdf23014575a617ad6e00cbe74a_9366/Adilette_Comfort_Slides_Blue_GZ5892_00_plp_standard.jpg",now:40,was:50,cat:"Footwear",end:"Outlet · while stocks last"},
+ // ---- Myer
+ {r:"Myer",n:"Dyson Wash G1 2-in-1 Hard Floor Cleaner",now:399,was:999,cat:"Home",end:"While stocks last"},
+ {r:"Myer",n:"De'Longhi Stainless Steel Milk Frothing Jug 350mL",now:13.99,cat:"Home",end:"Ends 1 Nov",note:"30% off at Myer (Amazon matches)"},
+ // ---- Kmart
+ {r:"Kmart",n:"Women's Backstrap Clogs",now:3,was:15,cat:"Footwear",end:"While stocks last"},
+ {r:"Kmart",n:"GreenLife 6-Piece Ceramic-Coated Bakeware Set",now:49,was:79,cat:"Home",end:"While stocks last"},
+ {r:"Kmart",n:"Collapsible Pop Up Clothes Airer",now:15,was:39,cat:"Home",end:"While stocks last",note:"Also at Target"},
+ {r:"Kmart",n:"Anko 4L/5L Cast Iron Casserole or 10L Stock Pot",now:12,cat:"Home",end:"While stocks last"},
+ {r:"Kmart",n:"BIC Cristal Ballpoint Pens 50 pack",now:10,was:20,cat:"Home",end:"While stocks last"},
+ {r:"Kmart",n:"Carbon Fibre Badminton Racket + Case",now:29,cat:"Sport",end:"While stocks last"},
+ // ---- Target
+ {r:"Target",n:"Marvel's Spider-Man 2 (PS5)",now:49,was:99,cat:"Gaming",end:"While stocks last · online"},
+ {r:"Target",n:"Mario Kart World (Switch 2)",now:95,cat:"Gaming",end:"While stocks last",note:"$85 with Target's $10 newsletter voucher"},
+ {r:"Target",n:"Pokémon GO Plus +",now:74,cat:"Gaming",end:"While stocks last",note:"$64 with $10 newsletter voucher"},
+ {r:"Target",n:"Xbox Wireless Controller – Robot White",now:79,cat:"Gaming",end:"Delivered only"},
+ {r:"Target",n:"Nintendo Talking Flower",now:29,cat:"Gaming",end:"While stocks last"},
+ // ---- BIG W
+ {r:"BIG W",n:"Cadbury Variety Jumbo Chocolate Box 1.56kg (110 pieces)",now:29,was:58,cat:"Snacks",end:"While stocks last"},
+ {r:"BIG W",n:"Shark PowerPro Cordless Stick Vacuum IZ370H",now:274,cat:"Home",end:"While stocks last · delivered"},
+ {r:"BIG W",n:"Moki Exo Bluetooth Headphones",now:17,was:49,cat:"Electronics",end:"While stocks last"},
+ {r:"BIG W",n:"LEGO 77078 Fortnite Mecha Team Leader",now:161,was:269,cat:"Kids & toys",end:"Selected locations"},
+ {r:"BIG W",n:"Skip Hop Silver Lining Cloud Activity Gym",now:149,was:199,cat:"Baby",end:"While stocks last"},
+ {r:"BIG W",n:"Quilton 3-Ply Toilet Tissue 48 rolls",now:23,cat:"Household",end:"Long-running price"},
+ // ---- JB Hi-Fi
+ {r:"JB Hi-Fi",n:"Blaupunkt 55\" 4K UHD Smart TV",now:399,cat:"Electronics",end:"While stocks last"},
+ {r:"JB Hi-Fi",n:"TCL 98\" P7K 4K QLED Google TV",now:2488,cat:"Electronics",end:"Delivered, select areas"},
+ {r:"JB Hi-Fi",n:"Honor 600 5G 256GB",now:699,was:999,cat:"Electronics",end:"While stocks last"},
+ {r:"JB Hi-Fi",n:"JBL Live Beam 3 True Wireless Earbuds",now:99,cat:"Electronics",end:"While stocks last"},
+ {r:"JB Hi-Fi",n:"JBL Tune 520BT On-Ear Headphones",now:39.95,cat:"Electronics",end:"While stocks last"},
+ {r:"JB Hi-Fi",n:"Winix Compact 360 5-Stage Air Purifier",now:199,cat:"Home",end:"While stocks last"},
+ {r:"JB Hi-Fi",n:"Helldivers 2 (PS5)",now:24,cat:"Gaming",end:"While stocks last"},
+ {r:"JB Hi-Fi",n:"Battlefield 6 (PS5 / Xbox Series X)",now:39,cat:"Gaming",end:"While stocks last"},
+ // ---- Uniqlo
+ {r:"Uniqlo",n:"Men's PUFFTECH Parka",now:59.9,was:99.9,cat:"Clothing",end:"While stocks last",note:"Free click & collect or $75+ delivery"},
+ // ---- Typo (Cotton On Group)
+ {r:"Cotton On / Typo",n:"Typo Metro Tote (River Gum)",now:25,was:59.99,cat:"Home",end:"Typo sale"},
+ {r:"Cotton On / Typo",n:"Typo Cloud Lamp",now:30,was:69.99,cat:"Home",end:"Typo sale"},
+ {r:"Cotton On / Typo",n:"Typo Box of Socks (stripes)",now:20,was:39.99,cat:"Clothing",end:"Typo sale"},
+ {r:"Cotton On / Typo",n:"Typo Pro 14\" Laptop Case",now:20,was:39.99,cat:"Home",end:"Typo sale"},
+ // ---- Bunnings
+ {r:"Bunnings",n:"Char-Griller Akorn Jr Kamado Grill & Smoker",now:148,was:248,cat:"Tools & garden"},
+ {r:"Bunnings",n:"Charbroil Outdoor Air Fryer",now:99,was:195,cat:"Tools & garden"},
+ {r:"Bunnings",n:"DeWALT 18V XR Brushless Line Trimmer 5.0Ah Kit",now:249,was:299,cat:"Tools & garden"},
+ {r:"Bunnings",n:"Ozito PXC 36V Brushless 410mm Lawn Mower Kit",now:229,cat:"Tools & garden"},
+ {r:"Bunnings",n:"Ozito PXC 18V 4.0Ah Battery & Charger Pack",now:39.98,cat:"Tools & garden"},
+ {r:"Bunnings",n:"VoltX 2400W 2240Wh LiFePO4 Power Station",now:1199.2,cat:"Electronics",note:"Sold via Bunnings Marketplace"},
+ {r:"Bunnings",n:"Dyson V8 Advanced Cordless Vacuum + Car Cleaning Kit",now:319,cat:"Home"},
+ {r:"Bunnings",n:"Arlo Wired Security Floodlight & 2K Camera",now:49,cat:"Home"},
+ {r:"Bunnings",n:"eero 6 Mesh Wi-Fi 6 Router 3-pack",now:199,cat:"Electronics"},
+ {r:"Bunnings",n:"Selleys BBQ Tough Wipes 30 pack",now:5.89,was:10.49,cat:"Household"},
+ {r:"Bunnings",n:"Heat Beads Original BBQ Briquettes 7.5kg",now:12.38,cat:"Tools & garden"},
+ {r:"Bunnings",n:"DampFree Disposable Moisture Absorbers 2 pack",now:2.95,cat:"Household"},
+ // ---- Chemist Warehouse
+ {r:"Chemist Warehouse",n:"Musashi 100% Whey Protein 2kg",now:77.49,cat:"Health & beauty"},
+ {r:"Chemist Warehouse",n:"INC Plant Protein 1kg",now:26.99,cat:"Health & beauty",note:"2kg $44.99"},
+ {r:"Chemist Warehouse",n:"NeilMed Sinus Rinse 120 sachets",now:15.99,cat:"Health & beauty"},
+ {r:"Chemist Warehouse",n:"King C. Gillette Safety Razor + 5 Blades",now:14.94,cat:"Health & beauty"},
+ {r:"Chemist Warehouse",n:"Earth Choice Dishwashing Powder 1kg",now:6.49,cat:"Household",note:"42 tablets $12.39"},
+ {r:"Chemist Warehouse",n:"Bambi Mini Co. Baby Singlet Suits & Onesies",now:4.99,cat:"Baby"},
+ // ---- Harris Scarfe (HS Friends prices)
+ {r:"Harris Scarfe",n:"My Genie IQ500 Laser Smart Robotic Vacuum",now:269.99,was:1799.99,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP667980001-black.jpg",note:"HS Friends price (free to join)"},
+ {r:"Harris Scarfe",n:"Smith + Nobel Deluxe Digital Slushie Maker",now:199.99,was:499.99,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP667454001-black.jpg",note:"HS Friends price"},
+ {r:"Harris Scarfe",n:"Shark Cordless Pro Stick Vacuum IR300",now:289.99,was:749.99,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP652868-nc.jpg"},
+ {r:"Harris Scarfe",n:"Tefal Enhance 6-Piece Induction Cookware Set",now:149.99,was:399.99,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP643701-nc.jpg",note:"HS Friends price"},
+ {r:"Harris Scarfe",n:"Scanpan Impact 6-Piece Stainless Cookware Set",now:289.99,was:729.95,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP507004-nc.jpg",note:"HS Friends price"},
+ {r:"Harris Scarfe",n:"Smith + Nobel 10L XL Stainless Air Fryer",now:99.99,was:249.99,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP625764-nc.jpg",note:"HS Friends price"},
+ {r:"Harris Scarfe",n:"Ramesses 1000GSM Bamboo Mattress Topper",now:74.99,was:239.99,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP541067001-white.jpg",note:"HS Friends price"},
+ {r:"Harris Scarfe",n:"Nordic Portable Ice Maker",now:99.99,was:199.99,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP659655-nc.jpg",note:"HS Friends price"},
+ // ---- Strandbags (incl. Laura Jones)
+ {r:"Strandbags",n:"Laura Jones Scarf Tote Bag",now:39.99,was:79.99,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0556/2643/2670/files/3229556_1_400x.png?v=1786895398"},
+ {r:"Strandbags",n:"Laura Jones Embossed Large Clutch Wallet",now:24.99,was:49.99,cat:"Bags",note:"Further markdown"},
+ {r:"Strandbags",n:"Cabrelli 3 Compartment Tote Bag",now:29.99,was:59.99,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0556/2643/2670/files/3229761_1_400x.jpg?v=1792020319"},
+ {r:"Strandbags",n:"Guess Matilda Shoulder Bag",now:89,was:149,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0556/2643/2670/files/3226547_1_400x.png?v=1786893789"},
+ {r:"Strandbags",n:"Antler Urban Light Large Backpack",now:79,was:149,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0556/2643/2670/files/3224134_1_400x.png?v=1775101532",note:"Further markdown"},
+ {r:"Strandbags",n:"Samsonite Lite-Geo 15.6\" Backpack",now:99,was:185,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0556/2643/2670/files/3226088_1_400x.png?v=1786893167"},
+ {r:"Strandbags",n:"Evity Noosa Travel Tote Bag",now:71.2,was:179,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0556/2643/2670/files/3227567_1_400x.png?v=1774314875"},
+ {r:"Strandbags",n:"Flylite Dahlia 80cm Check-in Suitcase",now:121.5,was:270,cat:"Bags",end:"Delivered"},
+ // ---- Guess
+ {r:"Guess",n:"Guess Little Bay Mini Crossbody Bag (black)",now:95,was:159,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0274/5620/8968/files/LITTLE_BAY_DEVEL-Front.jpg?v=1761536340&width=400"},
+ {r:"Guess",n:"Guess Logo Carrie Top Zip Shoulder Bag (brown)",now:125,was:179,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0274/5620/8968/files/GP989818-ESL-ALT1.jpg?v=1768903345&width=400"},
+ {r:"Guess",n:"Guess Gregoria Top Zip Shoulder Bag (black)",now:118,was:169,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0274/5620/8968/files/BG854617_BLA_GREGORIA_F.jpg?v=1771465508&width=400"},
+ {r:"Guess",n:"Guess Isobel Mini Shoulder Bag (black)",now:104,was:149,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0274/5620/8968/files/BG993272_BLA_ISOBEL_F.jpg?v=1769522710&width=400"},
+ {r:"Guess",n:"Guess Logo Jessa Large Zip Around Wallet",now:76,was:109,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0274/5620/8968/files/JG8362146_LTL_JESSA_F.jpg?v=1769555020&width=400"},
+ // ---- New Balance
+ {r:"New Balance",n:"New Balance ABZORB 2000 (unisex)",now:100,was:200,cat:"Footwear",img:"https://nb.scene7.com/is/image/NB/u2000etb_nb_02_i?$pdpflexf2$&wid=440&hei=440"},
+ {r:"New Balance",n:"New Balance Ellipse Breathe Men's",now:120,was:240,cat:"Footwear",img:"https://nb.scene7.com/is/image/NB/melps6qr_nb_02_i?$pdpflexf2$&wid=440&hei=440"},
+ {r:"New Balance",n:"New Balance Fresh Foam X 880v15 Men's",now:161,was:230,cat:"Footwear",img:"https://nb.scene7.com/is/image/NB/m880k15_nb_02_i?$pdpflexf2$&wid=440&hei=440"},
+ {r:"New Balance",n:"New Balance Fresh Foam X 880v15 Women's",now:161,was:230,cat:"Footwear",img:"https://nb.scene7.com/is/image/NB/w880w15_nb_02_i?$pdpflexf2$&wid=440&hei=440"},
+ {r:"New Balance",n:"New Balance 204L (unisex)",now:114,was:190,cat:"Footwear"},
+ // ---- Reebok
+ {r:"Reebok",n:"Reebok World 70 Women's",now:69,was:100,cat:"Footwear",img:"https://cdn.shopify.com/s/files/1/0617/9894/0836/files/RBK152945_FQA_SQR-GREY-02.jpg?v=1770761563&width=600",note:"$69 Kicks offer"},
+ {r:"Reebok",n:"Reebok Classic AZ Women's",now:69,was:140,cat:"Footwear",note:"$69 Kicks offer"},
+ {r:"Reebok",n:"Reebok Match Prime V2",now:69,was:100,cat:"Footwear",note:"$69 Kicks offer"},
+ {r:"Reebok",n:"Reebok Floatzig 2 Running Shoes (men's & women's)",now:129,was:220,cat:"Footwear",note:"$129 Floats offer"},
+ {r:"Reebok",n:"Reebok Floatzig Double Running Shoes",now:129,was:240,cat:"Footwear",note:"$129 Floats offer"},
+ // ---- Skechers
+ {r:"Skechers",n:"Skechers Slip-ins Ultra Flex 3.0 – Pure Color (women's)",now:39.99,was:159.99,cat:"Footwear",img:"https://www.skechers.com.au/media/catalog/product/cache/90374ea3daa233ca866ad63ea2e4bc7c/1/5/150447_mve_01.jpg?auto=webp&quality=85&format=pjpg&width=400&fit=cover"},
+ {r:"Skechers",n:"Skechers Slip-ins GO Walk Flex – Illuminate (women's)",now:59.99,was:129.99,cat:"Footwear",img:"https://www.skechers.com.au/media/catalog/product/cache/90374ea3daa233ca866ad63ea2e4bc7c/1/4/141481_peri_01.jpg?auto=webp&quality=85&format=pjpg&width=400&fit=cover"},
+ {r:"Skechers",n:"Skechers Slip-ins Work Max Cushioning Elite – Eltra (women's)",now:99.99,was:169.99,cat:"Footwear",img:"https://www.skechers.com.au/media/catalog/product/cache/90374ea3daa233ca866ad63ea2e4bc7c/1/0/108172_gry_01.jpg?auto=webp&quality=85&format=pjpg&width=400&fit=cover"},
+ {r:"Skechers",n:"Skechers GO Walk Flex Sandal – Holly (women's)",now:59.99,was:99.99,cat:"Footwear",img:"https://www.skechers.com.au/media/catalog/product/cache/90374ea3daa233ca866ad63ea2e4bc7c/1/4/141459_mve_01.jpg?auto=webp&quality=85&format=pjpg&width=400&fit=cover"},
+ {r:"Skechers",n:"Skechers Slip-ins GO Walk Flex Sandal – Enticing (women's)",now:54.99,was:129.99,cat:"Footwear",img:"https://www.skechers.com.au/media/catalog/product/cache/90374ea3daa233ca866ad63ea2e4bc7c/1/4/141482_blsh_01.jpg?auto=webp&quality=85&format=pjpg&width=400&fit=cover"},
+ {r:"Skechers",n:"Skechers Slip-ins GO Walk Arch Fit 2.0 Sandal – Sasha",now:84.99,was:139.99,cat:"Footwear",img:"https://www.skechers.com.au/media/catalog/product/cache/90374ea3daa233ca866ad63ea2e4bc7c/1/4/140892_blsh_01.jpg?auto=webp&quality=85&format=pjpg&width=400&fit=cover"},
+ // ---- OTR
+ {r:"OTR",n:"Moe's BBQ Bacon Hot Dog",now:5,cat:"Food & coffee",end:"OTR stores · while offer runs"},
+ {r:"OTR",n:"Krispy Kreme Assorted Doughnuts 4 pack",now:10,cat:"Food & coffee",end:"OTR stores · while offer runs"},
+ {r:"OTR",n:"EAT Slice with any C Coffee",now:2.5,cat:"Food & coffee",end:"OTR stores · while offer runs"},
+];
+
+const PROMOS = [
+ {r:"Harris Scarfe",where:"Marion, Tea Tree Plaza, Elizabeth & more · HS Friends prices",items:[
+   ["60%","Stanley Rogers cutlery (full price)",""],
+   ["50%","Tontine, Scanpan, Tefal cookware, Ardor, GreenPan (full price)","Excludes clearance"],
+   ["40%","Maxwell & Williams, Dri Glo (full price)",""],
+   ["30%","Berlei bras & underwear",""],
+   ["20%","Ninja, Russell Hobbs, De'Longhi appliances",""],
+   ["$10","Off your first order when you join HS Friends (free)",""]]},
+ {r:"Strandbags",where:"Rundle Mall, Marion, Tea Tree Plaza & more · includes Laura Jones",items:[
+   ["≤50%","Sale on 100+ bags & luggage","Further markdowns on Antler, Evity, Laura Jones"],
+   ["10%","Off with sign-up code WELCOME10",""]]},
+ {r:"Guess",where:"Rundle Mall, Harbour Town · guess.com.au",items:[
+   ["20–40%","Handbag & wallet sale, 358 styles","Most bags 30% off"]]},
+ {r:"New Balance",where:"newbalance.com.au · Harbour Town outlet",items:[
+   ["≤50%","Clearance sale, 260 styles","ABZORB 2000, Ellipse, 880v15"]]},
+ {r:"Puma",where:"au.puma.com",items:[
+   ["≤50%","October flash sale","Edits under $50, Speedcat up to 30% off"]]},
+ {r:"Reebok",where:"reebok.com.au",items:[
+   ["$69","Kicks: World 70, Classic AZ, Match Prime","Limited time"],
+   ["$129","Floatzig running shoes","Were $220–$240"],
+   ["30–40%","Apparel: buy 2 save 30%, buy 3 save 40%",""]]},
+ {r:"Skechers",where:"Marion, Tea Tree Plaza, Harbour Town · skechers.com.au",items:[
+   ["Sale","615 styles on sale, many Slip-ins","Free express delivery on $150+"]]},
+ {r:"Bunnings",where:"All SA stores",items:[
+   ["Free","Delivery with OnePass, or click & collect",""],
+   ["Price","Lowest price guarantee — beats competitors' prices by 10%","Bring proof of the cheaper price"]]},
+ {r:"Chemist Warehouse",where:"All SA stores",items:[
+   ["+10%","Price match plus 10% off the difference",""],
+   ["Free","Shipping on prescriptions",""]]},
+ {r:"OTR",where:"SA service stations · OTR app",items:[
+   ["App","App-only deals on coffee, food, car wash & fuel","Earn Flybuys points"],
+   ["$5","Moe's BBQ Bacon Dog",""],["$2.50","EAT slice with any C Coffee",""]]},
+ {r:"Westfield Tea Tree Plaza",where:"Modbury · Westfield app offers",items:[
+   ["40%","Adairs Linen Lovers event","40% off full price, 20% off clearance linen"],
+   ["30–50%","Lowes menswear","Plus 20% off school wear"],
+   ["$85","Lorna Jane Flashdance pants","Limited time (20% off)"],
+   ["3 for 2","Swarovski Crystal Lover's Week","Buy two, get a third free · until 25 Oct"],
+   ["Bonus","Timezone & Zone Bowling","Load $60 or $100 for bonus credit + Hello Kitty plush"],
+   ["Sale","Myer summer home essentials sale",""],
+   ["Win","$1K shopping spree + styling session","Enter daily in the Westfield app until 31 Oct"]]},
+ {r:"Westfield Marion",where:"Oaklands Park · Westfield app offers",items:[
+   ["≤30%","Adore Beauty 'Adore Frenzy'","Limited time"],
+   ["40%","Adairs Linen Lovers event","40% off full price, 20% off clearance linen"],
+   ["3 for 2","Swarovski Crystal Lover's Week","Until 25 Oct"],
+   ["2 for 1","SkinKandy piercings","One day only — check in-centre"],
+   ["New","Uniqlo UT Pokémon 30th anniversary range",""],
+   ["Win","$1K shopping spree + styling session","Enter daily in the Westfield app until 31 Oct"]]},
+ {r:"Rundle Mall",where:"Adelaide CBD",items:[
+   ["50%","David Jones Sealy & Tempur beds","Excludes Haynes by Sealy & floor stock"],
+   ["≤60%","Shiels gifts & jewellery",""],
+   ["3 for 2","Swarovski Crystal Lover's Week","Until 25 Oct"],
+   ["50%","Specsavers lens options","Until 5 Dec"],
+   ["$65","Lorna Jane Amy sports bra","Until 2 Nov"],
+   ["Fri 30","Gathered Market in the Mall","30 Oct, 9am–9pm"]]},
+ {r:"Burnside Village",where:"Glynde/Burnside · Portrush Rd",items:[
+   ["≤50%","Hype DC selected styles",""],["≤50%","Gorman",""],["≤50%","Bed Bath N' Table",""],
+   ["≤50%","Saba selected styles",""],["+40%","Unison selected styles",""],["≤40%","Portmans",""],
+   ["≤40%","Le Creuset",""],["≤30%","Jurlique selected products",""],["+20%","Smiggle sale items",""],
+   ["Gift","Georg Jensen wine glass set","With $1,000+ spend · 15–25 Oct"]]},
+ {r:"Kmart",where:"Online + stores (e.g. Firle, Marion, Tea Tree Plaza)",items:[
+   ["Free","Click & collect, or delivery on $65+ orders","OnePass members get free delivery"]]},
+ {r:"Target",where:"Online + stores",items:[
+   ["$10","Off when you sign up to the Target newsletter","Used on the game deals above"]]},
+ {r:"BIG W",where:"Online + stores",items:[
+   ["$10","Off a $75+ online order with Inner Circle sign-up",""],
+   ["New","Catalogue starts Thu 29 Oct",""]]},
+ {r:"JB Hi-Fi",where:"Rundle Mall, Marion, Tea Tree Plaza & more",items:[
+   ["2 for $30","Selected Blu-rays","Also 2 for $20 DVD/Blu-ray, 2 for $50 4K"],
+   ["$99","Google Pixel 11 Pro XL 256GB","With a JB Hi-Fi Mobile plan + port-in, in-store only"],
+   ["$10","Voucher for joining JB Perks",""]]},
+ {r:"H&M",where:"Rundle Mall, Marion, Tea Tree Plaza · hm.com/au",items:[
+   ["≤60%","H&M sale, 1000s of styles","As reported by Marie Claire's deals page"],
+   ["60%","Selected kids' clothing","Until 23 Oct"],
+   ["60%","Selected women's trousers","Until 26 Oct"],
+   ["20–50%","Cardigans & jumpers",""],
+   ["10%","Off your first order when you join (free)",""]]},
+ {r:"Cotton On / Typo",where:"Cotton On Group stores",items:[
+   ["25%","Typo: everything Christmas","Ornaments, decor, cards & wrap"],
+   ["50%","Typo drink bottles",""],
+   ["Free","Delivery on orders $75+",""],
+   ["—","No main Cotton On sale found this week",""]]},
+ {r:"Uniqlo",where:"Rundle Mall, Marion, Burnside Village",items:[
+   ["$59.90","Men's PUFFTECH Parka","Was $99.90"],["$5","Off a $50+ online order for new app members",""]]},
+ {r:"Sephora",where:"Rundle Mall · sephora.com.au",items:[
+   ["—","No store-wide sale running this week","Beauty Pass member sale expected in November"],
+   ["12%","Off first app order over $100","Beauty Pass members, code APPNEW12 · excludes Dyson & GHD"],
+   ["Free","Deluxe samples when you join Beauty Pass",""]]},
+ {r:"MECCA",where:"Rundle Mall, Burnside Village, Marion",items:[
+   ["—","No public sale running this week",""],
+   ["Gift","Free birthday gift for Beauty Loop members",""]]},
+ {r:"Zara",where:"Rundle Mall",items:[["—","No sale or promotion found this week","Zara typically discounts only in end-of-season sales"]]},
+ {r:"Nike",where:"nike.com/au · Harbour Town outlet, Adelaide Airport",items:[
+   ["Sale","Further markdowns across 840 sale styles","Most at 20–40% off"],
+   ["30–70%","Nike Factory Store, Harbour Town Adelaide","Outlet pricing everyday · late night Thu to 9pm"],
+   ["Free","Member shipping on orders $80+ and 30-day returns",""]]},
+ {r:"adidas",where:"adidas.com.au · in-store",items:[
+   ["≤50%","Outlet sale, about 2,360 styles","Shoes under $100 and under-$50 edits"],
+   ["Spend & Save","Tiered discount at checkout","Online and in-store, T&Cs apply"],
+   ["Free","Shipping with adiClub membership, no minimum",""]]},
+ {r:"Myer",where:"Rundle Mall, Marion, Tea Tree Plaza, Elizabeth · myer.com.au",items:[
+   ["+30%","Further 30% off selected home clearance","Applied in cart, e.g. Maxwell & Williams bottles $10.50"],
+   ["+30%","Further 30% off selected men's & women's clothing clearance","Applied in cart"],
+   ["50%","Quilt covers and bedding in the home sale","Plus 40% off selected cookware and kitchenware"],
+   ["Free","Delivery on orders $99+ or click & collect",""]]},
+ {r:"Harbour Town",where:"727 Tapleys Hill Rd, Adelaide Airport · late night Thu 9pm",items:[
+   ["50%","Russell Athletic, storewide","Excludes New Era caps"],
+   ["≤50%","Bed Bath N' Table mid-season sale",""],
+   ["≤40%","Oroton selected styles","Members take an extra 20% off"],
+   ["+20%","Lorna Jane, selected styles","Outlet only, until 2 Nov"],
+   ["30%","Fila new-season footwear","Also 2 for $60 polos, tanks, tees & shorts"],
+   ["25%","Johnny Bigg full-price suits, blazers & footwear",""],
+   ["$99","Tarocash sale suits from",""],
+   ["$15","Billabong adult tees & kids' apparel","$30 boardies, $40 jackets"]]},
+ {r:"Costco",where:"Kilburn warehouse · membership required",items:[
+   ["+$20","Bonus Costco Shop Card with a new membership","Gold Star/Business $65 or Executive $130 · ends 1 Nov"]]},
+];
+
+const CAL = [
+ ["Thu 22 Oct","JB Hi-Fi & The Good Guys new catalogues"],
+ ["Sun 25 Oct","Last day: Swarovski 3-for-2 & Georg Jensen gift at Burnside"],
+ ["Sat 24 Oct","ALDI Special Buys: tools, garden, pool care, kids' outdoor toys"],
+ ["Wed 28 Oct","New Coles & Woolworths specials · ALDI kids' toys & pet essentials"],
+ ["Thu 29 Oct","New BIG W catalogue"],
+ ["Fri 30 Oct","Gathered Market in Rundle Mall, 9am–9pm"],
+ ["Sat 31 Oct","Halloween · ALDI electrical sale & family fashion · Westfield $1K spree closes"],
+ ["Wed 4 Nov","ALDI advent calendars & Christmas sweets"],
+ ["November","Sephora Beauty Pass member sale (expected)"],
+ ["11–14 Nov","Click Frenzy (expected dates)"],
+ ["Fri 27 Nov","Black Friday"],
+ ["Sat 26 Dec","Boxing Day sales"],
+];
+
+const SOURCES = [
+ ["OzBargain – Coles & Woolworths half-price report, 21–27 Oct 2026","https://www.ozbargain.com.au/node/979557"],
+ ["OzBargain – Mayver's ½ price at Coles","https://www.ozbargain.com.au/node/979831"],
+ ["ALDI – Special Buys from Wed 21 Oct","https://www.aldi.com.au/special-buys/2026-10-21"],
+ ["ALDI – Special Buys from Sat 24 Oct","https://www.aldi.com.au/special-buys/2026-10-24"],
+ ["Store Locator Tool – Costco live deals","https://storelocatortool.com/v3/australia/catalogues/costco/"],
+ ["Nike AU – Sale","https://www.nike.com/au/w/sale-3yaep"],
+ ["adidas AU – Outlet","https://www.adidas.com.au/outlet"],
+ ["OzBargain – Myer deals","https://www.ozbargain.com.au/deals/myer.com.au"],
+ ["RUSSH – Best online sales in October (Myer home sale)","https://www.russh.com/?p=304810"],
+ ["Harbour Town Adelaide – Offers","https://www.harbourtownadelaide.com.au/offers"],
+ ["Harbour Town Adelaide – Nike","https://www.harbourtownadelaide.com.au/stores/nike"],
+ ["Store Locator Tool – Coles catalogue dates","https://storelocatortool.com/v3/australia/catalogues/coles/"],
+ ["OzBargain – Kmart deals","https://www.ozbargain.com.au/deals/kmart.com.au"],
+ ["OzBargain – Target deals","https://www.ozbargain.com.au/deals/target.com.au"],
+ ["OzBargain – BIG W deals","https://www.ozbargain.com.au/deals/bigw.com.au"],
+ ["OzBargain – JB Hi-Fi deals","https://www.ozbargain.com.au/deals/jbhifi.com.au"],
+ ["OzBargain – Uniqlo deals","https://www.ozbargain.com.au/deals/uniqlo.com"],
+ ["OzBargain – Sephora deals","https://www.ozbargain.com.au/deals/sephora.com.au"],
+ ["Typo / Cotton On Group – Sale","https://cottonon.com/AU/sale/"],
+ ["Marie Claire – H&M offers (updated 20 Oct)","https://www.marieclaire.com.au/discount-codes/hm.com/"],
+ ["Better Homes & Gardens – MECCA offers","https://www.bhg.com.au/discount-codes/mecca.com.au"],
+ ["ShopBack – Next Sephora sale","https://www.shopback.com.au/blog/beauty/next-sephora-australia-sale"],
+ ["Westfield Tea Tree Plaza","https://www.westfield.com.au/teatreeplaza"],
+ ["Westfield Marion","https://www.westfield.com.au/marion"],
+ ["Rundle Mall – Offers","https://www.rundlemall.com/offers/"],
+ ["Rundle Mall – What's on","https://www.rundlemall.com/"],
+ ["OzBargain – Bunnings deals","https://www.ozbargain.com.au/deals/bunnings.com.au"],
+ ["OzBargain – Chemist Warehouse deals","https://www.ozbargain.com.au/deals/chemistwarehouse.com.au"],
+ ["OzBargain – Strandbags (Flylite suitcase)","https://www.ozbargain.com.au/deals/strandbags.com.au"],
+ ["Harris Scarfe – Home page sale highlights","https://www.harrisscarfe.com.au/"],
+ ["Strandbags – Sale","https://www.strandbags.com.au/collections/sale"],
+ ["Guess – Handbag sale","https://www.guess.com.au/collections/handbags-sale"],
+ ["New Balance – Clearance","https://www.newbalance.com.au/clearance-sale/"],
+ ["Puma – Sale","https://au.puma.com/au/en/sale"],
+ ["Reebok – Home page offers","https://www.reebok.com.au/"],
+ ["Skechers – Sale","https://www.skechers.com.au/sale/"],
+ ["OTR – Home page offers","https://www.otr.com.au/"],
+ ["Burnside Village – Offers","https://www.burnsidevillage.com.au/offers"],
+];
+
+
+// ---- pictures: real photo when known, otherwise an illustrated tile matched by keyword
+const PICS = [
+ [/bacon dog|hot dog/i,"🌭"],[/krispy|doughnut/i,"🍩"],[/eat slice/i,"🍰"],[/kamado/i,"🔥"],[/briquettes/i,"🔥"],[/fryer/i,"🍳"],[/trimmer/i,"🌿"],
+ [/power station/i,"🔋"],[/floodlight/i,"📹"],[/wi-fi|router/i,"📶"],[/bbq tough wipes/i,"🧽"],[/moisture absorber/i,"💧"],
+ [/whey|protein/i,"💪"],[/sinus/i,"👃"],[/razor/i,"🪒"],[/onesies/i,"👶"],[/robotic vacuum/i,"🤖"],[/slushie|ice maker/i,"🧊"],[/cookware/i,"🍳"],[/topper/i,"🛏️"],
+ [/suitcase/i,"🧳"],[/backpack/i,"🎒"],[/wallet/i,"👛"],[/sandal/i,"🩴"],[/bag\b|tote/i,"👜"],
+ [/abzorb|ellipse|880v15|204l|world 70|classic az|match prime|floatzig|ultra flex|go walk|cushioning/i,"👟"],
+ [/clogs/i,"👡"],[/bakeware/i,"🥧"],[/airer/i,"👕"],[/casserole|stock pot/i,"🍲"],[/ballpoint|pens/i,"🖊️"],[/badminton/i,"🏸"],
+ [/ps5|switch 2|xbox|pokémon go|helldivers|battlefield/i,"🎮"],[/talking flower/i,"🌼"],[/stick vacuum/i,"🧹"],[/activity gym/i,"👶"],
+ [/\btv\b/i,"📺"],[/honor|pixel/i,"📱"],[/earbuds/i,"🎧"],[/purifier/i,"🌬️"],[/parka/i,"🧥"],[/tote/i,"👜"],[/lamp/i,"💡"],[/laptop case/i,"💼"],
+ [/peanut butter/i,"🥜"],[/dishwash|fairy|finish|morning fresh/i,"🍽️"],[/laundry|omo|radiant|cold power|napisan|fabric/i,"🧺"],
+ [/baby wipes/i,"👶"],[/disinfectant|bleach|domestos/i,"🧽"],[/toilet|quilton|paper towel/i,"🧻"],
+ [/red bull|v energy/i,"⚡"],[/coca|pepsi|fanta|sprite|schweppes|soft drink/i,"🥤"],[/tea /i,"🍵"],[/coffee|nescaf|moccona/i,"☕"],
+ [/prawn/i,"🦐"],[/bacon/i,"🥓"],[/squid/i,"🦑"],[/fish|salmon/i,"🐟"],[/chicken|schnitzel|tenderloin|tegel/i,"🍗"],
+ [/drumstick|ice cream|bulla|dessert bar/i,"🍦"],[/olive oil|canola|vegetable or/i,"🫒"],[/simmer sauce/i,"🍛"],
+ [/namkeen|bhuja/i,"🥨"],[/doritos|smith|crinkle|chips/i,"🍟"],[/shapes|oreo|biscuit/i,"🍪"],[/haribo|lolly/i,"🍬"],
+ [/cadbury|roses|ferrero|maltesers|celebrations|chocolate/i,"🍫"],[/sunscreen|spf/i,"☀️"],
+ [/toothbrush|toothpaste|colgate|oral-b/i,"🪥"],[/listerine|mouthwash/i,"🦷"],
+ [/vitamin|magnesium|swisse|ostelin|blackmores|centrum|fish oil|multivitamin/i,"💊"],
+ [/shampoo|conditioner|body wash|moisturiser|head & shoulders/i,"🧴"],[/cat food|fussy cat/i,"🐱"],
+ [/container|meal prep/i,"🥡"],[/batter/i,"🔋"],[/sim|starter pack/i,"📱"],[/rice/i,"🍚"],[/weet-bix|cereal|milo/i,"🥣"],
+ [/dumpling|bao/i,"🥟"],[/noodle/i,"🍜"],[/trunk/i,"🩲"],[/socks/i,"🧦"],[/foil/i,"📦"],[/aperol|spritz/i,"🍹"],
+ [/ceiling fan/i,"🌀"],[/drill|driver/i,"🛠️"],[/mower/i,"🌱"],[/pool/i,"🏊"],[/irrigation/i,"💧"],[/fertiliser/i,"🌻"],
+ [/splash table|mud kitchen/i,"🧒"],[/headphones/i,"🎧"],[/monitor/i,"🖥️"],[/macbook/i,"💻"],[/lego/i,"🧱"],[/watch/i,"⌚"],
+ [/boots/i,"⚽"],[/slides/i,"🩴"],[/shorts/i,"🩳"],[/dyson|floor cleaner/i,"🧹"],[/milk frothing/i,"🥛"],[/shoe|dunk|jordan|metcon|air max|spezial|samba|gazelle|galaxy|runfalcon|g\.t\./i,"👟"],
+];
+const CAT_HUE = {"Pantry":32,"Household":195,"Drinks":5,"Meat & seafood":350,"Frozen":205,"Snacks":280,"Health & beauty":320,
+ "Baby":170,"Pet":40,"Home":160,"Phone & SIM":230,"Clothing":260,"Liquor":15,"Tools & garden":110,"Kids & toys":50,"Electronics":220,"Footwear":190,"Gaming":250,"Sport":140,"Bags":300,"Food & coffee":25};
+const emojiFor = d => (PICS.find(([re]) => re.test(d.n)) || [0,"🛍️"])[1];
+function picHTML(d){
+  const h = CAT_HUE[d.cat] ?? 45;
+  const emo = `<span class="emo" aria-hidden="true">${emojiFor(d)}</span><span class="approx">illustration</span>`;
+  if (d.img) return `<div class="pic" style="--h:${h}"><img src="${d.img}" alt="${esc(d.n)}" loading="lazy" onerror="this.parentNode.innerHTML=this.parentNode.dataset.fb"></div>`.replace('class="pic"', `class="pic" data-fb='${emo.replace(/'/g,"&#39;")}'`);
+  return `<div class="pic" style="--h:${h}">${emo}</div>`;
+}
+
+
+// ---- store types (top filter row)
+const GROUPS = [
+ {k:"Groceries",ic:"🛒",g:"#1E8E3E",r:["Coles","Woolworths","ALDI","Costco"]},
+ {k:"Department stores",ic:"🏬",g:"#2563EB",r:["Myer","Kmart","Target","BIG W","Harris Scarfe"]},
+ {k:"Shoes & sportswear",ic:"👟",g:"#EA580C",r:["Nike","adidas","New Balance","Puma","Reebok","Skechers"]},
+ {k:"Clothes & fashion",ic:"👕",g:"#DB2777",r:["Uniqlo","H&M","Zara","Cotton On / Typo"]},
+ {k:"Bags & accessories",ic:"👜",g:"#9333EA",r:["Strandbags","Guess"]},
+ {k:"Beauty & pharmacy",ic:"💄",g:"#E11D48",r:["Chemist Warehouse","Sephora","MECCA"]},
+ {k:"Home, hardware & tech",ic:"🔨",g:"#0F766E",r:["Bunnings","JB Hi-Fi"]},
+ {k:"Food & fuel",ic:"⛽",g:"#D97706",r:["OTR"]},
+ {k:"Shopping centres",ic:"🏙️",g:"#7C3AED",r:["Harbour Town","Rundle Mall","Westfield Tea Tree Plaza","Westfield Marion","Burnside Village"]},
+];
+const GROUP_OF = {}; GROUPS.forEach(G => G.r.forEach(r => GROUP_OF[r] = G.k));
+
+// ---------- render ----------
+const $ = s => document.querySelector(s);
+const money = v => v >= 100 ? "$" + (Number.isInteger(v) ? v : v.toFixed(2)) : "$" + v.toFixed(2);
+const pct = d => d.was ? Math.round((1 - d.now / d.was) * 100) : 0;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+DEALS.forEach(d => { d.p = pct(d); d.save = d.was ? d.was - d.now : 0; if(!d.end) d.end = (d.r==="Coles"||d.r==="Woolworths") ? WK : "While stocks last"; });
+
+let state = {g:"All", r:"All", half:false, cat:"All", sort:"save", q:""};
+try { const s = JSON.parse(localStorage.getItem("ads-state")||"null"); if (s) state = {...state, ...s, q:""}; } catch(e){}
+const persist = () => { try { localStorage.setItem("ads-state", JSON.stringify(state)); } catch(e){} };
+
+function priceHTML(v){
+  const [a,b] = v.toFixed(2).split(".");
+  return `<span class="price"><sup>$</sup>${a}${b==="00" && v>=100 ? "" : `<sup>.${b}</sup>`}</span>`;
+}
+function card(d){
+  const c = RETAILERS[d.r].c;
+  let flag = "";
+  if (d.tag==="sb") flag = `<span class="flag sb">Special Buy</span>`;
+  else if (d.p >= 50) flag = `<span class="flag">${d.p > 52 ? d.p+"% off" : "½ price"}</span>`;
+  else if (d.p > 0) flag = `<span class="flag">${d.p}% off</span>`;
+  const was = d.was ? `<s>was ${money(d.was)}</s><br>save ${money(d.save)}` : "";
+  return `<article class="deal" style="--c:${c}">
+    ${picHTML(d)}
+    <div class="top"><span class="rt pill" style="--c:${c}"><span class="dot"></span>${esc(d.r)}</span><span class="cat">${esc(d.cat)}</span></div>
+    <h3>${esc(d.n)}</h3>${d.note?`<div class="note">${esc(d.note)}</div>`:""}
+    <div class="tkt">${flag}${priceHTML(d.now)}<span class="was">${was}</span></div>
+    <div class="end">${esc(d.end)}</div></article>`;
+}
+
+function renderGroups(){
+  const gc = {}; DEALS.forEach(d => { const g = GROUP_OF[d.r]; gc[g] = (gc[g]||0)+1; });
+  const tabs = [{k:"All",ic:"🛍️",g:"#15223A"}, ...GROUPS.filter(G => gc[G.k])];
+  $("#groups").innerHTML = tabs.map(G => `<button class="grp" type="button" data-g="${esc(G.k)}" aria-pressed="${state.g===G.k}" style="--g:${G.g}"><span class="ic" aria-hidden="true">${G.ic}</span>${G.k==="All"?"All stores":esc(G.k)}<span class="n">${G.k==="All"?DEALS.length:gc[G.k]}</span></button>`).join("");
+}
+function renderChips(){
+  const counts = {}; DEALS.forEach(d => counts[d.r]=(counts[d.r]||0)+1);
+  const pool = state.g==="All" ? Object.keys(RETAILERS) : (GROUPS.find(G=>G.k===state.g)||{r:[]}).r;
+  const names = ["All", ...pool.filter(n=>counts[n])];
+  const label = state.g==="All" ? "Stores" : "In this group";
+  $("#chips").innerHTML = `<span class="lbl">${label}</span>` + names.map(n => `<button class="chip" type="button" data-r="${esc(n)}" aria-pressed="${state.r===n}" style="--c:${n==="All"?"var(--ticket)":RETAILERS[n].c}"><span class="dot"></span>${n==="All"?(state.g==="All"?"All":"All "+state.g.toLowerCase()):esc(n)}${counts[n]?` <span style="opacity:.6">${counts[n]}</span>`:""}</button>`).join("");
+}
+function renderCats(){
+  const cats = ["All", ...[...new Set(DEALS.map(d=>d.cat))].sort()];
+  $("#cat").innerHTML = cats.map(c=>`<option value="${c}">${c==="All"?"All categories":c}</option>`).join("");
+  $("#cat").value = cats.includes(state.cat) ? state.cat : "All";
+}
+function render(){
+  const q = state.q.trim().toLowerCase();
+  let list = DEALS.filter(d =>
+    (state.g==="All" || GROUP_OF[d.r]===state.g) && (state.r==="All" || d.r===state.r) && (state.cat==="All" || d.cat===state.cat) &&
+    (!state.half || d.p>=50) && (!q || (d.n+" "+d.r+" "+d.cat).toLowerCase().includes(q)));
+  const by = {save:(a,b)=>b.p-a.p||b.save-a.save, dollars:(a,b)=>b.save-a.save, low:(a,b)=>a.now-b.now, store:(a,b)=>a.r.localeCompare(b.r)||b.p-a.p}[state.sort];
+  list.sort(by);
+  $("#grid").innerHTML = list.length ? list.map(card).join("") : `<div class="empty">No deals match. Try another retailer or clear the search.</div>`;
+  $("#count").textContent = `${list.length} of ${DEALS.length} deals`;
+  document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", b.dataset.r===state.r));
+  document.querySelectorAll(".grp").forEach(b => b.setAttribute("aria-pressed", b.dataset.g===state.g));
+  persist();
+}
+
+function renderStatic(){
+  const half = DEALS.filter(d=>d.p>=50).length;
+  const total = DEALS.reduce((s,d)=>s+d.save,0);
+  const end = new Date("2026-10-27T23:59:00+10:30");
+  const days = Math.max(0, Math.ceil((end - new Date())/86400000));
+  $("#facts").innerHTML = `<span><b>${DEALS.length}</b> deals across <b>${new Set([...DEALS.map(d=>d.r),...PROMOS.map(p=>p.r)]).size}</b> retailers &amp; centres</span>
+    <span><b>${half}</b> at half price or better</span>
+    <span>Coles &amp; Woolworths specials end Tue 27 Oct · <b>${days}</b> day${days===1?"":"s"} left</span>`;
+
+  const picks = [
+    ["Coles","$4.25","Mayver's Upside Down Peanut Butter","First half-price Mayver's in about two years. Was $8.50.","🥜"],
+    ["ALDI","$15.99","OMO Wonder Wash 1.94L","ALDI's Special Buy just beats Woolworths' half-price $16.","🧺"],
+    ["Woolworths","$6","Tegel Take Outs chicken","Half price for the first time in 12 weeks. Usually only drops to $10.","🍗"],
+    ["Coles","½ price","Sunscreen season stock-up","Banana Boat, Nivea and Bondi Sands SPF50+ all half price.","☀️"],
+    ["BIG W","$29","Cadbury Jumbo Box 1.56kg","Half price — 110 chocolates, handy for Christmas.","🍫"],
+    ["Harris Scarfe","$269.99","My Genie IQ500 robot vacuum","85% off the $1,799.99 regular price (HS Friends price).","🤖"],
+  ];
+  $("#stand").innerHTML = picks.map(([r,p,t,x,e]) => `<div class="pick" style="--c:${RETAILERS[r].c}"><span class="emo" aria-hidden="true">${e}</span><div class="txt"><span class="rt pill"><span class="dot"></span>${r}</span><div class="big">${p}</div><strong>${t}</strong><p>${x}</p></div></div>`).join("");
+
+  const storeCard = s => `<div class="store" style="--c:${RETAILERS[s.r].c}"><h3><span class="dot"></span>${s.r}</h3><div class="where">${esc(s.where)}</div><ul>${s.items.map(([a,b,c])=>`<li><b>${esc(a)}</b><span>${esc(b)}${c?`<small>${esc(c)}</small>`:""}</span></li>`).join("")}</ul></div>`;
+  $("#promoGrid").innerHTML = GROUPS.map(G => { const ps = PROMOS.filter(p => GROUP_OF[p.r]===G.k); return ps.length ? `<div class="pgroup" style="--g:${G.g}"><span aria-hidden="true">${G.ic}</span>${esc(G.k)}</div>` + ps.map(storeCard).join("") : ""; }).join("");
+  $("#cal").innerHTML = CAL.map(([d,w]) => `<div class="when"><div class="d">${d}</div><div class="w">${esc(w)}</div></div>`).join("");
+  $("#src").innerHTML = SOURCES.map(([t,u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("");
+}
+
+if (state.g!=="All" && !GROUPS.some(G=>G.k===state.g)) state.g="All";
+renderStatic(); renderGroups(); renderChips(); renderCats();
+$("#half").checked = state.half; $("#sort").value = state.sort;
+$("#chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; state.r = b.dataset.r; render(); });
+$("#groups").addEventListener("click", e => { const b = e.target.closest(".grp"); if(!b) return; state.g = b.dataset.g; state.r = "All"; renderChips(); render(); });
+$("#half").addEventListener("change", e => { state.half = e.target.checked; render(); });
+$("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
+$("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
+$("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+render();
+</script>
