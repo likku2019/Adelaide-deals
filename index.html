@@ -202,6 +202,9 @@ footer{border-top:8px solid var(--ticket)}
 .clear:disabled{cursor:default;background:var(--card);color:var(--muted);border-color:var(--line)}
 @media (max-width:640px){.events{flex-basis:100%}}
 main{padding-bottom:40px}
+.trk{align-self:flex-start;display:inline-flex;gap:6px;align-items:center;font:700 14px var(--body);text-decoration:none;background:var(--ticket-ink);color:var(--ticket);padding:7px 14px;border-radius:999px}
+.trk span{font-weight:500;opacity:.85}
+.trk:hover{background:var(--sale);color:#fff}
 </style>
 
 <header class="mast"><div class="wrap">
@@ -213,6 +216,7 @@ main{padding-bottom:40px}
         <small>Compiled Wed 21 Oct 2026 · supermarket specials change every Wednesday</small>
       </div>
       <div class="facts" id="facts"></div>
+      <a class="trk" href="history.html">📈 Price tracker <span>— compare prices week to week</span></a>
     </div>
     <aside class="events" aria-labelledby="ev-h">
       <div class="ev-h" id="ev-h">Big sales coming up</div>

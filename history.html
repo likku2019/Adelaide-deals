@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en-AU">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Price Tracker · Adelaide Deal Sheet</title>
+<meta name="description" content="Compare Adelaide supermarket and store prices week by week and month by month.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Adelaide Deal Sheet">
+<meta property="og:title" content="Adelaide Deal Sheet — price tracker">
+<meta property="og:description" content="See how prices at Coles, Woolworths, ALDI, Kmart, Amazon and 30+ Adelaide stores change week to week.">
+<meta property="og:url" content="https://likku2019.github.io/Adelaide-deals/history.html">
+<meta property="og:image" content="https://likku2019.github.io/Adelaide-deals/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFD43B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23FFD43B'/%3E%3Crect x='8' y='20' width='48' height='26' rx='3' fill='%23D3261D' transform='rotate(-6 32 33)'/%3E%3Ctext x='32' y='41' font-family='Arial Black,Arial' font-weight='900' font-size='20' fill='white' text-anchor='middle' transform='rotate(-6 32 33)'%3E%C2%BD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F2F4F1; --card:#FFFFFF; --ink:#15223A; --muted:#5B6577; --line:#D8DDD6;
+  --ticket:#FFD43B; --ticket-ink:#15223A; --sale:#D3261D; --focus:#1D5FD1; --down:#1E8E3E; --up:#D3261D; --spark:#15223A;
+  --display:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --body:"Public Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0E131B; --card:#161D29; --ink:#E7EBF1; --muted:#9AA4B4; --line:#283244;
+  --ticket:#F2C531; --sale:#FF5C50; --focus:#7FA8FF; --down:#4ED17A; --up:#FF6B60; --spark:#E7EBF1; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0E131B; --card:#161D29; --ink:#E7EBF1; --muted:#9AA4B4; --line:#283244;
+  --ticket:#F2C531; --sale:#FF5C50; --focus:#7FA8FF; --down:#4ED17A; --up:#FF6B60; --spark:#E7EBF1; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+h1,h2{font-family:var(--display);margin:0;text-wrap:balance}
+header{background:var(--ticket);color:var(--ticket-ink);padding-block:22px 18px}
+.back{display:inline-block;font:600 13px var(--body);text-decoration:none;background:var(--ticket-ink);color:var(--ticket);padding:5px 11px;border-radius:999px;margin-bottom:12px}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+h1{font-size:clamp(34px,6.5vw,60px);font-weight:900;font-stretch:72%;line-height:.95;text-transform:uppercase}
+h1 span{display:inline-block;background:var(--sale);color:#fff;padding:0 .14em;transform:rotate(-1.5deg)}
+.sub{margin:10px 0 0;font-size:14px;max-width:70ch;opacity:.85}
+.facts{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:10px;font-size:13px}
+.facts b{font-variant-numeric:tabular-nums}
+.ribbon{height:8px;background:linear-gradient(90deg,#D71920 0 12.5%,#178841 0 25%,#0B3D7A 0 37.5%,#005DAA 0 50%,#E8457A 0 62.5%,#0E9E9A 0 75%,#7A4FB8 0 87.5%,#D3261D 0)}
+.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-block:12px}
+.bar select,.bar input[type=search]{font:500 14px var(--body);color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;min-width:0}
+.bar input[type=search]{flex:1 1 200px}
+.toggle{display:inline-flex;align-items:center;gap:6px;font:600 13px var(--body);background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}
+.dl{margin-left:auto;font:600 13px var(--body);text-decoration:none;border:1.5px solid var(--ink);border-radius:8px;padding:6px 11px}
+.notice{margin:18px 0 0;background:var(--card);border:1.5px dashed var(--line);border-radius:8px;padding:10px 14px;font-size:14px}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:22px 0 10px;flex-wrap:wrap}
+h2{font-size:26px;font-weight:850;font-stretch:78%;text-transform:uppercase;box-shadow:inset 0 -.38em 0 #FFE27A;padding:0 .1em;display:inline}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) h2{box-shadow:inset 0 -.38em 0 #6B5612}}
+.count{font:500 13px var(--mono);color:var(--muted)}
+.cols,.row{display:grid;grid-template-columns:minmax(0,2.6fr) 1fr 1.1fr 1fr .8fr 120px;gap:12px;align-items:center}
+.cols{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:0 14px 6px}
+.list{display:flex;flex-direction:column;gap:6px;padding-bottom:40px}
+.item{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--c,var(--ink));border-radius:6px}
+.row{padding:10px 14px;cursor:pointer;width:100%;text-align:left;background:none;border:0;color:inherit;font:inherit}
+.nm{font-weight:600;line-height:1.3}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:3px;font-size:12px;color:var(--muted)}
+.pill{background:var(--c);color:#fff;border-radius:999px;padding:0 8px;font-weight:700;font-size:11.5px}
+.pr{font-family:var(--display);font-weight:900;font-stretch:78%;font-size:22px;line-height:1;font-variant-numeric:tabular-nums}
+.pr small,.lo small,.chg small{display:block;font:500 11px var(--mono);color:var(--muted);margin-top:3px}
+.off .pr{color:var(--muted);font-size:17px}
+.chg{font:700 14px var(--body);font-variant-numeric:tabular-nums}
+.chg.dn{color:var(--down)} .chg.up{color:var(--up)} .chg.eq,.chg.nw{color:var(--muted);font-weight:600}
+.lo{font-weight:700;font-variant-numeric:tabular-nums}
+.lo.best{color:var(--down)}
+.tm{font:500 13px var(--mono);color:var(--muted)}
+.spark{width:120px;height:34px;display:block}
+.detail{display:none;padding:0 14px 14px;border-top:1px dashed var(--line)}
+.item.open .detail{display:block}
+.detail h3{font:800 14px var(--display);font-stretch:85%;text-transform:uppercase;letter-spacing:.03em;margin:12px 0 6px}
+.hist{display:flex;flex-wrap:wrap;gap:6px}
+.hist span{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:4px 8px;font:500 12.5px var(--mono)}
+.hist span b{font-family:var(--body)}
+.empty{padding:30px;text-align:center;color:var(--muted);border:1.5px dashed var(--line);border-radius:6px}
+@media (max-width:760px){
+  .cols{display:none}
+  .row{grid-template-columns:1fr auto;grid-template-areas:"nm pr" "chg lo" "tm sp";row-gap:8px}
+  .row>.c1{grid-area:nm}.row>.c2{grid-area:pr;text-align:right}.row>.c3{grid-area:chg}
+  .row>.c4{grid-area:lo;text-align:right}.row>.c5{grid-area:tm}.row>.c6{grid-area:sp;justify-self:end}
+  .dl{margin-left:0}
+  .bar select{flex:1 1 140px}
+}
+</style>
+
+<header><div class="wrap">
+  <a class="back" href="./">← This week's deals</a>
+  <div class="eyebrow">Adelaide Deal Sheet · price history</div>
+  <h1>Price <span>Tracker</span></h1>
+  <p class="sub">Every price on the deal sheet is saved each Wednesday. Use this page to see whether a deal is really a good price, the lowest it has been, and how often it goes on special.</p>
+  <div class="facts" id="facts"></div>
+</div></header>
+<div class="ribbon" aria-hidden="true"></div>
+
+<div class="bar"><div class="wrap">
+  <input type="search" id="q" placeholder="Search e.g. OMO, coffee, Samba" aria-label="Search items">
+  <select id="grp" aria-label="Store type"></select>
+  <select id="ret" aria-label="Retailer"></select>
+  <select id="sort" aria-label="Sort">
+    <option value="drop">Biggest price drop</option>
+    <option value="best">At its lowest price now</option>
+    <option value="often">Most often on special</option>
+    <option value="ret">By retailer</option>
+    <option value="az">A–Z</option>
+  </select>
+  <label class="toggle"><input type="checkbox" id="now"> On special this week</label>
+  <a class="dl" href="data/prices.csv" download="adelaide-prices.csv">⬇ Download all prices</a>
+</div></div>
+
+<main class="wrap">
+  <div id="notice"></div>
+  <div class="head"><h2>All tracked items</h2><span class="count" id="count"></span></div>
+  <div class="cols" aria-hidden="true"><span>Item</span><span>Latest price</span><span>Change</span><span>Lowest seen</span><span>Times listed</span><span>Trend</span></div>
+  <div class="list" id="list"><div class="empty">Loading prices…</div></div>
+</main>
+
+<script>
+const COLORS = {"Coles":"#D71920","Woolworths":"#178841","ALDI":"#0B3D7A","Costco":"#005DAA","Kmart":"#D5002B","Target":"#B3001B","BIG W":"#0046BE",
+ "JB Hi-Fi":"#A67C00","Uniqlo":"#E60012","H&M":"#C8102E","Bunnings":"#0D6B4E","Chemist Warehouse":"#C2185B","Harris Scarfe":"#8E1B3A","OTR":"#E8590C",
+ "Skechers":"#1F4FA0","Harvey Norman":"#0B5CAD","Amazon":"#C45500","Rundle Mall":"#00838F","Harbour Town":"#7A4FB8","Burnside Village":"#2E7D32",
+ "Westfield Marion":"#C2185B","Westfield Tea Tree Plaza":"#C2185B"};
+const colorOf = r => COLORS[r] || "#15223A";
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money = v => "$" + (Number.isInteger(v) ? v : v.toFixed(2));
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const dShort = w => { const [y,m,d] = w.split("-"); return `${+d} ${MON[m-1]}`; };
+const dLong = w => { const [y,m,d] = w.split("-"); return `${+d} ${MON[m-1]} ${y}`; };
+const monthOf = w => { const [y,m] = w.split("-"); return `${MON[m-1]} ${y}`; };
+
+function parseCSV(t){
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < t.length; i++){
+    const c = t[i];
+    if (q){ if (c === '"'){ if (t[i+1] === '"'){ f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ","){ row.push(f); f = ""; }
+    else if (c === "\n"){ row.push(f); rows.push(row); row = []; f = ""; }
+    else if (c !== "\r") f += c;
+  }
+  if (f || row.length){ row.push(f); rows.push(row); }
+  const [head, ...body] = rows;
+  return body.filter(r => r.length > 1).map(r => Object.fromEntries(head.map((h,i) => [h, r[i] ?? ""])));
+}
+
+let ITEMS = [], WEEKS = [], LATEST = "";
+const state = {q:"", grp:"All", ret:"All", sort:"drop", now:false};
+try { Object.assign(state, JSON.parse(localStorage.getItem("ads-tracker") || "{}")); } catch(e){}
+const save = () => { try { localStorage.setItem("ads-tracker", JSON.stringify(state)); } catch(e){} };
+
+function build(rows){
+  WEEKS = [...new Set(rows.map(r => r.week))].sort();
+  LATEST = WEEKS[WEEKS.length-1];
+  const by = new Map();
+  rows.forEach(r => {
+    const e = {week:r.week, price:+r.price, was:r.was ? +r.was : null};
+    if (!by.has(r.id)) by.set(r.id, {id:r.id, r:r.retailer, g:r.store_type, n:r.item, cat:r.category, h:[]});
+    const it = by.get(r.id); it.n = r.item; it.cat = r.category; it.h.push(e);
+  });
+  ITEMS = [...by.values()].map(it => {
+    it.h.sort((a,b) => a.week.localeCompare(b.week));
+    const last = it.h[it.h.length-1], prev = it.h[it.h.length-2];
+    const lo = it.h.reduce((m,e) => e.price < m.price ? e : m, it.h[0]);
+    const usual = Math.max(0, ...it.h.map(e => e.was || 0)) || null;
+    return {...it, last, prev, lo, usual, onNow:last.week === LATEST,
+      diff: prev ? last.price - prev.price : null,
+      atLow: last.week === LATEST && last.price <= lo.price && it.h.length > 1};
+  });
+}
+
+function spark(h){
+  const W = 120, H = 34, p = 4;
+  if (h.length < 2) return `<svg class="spark" viewBox="0 0 ${W} ${H}" aria-hidden="true"><circle cx="${W-p}" cy="${H/2}" r="3" fill="var(--spark)"/></svg>`;
+  const xs = h.map(e => WEEKS.indexOf(e.week)), x0 = Math.min(...xs), x1 = Math.max(...xs);
+  const ys = h.map(e => e.price), lo = Math.min(...ys), hi = Math.max(...ys);
+  const X = i => p + (x1 === x0 ? 0 : (i - x0) / (x1 - x0)) * (W - 2*p);
+  const Y = v => hi === lo ? H/2 : p + (1 - (v - lo) / (hi - lo)) * (H - 2*p);
+  const pts = h.map((e,k) => `${X(xs[k]).toFixed(1)},${Y(e.price).toFixed(1)}`);
+  const last = pts[pts.length-1].split(",");
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" aria-hidden="true"><polyline points="${pts.join(" ")}" fill="none" stroke="var(--spark)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" opacity=".7"/><circle cx="${last[0]}" cy="${last[1]}" r="3.2" fill="var(--sale)"/></svg>`;
+}
+
+function itemHTML(it){
+  let chg;
+  if (it.diff == null) chg = `<span class="chg nw">First recorded<small>${dShort(it.h[0].week)}</small></span>`;
+  else if (Math.abs(it.diff) < 0.005) chg = `<span class="chg eq">Same price<small>as ${dShort(it.prev.week)}</small></span>`;
+  else chg = `<span class="chg ${it.diff < 0 ? "dn" : "up"}">${it.diff < 0 ? "▼" : "▲"} ${money(Math.abs(+it.diff.toFixed(2)))}<small>vs ${money(it.prev.price)} on ${dShort(it.prev.week)}</small></span>`;
+  const months = {};
+  it.h.forEach(e => { const m = monthOf(e.week); (months[m] ||= []).push(e.price); });
+  const monthRows = Object.entries(months).map(([m,v]) =>
+    `<span>${m}: <b>${money(Math.min(...v))}</b>${v.length > 1 && Math.max(...v) !== Math.min(...v) ? ` – ${money(Math.max(...v))}` : ""} · ${v.length} wk</span>`).join("");
+  return `<div class="item${it.onNow ? "" : " off"}" style="--c:${colorOf(it.r)}">
+    <button class="row" type="button" aria-expanded="false">
+      <span class="c1"><span class="nm">${esc(it.n)}</span><span class="meta"><span class="pill">${esc(it.r)}</span><span>${esc(it.cat)}</span>${it.usual ? `<span>Usually ${money(it.usual)}</span>` : ""}</span></span>
+      <span class="c2"><span class="pr">${it.onNow ? money(it.last.price) : "Not on special"}<small>${it.onNow ? "this week" : `last ${money(it.last.price)} on ${dShort(it.last.week)}`}</small></span></span>
+      <span class="c3">${chg}</span>
+      <span class="c4"><span class="lo${it.atLow ? " best" : ""}">${money(it.lo.price)}${it.atLow ? " ★" : ""}<small>${it.atLow ? "lowest yet — now" : dShort(it.lo.week)}</small></span></span>
+      <span class="c5 tm">${it.h.length} of ${WEEKS.length} wk</span>
+      <span class="c6">${spark(it.h)}</span>
+    </button>
+    <div class="detail">
+      <h3>Every week recorded</h3>
+      <div class="hist">${it.h.slice().reverse().map(e => `<span>${dLong(e.week)}: <b>${money(e.price)}</b>${e.was ? ` <s>${money(e.was)}</s>` : ""}</span>`).join("")}</div>
+      <h3>By month</h3>
+      <div class="hist">${monthRows}</div>
+    </div>
+  </div>`;
+}
+
+function fillSelects(){
+  const groups = [...new Set(ITEMS.map(i => i.g).filter(Boolean))];
+  $("#grp").innerHTML = `<option value="All">All store types</option>` + groups.map(g => `<option>${esc(g)}</option>`).join("");
+  $("#grp").value = groups.includes(state.grp) ? state.grp : (state.grp = "All");
+  fillRet();
+}
+function fillRet(){
+  const rs = [...new Set(ITEMS.filter(i => state.grp === "All" || i.g === state.grp).map(i => i.r))];
+  $("#ret").innerHTML = `<option value="All">All retailers</option>` + rs.map(r => `<option>${esc(r)}</option>`).join("");
+  $("#ret").value = rs.includes(state.ret) ? state.ret : (state.ret = "All");
+}
+
+function render(){
+  const q = state.q.trim().toLowerCase();
+  let list = ITEMS.filter(i => (state.grp === "All" || i.g === state.grp) && (state.ret === "All" || i.r === state.ret)
+    && (!state.now || i.onNow) && (!q || (i.n + " " + i.r + " " + i.cat).toLowerCase().includes(q)));
+  const S = {
+    drop:(a,b) => (a.diff ?? 1e9) - (b.diff ?? 1e9) || (b.onNow - a.onNow) || a.n.localeCompare(b.n),
+    best:(a,b) => (b.atLow - a.atLow) || (b.onNow - a.onNow) || (b.h.length - a.h.length) || a.n.localeCompare(b.n),
+    often:(a,b) => b.h.length - a.h.length || a.n.localeCompare(b.n),
+    ret:(a,b) => a.r.localeCompare(b.r) || a.n.localeCompare(b.n),
+    az:(a,b) => a.n.localeCompare(b.n)};
+  list.sort(S[state.sort] || S.drop);
+  $("#count").textContent = `${list.length} of ${ITEMS.length} items`;
+  $("#list").innerHTML = list.length ? list.map(itemHTML).join("") : `<div class="empty">No items match. Try a different search or store.</div>`;
+  save();
+}
+
+$("#list").addEventListener("click", e => {
+  const b = e.target.closest(".row"); if (!b) return;
+  const it = b.parentNode; it.classList.toggle("open"); b.setAttribute("aria-expanded", it.classList.contains("open"));
+});
+$("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+$("#grp").addEventListener("change", e => { state.grp = e.target.value; fillRet(); render(); });
+$("#ret").addEventListener("change", e => { state.ret = e.target.value; render(); });
+$("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
+$("#now").addEventListener("change", e => { state.now = e.target.checked; render(); });
+
+fetch("data/prices.csv?v=" + Date.now()).then(r => { if (!r.ok) throw 0; return r.text(); }).then(t => {
+  build(parseCSV(t));
+  const drops = ITEMS.filter(i => i.onNow && i.diff < 0).length, lows = ITEMS.filter(i => i.atLow).length;
+  $("#facts").innerHTML = `<span><b>${ITEMS.length}</b> items tracked</span><span><b>${WEEKS.length}</b> week${WEEKS.length>1?"s":""} recorded since ${dLong(WEEKS[0])}</span>`
+    + (WEEKS.length > 1 ? `<span><b>${drops}</b> cheaper than last time</span><span><b>${lows}</b> at their lowest yet</span>` : "");
+  if (WEEKS.length < 2) $("#notice").innerHTML = `<p class="notice">📅 Tracking started on <b>${dLong(WEEKS[0])}</b>. From next Wednesday you'll see which prices went up or down, the lowest price seen, and a trend line for each item.</p>`;
+  $("#q").value = state.q; $("#sort").value = state.sort; $("#now").checked = state.now;
+  fillSelects(); render();
+}).catch(() => { $("#list").innerHTML = `<div class="empty">Couldn't load the price list. Please refresh the page.</div>`; });
+</script>
