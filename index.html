@@ -201,6 +201,7 @@ footer{border-top:8px solid var(--ticket)}
 .clear{appearance:none;cursor:pointer;font:700 13px var(--body);border-radius:8px;padding:7px 12px;border:1.5px solid var(--sale);background:var(--sale);color:#fff}
 .clear:disabled{cursor:default;background:var(--card);color:var(--muted);border-color:var(--line)}
 @media (max-width:640px){.events{flex-basis:100%}}
+main{padding-bottom:40px}
 </style>
 
 <header class="mast"><div class="wrap">
@@ -260,12 +261,6 @@ footer{border-top:8px solid var(--ticket)}
     <div class="cal" id="cal"></div>
   </section>
 
-  <footer>
-    <h2 style="font-size:20px;margin-bottom:8px">How this sheet is made</h2>
-    <p class="notes">Coles and Woolworths half-price lists come from the national weekly catalogue (published from the NSW edition). Half-price deals are almost always national, but some fresh and liquor prices differ in SA, so check the Coles or Woolworths app with your local store selected. ALDI Special Buys are while stocks last and can sell out on day one. Costco deals need a membership (Adelaide warehouse: Kilburn). Fashion prices are online prices on the day this was compiled and can change without notice. Kmart, Target, BIG W and JB Hi-Fi prices are from deals posted by shoppers on OzBargain in the past few weeks; they run while stocks last, so confirm in the app. H&M offers are as listed on Marie Claire's deals page. No current sale was found for Zara, MECCA or Cotton On's main brand. Harris Scarfe prices marked “HS Friends” need the free HS Friends membership. Laura Jones bags are sold through Strandbags. Bunnings and Chemist Warehouse prices are recent shopper-reported deals and can sell out.</p>
-    <h3 style="font-size:16px;margin:16px 0 8px;font-family:var(--body)">Sources</h3>
-    <ol class="src" id="src"></ol>
-  </footer>
 </main>
 
 <script>
@@ -869,7 +864,6 @@ function renderStatic(){
   const storeCard = s => `<div class="store" style="--c:${RETAILERS[s.r].c}"><h3><span class="dot"></span>${s.r}</h3><div class="where">${esc(s.where)}</div><ul>${s.items.map(([a,b,c])=>`<li><b>${esc(a)}</b><span>${esc(b)}${c?`<small>${esc(c)}</small>`:""}</span></li>`).join("")}</ul></div>`;
   $("#promoGrid").innerHTML = GROUPS.map(G => { const ps = PROMOS.filter(p => GROUP_OF[p.r]===G.k); return ps.length ? `<div class="pgroup" style="--g:${G.g}"><span aria-hidden="true">${G.ic}</span>${esc(G.k)}</div>` + ps.map(storeCard).join("") : ""; }).join("");
   $("#cal").innerHTML = CAL.map(([d,w]) => `<div class="when"><div class="d">${d}</div><div class="w">${esc(w)}</div></div>`).join("");
-  $("#src").innerHTML = SOURCES.map(([t,u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("");
 }
 
 if (state.g!=="All" && !GROUPS.some(G=>G.k===state.g)) state.g="All";
