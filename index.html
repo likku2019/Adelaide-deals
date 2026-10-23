@@ -291,6 +291,8 @@ details.weeks summary{cursor:pointer;font-weight:700;font-size:15px}
 .jump a .jl-short{display:none}
 .jump a[aria-current="true"]{background:var(--ink);color:var(--paper)}
 main section{scroll-margin-top:64px}
+main>section[data-off]{display:none}
+main>section:first-of-type .sec-head,main>section:not([data-off]) .sec-head{margin-top:26px}
 .store{scroll-margin-top:120px}
 /* best deals */
 .more-row{display:flex;justify-content:center;margin-top:14px}
@@ -1264,7 +1266,7 @@ function card(d){
 }
 
 // ---- filters & list
-let state = {g:"All", r:"All", half:false, low:false, cat:"All", sort:"save", q:""};
+let state = {g:"All", r:"All", half:false, low:false, cat:"All", sort:"save", q:"", tab:"stores"};
 try { const s = JSON.parse(localStorage.getItem("ads-state") || "null"); if (s) state = {...state, ...s, q:""}; } catch(e){}
 const persist = () => { try { localStorage.setItem("ads-state", JSON.stringify(state)); } catch(e){} };
 let VIS = [];
@@ -1308,8 +1310,6 @@ function render(){
   renderStoreOffers();
   $("#count").textContent = list.length === DEALS.length ? `${DEALS.length} deals` : `${list.length} of ${DEALS.length} deals`;
   const active = isActive();
-  $("#standouts").hidden = active;
-  $("#best").hidden = active;
   $("#clear").disabled = !active;
   persist();
 }
@@ -1318,15 +1318,29 @@ function clearAll(){
   $("#half").checked = false; $("#low").checked = false; $("#cat").value = "All"; $("#q").value = "";
   renderSelects(); render();
 }
+// ---- tabs: each section of the bar is its own screen
+const TABS = {stores:["stores"], deals:["deals"], best:["best","standouts"], promos:["promos"], next:["next"]};
+function showTab(t, scroll = true){
+  if (!TABS[t]) t = "stores";
+  state.tab = t; persist();
+  document.querySelectorAll("main > section").forEach(sec => sec.toggleAttribute("data-off", !TABS[t].includes(sec.id)));
+  document.querySelectorAll(".jump a").forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + t));
+  if (scroll){
+    const off = matchMedia("(max-width:719px)").matches ? 0 : 56;
+    const top = $("main").getBoundingClientRect().top + scrollY - off;
+    if (scrollY > top) scrollTo({top});
+  }
+}
 function selectStore(n){
   if (!DEALS.some(d => d.r === n)) return openOffer(n);
   state = {...state, g:GROUP_OF[n] || "All", r:n, half:false, low:false, cat:"All", q:""};
   $("#half").checked = false; $("#low").checked = false; $("#cat").value = "All"; $("#q").value = "";
   renderSelects(); render();
-  $("#deals").scrollIntoView({block:"start"});
+  showTab("deals");
 }
 function openOffer(n){
   const el = document.getElementById("offer-" + slug(n)); if (!el) return;
+  showTab("promos", false);
   const det = el.closest("details"); if (det) det.open = true;
   el.scrollIntoView({block:"start"});
   el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 1800);
@@ -1593,16 +1607,10 @@ document.addEventListener("click", e => { const b = e.target.closest("[data-offe
 $("#openAll").addEventListener("click", e => { const all = [...document.querySelectorAll("details.og")]; const open = !all.every(d => d.open); all.forEach(d => d.open = open); e.target.textContent = open ? "Close all" : "Open all"; });
 document.querySelector(".jump").addEventListener("click", e => {
   const a = e.target.closest("a"); if (!a) return;
-  const t = document.querySelector(a.getAttribute("href")); if (!t) return;
   e.preventDefault();
-  if (t.hidden) clearAll();
-  t.scrollIntoView({block:"start"});
+  showTab(a.getAttribute("href").slice(1));
 });
-{
-  const links = [...document.querySelectorAll(".jump a")];
-  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) links.forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + en.target.id)); }), {rootMargin:"-40% 0px -55% 0px"});
-  ["best","standouts","stores","deals","promos","next"].forEach(id => { const el = document.getElementById(id); if (el) io.observe(el); });
-}
+showTab(state.tab, false);
 $("#half").addEventListener("change", e => { state.half = e.target.checked; render(); });
 $("#low").addEventListener("change", e => { state.low = e.target.checked; if (state.low && state.sort === "save") {} render(); });
 $("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
@@ -1646,7 +1654,7 @@ let installEvt = null;
 window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; if (!IN_APP && $("#getApk").hidden && $("#getIos").hidden) $("#install").hidden = false; });
 $("#install").addEventListener("click", async () => { if (!installEvt) return; installEvt.prompt(); try { await installEvt.userChoice; } catch(e){} installEvt = null; $("#install").hidden = true; });
 window.addEventListener("appinstalled", () => { $("#install").hidden = true; toast("Added to your home screen"); });
-try { if (new URLSearchParams(location.search).get("filter") === "lows"){ state.low = true; $("#low").checked = true; render(); } } catch(e){}
+try { if (new URLSearchParams(location.search).get("filter") === "lows"){ state.low = true; $("#low").checked = true; render(); showTab("deals", false); } } catch(e){}
 // ---- app install & offline support (only on the published website)
 if ("serviceWorker" in navigator && /github\.io$/.test(location.hostname)){
   window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => {}); });
