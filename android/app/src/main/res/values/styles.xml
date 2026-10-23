@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="ticket">#FFD21F</color>
+  <color name="ticket_ink">#14213D</color>
+  <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+    <item name="android:windowBackground">@color/ticket</item>
+    <item name="android:statusBarColor">@color/ticket</item>
+    <item name="android:navigationBarColor">#EDF0F4</item>
+    <item name="android:windowLightStatusBar">true</item>
+    <item name="android:windowLightNavigationBar">true</item>
+    <item name="android:colorAccent">@color/ticket_ink</item>
+  </style>
+</resources>

@@ -1,0 +1,31 @@
+plugins { id 'com.android.application' }
+
+android {
+  namespace 'au.adelaide.dealsheet'
+  compileSdk 35
+  defaultConfig {
+    applicationId "au.adelaide.dealsheet"
+    minSdk 24
+    targetSdk 35
+    versionCode 1
+    versionName "1.0"
+  }
+  signingConfigs {
+    release {
+      storeFile file("release.jks")
+      storePassword "dealsheet2026"
+      keyAlias "dealsheet"
+      keyPassword "dealsheet2026"
+    }
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      signingConfig signingConfigs.release
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+}

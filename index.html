@@ -82,7 +82,7 @@ h1.mark span{display:block}
 .btn-ink:hover{background:var(--sale);color:#fff}
 .btn-ink svg{width:18px;height:18px}
 .btn-install{border:0;cursor:pointer;font-family:var(--body)}
-.btn-install[hidden]{display:none}
+.btn-install[hidden],#getApk[hidden]{display:none}
 @media (display-mode: standalone){.btn-install{display:none}}
 
 .events{background:var(--board);color:var(--board-ink);border-radius:16px;padding:16px 18px 10px}
@@ -325,6 +325,7 @@ details.weeks summary{cursor:pointer;font-weight:700;font-size:15px}
     <div class="hdr-links">
       <a class="btn-ink" href="https://likku2019.github.io/Adelaide-deals/history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8"/><path d="M15 7h5v5"/></svg>Price tracker</a>
       <button class="btn-ink btn-install" id="install" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Install app</button>
+      <a class="btn-ink" id="getApk" href="app/deal-sheet.apk" download="deal-sheet.apk" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>Get the Android app</a>
     </div>
   </div>
   <aside class="events" aria-labelledby="ev-h">
@@ -1371,6 +1372,7 @@ panel.addEventListener("click", async e => {
   if (t.hasAttribute("data-share")){
     const d = DEALS[OPEN], url = "https://likku2019.github.io/Adelaide-deals/#deal=" + d.id;
     const text = `${d.n}: ${money(d.now)}${d.was ? ` (was ${money(d.was)})` : ""} at ${d.r}. ${d.end}.`;
+    if (window.DealSheetApp && window.DealSheetApp.share){ window.DealSheetApp.share(text + " " + url); return; }
     try { if (navigator.share){ await navigator.share({title:"Adelaide Deal Sheet", text, url}); return; } } catch(err){ if (err && err.name === "AbortError") return; }
     try { await navigator.clipboard.writeText(text + " " + url); toast("Link copied"); } catch(err){ toast("Couldn't copy. Long-press the address bar to copy the link."); }
   }
@@ -1411,8 +1413,10 @@ loadHistory().then(rows => {
   if (OPEN !== null) openDeal(OPEN, false); else fromHash();
 });
 window.addEventListener("hashchange", fromHash);
+const IN_APP = /DealSheetApp/.test(navigator.userAgent);
+if (/Android/i.test(navigator.userAgent) && !IN_APP && !matchMedia("(display-mode: standalone)").matches) $("#getApk").hidden = false;
 let installEvt = null;
-window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; $("#install").hidden = false; });
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; if (!IN_APP && $("#getApk").hidden) $("#install").hidden = false; });
 $("#install").addEventListener("click", async () => { if (!installEvt) return; installEvt.prompt(); try { await installEvt.userChoice; } catch(e){} installEvt = null; $("#install").hidden = true; });
 window.addEventListener("appinstalled", () => { $("#install").hidden = true; toast("Added to your home screen"); });
 try { if (new URLSearchParams(location.search).get("filter") === "lows"){ state.low = true; $("#low").checked = true; render(); } } catch(e){}
