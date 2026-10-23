@@ -13,7 +13,13 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#FFD43B">
+<meta name="theme-color" content="#FFD21F">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Deal Sheet">
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23FFD43B'/%3E%3Crect x='8' y='20' width='48' height='26' rx='3' fill='%23D3261D' transform='rotate(-6 32 33)'/%3E%3Ctext x='32' y='41' font-family='Arial Black,Arial' font-weight='900' font-size='20' fill='white' text-anchor='middle' transform='rotate(-6 32 33)'%3E%C2%BD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -262,4 +268,9 @@ fetch("data/prices.csv?v=" + Date.now()).then(r => { if (!r.ok) throw 0; return 
   $("#q").value = state.q; $("#sort").value = state.sort; $("#now").checked = state.now;
   fillSelects(); render();
 }).catch(() => { $("#list").innerHTML = `<div class="empty">Couldn't load the price list. Please refresh the page.</div>`; });
+
+// ---- app install & offline support (only on the published website)
+if ("serviceWorker" in navigator && /github\.io$/.test(location.hostname)){
+  window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => {}); });
+}
 </script>
