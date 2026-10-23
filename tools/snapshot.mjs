@@ -1,6 +1,7 @@
 // Adds this week's deals from index.html to data/prices.csv.
 // Usage: node tools/snapshot.mjs YYYY-MM-DD   (the Wednesday the week starts)
-// Running it again for the same week replaces that week's rows.
+// Safe to run every day: rows for this week are added or updated, and deals that ended
+// earlier in the week keep their row. Earlier weeks are never touched.
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 
 const week = process.argv[2];
@@ -28,7 +29,8 @@ const rows = DEALS.filter(d => typeof d.now === "number").map(d => [
 mkdirSync("data", { recursive: true });
 const file = "data/prices.csv";
 let old = existsSync(file) ? readFileSync(file, "utf8").trim().split("\n").slice(1) : [];
-old = old.filter(l => l && !l.startsWith(week + ","));
+const ids = new Set(rows.map(r => r[1]));
+old = old.filter(l => l && !(l.startsWith(week + ",") && ids.has(l.split(",")[1])));
 const out = [HEAD.join(","), ...old, ...rows.map(r => r.map(cell).join(","))].join("\n") + "\n";
 writeFileSync(file, out);
-console.log(`${rows.length} prices saved for week ${week} (${old.length} earlier rows kept)`);
+console.log(`${rows.length} prices saved for week ${week} (${old.length} other rows kept)`);
