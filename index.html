@@ -22,6 +22,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Deal Sheet">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23FFD43B'/%3E%3Crect x='8' y='20' width='48' height='26' rx='3' fill='%23D3261D' transform='rotate(-6 32 33)'/%3E%3Ctext x='32' y='41' font-family='Arial Black,Arial' font-weight='900' font-size='20' fill='white' text-anchor='middle' transform='rotate(-6 32 33)'%3E%C2%BD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,7 +83,7 @@ h1.mark span{display:block}
 .btn-ink:hover{background:var(--sale);color:#fff}
 .btn-ink svg{width:18px;height:18px}
 .btn-install{border:0;cursor:pointer;font-family:var(--body)}
-.btn-install[hidden],#getApk[hidden]{display:none}
+.btn-install[hidden],#getApk[hidden],#getIos[hidden]{display:none}
 @media (display-mode: standalone){.btn-install{display:none}}
 
 .events{background:var(--board);color:var(--board-ink);border-radius:16px;padding:16px 18px 10px}
@@ -354,6 +355,18 @@ details.so-group{margin:0 0 18px}
 .sh-store{background:var(--paper);border-radius:12px;padding:4px 14px 2px;border:1px solid var(--line);border-top:4px solid var(--c)}
 .sh-store li:first-child,.so-wrap .store li:first-child{border-top:0}
 .so-wrap .store ul{border-top:1px solid var(--line)}
+/* iPhone install guide */
+.ios-hero{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start}
+.ios-hero img{border-radius:16px;box-shadow:0 4px 12px -6px rgba(0,0,0,.35)}
+.ios-hero h2{font-size:21px;font-weight:700}
+.ios-hero p{margin:4px 0 0;color:var(--ink-2);font-size:14.5px}
+.ios-note{margin:0;background:var(--warn-bg);color:var(--ink);border-radius:12px;padding:10px 14px;font-size:14px}
+.ios-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.ios-steps li{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start;background:var(--paper);border-radius:12px;padding:12px 14px}
+.ios-steps .n{width:32px;height:32px;border-radius:50%;background:var(--ticket);color:var(--ticket-ink);display:grid;place-items:center;font:800 16px var(--display)}
+.ios-steps strong{display:flex;align-items:center;gap:6px;font-size:15.5px}
+.ios-steps p{margin:3px 0 0;font-size:14px;color:var(--ink-2)}
+.ios-ic{width:20px;height:20px;color:#0A84FF;flex:none}
 /* ---------- responsive ---------- */
 @media (max-width:900px){
   .top-in{grid-template-columns:minmax(0,1fr);gap:22px}
@@ -401,6 +414,7 @@ details.so-group{margin:0 0 18px}
       <a class="btn-ink" href="https://likku2019.github.io/Adelaide-deals/history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8"/><path d="M15 7h5v5"/></svg>Price tracker</a>
       <button class="btn-ink btn-install" id="install" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Install app</button>
       <a class="btn-ink" id="getApk" href="app/deal-sheet.apk" download="deal-sheet.apk" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>Get the Android app</a>
+      <button class="btn-ink btn-install" id="getIos" type="button" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2.1-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 .1-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.4-.6 3.1-1.5z"/></svg>Get the iPhone app</button>
     </div>
   </div>
   <aside class="events" aria-labelledby="ev-h">
@@ -480,6 +494,20 @@ details.so-group{margin:0 0 18px}
 
 
 <dialog class="sheet" id="sheet" aria-labelledby="sh-title"><div class="panel" id="panel"></div></dialog>
+<dialog class="sheet" id="iosDlg" aria-labelledby="ios-h"><div class="panel ios-panel">
+  <div class="sh-top"><span class="pos">Install on iPhone or iPad</span><button class="ibtn" type="button" data-close-ios aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="sh-body">
+    <div class="ios-hero"><img src="icons/apple-touch-icon.png" alt="" width="72" height="72"><div><h2 id="ios-h">Deal Sheet for iPhone</h2><p>Adds the deal sheet to your Home Screen as an app. It opens full screen, works offline, and shows the new deals every Wednesday.</p></div></div>
+    <p class="ios-note" id="iosNote" hidden></p>
+    <ol class="ios-steps">
+      <li><span class="n">1</span><div><strong>Open this page in Safari</strong><p>Go to likku2019.github.io/Adelaide-deals in Safari on your iPhone. (Chrome on iPhone works too.)</p></div></li>
+      <li><span class="n">2</span><div><strong>Tap the Share button <svg class="ios-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Share icon"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11v9h12v-9"/></svg></strong><p>It's the square with an arrow, at the bottom of Safari (top right on iPad). In Chrome it's in the address bar.</p></div></li>
+      <li><span class="n">3</span><div><strong>Choose "Add to Home Screen" <svg class="ios-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="Add icon"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg></strong><p>Scroll down the list if you don't see it straight away.</p></div></li>
+      <li><span class="n">4</span><div><strong>Tap Add</strong><p>The yellow ½ "Deal Sheet" icon appears on your Home Screen. Open it like any other app.</p></div></li>
+    </ol>
+    <button class="btn primary" type="button" data-close-ios>Got it</button>
+  </div>
+</div></dialog>
 
 <script>
 // ---- this week (the Wednesday-to-Tuesday catalogue week)
@@ -1592,9 +1620,24 @@ loadHistory().then(rows => {
 });
 window.addEventListener("hashchange", fromHash);
 const IN_APP = /DealSheetApp/.test(navigator.userAgent);
-if (/Android/i.test(navigator.userAgent) && !IN_APP && !matchMedia("(display-mode: standalone)").matches) $("#getApk").hidden = false;
+const UA = navigator.userAgent;
+const IS_IOS = /iPhone|iPad|iPod/.test(UA) || (/Macintosh/.test(UA) && navigator.maxTouchPoints > 1);
+const IS_ANDROID = /Android/i.test(UA);
+const STANDALONE = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+if (!IN_APP && !STANDALONE){
+  if (IS_ANDROID || !IS_IOS) $("#getApk").hidden = false;
+  if (IS_IOS || !IS_ANDROID) $("#getIos").hidden = false;
+}
+$("#getIos").addEventListener("click", () => {
+  const note = $("#iosNote");
+  if (!IS_IOS){ note.hidden = false; note.textContent = "You're on a computer. Open likku2019.github.io/Adelaide-deals on your iPhone, tap \"Get the iPhone app\" there, and follow these steps."; }
+  else if (/FxiOS|EdgiOS/.test(UA)){ note.hidden = false; note.textContent = "Open this page in Safari first. This browser can't add apps to the Home Screen."; }
+  else note.hidden = true;
+  $("#iosDlg").showModal();
+});
+$("#iosDlg").addEventListener("click", e => { if (e.target.id === "iosDlg" || e.target.closest("[data-close-ios]")) $("#iosDlg").close(); });
 let installEvt = null;
-window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; if (!IN_APP && $("#getApk").hidden) $("#install").hidden = false; });
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; if (!IN_APP && $("#getApk").hidden && $("#getIos").hidden) $("#install").hidden = false; });
 $("#install").addEventListener("click", async () => { if (!installEvt) return; installEvt.prompt(); try { await installEvt.userChoice; } catch(e){} installEvt = null; $("#install").hidden = true; });
 window.addEventListener("appinstalled", () => { $("#install").hidden = true; toast("Added to your home screen"); });
 try { if (new URLSearchParams(location.search).get("filter") === "lows"){ state.low = true; $("#low").checked = true; render(); } } catch(e){}
