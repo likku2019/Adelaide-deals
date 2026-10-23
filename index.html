@@ -96,8 +96,9 @@ h1.mark span{display:block}
 .events .cd.now{background:#2BB673;color:#08281A}
 
 /* ---------- filter bar ---------- */
-.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
-.bar-in{display:flex;flex-direction:column;gap:10px;padding-block:12px}
+.bar{position:sticky;top:55px;z-index:20;margin:0 0 16px;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;flex-direction:column;gap:8px;padding-block:10px}
+.row1 .sel{flex:1 1 170px}
 .row1{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .search{flex:1 1 280px;display:flex;align-items:center;gap:10px;height:46px;padding:0 14px;background:var(--card);border:1.5px solid var(--line-2);border-radius:12px}
 .search:focus-within{border-color:var(--focus)}
@@ -279,6 +280,72 @@ details.weeks summary{cursor:pointer;font-weight:700;font-size:15px}
 .btn svg{width:17px;height:17px}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
 
+
+/* ---------- section nav (top on computers, bottom tab bar on phones) ---------- */
+.jump{position:sticky;top:0;z-index:25;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.jump-in{display:flex;gap:6px;padding-block:8px;overflow-x:auto;scrollbar-width:none}
+.jump a{flex:none;display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:14.5px;color:var(--ink)}
+.jump a:hover{background:color-mix(in srgb,var(--ink) 7%,transparent)}
+.jump a .ji{font-size:17px;line-height:1}
+.jump a .jl-short{display:none}
+.jump a[aria-current="true"]{background:var(--ink);color:var(--paper)}
+main section{scroll-margin-top:64px}
+.store{scroll-margin-top:120px}
+/* best deals */
+.more-row{display:flex;justify-content:center;margin-top:14px}
+.more-row [hidden]{display:none}
+.sub-h{font-family:var(--display);font-weight:800;font-stretch:72%;font-size:24px;margin:28px 0 10px}
+.bigsales{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.bigsales button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:minmax(78px,auto) 1fr;gap:1px 12px;align-items:center;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:12px;padding:10px 14px;cursor:pointer}
+.bigsales button:hover{border-color:var(--c)}
+.bigsales button:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+.bigsales b{grid-row:1/3;font:900 28px/1 var(--display);font-stretch:58%;color:var(--sale);white-space:nowrap}
+.bigsales .bs-store{font-weight:700;font-size:14.5px}
+.bigsales .bs-text{font-size:13px;color:var(--muted);line-height:1.35}
+/* store directory */
+.dir{display:flex;flex-direction:column;gap:20px}
+.dir-g h3{display:flex;align-items:baseline;gap:8px;font-family:var(--display);font-weight:800;font-stretch:72%;font-size:21px;margin-bottom:8px}
+.dir-g h3 small{font:500 13px var(--body);color:var(--muted)}
+.dir-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:8px}
+.tile{all:unset;box-sizing:border-box;display:flex;flex-direction:column;gap:2px;padding:10px 12px 11px;border-radius:12px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);cursor:pointer;min-width:0}
+.tile:hover{border-color:var(--c)}
+.tile:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+.tile .tn{font-weight:700;font-size:15px;line-height:1.25}
+.tile .tm{font-size:12.5px;color:var(--muted)}
+.tile .tb{font-size:12.5px;font-weight:700;color:var(--sale)}
+/* store-wide offers */
+.linkbtn{all:unset;cursor:pointer;color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.linkbtn:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+.offers{display:flex;flex-direction:column;gap:10px}
+details.og{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--g);border-radius:14px}
+details.og>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:14px 16px;font-family:var(--display);font-weight:800;font-stretch:72%;font-size:21px}
+details.og>summary::-webkit-details-marker{display:none}
+details.og>summary small{font:500 13px var(--body);color:var(--muted);margin-left:auto;text-align:right;white-space:nowrap}
+details.og>summary::after{content:"";flex:none;width:9px;height:9px;border-right:2.5px solid var(--muted);border-bottom:2.5px solid var(--muted);transform:rotate(45deg) translateY(-3px);margin:0 4px 0 6px}
+details.og[open]>summary::after{transform:rotate(225deg) translateY(-2px)}
+details.og>summary:focus-visible{outline:2.5px solid var(--focus);outline-offset:-3px;border-radius:12px}
+.og-body{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;padding:0 14px 14px}
+.og-body .store{background:var(--paper)}
+.store.flash{outline:3px solid var(--ticket);outline-offset:3px}
+@media (max-width:719px){
+  .jump{position:fixed;top:auto;bottom:0;left:0;right:0;border-bottom:0;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .jump-in{justify-content:space-between;gap:2px;padding:4px 6px;overflow:visible}
+  .jump a{flex:1 1 0;flex-direction:column;justify-content:center;gap:3px;height:58px;padding:0;border-radius:12px;font-size:11.5px}
+  .jump a .jl-long{display:none}
+  .jump a .jl-short{display:inline}
+  .jump a .ji{font-size:19px;padding:3px 14px;border-radius:999px}
+  .jump a[aria-current="true"]{background:transparent;color:var(--ink)}
+  .jump a[aria-current="true"] .ji{background:var(--ticket)}
+  body{padding-bottom:calc(70px + env(safe-area-inset-bottom,0px))}
+  main section{scroll-margin-top:10px}
+  .store{scroll-margin-top:40px}
+  .toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+  .dir-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .og-body{grid-template-columns:minmax(0,1fr);padding:0 10px 10px}
+  details.og>summary{font-size:19px;padding:13px 12px}
+  .bigsales b{font-size:25px}
+}
+
 /* ---------- responsive ---------- */
 @media (max-width:900px){
   .top-in{grid-template-columns:minmax(0,1fr);gap:22px}
@@ -334,42 +401,65 @@ details.weeks summary{cursor:pointer;font-weight:700;font-size:15px}
   </aside>
 </div></header>
 
-<div class="bar" id="bar"><div class="wrap bar-in">
-  <div class="row1">
-    <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      <input type="search" id="q" placeholder="Search deals, e.g. coffee or Samba" aria-label="Search deals" autocomplete="off"></label>
-    <div class="controls">
-      <label class="tog"><input type="checkbox" id="half"><span class="box" aria-hidden="true"></span>½ price or better</label>
-      <label class="tog"><input type="checkbox" id="low"><span class="box" aria-hidden="true"></span>Record lows</label>
-      <select class="sel" id="cat" aria-label="Category"></select>
-      <select class="sel" id="sort" aria-label="Sort deals">
-        <option value="save">Biggest % off</option>
-        <option value="dollars">Biggest $ saving</option>
-        <option value="low">Lowest price</option>
-        <option value="record">Record lows first</option>
-        <option value="store">By store</option>
-      </select>
-      <button type="button" class="clear" id="clear" disabled>Clear filters</button>
-    </div>
-  </div>
-  <div class="scroller" id="groups" role="group" aria-label="Filter by type of store"></div>
-  <div class="scroller" id="chips" role="group" aria-label="Filter by store"></div>
-</div></div>
+<nav class="jump" aria-label="Sections"><div class="wrap jump-in">
+  <a href="#best"><span class="ji" aria-hidden="true">🔥</span><span class="jl-long">Best deals</span><span class="jl-short">Best</span></a>
+  <a href="#stores"><span class="ji" aria-hidden="true">🏬</span><span class="jl-long">Stores</span><span class="jl-short">Stores</span></a>
+  <a href="#deals"><span class="ji" aria-hidden="true">🏷️</span><span class="jl-long">All deals</span><span class="jl-short">Deals</span></a>
+  <a href="#promos"><span class="ji" aria-hidden="true">📣</span><span class="jl-long">Store-wide offers</span><span class="jl-short">Offers</span></a>
+  <a href="#next"><span class="ji" aria-hidden="true">📅</span><span class="jl-long">Coming up</span><span class="jl-short">Dates</span></a>
+</div></nav>
 
 <main class="wrap">
+  <section id="best" aria-labelledby="bs-h">
+    <div class="sec-head"><h2 id="bs-h">Best deals this week</h2><p>75% off or more, plus outlet deals at half price or better · <span id="bestCount"></span></p></div>
+    <div class="grid" id="bestGrid"></div>
+    <div class="more-row"><button class="btn" type="button" id="bestMore" hidden></button></div>
+    <div id="bigWrap">
+      <h3 class="sub-h">Big store-wide sales</h3>
+      <ul class="bigsales" id="bigSales"></ul>
+      <div class="more-row"><button class="btn" type="button" id="bigMore" hidden></button></div>
+    </div>
+  </section>
+
   <section id="standouts" aria-labelledby="st-h">
-    <div class="sec-head"><h2 id="st-h">This week's standouts</h2><p>Our picks from every store</p></div>
+    <div class="sec-head"><h2 id="st-h">Our picks</h2><p>Handy buys picked from this week's catalogues</p></div>
     <div class="stand" id="stand"></div>
+  </section>
+
+  <section id="stores" aria-labelledby="sd-h">
+    <div class="sec-head"><h2 id="sd-h">Stores</h2><p>Tap a store to see its deals</p></div>
+    <div class="dir" id="storeDir"></div>
   </section>
 
   <section id="deals" aria-labelledby="dl-h">
     <div class="sec-head"><h2 id="dl-h">All deals</h2><p id="count" aria-live="polite"></p></div>
+    <div class="bar" id="bar"><div class="bar-in">
+      <div class="row1">
+        <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input type="search" id="q" placeholder="Search deals, e.g. coffee or Samba" aria-label="Search deals" autocomplete="off"></label>
+        <select class="sel" id="grpSel" aria-label="Type of store"></select>
+        <select class="sel" id="storeSel" aria-label="Store"></select>
+      </div>
+      <div class="controls">
+        <label class="tog"><input type="checkbox" id="half"><span class="box" aria-hidden="true"></span>½ price or better</label>
+        <label class="tog"><input type="checkbox" id="low"><span class="box" aria-hidden="true"></span>Record lows</label>
+        <select class="sel" id="cat" aria-label="Category"></select>
+        <select class="sel" id="sort" aria-label="Sort deals">
+          <option value="save">Biggest % off</option>
+          <option value="dollars">Biggest $ saving</option>
+          <option value="low">Lowest price</option>
+          <option value="record">Record lows first</option>
+          <option value="store">By store</option>
+        </select>
+        <button type="button" class="clear" id="clear" disabled>Clear filters</button>
+      </div>
+    </div></div>
     <div class="grid" id="grid"></div>
   </section>
 
   <section id="promos" aria-labelledby="pr-h">
-    <div class="sec-head"><h2 id="pr-h">Store-wide sales and centre offers</h2><p>Offers that cover a whole store or shopping centre</p></div>
-    <div class="promos" id="promoGrid"></div>
+    <div class="sec-head"><h2 id="pr-h">Store-wide offers</h2><p>Sales that cover a whole store or shopping centre · <button class="linkbtn" type="button" id="openAll">Open all</button></p></div>
+    <div class="offers" id="promoGrid"></div>
   </section>
 
   <section id="next" aria-labelledby="nx-h">
@@ -378,7 +468,7 @@ details.weeks summary{cursor:pointer;font-weight:700;font-size:15px}
   </section>
 </main>
 
-<button class="fab" id="fab" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Search &amp; filter<span class="badge" id="fabBadge" hidden></span></button>
+
 
 <dialog class="sheet" id="sheet" aria-labelledby="sh-title"><div class="panel" id="panel"></div></dialog>
 
@@ -1142,16 +1232,18 @@ try { const s = JSON.parse(localStorage.getItem("ads-state") || "null"); if (s) 
 const persist = () => { try { localStorage.setItem("ads-state", JSON.stringify(state)); } catch(e){} };
 let VIS = [];
 
-function renderGroups(){
-  const gc = {}; DEALS.forEach(d => { const g = GROUP_OF[d.r]; gc[g] = (gc[g] || 0) + 1; });
-  const tabs = [{k:"All", ic:"🛍️", g:"#14213D"}, ...GROUPS.filter(G => gc[G.k])];
-  $("#groups").innerHTML = tabs.map(G => `<button class="grp" type="button" data-g="${esc(G.k)}" aria-pressed="${state.g === G.k}" style="--g:${G.g}"><span class="ic" aria-hidden="true">${G.ic}</span>${G.k === "All" ? "All stores" : esc(G.k)}<span class="n">${G.k === "All" ? DEALS.length : gc[G.k]}</span></button>`).join("");
-}
-function renderChips(){
+function renderSelects(){
   const counts = {}; DEALS.forEach(d => counts[d.r] = (counts[d.r] || 0) + 1);
-  const pool = state.g === "All" ? Object.keys(RETAILERS) : (GROUPS.find(G => G.k === state.g) || {r:[]}).r;
-  const names = ["All", ...pool.filter(n => counts[n] || PROMOS.some(p => p.r === n))];
-  $("#chips").innerHTML = names.map(n => `<button class="chip" type="button" data-r="${esc(n)}" aria-pressed="${state.r === n}" style="--c:${n === "All" ? "var(--ink)" : RETAILERS[n].c}"><span class="dot" aria-hidden="true"></span>${n === "All" ? (state.g === "All" ? "Every store" : "All " + state.g.toLowerCase()) : esc(n)}${counts[n] ? ` <span class="n">${counts[n]}</span>` : ""}</button>`).join("");
+  const promo = new Set(PROMOS.map(p => p.r));
+  const gc = {}; DEALS.forEach(d => { const g = GROUP_OF[d.r]; gc[g] = (gc[g] || 0) + 1; });
+  $("#grpSel").innerHTML = `<option value="All">All store types</option>` + GROUPS.filter(G => G.r.some(r => counts[r] || promo.has(r))).map(G => `<option value="${esc(G.k)}">${G.ic} ${esc(G.k)} (${gc[G.k] || 0})</option>`).join("");
+  if (state.g !== "All" && !GROUPS.some(G => G.k === state.g)) state.g = "All";
+  $("#grpSel").value = state.g;
+  const pool = state.g === "All" ? GROUPS.flatMap(G => G.r) : (GROUPS.find(G => G.k === state.g) || {r:[]}).r;
+  const names = [...new Set(pool.filter(n => counts[n] || promo.has(n)))].sort((a,b) => a.localeCompare(b));
+  if (state.r !== "All" && !names.includes(state.r)) state.r = "All";
+  $("#storeSel").innerHTML = `<option value="All">${state.g === "All" ? "All stores" : "All " + esc(state.g.toLowerCase())}</option>` + names.map(n => `<option value="${esc(n)}">${esc(n)} ${counts[n] ? "(" + counts[n] + ")" : "(offers only)"}</option>`).join("");
+  $("#storeSel").value = state.r;
 }
 function renderCats(){
   const cats = ["All", ...[...new Set(DEALS.map(d => d.cat))].sort()];
@@ -1174,23 +1266,65 @@ function render(){
   VIS = list.map(d => d.i);
   const promoOnly = state.r !== "All" && !DEALS.some(d => d.r === state.r);
   $("#grid").innerHTML = list.length ? list.map(card).join("")
-    : promoOnly ? `<div class="empty"><p>${esc(state.r)} has no individual deals listed this week. Its store-wide offers are below.</p><button class="btn" type="button" data-goto-promos>See ${esc(state.r)} offers</button></div>`
+    : promoOnly ? `<div class="empty"><p>${esc(state.r)} has no individual deals listed this week, only store-wide offers.</p><button class="btn" type="button" data-offer="${esc(state.r)}">See ${esc(state.r)} offers</button></div>`
     : `<div class="empty"><p>No deals match these filters.</p><button class="btn" type="button" data-clear>Clear filters</button></div>`;
-  renderPromos();
   $("#count").textContent = list.length === DEALS.length ? `${DEALS.length} deals` : `${list.length} of ${DEALS.length} deals`;
-  document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", b.dataset.r === state.r));
-  document.querySelectorAll(".grp").forEach(b => b.setAttribute("aria-pressed", b.dataset.g === state.g));
   const active = isActive();
   $("#standouts").hidden = active;
+  $("#best").hidden = active;
   $("#clear").disabled = !active;
-  const n = [state.g !== "All", state.r !== "All", state.half, state.low, state.cat !== "All", q !== ""].filter(Boolean).length;
-  $("#fabBadge").hidden = !n; $("#fabBadge").textContent = n;
   persist();
 }
 function clearAll(){
   state = {...state, g:"All", r:"All", half:false, low:false, cat:"All", q:""};
   $("#half").checked = false; $("#low").checked = false; $("#cat").value = "All"; $("#q").value = "";
-  renderChips(); render();
+  renderSelects(); render();
+}
+function selectStore(n){
+  if (!DEALS.some(d => d.r === n)) return openOffer(n);
+  state = {...state, g:GROUP_OF[n] || "All", r:n, half:false, low:false, cat:"All", q:""};
+  $("#half").checked = false; $("#low").checked = false; $("#cat").value = "All"; $("#q").value = "";
+  renderSelects(); render();
+  $("#deals").scrollIntoView({block:"start"});
+}
+function openOffer(n){
+  const el = document.getElementById("offer-" + slug(n)); if (!el) return;
+  const det = el.closest("details"); if (det) det.open = true;
+  el.scrollIntoView({block:"start"});
+  el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 1800);
+}
+
+// ---- best deals: 75% off or more, plus outlet / clearance deals at half price or better
+const isOutlet = d => GROUP_OF[d.r] === "Shoes & sportswear" || /outlet|clearance/i.test((d.end || "") + " " + (d.note || ""));
+let bestAll = false, bigAll = false;
+function renderBest(){
+  const best = DEALS.filter(d => d.p >= 75 || (d.p >= 50 && isOutlet(d))).sort((a,b) => b.p - a.p || b.save - a.save);
+  const per = {}; const first = best.filter(d => (per[d.r] = (per[d.r] || 0) + 1) <= 3).slice(0, 12);
+  const show = bestAll ? best : first;
+  $("#bestGrid").innerHTML = show.length ? show.map(card).join("") : `<div class="empty"><p>No deals at 75% off or more this week.</p></div>`;
+  $("#bestMore").hidden = show.length >= best.length;
+  $("#bestMore").textContent = `Show all ${best.length} best deals`;
+  $("#bestCount").textContent = plural(best.length, "deal");
+  const big = [];
+  PROMOS.forEach(p => p.items.forEach(([a, b]) => { const m = String(a).match(/(\d+)\s*%/); if (m && +m[1] >= 50) big.push({r:p.r, pct:+m[1], a, b}); }));
+  const one = {}; big.forEach(x => { if (!one[x.r] || x.pct > one[x.r].pct) one[x.r] = x; });
+  big.length = 0; big.push(...Object.values(one).sort((x, y) => y.pct - x.pct));
+  $("#bigMore").hidden = bigAll || big.length <= 8;
+  $("#bigMore").textContent = `Show all ${big.length} store-wide sales`;
+  $("#bigSales").innerHTML = (bigAll ? big : big.slice(0, 8)).map(x => `<li><button type="button" data-offer="${esc(x.r)}" style="--c:${RETAILERS[x.r]?.c || "var(--brand)"}"><b>${esc(x.a)}</b><span class="bs-store">${esc(x.r)}</span><span class="bs-text">${esc(x.b)}</span></button></li>`).join("");
+  $("#bigWrap").hidden = !big.length;
+}
+
+// ---- store directory
+function renderStores(){
+  const counts = {}, top = {};
+  DEALS.forEach(d => { counts[d.r] = (counts[d.r] || 0) + 1; top[d.r] = Math.max(top[d.r] || 0, d.p); });
+  const promo = new Set(PROMOS.map(p => p.r));
+  $("#storeDir").innerHTML = GROUPS.map(G => {
+    const rs = G.r.filter(r => counts[r] || promo.has(r)); if (!rs.length) return "";
+    return `<div class="dir-g"><h3><span aria-hidden="true">${G.ic}</span>${esc(G.k)}<small>${plural(rs.length, "store")}</small></h3><div class="dir-grid">${rs.map(r =>
+      `<button class="tile" type="button" data-store="${esc(r)}" style="--c:${RETAILERS[r]?.c || "var(--brand)"}"><span class="tn">${esc(r)}</span><span class="tm">${counts[r] ? plural(counts[r], "deal") + (promo.has(r) ? " + offers" : "") : "Store-wide offers"}</span>${top[r] >= 30 ? `<span class="tb">Up to ${top[r]}% off</span>` : ""}</button>`).join("")}</div></div>`;
+  }).join("");
 }
 
 // ---- header, standouts, store offers, calendar
@@ -1218,10 +1352,12 @@ function renderStatic(){
   }).join("");
 }
 function renderPromos(){
-  const storeCard = s => `<div class="store" style="--c:${RETAILERS[s.r]?.c || "var(--brand)"}"><h3><span class="dot" aria-hidden="true"></span>${esc(s.r)}</h3><div class="where">${esc(s.where)}</div><ul>${s.items.map(([a,b,c]) => `<li><b>${esc(a)}</b><span>${esc(b)}${c ? `<small>${esc(c)}</small>` : ""}</span></li>`).join("")}</ul></div>`;
-  const keep = p => (state.g === "All" || GROUP_OF[p.r] === state.g) && (state.r === "All" || p.r === state.r);
-  const html = GROUPS.map(G => { const ps = PROMOS.filter(p => GROUP_OF[p.r] === G.k && keep(p)); return ps.length ? `<h3 class="pgroup" style="--g:${G.g}"><span aria-hidden="true">${G.ic}</span>${esc(G.k)}</h3>` + ps.map(storeCard).join("") : ""; }).join("");
-  $("#promoGrid").innerHTML = html || `<div class="empty"><p>No store-wide offers for this selection.</p></div>`;
+  const storeCard = s => `<div class="store" id="offer-${slug(s.r)}" style="--c:${RETAILERS[s.r]?.c || "var(--brand)"}"><h3><span class="dot" aria-hidden="true"></span>${esc(s.r)}</h3><div class="where">${esc(s.where)}</div><ul>${s.items.map(([a,b,c]) => `<li><b>${esc(a)}</b><span>${esc(b)}${c ? `<small>${esc(c)}</small>` : ""}</span></li>`).join("")}</ul></div>`;
+  $("#promoGrid").innerHTML = GROUPS.map(G => {
+    const ps = PROMOS.filter(p => GROUP_OF[p.r] === G.k); if (!ps.length) return "";
+    const top = Math.max(0, ...ps.flatMap(p => p.items.map(([a]) => +((String(a).match(/(\d+)\s*%/) || [])[1] || 0))));
+    return `<details class="og" style="--g:${G.g}"><summary><span aria-hidden="true">${G.ic}</span>${esc(G.k)}<small>${plural(ps.length, "store")}${top >= 20 ? `<br>up to ${top}% off` : ""}</small></summary><div class="og-body">${ps.map(storeCard).join("")}</div></details>`;
+  }).join("");
 }
 function renderCal(){
   $("#cal").innerHTML = CAL.map(([d, w]) => `<li><span class="d">${esc(d)}</span><span class="w">${esc(w)}</span></li>`).join("");
@@ -1391,24 +1527,40 @@ function toast(msg){
 
 // ---- start
 if (state.g !== "All" && !GROUPS.some(G => G.k === state.g)) state.g = "All";
-renderStatic(); renderCal(); renderEvents(); renderGroups(); renderChips(); renderCats();
+renderStatic(); renderCal(); renderEvents(); renderSelects(); renderCats(); renderPromos(); renderStores(); renderBest();
 $("#half").checked = state.half; $("#low").checked = state.low; $("#sort").value = state.sort;
-$("#chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; state.r = b.dataset.r; render(); });
-$("#groups").addEventListener("click", e => { const b = e.target.closest(".grp"); if (!b) return; state.g = b.dataset.g; state.r = "All"; renderChips(); render(); });
+$("#grpSel").addEventListener("change", e => { state.g = e.target.value; state.r = "All"; renderSelects(); render(); });
+$("#storeSel").addEventListener("change", e => { state.r = e.target.value; if (state.r !== "All" && state.g === "All"){} render(); });
+$("#storeDir").addEventListener("click", e => { const b = e.target.closest(".tile"); if (b) selectStore(b.dataset.store); });
+$("#bestGrid").addEventListener("click", e => { const b = e.target.closest(".nm"); if (b) openDeal(+b.dataset.i); });
+$("#bestMore").addEventListener("click", () => { bestAll = true; renderBest(); });
+$("#bigMore").addEventListener("click", () => { bigAll = true; renderBest(); });
+document.addEventListener("click", e => { const b = e.target.closest("[data-offer]"); if (b && !e.target.closest("#panel")) openOffer(b.dataset.offer); });
+$("#openAll").addEventListener("click", e => { const all = [...document.querySelectorAll("details.og")]; const open = !all.every(d => d.open); all.forEach(d => d.open = open); e.target.textContent = open ? "Close all" : "Open all"; });
+document.querySelector(".jump").addEventListener("click", e => {
+  const a = e.target.closest("a"); if (!a) return;
+  const t = document.querySelector(a.getAttribute("href")); if (!t) return;
+  e.preventDefault();
+  if (t.hidden) clearAll();
+  t.scrollIntoView({block:"start"});
+});
+{
+  const links = [...document.querySelectorAll(".jump a")];
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) links.forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + en.target.id)); }), {rootMargin:"-40% 0px -55% 0px"});
+  ["best","standouts","stores","deals","promos","next"].forEach(id => { const el = document.getElementById(id); if (el) io.observe(el); });
+}
 $("#half").addEventListener("change", e => { state.half = e.target.checked; render(); });
 $("#low").addEventListener("change", e => { state.low = e.target.checked; if (state.low && state.sort === "save") {} render(); });
 $("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("#clear").addEventListener("click", () => { clearAll(); $("#deals").scrollIntoView({block:"start"}); });
-$("#grid").addEventListener("click", e => { const b = e.target.closest(".nm"); if (b) return openDeal(+b.dataset.i); if (e.target.closest("[data-clear]")) clearAll(); if (e.target.closest("[data-goto-promos]")) $("#promos").scrollIntoView({block:"start"}); });
+$("#grid").addEventListener("click", e => { const b = e.target.closest(".nm"); if (b) return openDeal(+b.dataset.i); if (e.target.closest("[data-clear]")) clearAll(); });
 $("#stand").addEventListener("click", e => { const b = e.target.closest("button.pick"); if (b) openDeal(+b.dataset.i); });
-$("#fab").addEventListener("click", () => { $("#bar").scrollIntoView({block:"start"}); setTimeout(() => $("#q").focus({preventScroll:true}), 350); });
-new IntersectionObserver(([en]) => $("#fab").classList.toggle("show", !en.isIntersecting && en.boundingClientRect.top < 0)).observe($("#bar"));
 render();
 const fromHash = () => { const m = location.hash.match(/^#deal=(.+)$/); if (m){ const d = DEALS.find(x => x.id === decodeURIComponent(m[1])); if (d) openDeal(d.i, false); } };
 loadHistory().then(rows => {
-  if (rows){ applyHistory(rows); DEALS.forEach(d => d.I = insight(d)); render(); }
+  if (rows){ applyHistory(rows); DEALS.forEach(d => d.I = insight(d)); render(); renderBest(); }
   else DEALS.forEach(d => d.I = insight(d));
   if (OPEN !== null) openDeal(OPEN, false); else fromHash();
 });
