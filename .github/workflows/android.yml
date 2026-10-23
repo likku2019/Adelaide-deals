@@ -24,7 +24,8 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - uses: android-actions/setup-android@v3
+      - name: Check Android SDK
+        run: echo "ANDROID_HOME=$ANDROID_HOME"; ls "$ANDROID_HOME/platforms" "$ANDROID_HOME/build-tools" | tail -20
 
       - uses: gradle/actions/setup-gradle@v4
         with:
@@ -51,7 +52,7 @@ jobs:
         if: failure()
         run: |
           mkdir -p app
-          tail -n 200 build-log.txt > app/build-log.txt || echo "no log" > app/build-log.txt
+          { echo "failed step log:"; tail -n 200 build-log.txt 2>/dev/null || echo "(build step did not run)"; } > app/build-log.txt
           git config user.name "likku2019"
           git config user.email "likku2019@users.noreply.github.com"
           git add app/build-log.txt
