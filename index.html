@@ -2213,9 +2213,10 @@ const UA = navigator.userAgent;
 const IS_IOS = /iPhone|iPad|iPod/.test(UA) || (/Macintosh/.test(UA) && navigator.maxTouchPoints > 1);
 const IS_ANDROID = /Android/i.test(UA);
 const STANDALONE = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
-// show both app buttons, except the one for the app you're already using
-if (!IN_APP && !(IS_ANDROID && STANDALONE)) $("#getApk").hidden = false;
-if (!(IS_IOS && STANDALONE)) $("#getIos").hidden = false;
+// app buttons: Android phones see the Android app, iPhones the iPhone app, computers both; none inside an installed app
+const DESKTOP = !IS_ANDROID && !IS_IOS;
+if (!IN_APP && !STANDALONE && (IS_ANDROID || DESKTOP)) $("#getApk").hidden = false;
+if (!IN_APP && !STANDALONE && (IS_IOS || DESKTOP)) $("#getIos").hidden = false;
 $("#getIos").addEventListener("click", () => {
   const note = $("#iosNote");
   if (!IS_IOS){ note.hidden = false; note.innerHTML = 'This isn\'t an iPhone. Send the link to the iPhone, open it there in Safari and follow these steps. <button class="btn" type="button" id="sendIos" style="margin-top:8px">Send the link to an iPhone</button>'; }
