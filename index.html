@@ -466,6 +466,15 @@ details.so-group{margin:0 0 18px}
 .scan-acts{display:flex;flex-wrap:wrap;gap:8px}
 .scan-recent{font-size:13px;color:var(--muted)}
 .scan-recent button{all:unset;cursor:pointer;text-decoration:underline;text-underline-offset:2px;color:var(--ink-2);margin-right:10px}
+.updbar{background:var(--ink);color:var(--paper)}
+.updbar-in{display:flex;align-items:center;gap:12px;padding-block:10px}
+.updbar .ui{font-size:24px}
+.updbar .ut{flex:1;min-width:0;display:flex;flex-direction:column;font-size:13.5px;line-height:1.3}
+.updbar .ut b{font-size:15px}
+.updbar .btn.primary{background:var(--ticket);border-color:var(--ticket);color:var(--ticket-ink);height:40px;flex:none}
+.updbar .ux{all:unset;cursor:pointer;width:32px;height:32px;display:grid;place-items:center;font-size:22px;opacity:.7;flex:none}
+.updhow{margin:0;padding:0 16px 12px;font-size:13.5px;color:color-mix(in srgb,var(--paper) 85%,transparent)}
+.scan-msg .btn{margin-top:8px}
 .ios-hero{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start}
 .ios-hero img{border-radius:16px;box-shadow:0 4px 12px -6px rgba(0,0,0,.35)}
 .ios-hero h2{font-size:21px;font-weight:700}
@@ -515,6 +524,7 @@ details.so-group{margin:0 0 18px}
 </style>
 
 <a class="skip" href="#deals">Skip to the deals</a>
+<div class="updbar" id="appUpdate" hidden><div class="wrap updbar-in"><span class="ui" aria-hidden="true">📲</span><div class="ut"><b>App update available</b><span id="updText">The new version adds the barcode scanner.</span></div><a class="btn primary" id="updBtn" href="#" target="_blank" rel="noopener">Update now</a><button class="ux" type="button" id="updLater" aria-label="Remind me later">×</button></div><p class="wrap updhow" id="updHow" hidden>Chrome is downloading <b>deal-sheet.apk</b>. When it finishes, tap <b>Open</b> (or find it in Downloads), then tap <b>Update</b>. Your list and watch words are kept.</p></div>
 <header class="top"><div class="wrap top-in">
   <div class="brand">
     <h1 class="mark"><span>Adelaide</span><span>Deal Sheet</span></h1>
@@ -2068,8 +2078,8 @@ async function startCam(){
     stopCam();
     const denied = err && (err.name === "NotAllowedError" || err.name === "SecurityError");
     let appV = 0; try { appV = window.DealSheetApp && DealSheetApp.version ? parseFloat(DealSheetApp.version()) : 0; } catch(e){}
-    msg.textContent = IN_APP && appV < 1.1 ? "This version of the Android app can't use the camera yet. Open likku2019.github.io/Adelaide-deals in Chrome and tap “Get the Android app” to install the update. Meanwhile, type the barcode number below."
-      : denied ? "Camera access is blocked. Allow the camera for this site (or app) in your phone's settings, or type the barcode number below."
+    if (IN_APP && appV < APP_LATEST){ msg.innerHTML = `This version of the app can't use the camera yet. Update the app (takes a minute), or type the barcode number below.<br><a class="btn primary" href="${APK_URL}" target="_blank" rel="noopener" data-upd>📲 Update the app</a>`; return; }
+    msg.textContent = denied ? "Camera access is blocked. Allow the camera for this site (or app) in your phone's settings, or type the barcode number below."
       : "The camera couldn't start. Type the barcode number below instead.";
   }
 }
@@ -2186,6 +2196,19 @@ loadHistory().then(rows => {
 });
 window.addEventListener("hashchange", fromHash);
 const IN_APP = /DealSheetApp/.test(navigator.userAgent);
+// ---- Android app updates: newer app versions add features (1.1 = camera for the barcode scanner)
+const APP_LATEST = 1.1;
+// a link to another site makes even the oldest app hand the download to Chrome
+const APK_URL = "https://raw.githubusercontent.com/likku2019/Adelaide-deals/main/app/deal-sheet.apk";
+let APP_VER = 0; try { if (IN_APP && window.DealSheetApp && DealSheetApp.version) APP_VER = parseFloat(DealSheetApp.version()) || 1; } catch(e){ APP_VER = 1; }
+if (IN_APP && APP_VER < APP_LATEST){
+  let later = 0; try { later = +localStorage.getItem("ads-upd-later") || 0; } catch(e){}
+  $("#updBtn").href = APK_URL;
+  $("#updText").textContent = `You have version ${APP_VER.toFixed(1)}. Version ${APP_LATEST.toFixed(1)} adds the barcode scanner.`;
+  if (Date.now() - later > 2 * 864e5) $("#appUpdate").hidden = false;
+  $("#updLater").addEventListener("click", () => { $("#appUpdate").hidden = true; try { localStorage.setItem("ads-upd-later", Date.now()); } catch(e){} });
+}
+document.addEventListener("click", e => { if (e.target.closest("#updBtn, [data-upd]")){ $("#appUpdate").hidden = false; $("#updHow").hidden = false; } });
 const UA = navigator.userAgent;
 const IS_IOS = /iPhone|iPad|iPod/.test(UA) || (/Macintosh/.test(UA) && navigator.maxTouchPoints > 1);
 const IS_ANDROID = /Android/i.test(UA);
