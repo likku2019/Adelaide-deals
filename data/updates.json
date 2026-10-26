@@ -10,14 +10,14 @@
   "note": ""
  },
  "Amazon": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "17 new deals, older ones removed; HAUL30 code ended, new buy-2 13% off code"
+  "checked": "2026-10-27",
+  "changed": "2026-10-27",
+  "note": "6 new deals; BIC razors sold out"
  },
  "BIG W": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-26",
-  "note": "3 new deals"
+  "note": "No change"
  },
  "Best&Less": {
   "checked": "2026-10-22",
@@ -25,9 +25,9 @@
   "note": ""
  },
  "Bunnings": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "4 new deals"
+  "checked": "2026-10-27",
+  "changed": "2026-10-27",
+  "note": "CLR rust remover half price"
  },
  "Burnside Village": {
   "checked": "2026-10-26",
@@ -35,9 +35,9 @@
   "note": "Georg Jensen gift ended 25 Oct"
  },
  "Chemist Warehouse": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-26",
-  "note": "New whey deal, Pillar 50% off, free delivery over $30"
+  "note": "No change"
  },
  "Coles": {
   "checked": "2026-10-21",
@@ -50,9 +50,9 @@
   "note": ""
  },
  "Costco": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "LG monitor and MacBook Air offers ended; Roborock robot vacuum added"
+  "checked": "2026-10-27",
+  "changed": "2026-10-27",
+  "note": "MacBook Air 15\" M5 1TB added; LEGO Eevee ended 26 Oct"
  },
  "Cotton On / Typo": {
   "checked": "2026-10-21",
@@ -65,9 +65,9 @@
   "note": ""
  },
  "H&M": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "Kids' 60% off ended 23 Oct"
+  "checked": "2026-10-27",
+  "changed": "2026-10-27",
+  "note": "Women's trousers 60% ended 26 Oct"
  },
  "HOKA": {
   "checked": "2026-10-22",
@@ -85,9 +85,9 @@
   "note": ""
  },
  "Harvey Norman": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-26",
-  "note": "2 new deals"
+  "note": "No change"
  },
  "IKEA": {
   "checked": "2026-10-22",
@@ -95,14 +95,14 @@
   "note": ""
  },
  "JB Hi-Fi": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "Frame Pro TV + Edifier speakers; $500 off $2,000 TV & audio"
+  "checked": "2026-10-27",
+  "changed": "2026-10-27",
+  "note": "MacBook Air M5, iPhone 17 Pro Max; buy 2 get 1 free movies"
  },
  "Kmart": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-26",
-  "note": "2 new deals"
+  "note": "No change"
  },
  "Lovisa": {
   "checked": "2026-10-22",
@@ -120,7 +120,7 @@
   "note": ""
  },
  "Myer": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-21",
   "note": "No change"
  },
@@ -130,7 +130,7 @@
   "note": ""
  },
  "Nike": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-21",
   "note": "No change"
  },
@@ -140,9 +140,9 @@
   "note": ""
  },
  "Officeworks": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-26",
-  "note": "4 new deals"
+  "note": "No change"
  },
  "Onitsuka Tiger": {
   "checked": "2026-10-22",
@@ -190,9 +190,9 @@
   "note": ""
  },
  "Target": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "Xbox controller deal ended; JinxO board game added"
+  "checked": "2026-10-27",
+  "changed": "2026-10-27",
+  "note": "Faber-Castell pen cube added"
  },
  "TerryWhite Chemmart": {
   "checked": "2026-10-22",
@@ -200,9 +200,9 @@
   "note": ""
  },
  "The Good Guys": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-26",
-  "note": "2 new deals; 20% off TVs & soundbars for StoreCash members"
+  "note": "No change"
  },
  "The Reject Shop": {
   "checked": "2026-10-22",
@@ -245,28 +245,38 @@
   "note": ""
  },
  "Kogan": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "Added: Kogan First offers, 1 deal"
+  "checked": "2026-10-27",
+  "changed": "2026-10-27",
+  "note": "Kogan Mobile 365-day plans"
  },
  "eBay": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "Added: price match & eBay Plus offers"
+  "checked": "2026-10-27",
+  "changed": "2026-10-27",
+  "note": "4 deals and 3 codes added"
  },
  "THE ICONIC": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-26",
-  "note": "Added: home essentials sale, delivery & first-order offers"
+  "note": "No change"
  },
  "Appliances Online": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-26",
-  "note": "Added: category sales to 28 Dec, free delivery & removal"
+  "note": "No change"
  },
  "Adore Beauty": {
-  "checked": "2026-10-26",
+  "checked": "2026-10-27",
   "changed": "2026-10-26",
-  "note": "Added: Adore Frenzy up to 30% until 1 Nov"
+  "note": "No change"
+ },
+ "Golden Star Spices Supermarket": {
+  "checked": "2026-10-27",
+  "changed": "2026-10-27",
+  "note": "Added from Facebook: Daawat basmati 20kg flyer (24 Oct); Ekam Indian Grocery not identified; FB login wall limits older posts"
+ },
+ "Indian PLAZA": {
+  "checked": "2026-10-27",
+  "changed": "2026-10-27",
+  "note": "Added from Facebook: no specials posted"
  }
 }

@@ -683,7 +683,7 @@ details.so-group{margin:0 0 18px}
 
 <script>
 // ---- this week (the Wednesday-to-Tuesday catalogue week)
-const WEEK = {start:"2026-10-21", end:"2026-10-27", label:"Wed 21 – Tue 27 Oct 2026", ends:"Tue 27 Oct", updated:"Mon 26 Oct 2026"};
+const WEEK = {start:"2026-10-21", end:"2026-10-27", label:"Wed 21 – Tue 27 Oct 2026", ends:"Tue 27 Oct", updated:"Tue 27 Oct 2026"};
 
 const RETAILERS = {
   "Coles":{c:"var(--coles)"}, "Woolworths":{c:"var(--woolies)"}, "ALDI":{c:"var(--aldi)"},
@@ -695,7 +695,7 @@ const RETAILERS = {
   "Westfield Marion":{c:"var(--westfield)"}, "Burnside Village":{c:"var(--burnside)"},
   "Bunnings":{c:"var(--bunnings)"}, "Chemist Warehouse":{c:"var(--cw)"}, "Harris Scarfe":{c:"var(--hs)"},
   "Strandbags":{c:"var(--brand)"}, "Guess":{c:"var(--brand)"}, "New Balance":{c:"var(--brand)"}, "Puma":{c:"var(--brand)"},
-  "Reebok":{c:"var(--brand)"}, "Skechers":{c:"var(--skechers)"}, "OTR":{c:"var(--otr)"}, "Harvey Norman":{c:"var(--hn)"}, "Amazon":{c:"var(--amazon)"}, "Officeworks":{c:"var(--officeworks)"}, "The Reject Shop":{c:"var(--tbs)"}, "Best&Less":{c:"var(--bnl)"}, "The Good Guys":{c:"var(--tgg)"}, "Amart":{c:"var(--amart)"}, "IKEA":{c:"var(--ikea)"}, "Priceline":{c:"var(--priceline)"}, "TerryWhite Chemmart":{c:"var(--tw)"}, "Valley Girl":{c:"var(--brand)"}, "Mountain Warehouse":{c:"var(--mw)"}, "HOKA":{c:"var(--hoka)"}, "Onitsuka Tiger":{c:"var(--brand)"}, "Shoe Warehouse":{c:"var(--swh)"}, "Lovisa":{c:"var(--lovisa)"}, "Converse":{c:"var(--brand)"}, "Kogan":{c:"var(--kogan)"}, "eBay":{c:"var(--ebay)"}, "THE ICONIC":{c:"var(--iconic)"}, "Appliances Online":{c:"var(--ao)"}, "Adore Beauty":{c:"var(--adore)"}
+  "Reebok":{c:"var(--brand)"}, "Skechers":{c:"var(--skechers)"}, "OTR":{c:"var(--otr)"}, "Harvey Norman":{c:"var(--hn)"}, "Amazon":{c:"var(--amazon)"}, "Officeworks":{c:"var(--officeworks)"}, "The Reject Shop":{c:"var(--tbs)"}, "Best&Less":{c:"var(--bnl)"}, "The Good Guys":{c:"var(--tgg)"}, "Amart":{c:"var(--amart)"}, "IKEA":{c:"var(--ikea)"}, "Priceline":{c:"var(--priceline)"}, "TerryWhite Chemmart":{c:"var(--tw)"}, "Valley Girl":{c:"var(--brand)"}, "Mountain Warehouse":{c:"var(--mw)"}, "HOKA":{c:"var(--hoka)"}, "Onitsuka Tiger":{c:"var(--brand)"}, "Shoe Warehouse":{c:"var(--swh)"}, "Lovisa":{c:"var(--lovisa)"}, "Converse":{c:"var(--brand)"}, "Kogan":{c:"var(--kogan)"}, "eBay":{c:"var(--ebay)"}, "THE ICONIC":{c:"var(--iconic)"}, "Appliances Online":{c:"var(--ao)"}, "Adore Beauty":{c:"var(--adore)"}, "Golden Star Spices Supermarket":{c:"#E07A00"}, "Indian PLAZA":{c:"#B5179E"}
 };
 // r = retailer, n = name, now/was = AUD, cat, end, tag ("sb" = ALDI Special Buy), note
 const DEALS = [
@@ -807,10 +807,10 @@ const DEALS = [
  {r:"ALDI",n:"Gardenline Vegetable Grow Tower",now:9.99,cat:"Tools & garden",end:"From Sat 24 Oct · while stocks last"},
  // ---- Costco
  {r:"Costco",n:"Sony WH-1000XM5 Noise Cancelling Headphones",now:299.99,cat:"Electronics",end:"Ends 29 Oct · delivered"},
- {r:"Costco",n:"LEGO Pokémon Eevee 72151",now:39.99,cat:"Kids & toys",end:"Ends 26 Oct · in-store"},
  {r:"Costco",n:"LEGO Scuderia Ferrari HP Helmet (Leclerc or Hamilton)",now:69.99,cat:"Kids & toys",end:"Ends 23 Nov · in-store"},
  {r:"Costco",n:"adidas Originals Project Two Strap Watch",now:49.97,cat:"Clothing",end:"While stocks last · delivered"},
  {r:"Costco",n:"Roborock Qrevo C Pro Robot Vacuum",now:699.99,cat:"Electronics",end:"While stocks last · delivered"},
+ {r:"Costco",n:"Apple MacBook Air 15\" M5 24GB/1TB",now:2599.99,cat:"Electronics",end:"While stocks last",note:"Membership required"},
  // ---- Nike (online sale, further markdowns)
  {r:"Nike",n:"Nike SB Dunk Low Pro Skate Shoes",now:108,was:180,cat:"Footwear",end:"Online sale · while stocks last"},
  {r:"Nike",n:"Nike Air Force 1 Older Kids' Shoes",now:90,was:150,cat:"Footwear",end:"Online sale · while stocks last"},
@@ -848,6 +848,7 @@ const DEALS = [
  {r:"Target",n:"Pokémon GO Plus +",now:74,cat:"Gaming",end:"While stocks last",note:"$64 with $10 newsletter voucher"},
  {r:"Target",n:"JinxO Board Game",now:39,cat:"Kids & toys",end:"While stocks last"},
  {r:"Target",n:"Nintendo Talking Flower",now:29,cat:"Gaming",end:"While stocks last"},
+ {r:"Target",n:"Faber-Castell Connector Pens 48 pack + Colouring Book",now:10,was:14,cat:"Kids & toys",end:"While stocks last",note:"Free click & collect or OnePass delivery"},
  // ---- BIG W
  {r:"BIG W",n:"Cadbury Variety Jumbo Chocolate Box 1.56kg (110 pieces)",now:29,was:58,cat:"Snacks",end:"While stocks last"},
  {r:"BIG W",n:"Shark PowerPro Cordless Stick Vacuum IZ370H",now:274,cat:"Home",end:"While stocks last · delivered"},
@@ -869,6 +870,8 @@ const DEALS = [
  {r:"JB Hi-Fi",n:"Battlefield 6 (PS5 / Xbox Series X)",now:39,cat:"Gaming",end:"While stocks last"},
  {r:"JB Hi-Fi",n:"Edifier M90 Powered Bluetooth Speakers",now:343.2,cat:"Electronics",end:"Delivery only"},
  {r:"JB Hi-Fi",n:"Samsung 85\" The Frame Pro Neo QLED 4K TV (2026)",now:2912,cat:"Electronics",end:"Code GET500 · ends Fri 30 Oct",note:"Free click & collect"},
+ {r:"JB Hi-Fi",n:"Apple MacBook Air 13\" M5 24GB/1TB",now:2499,cat:"Electronics",end:"While stocks last",note:"Free click & collect"},
+ {r:"JB Hi-Fi",n:"Apple iPhone 17 Pro Max 256GB",now:1879,cat:"Electronics",end:"While stocks last",note:"Same price at Officeworks"},
  // ---- Uniqlo
  {r:"Uniqlo",n:"Men's PUFFTECH Parka",now:59.9,was:99.9,cat:"Clothing",end:"While stocks last",note:"Free click & collect or $75+ delivery"},
  // ---- Typo (Cotton On Group)
@@ -890,6 +893,7 @@ const DEALS = [
  {r:"Bunnings",n:"Pinnacle 4 Tier Heavy Duty Shelving Unit 1830mm",now:198,cat:"Tools & garden",end:"In-store & online"},
  {r:"Bunnings",n:"Hy-Clor Pool Stabiliser 2kg",now:9.94,cat:"Tools & garden",end:"In-store, click & collect or OnePass"},
  {r:"Bunnings",n:"Ozito PXC 18V Brushless Pruning Chainsaw (skin only)",now:49.89,cat:"Tools & garden",end:"In-store, click & collect or OnePass"},
+ {r:"Bunnings",n:"CLR Calcium Lime Rust Remover 750ml",now:6.5,was:13.95,cat:"Household",end:"In-store, click & collect or OnePass"},
  // ---- Chemist Warehouse
  {r:"Chemist Warehouse",n:"Musashi 100% Whey Protein 2kg",now:77.49,cat:"Health & beauty"},
  {r:"Chemist Warehouse",n:"INC Plant Protein 1kg",now:26.99,cat:"Health & beauty",note:"2kg $44.99"},
@@ -978,9 +982,20 @@ const DEALS = [
  {r:"Amazon",n:"Ecovacs Deebot T50 Omni Robot Vacuum",now:499,was:1499,cat:"Home",end:"Online · price can change any time"},
  {r:"Amazon",n:"Audio-Technica ATH-R50X Open-Back Headphones",now:268.91,was:399,cat:"Electronics",end:"Online · price can change any time",note:"Ships from Amazon US"},
  {r:"Amazon",n:"Uncle Tobys Cheerios Cereal 560g",now:3.75,cat:"Pantry",end:"Online · price can change any time",note:"$3.37 with Subscribe & Save"},
- {r:"Amazon",n:"BIC Comfort 3 Advance Men's Razors 16 pack",now:9.5,cat:"Health & beauty",end:"Online · price can change any time",note:"$8.55 with Subscribe & Save"},
+ {r:"Amazon",n:"Cobram Estate Extra Virgin Olive Oil Classic 3L",now:50,cat:"Pantry",end:"Online · price can change any time",note:"Same price at Coles"},
+ {r:"Amazon",n:"Meta Quest 3S 128GB VR Headset",now:483.65,was:569,cat:"Gaming",end:"Online · price can change any time"},
+ {r:"Amazon",n:"Tenda ME3 Pro Wi-Fi 7 Mesh Router 2-pack",now:169.99,was:249.99,cat:"Electronics",end:"Online · price can change any time",note:"Sold by Tenda-AU"},
+ {r:"Amazon",n:"Apple MacBook Air 15\" M5 16GB/512GB",now:2047,was:2499,cat:"Electronics",end:"Online · price can change any time"},
+ {r:"Amazon",n:"Apple MacBook Air 13\" M5 16GB/1TB (Sky Blue)",now:2049,was:2549,cat:"Electronics",end:"Online · price can change any time"},
+ {r:"Amazon",n:"Calvin Klein Deodorant Stick 75g",now:10,cat:"Health & beauty",end:"Online · price can change any time",note:"$10–$12.10 depending on scent"},
  // ---- Kogan
  {r:"Kogan",n:"Kogan TravelBoost 20000mAh 20W Power Bank",now:29.99,cat:"Electronics",end:"Online · price can change any time",note:"Kogan First price, delivered"},
+ {r:"Kogan",n:"Kogan Mobile 365-day Prepaid SIM 300GB",now:159,cat:"Phone & SIM",end:"Buy by 10 Nov",note:"Also 900GB for $199"},
+ {r:"eBay",n:"Dyson Supersonic Travel Hair Dryer",now:389,cat:"Health & beauty",end:"Online · price can change any time",note:"Sold by Dyson's eBay store · $369 for some eBay Plus members"},
+ {r:"eBay",n:"EcoFlow Delta 2 1024Wh Portable Power Station",now:719.28,cat:"Electronics",end:"Online · price can change any time",note:"Sold by EcoFlow's official eBay store"},
+ {r:"eBay",n:"Just Wines Red & White Mixed Wine 12 bottles",now:89,was:235.94,cat:"Liquor",end:"Online · price can change any time",note:"Sold by Just Wines · plus delivery"},
+ {r:"eBay",n:"Maxell AA Alkaline Batteries 144 pack",now:29.45,cat:"Household",end:"Online · price can change any time",note:"Delivered · sold by Tapesplus"},
+ {r:"Golden Star Spices Supermarket",n:"Daawat Everyday Basmati Rice Gold 20kg",now:41.99,cat:"Pantry",end:"Posted 24 Oct · while stocks last",note:"From the store's Facebook specials · $2.10/kg vs ALDI 5kg $14.99 ($3/kg)"},
  // ---- Officeworks
  {r:"Officeworks",n:"Lenovo Chromebook Plus 14\" OLED Touch (16GB/256GB)",now:697,cat:"Electronics",end:"Free delivery metro, OnePass or click & collect"},
  {r:"Officeworks",n:"Samsung Galaxy Watch Ultra (2025) LTE 47mm",now:697,cat:"Electronics",end:"Free delivery metro, OnePass or click & collect"},
@@ -1104,10 +1119,19 @@ const PROMOS = [
    ["Note","Home delivery orders currently running slightly late","Click & collect is an option"]]},
  {r:"Kogan",where:"kogan.com · delivered to Adelaide",items:[
    ["Daily","New 'today only' deals every day","Prices go back up the next day, so check the end date"],
-   ["Free","Shipping on eligible items with Kogan First membership","Plus member-only prices on selected deals"]]},
+   ["Free","Shipping on eligible items with Kogan First membership","Plus member-only prices on selected deals"],
+   ["$159","Kogan Mobile 365-day prepaid plans","300GB $159 or 900GB $199 · buy by 10 Nov"]]},
  {r:"eBay",where:"ebay.com.au · delivered to Adelaide",items:[
    ["5%","Price match promise on new fixed-price items","Capped at $150; claim within 48 hours with a lower price from an approved retailer"],
-   ["$5","Off a $50 order every month for eBay Plus members","Annual membership; 30-day free trial available"]]},
+   ["$5","Off a $50 order every month for eBay Plus members","Annual membership; 30-day free trial available"],
+   ["20%","Off selected tech items","Code TRADE20 · until Mon 2 Nov","sel"],
+   ["20%","Off HP products","Code HPOCT26 · until Fri 30 Oct","sel"],
+   ["10%","Off selected Sony audio","Code SONY10AUDIO · until Sat 31 Oct","sel"]]},
+ {r:"Golden Star Spices Supermarket",where:"Clovelly Park (1156 South Rd) · Facebook page",items:[
+   ["Weekly","Specials posted on Facebook","Latest flyer: 24 Oct (Daawat basmati 20kg $41.99)"],
+   ["New","Horn bananas and water apples ($12.99/kg) in stock","Also sold at its sister stores Golden India and Golden Fresh"]]},
+ {r:"Indian PLAZA",where:"Enfield (431 Main North Rd) · Facebook page",items:[
+   ["None","No current specials posted","Latest post 26 Oct: new mango & peach drinks"]]},
  {r:"THE ICONIC",where:"theiconic.com.au · delivered to Adelaide",items:[
    ["≤30%","Home essentials","Until 26 Jan"],
    ["$20","Off your first order when you join the newsletter",""],
@@ -1197,12 +1221,12 @@ const PROMOS = [
    ["New","Catalogue starts Thu 29 Oct",""]]},
  {r:"JB Hi-Fi",where:"Rundle Mall, Marion, Tea Tree Plaza & more",items:[
    ["$500","Off $2,000+ on selected TV & home audio brands","Free click & collect or in-store"],
+   ["Buy 2 get 1","Free on selected DVDs, Blu-rays & 4K movies and TV shows","","none"],
    ["2 for $30","Selected Blu-rays","Also 2 for $20 DVD/Blu-ray, 2 for $50 4K"],
    ["$99","Google Pixel 11 Pro XL 256GB","With a JB Hi-Fi Mobile plan + port-in, in-store only"],
    ["$10","Voucher for joining JB Perks",""]]},
  {r:"H&M",where:"Rundle Mall, Marion, Tea Tree Plaza · hm.com/au",items:[
    ["≤60%","H&M sale, 1000s of styles","As reported by Marie Claire's deals page"],
-   ["60%","Selected women's trousers","Until 26 Oct"],
    ["20–50%","Cardigans & jumpers",""],
    ["10%","Off your first order when you join (free)",""]]},
  {r:"Cotton On / Typo",where:"Cotton On Group stores",items:[
@@ -1270,6 +1294,8 @@ const PICKS = [
 ];
 
 const PICS = [
+ [/basmati|rice/i,"🍚"],[/\bdal\b|lentil/i,"🫘"],[/atta|flour/i,"🌾"],[/ghee/i,"🧈"],[/paneer/i,"🧀"],[/masala|spice/i,"🌶️"],
+ [/meta quest|vr headset/i,"🥽"],[/rust remover/i,"🧽"],[/wine/i,"🍷"],[/connector pens/i,"🖍️"],[/iphone 17 pro max/i,"📱"],
  [/power bank/i,"🔋"],
  [/robot vacuum/i,"🤖"],[/cheerios/i,"🥣"],[/picture books/i,"📚"],[/board game/i,"🎲"],
  [/chainsaw/i,"🪚"],[/blower/i,"🍃"],[/activity tent/i,"⛺"],[/grow tower/i,"🌱"],[/shave|trimmer$|clipper/i,"🪒"],[/\bcap\b/i,"🧢"],[/shelving/i,"🗄️"],[/carpet cleaner/i,"🧽"],[/charging station/i,"🔌"],[/alarm clock/i,"⏰"],[/mandoline/i,"🔪"],[/raglan tee/i,"👕"],[/deodorant/i,"🧴"],[/card reader/i,"💾"],[/hand wash/i,"🧼"],[/creatine/i,"💪"],[/surface laptop|macbook/i,"💻"],[/iphone 17 pro 256/i,"📱"],
@@ -1306,6 +1332,7 @@ const CAT_HUE = {"Pantry":32,"Household":195,"Drinks":5,"Meat & seafood":350,"Fr
  "Baby":170,"Pet":40,"Home":160,"Phone & SIM":230,"Clothing":260,"Liquor":15,"Tools & garden":110,"Kids & toys":50,"Electronics":220,"Footwear":190,"Gaming":250,"Sport":140,"Bags":300,"Food & coffee":25,"Furniture":28,"Jewellery":330};
 const GROUPS = [
  {k:"Groceries",ic:"🛒",g:"#1E8E3E",r:["Coles","Woolworths","ALDI","Costco"]},
+ {k:"Indian grocers",ic:"🍛",g:"#E07A00",r:["Golden Star Spices Supermarket","Indian PLAZA"]},
  {k:"Department stores",ic:"🏬",g:"#2563EB",r:["Myer","Kmart","Target","BIG W","Harris Scarfe","The Reject Shop"]},
  {k:"Shoes & sportswear",ic:"👟",g:"#EA580C",r:["Nike","adidas","New Balance","Puma","Reebok","Skechers","HOKA","Onitsuka Tiger","Converse","Shoe Warehouse","Mountain Warehouse"]},
  {k:"Clothes & fashion",ic:"👕",g:"#DB2777",r:["Uniqlo","H&M","Zara","Cotton On / Typo","Best&Less","Valley Girl"]},

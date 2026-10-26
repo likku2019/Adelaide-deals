@@ -170,6 +170,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,amazon--blackmores-magnesium,Amazon,Online,Blackmores Magnesium,Health & beauty,6,,,Up to 80% off · Ashwagandha+ 2-pack $12
 2026-10-21,amazon--beko-caffeexperto-manual-espresso-machine,Amazon,Online,Beko CaffeExperto Manual Espresso Machine,Home,29.6,,,
 2026-10-21,the-good-guys--dell-27-qhd-144hz-monitor-se2726d,The Good Guys,"Home, hardware & tech","Dell 27"" QHD 144Hz Monitor SE2726D",Electronics,174,,,Price shown with The Good Guys' Price Check button
+2026-10-21,costco--lego-poke-mon-eevee-72151,Costco,Groceries,LEGO Pokémon Eevee 72151,Kids & toys,39.99,,,
+2026-10-21,amazon--bic-comfort-3-advance-men-s-razors-16-pack,Amazon,Online,BIC Comfort 3 Advance Men's Razors 16 pack,Health & beauty,9.5,,,$8.55 with Subscribe & Save
 2026-10-21,coles--mayver-s-upside-down-peanut-butter-450g-smooth-crunchy-or-salted-caramel,Coles,Groceries,"Mayver's Upside Down Peanut Butter 450g (Smooth, Crunchy or Salted Caramel)",Pantry,4.25,8.5,50,First ½-price Mayver's since 2024
 2026-10-21,coles--fairy-platinum-dishwashing-tablets-52-pack,Coles,Groceries,Fairy Platinum Dishwashing Tablets 52 pack,Household,23,46,50,
 2026-10-21,coles--omo-expert-wonder-wash-laundry-liquid-1-18l,Coles,Groceries,OMO Expert Wonder Wash Laundry Liquid 1.18L,Household,10.5,21,50,
@@ -274,10 +276,10 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,aldi--findon-kids-activity-tent,ALDI,Groceries,Findon Kids' Activity Tent,Kids & toys,29.99,,,
 2026-10-21,aldi--gardenline-vegetable-grow-tower,ALDI,Groceries,Gardenline Vegetable Grow Tower,Tools & garden,9.99,,,
 2026-10-21,costco--sony-wh-1000xm5-noise-cancelling-headphones,Costco,Groceries,Sony WH-1000XM5 Noise Cancelling Headphones,Electronics,299.99,,,
-2026-10-21,costco--lego-poke-mon-eevee-72151,Costco,Groceries,LEGO Pokémon Eevee 72151,Kids & toys,39.99,,,
 2026-10-21,costco--lego-scuderia-ferrari-hp-helmet-leclerc-or-hamilton,Costco,Groceries,LEGO Scuderia Ferrari HP Helmet (Leclerc or Hamilton),Kids & toys,69.99,,,
 2026-10-21,costco--adidas-originals-project-two-strap-watch,Costco,Groceries,adidas Originals Project Two Strap Watch,Clothing,49.97,,,
 2026-10-21,costco--roborock-qrevo-c-pro-robot-vacuum,Costco,Groceries,Roborock Qrevo C Pro Robot Vacuum,Electronics,699.99,,,
+2026-10-21,costco--apple-macbook-air-15-m5-24gb-1tb,Costco,Groceries,"Apple MacBook Air 15"" M5 24GB/1TB",Electronics,2599.99,,,Membership required
 2026-10-21,nike--nike-sb-dunk-low-pro-skate-shoes,Nike,Shoes & sportswear,Nike SB Dunk Low Pro Skate Shoes,Footwear,108,180,40,
 2026-10-21,nike--nike-air-force-1-older-kids-shoes,Nike,Shoes & sportswear,Nike Air Force 1 Older Kids' Shoes,Footwear,90,150,40,
 2026-10-21,nike--air-jordan-4-toro-men-s,Nike,Shoes & sportswear,Air Jordan 4 'Toro' Men's,Footwear,203,290,30,
@@ -310,6 +312,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,target--poke-mon-go-plus,Target,Department stores,Pokémon GO Plus +,Gaming,74,,,$64 with $10 newsletter voucher
 2026-10-21,target--jinxo-board-game,Target,Department stores,JinxO Board Game,Kids & toys,39,,,
 2026-10-21,target--nintendo-talking-flower,Target,Department stores,Nintendo Talking Flower,Gaming,29,,,
+2026-10-21,target--faber-castell-connector-pens-48-pack-colouring-book,Target,Department stores,Faber-Castell Connector Pens 48 pack + Colouring Book,Kids & toys,10,14,29,Free click & collect or OnePass delivery
 2026-10-21,big-w--cadbury-variety-jumbo-chocolate-box-1-56kg-110-pieces,BIG W,Department stores,Cadbury Variety Jumbo Chocolate Box 1.56kg (110 pieces),Snacks,29,58,50,
 2026-10-21,big-w--shark-powerpro-cordless-stick-vacuum-iz370h,BIG W,Department stores,Shark PowerPro Cordless Stick Vacuum IZ370H,Home,274,,,
 2026-10-21,big-w--moki-exo-bluetooth-headphones,BIG W,Department stores,Moki Exo Bluetooth Headphones,Electronics,17,49,65,
@@ -329,6 +332,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,jb-hi-fi--battlefield-6-ps5-xbox-series-x,JB Hi-Fi,"Home, hardware & tech",Battlefield 6 (PS5 / Xbox Series X),Gaming,39,,,
 2026-10-21,jb-hi-fi--edifier-m90-powered-bluetooth-speakers,JB Hi-Fi,"Home, hardware & tech",Edifier M90 Powered Bluetooth Speakers,Electronics,343.2,,,
 2026-10-21,jb-hi-fi--samsung-85-the-frame-pro-neo-qled-4k-tv-2026,JB Hi-Fi,"Home, hardware & tech","Samsung 85"" The Frame Pro Neo QLED 4K TV (2026)",Electronics,2912,,,Free click & collect
+2026-10-21,jb-hi-fi--apple-macbook-air-13-m5-24gb-1tb,JB Hi-Fi,"Home, hardware & tech","Apple MacBook Air 13"" M5 24GB/1TB",Electronics,2499,,,Free click & collect
+2026-10-21,jb-hi-fi--apple-iphone-17-pro-max-256gb,JB Hi-Fi,"Home, hardware & tech",Apple iPhone 17 Pro Max 256GB,Electronics,1879,,,Same price at Officeworks
 2026-10-21,uniqlo--men-s-pufftech-parka,Uniqlo,Clothes & fashion,Men's PUFFTECH Parka,Clothing,59.9,99.9,40,Free click & collect or $75+ delivery
 2026-10-21,cotton-on-typo--typo-metro-tote-river-gum,Cotton On / Typo,Clothes & fashion,Typo Metro Tote (River Gum),Home,25,59.99,58,
 2026-10-21,cotton-on-typo--typo-cloud-lamp,Cotton On / Typo,Clothes & fashion,Typo Cloud Lamp,Home,30,69.99,57,
@@ -347,6 +352,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,bunnings--pinnacle-4-tier-heavy-duty-shelving-unit-1830mm,Bunnings,"Home, hardware & tech",Pinnacle 4 Tier Heavy Duty Shelving Unit 1830mm,Tools & garden,198,,,
 2026-10-21,bunnings--hy-clor-pool-stabiliser-2kg,Bunnings,"Home, hardware & tech",Hy-Clor Pool Stabiliser 2kg,Tools & garden,9.94,,,
 2026-10-21,bunnings--ozito-pxc-18v-brushless-pruning-chainsaw-skin-only,Bunnings,"Home, hardware & tech",Ozito PXC 18V Brushless Pruning Chainsaw (skin only),Tools & garden,49.89,,,
+2026-10-21,bunnings--clr-calcium-lime-rust-remover-750ml,Bunnings,"Home, hardware & tech",CLR Calcium Lime Rust Remover 750ml,Household,6.5,13.95,53,
 2026-10-21,chemist-warehouse--musashi-100-whey-protein-2kg,Chemist Warehouse,Beauty & pharmacy,Musashi 100% Whey Protein 2kg,Health & beauty,77.49,,,
 2026-10-21,chemist-warehouse--inc-plant-protein-1kg,Chemist Warehouse,Beauty & pharmacy,INC Plant Protein 1kg,Health & beauty,26.99,,,2kg $44.99
 2026-10-21,chemist-warehouse--neilmed-sinus-rinse-120-sachets,Chemist Warehouse,Beauty & pharmacy,NeilMed Sinus Rinse 120 sachets,Health & beauty,15.99,,,
@@ -425,8 +431,19 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,amazon--ecovacs-deebot-t50-omni-robot-vacuum,Amazon,Online,Ecovacs Deebot T50 Omni Robot Vacuum,Home,499,1499,67,
 2026-10-21,amazon--audio-technica-ath-r50x-open-back-headphones,Amazon,Online,Audio-Technica ATH-R50X Open-Back Headphones,Electronics,268.91,399,33,Ships from Amazon US
 2026-10-21,amazon--uncle-tobys-cheerios-cereal-560g,Amazon,Online,Uncle Tobys Cheerios Cereal 560g,Pantry,3.75,,,$3.37 with Subscribe & Save
-2026-10-21,amazon--bic-comfort-3-advance-men-s-razors-16-pack,Amazon,Online,BIC Comfort 3 Advance Men's Razors 16 pack,Health & beauty,9.5,,,$8.55 with Subscribe & Save
+2026-10-21,amazon--cobram-estate-extra-virgin-olive-oil-classic-3l,Amazon,Online,Cobram Estate Extra Virgin Olive Oil Classic 3L,Pantry,50,,,Same price at Coles
+2026-10-21,amazon--meta-quest-3s-128gb-vr-headset,Amazon,Online,Meta Quest 3S 128GB VR Headset,Gaming,483.65,569,15,
+2026-10-21,amazon--tenda-me3-pro-wi-fi-7-mesh-router-2-pack,Amazon,Online,Tenda ME3 Pro Wi-Fi 7 Mesh Router 2-pack,Electronics,169.99,249.99,32,Sold by Tenda-AU
+2026-10-21,amazon--apple-macbook-air-15-m5-16gb-512gb,Amazon,Online,"Apple MacBook Air 15"" M5 16GB/512GB",Electronics,2047,2499,18,
+2026-10-21,amazon--apple-macbook-air-13-m5-16gb-1tb-sky-blue,Amazon,Online,"Apple MacBook Air 13"" M5 16GB/1TB (Sky Blue)",Electronics,2049,2549,20,
+2026-10-21,amazon--calvin-klein-deodorant-stick-75g,Amazon,Online,Calvin Klein Deodorant Stick 75g,Health & beauty,10,,,$10–$12.10 depending on scent
 2026-10-21,kogan--kogan-travelboost-20000mah-20w-power-bank,Kogan,Online,Kogan TravelBoost 20000mAh 20W Power Bank,Electronics,29.99,,,"Kogan First price, delivered"
+2026-10-21,kogan--kogan-mobile-365-day-prepaid-sim-300gb,Kogan,Online,Kogan Mobile 365-day Prepaid SIM 300GB,Phone & SIM,159,,,Also 900GB for $199
+2026-10-21,ebay--dyson-supersonic-travel-hair-dryer,eBay,Online,Dyson Supersonic Travel Hair Dryer,Health & beauty,389,,,Sold by Dyson's eBay store · $369 for some eBay Plus members
+2026-10-21,ebay--ecoflow-delta-2-1024wh-portable-power-station,eBay,Online,EcoFlow Delta 2 1024Wh Portable Power Station,Electronics,719.28,,,Sold by EcoFlow's official eBay store
+2026-10-21,ebay--just-wines-red-white-mixed-wine-12-bottles,eBay,Online,Just Wines Red & White Mixed Wine 12 bottles,Liquor,89,235.94,62,Sold by Just Wines · plus delivery
+2026-10-21,ebay--maxell-aa-alkaline-batteries-144-pack,eBay,Online,Maxell AA Alkaline Batteries 144 pack,Household,29.45,,,Delivered · sold by Tapesplus
+2026-10-21,golden-star-spices-supermarket--daawat-everyday-basmati-rice-gold-20kg,Golden Star Spices Supermarket,Indian grocers,Daawat Everyday Basmati Rice Gold 20kg,Pantry,41.99,,,From the store's Facebook specials · $2.10/kg vs ALDI 5kg $14.99 ($3/kg)
 2026-10-21,officeworks--lenovo-chromebook-plus-14-oled-touch-16gb-256gb,Officeworks,"Home, hardware & tech","Lenovo Chromebook Plus 14"" OLED Touch (16GB/256GB)",Electronics,697,,,
 2026-10-21,officeworks--samsung-galaxy-watch-ultra-2025-lte-47mm,Officeworks,"Home, hardware & tech",Samsung Galaxy Watch Ultra (2025) LTE 47mm,Electronics,697,,,
 2026-10-21,officeworks--edifier-neobuds-pro-3-noise-cancelling-earphones,Officeworks,"Home, hardware & tech",Edifier Neobuds Pro 3 Noise Cancelling Earphones,Electronics,95,,,
