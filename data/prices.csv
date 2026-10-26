@@ -152,6 +152,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-14,coles--pine-o-cleen-disinfectant-wipes-100-pack,Coles,Groceries,Pine O Cleen Disinfectant Wipes 100 pack,Household,6,12,50,
 2026-10-14,coles--i-j-raw-peeled-prawns-tail-off-500g,Coles,Groceries,I&J Raw Peeled Prawns Tail Off 500g,Meat & seafood,12,24,50,
 2026-10-14,woolworths--blackmores-fish-oil-1000mg-400-capsules,Woolworths,Groceries,Blackmores Fish Oil 1000mg 400 capsules,Health & beauty,30,60,50,
+2026-10-21,costco--lg-34-ultragear-34g600a-160hz-curved-monitor,Costco,Groceries,"LG 34"" UltraGear 34G600A 160Hz Curved Monitor",Electronics,449.99,,,
+2026-10-21,target--xbox-wireless-controller-robot-white,Target,Department stores,Xbox Wireless Controller – Robot White,Gaming,79,,,
 2026-10-21,coles--mayver-s-upside-down-peanut-butter-450g-smooth-crunchy-or-salted-caramel,Coles,Groceries,"Mayver's Upside Down Peanut Butter 450g (Smooth, Crunchy or Salted Caramel)",Pantry,4.25,8.5,50,First ½-price Mayver's since 2024
 2026-10-21,coles--fairy-platinum-dishwashing-tablets-52-pack,Coles,Groceries,Fairy Platinum Dishwashing Tablets 52 pack,Household,23,46,50,
 2026-10-21,coles--omo-expert-wonder-wash-laundry-liquid-1-18l,Coles,Groceries,OMO Expert Wonder Wash Laundry Liquid 1.18L,Household,10.5,21,50,
@@ -250,8 +252,12 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,aldi--rocky-point-garden-fertiliser-6kg,ALDI,Groceries,Rocky Point Garden Fertiliser 6kg,Tools & garden,19.99,,,
 2026-10-21,aldi--step2-splash-table,ALDI,Groceries,Step2 Splash Table,Kids & toys,99.99,,,
 2026-10-21,aldi--little-town-outdoor-mud-kitchen,ALDI,Groceries,Little Town Outdoor Mud Kitchen,Kids & toys,49.99,,,
+2026-10-21,aldi--power-force-pool-cover,ALDI,Groceries,Power Force Pool Cover,Tools & garden,179,,,
+2026-10-21,aldi--ferrex-20v-mini-chainsaw-skin-only,ALDI,Groceries,Ferrex 20V Mini Chainsaw (skin only),Tools & garden,49.99,,,
+2026-10-21,aldi--ferrex-20v-cordless-blower-skin-only,ALDI,Groceries,Ferrex 20V Cordless Blower (skin only),Tools & garden,49.99,,,
+2026-10-21,aldi--findon-kids-activity-tent,ALDI,Groceries,Findon Kids' Activity Tent,Kids & toys,29.99,,,
+2026-10-21,aldi--gardenline-vegetable-grow-tower,ALDI,Groceries,Gardenline Vegetable Grow Tower,Tools & garden,9.99,,,
 2026-10-21,costco--sony-wh-1000xm5-noise-cancelling-headphones,Costco,Groceries,Sony WH-1000XM5 Noise Cancelling Headphones,Electronics,299.99,,,
-2026-10-21,costco--lg-34-ultragear-34g600a-160hz-curved-monitor,Costco,Groceries,"LG 34"" UltraGear 34G600A 160Hz Curved Monitor",Electronics,449.99,,,
 2026-10-21,costco--macbook-air-15-m5-24gb-ram-1tb,Costco,Groceries,"MacBook Air 15"" M5, 24GB RAM, 1TB",Electronics,2999,,,"Officeworks will price-beat to about $2,850"
 2026-10-21,costco--lego-poke-mon-eevee-72151,Costco,Groceries,LEGO Pokémon Eevee 72151,Kids & toys,39.99,,,
 2026-10-21,costco--lego-scuderia-ferrari-hp-helmet-leclerc-or-hamilton,Costco,Groceries,LEGO Scuderia Ferrari HP Helmet (Leclerc or Hamilton),Kids & toys,69.99,,,
@@ -281,10 +287,11 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,kmart--anko-4l-5l-cast-iron-casserole-or-10l-stock-pot,Kmart,Department stores,Anko 4L/5L Cast Iron Casserole or 10L Stock Pot,Home,12,,,
 2026-10-21,kmart--bic-cristal-ballpoint-pens-50-pack,Kmart,Department stores,BIC Cristal Ballpoint Pens 50 pack,Home,10,20,50,
 2026-10-21,kmart--carbon-fibre-badminton-racket-case,Kmart,Department stores,Carbon Fibre Badminton Racket + Case,Sport,29,,,
+2026-10-21,kmart--anko-shave-trim-set-ad-320r,Kmart,Department stores,anko Shave & Trim Set AD-320R,Health & beauty,29,,,
+2026-10-21,kmart--dad-cap,Kmart,Department stores,Dad Cap,Clothing,3,,,
 2026-10-21,target--marvel-s-spider-man-2-ps5,Target,Department stores,Marvel's Spider-Man 2 (PS5),Gaming,49,99,51,
 2026-10-21,target--mario-kart-world-switch-2,Target,Department stores,Mario Kart World (Switch 2),Gaming,95,,,$85 with Target's $10 newsletter voucher
 2026-10-21,target--poke-mon-go-plus,Target,Department stores,Pokémon GO Plus +,Gaming,74,,,$64 with $10 newsletter voucher
-2026-10-21,target--xbox-wireless-controller-robot-white,Target,Department stores,Xbox Wireless Controller – Robot White,Gaming,79,,,
 2026-10-21,target--nintendo-talking-flower,Target,Department stores,Nintendo Talking Flower,Gaming,29,,,
 2026-10-21,big-w--cadbury-variety-jumbo-chocolate-box-1-56kg-110-pieces,BIG W,Department stores,Cadbury Variety Jumbo Chocolate Box 1.56kg (110 pieces),Snacks,29,58,50,
 2026-10-21,big-w--shark-powerpro-cordless-stick-vacuum-iz370h,BIG W,Department stores,Shark PowerPro Cordless Stick Vacuum IZ370H,Home,274,,,
@@ -292,6 +299,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,big-w--lego-77078-fortnite-mecha-team-leader,BIG W,Department stores,LEGO 77078 Fortnite Mecha Team Leader,Kids & toys,161,269,40,
 2026-10-21,big-w--skip-hop-silver-lining-cloud-activity-gym,BIG W,Department stores,Skip Hop Silver Lining Cloud Activity Gym,Baby,149,199,25,
 2026-10-21,big-w--quilton-3-ply-toilet-tissue-48-rolls,BIG W,Department stores,Quilton 3-Ply Toilet Tissue 48 rolls,Household,23,,,
+2026-10-21,big-w--final-fantasy-resonance-ps5,BIG W,Department stores,Final Fantasy Resonance (PS5),Gaming,69,,,
+2026-10-21,big-w--cadbury-favourites-489g-monopoly-edition,BIG W,Department stores,Cadbury Favourites 489g (Monopoly Edition),Snacks,12,,,Same price at Coles
 2026-10-21,jb-hi-fi--blaupunkt-55-4k-uhd-smart-tv,JB Hi-Fi,"Home, hardware & tech","Blaupunkt 55"" 4K UHD Smart TV",Electronics,399,,,
 2026-10-21,jb-hi-fi--tcl-98-p7k-4k-qled-google-tv,JB Hi-Fi,"Home, hardware & tech","TCL 98"" P7K 4K QLED Google TV",Electronics,2488,,,
 2026-10-21,jb-hi-fi--honor-600-5g-256gb,JB Hi-Fi,"Home, hardware & tech",Honor 600 5G 256GB,Electronics,699,999,30,
@@ -300,6 +309,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,jb-hi-fi--winix-compact-360-5-stage-air-purifier,JB Hi-Fi,"Home, hardware & tech",Winix Compact 360 5-Stage Air Purifier,Home,199,,,
 2026-10-21,jb-hi-fi--helldivers-2-ps5,JB Hi-Fi,"Home, hardware & tech",Helldivers 2 (PS5),Gaming,24,,,
 2026-10-21,jb-hi-fi--battlefield-6-ps5-xbox-series-x,JB Hi-Fi,"Home, hardware & tech",Battlefield 6 (PS5 / Xbox Series X),Gaming,39,,,
+2026-10-21,jb-hi-fi--edifier-m90-powered-bluetooth-speakers,JB Hi-Fi,"Home, hardware & tech",Edifier M90 Powered Bluetooth Speakers,Electronics,343.2,,,
+2026-10-21,jb-hi-fi--samsung-85-the-frame-pro-neo-qled-4k-tv-2026,JB Hi-Fi,"Home, hardware & tech","Samsung 85"" The Frame Pro Neo QLED 4K TV (2026)",Electronics,2912,,,Free click & collect
 2026-10-21,uniqlo--men-s-pufftech-parka,Uniqlo,Clothes & fashion,Men's PUFFTECH Parka,Clothing,59.9,99.9,40,Free click & collect or $75+ delivery
 2026-10-21,cotton-on-typo--typo-metro-tote-river-gum,Cotton On / Typo,Clothes & fashion,Typo Metro Tote (River Gum),Home,25,59.99,58,
 2026-10-21,cotton-on-typo--typo-cloud-lamp,Cotton On / Typo,Clothes & fashion,Typo Cloud Lamp,Home,30,69.99,57,
@@ -317,12 +328,17 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,bunnings--selleys-bbq-tough-wipes-30-pack,Bunnings,"Home, hardware & tech",Selleys BBQ Tough Wipes 30 pack,Household,5.89,10.49,44,
 2026-10-21,bunnings--heat-beads-original-bbq-briquettes-7-5kg,Bunnings,"Home, hardware & tech",Heat Beads Original BBQ Briquettes 7.5kg,Tools & garden,12.38,,,
 2026-10-21,bunnings--dampfree-disposable-moisture-absorbers-2-pack,Bunnings,"Home, hardware & tech",DampFree Disposable Moisture Absorbers 2 pack,Household,2.95,,,
+2026-10-21,bunnings--ryobi-36v-line-trimmer-blower-4ah-kit,Bunnings,"Home, hardware & tech",Ryobi 36V Line Trimmer & Blower 4Ah Kit,Tools & garden,399,,,
+2026-10-21,bunnings--pinnacle-4-tier-heavy-duty-shelving-unit-1830mm,Bunnings,"Home, hardware & tech",Pinnacle 4 Tier Heavy Duty Shelving Unit 1830mm,Tools & garden,198,,,
+2026-10-21,bunnings--hy-clor-pool-stabiliser-2kg,Bunnings,"Home, hardware & tech",Hy-Clor Pool Stabiliser 2kg,Tools & garden,9.94,,,
+2026-10-21,bunnings--ozito-pxc-18v-brushless-pruning-chainsaw-skin-only,Bunnings,"Home, hardware & tech",Ozito PXC 18V Brushless Pruning Chainsaw (skin only),Tools & garden,49.89,,,
 2026-10-21,chemist-warehouse--musashi-100-whey-protein-2kg,Chemist Warehouse,Beauty & pharmacy,Musashi 100% Whey Protein 2kg,Health & beauty,77.49,,,
 2026-10-21,chemist-warehouse--inc-plant-protein-1kg,Chemist Warehouse,Beauty & pharmacy,INC Plant Protein 1kg,Health & beauty,26.99,,,2kg $44.99
 2026-10-21,chemist-warehouse--neilmed-sinus-rinse-120-sachets,Chemist Warehouse,Beauty & pharmacy,NeilMed Sinus Rinse 120 sachets,Health & beauty,15.99,,,
 2026-10-21,chemist-warehouse--king-c-gillette-safety-razor-5-blades,Chemist Warehouse,Beauty & pharmacy,King C. Gillette Safety Razor + 5 Blades,Health & beauty,14.94,,,
 2026-10-21,chemist-warehouse--earth-choice-dishwashing-powder-1kg,Chemist Warehouse,Beauty & pharmacy,Earth Choice Dishwashing Powder 1kg,Household,6.49,,,42 tablets $12.39
 2026-10-21,chemist-warehouse--bambi-mini-co-baby-singlet-suits-onesies,Chemist Warehouse,Beauty & pharmacy,Bambi Mini Co. Baby Singlet Suits & Onesies,Baby,4.99,,,
+2026-10-21,chemist-warehouse--inc-100-dynamic-whey-2kg,Chemist Warehouse,Beauty & pharmacy,INC 100% Dynamic Whey 2kg,Health & beauty,77.99,,,
 2026-10-21,harris-scarfe--my-genie-iq500-laser-smart-robotic-vacuum,Harris Scarfe,Department stores,My Genie IQ500 Laser Smart Robotic Vacuum,Home,269.99,1799.99,85,HS Friends price (free to join)
 2026-10-21,harris-scarfe--smith-nobel-deluxe-digital-slushie-maker,Harris Scarfe,Department stores,Smith + Nobel Deluxe Digital Slushie Maker,Home,199.99,499.99,60,HS Friends price
 2026-10-21,harris-scarfe--shark-cordless-pro-stick-vacuum-ir300,Harris Scarfe,Department stores,Shark Cordless Pro Stick Vacuum IR300,Home,289.99,749.99,61,
@@ -371,6 +387,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,harvey-norman--motorola-edge-50-neo-5g-256gb,Harvey Norman,"Home, hardware & tech",Motorola Edge 50 Neo 5G 256GB,Electronics,354.95,,,
 2026-10-21,harvey-norman--tcl-60-se-nxtpaper-5g-256gb,Harvey Norman,"Home, hardware & tech",TCL 60 SE NxtPaper 5G 256GB,Electronics,197,,,Advertised as 50% off
 2026-10-21,harvey-norman--belkin-secure-holder-with-clip-for-airtag,Harvey Norman,"Home, hardware & tech",Belkin Secure Holder with Clip for AirTag,Electronics,5,,,
+2026-10-21,harvey-norman--dreame-t3-professional-barber-trimmer,Harvey Norman,"Home, hardware & tech",Dreame T3 Professional Barber Trimmer,Health & beauty,197,,,
+2026-10-21,harvey-norman--tineco-one-cruiser-carpet-cleaner,Harvey Norman,"Home, hardware & tech",Tineco One Cruiser Carpet Cleaner,Home,498,,,
 2026-10-21,amazon--canon-powershot-v1-vlog-camera-au-stock,Amazon,Online,Canon PowerShot V1 Vlog Camera (AU stock),Electronics,888,1449,39,
 2026-10-21,amazon--dreame-hair-gleam-hair-dryer,Amazon,Online,Dreame Hair Gleam Hair Dryer,Health & beauty,67.94,169,60,
 2026-10-21,amazon--anker-25w-usb-c-charger,Amazon,Online,Anker 25W USB-C Charger,Electronics,16.13,69.99,77,Sold by AnkerDirect
@@ -387,6 +405,19 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,amazon--apple-airtag-4-pack-2nd-gen,Amazon,Online,Apple AirTag 4-Pack (2nd Gen),Electronics,129,,,
 2026-10-21,amazon--palmolive-naturals-body-wash-3-1l,Amazon,Online,Palmolive Naturals Body Wash 3 × 1L,Household,16.5,,,$14.85 with Subscribe & Save
 2026-10-21,amazon--duracell-optimum-aaa-batteries-12-pack,Amazon,Online,Duracell Optimum AAA Batteries 12-pack,Household,13.5,,,$12.15 with Subscribe & Save
+2026-10-21,amazon--anker-prime-200w-6-port-gan-usb-c-charging-station,Amazon,Online,Anker Prime 200W 6-Port GaN USB-C Charging Station,Electronics,94.72,172.98,45,Prime members · sold by AnkerDirect
+2026-10-21,amazon--lenovo-legion-r45w-30-44-5-dual-qhd-curved-gaming-monitor,Amazon,Online,"Lenovo Legion R45w-30 44.5"" Dual QHD Curved Gaming Monitor",Electronics,799,1299,38,
+2026-10-21,amazon--nintendo-switch-2-console,Amazon,Online,Nintendo Switch 2 Console,Gaming,728,,,Officeworks Price Beat makes it $691.60
+2026-10-21,amazon--apple-macbook-air-13-m5-16gb-512gb,Amazon,Online,"Apple MacBook Air 13"" M5 16GB/512GB",Electronics,1747,,,
+2026-10-21,amazon--sunrise-alarm-clock-white-noise-machine,Amazon,Online,Sunrise Alarm Clock & White Noise Machine,Home,41.99,69.99,40,
+2026-10-21,amazon--oxo-good-grips-hand-held-mandoline-slicer,Amazon,Online,OXO Good Grips Hand-Held Mandoline Slicer,Home,18.95,39.95,53,
+2026-10-21,amazon--bonds-men-s-raglan-tee-2-pack,Amazon,Online,Bonds Men's Raglan Tee 2 pack,Clothing,17.4,34.99,50,
+2026-10-21,amazon--brut-roll-on-deodorant-50ml-3-pack,Amazon,Online,Brut Roll-on Deodorant 50ml 3 pack,Health & beauty,6.75,11.07,39,
+2026-10-21,amazon--duracell-coppertop-9v-batteries-2-pack,Amazon,Online,Duracell Coppertop 9V Batteries 2 pack,Household,7,14.99,53,$6.30 with Subscribe & Save
+2026-10-21,amazon--ugreen-usb-c-sd-card-reader,Amazon,Online,UGREEN USB-C SD Card Reader,Electronics,16.98,,,
+2026-10-21,amazon--palmolive-naturals-hand-wash-refill-3-1l,Amazon,Online,Palmolive Naturals Hand Wash Refill 3 × 1L,Household,9.6,,,$8.64 with Subscribe & Save
+2026-10-21,amazon--micronised-creatine-monohydrate-1kg,Amazon,Online,Micronised Creatine Monohydrate 1kg,Health & beauty,25.9,59,56,Sold by BlackBelt Protein
+2026-10-21,amazon--google-home-speaker,Amazon,Online,Google Home Speaker,Electronics,158,199,21,The Good Guys has it for $148 with Price Check
 2026-10-21,officeworks--lenovo-chromebook-plus-14-oled-touch-16gb-256gb,Officeworks,"Home, hardware & tech","Lenovo Chromebook Plus 14"" OLED Touch (16GB/256GB)",Electronics,697,,,
 2026-10-21,officeworks--samsung-galaxy-watch-ultra-2025-lte-47mm,Officeworks,"Home, hardware & tech",Samsung Galaxy Watch Ultra (2025) LTE 47mm,Electronics,697,,,
 2026-10-21,officeworks--edifier-neobuds-pro-3-noise-cancelling-earphones,Officeworks,"Home, hardware & tech",Edifier Neobuds Pro 3 Noise Cancelling Earphones,Electronics,95,,,
@@ -397,6 +428,10 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,officeworks--belkin-boostcharge-30w-usb-c-car-charger,Officeworks,"Home, hardware & tech",Belkin BoostCharge 30W USB-C Car Charger,Electronics,14,,,
 2026-10-21,officeworks--apple-iphone-17-pro-silicone-or-clear-case,Officeworks,"Home, hardware & tech",Apple iPhone 17 Pro Silicone or Clear Case,Electronics,20,,,
 2026-10-21,officeworks--keji-wireless-mouse,Officeworks,"Home, hardware & tech",Keji Wireless Mouse,Electronics,1,,,Advertised as 83% off; Keji wired keyboard also $1
+2026-10-21,officeworks--gopro-hero13-black-camera,Officeworks,"Home, hardware & tech",GoPro HERO13 Black Camera,Electronics,498,,,
+2026-10-21,officeworks--microsoft-surface-laptop-13-snapdragon-x-plus-16gb-256gb,Officeworks,"Home, hardware & tech","Microsoft Surface Laptop 13"" Snapdragon X Plus 16GB/256GB",Electronics,1497,,,
+2026-10-21,officeworks--sandisk-ultra-1tb-microsdxc-card,Officeworks,"Home, hardware & tech",SanDisk Ultra 1TB microSDXC Card,Electronics,200,,,
+2026-10-21,officeworks--apple-iphone-17-pro-256gb,Officeworks,"Home, hardware & tech",Apple iPhone 17 Pro 256GB,Electronics,1689,,,
 2026-10-21,the-reject-shop--quilton-3-ply-toilet-paper-36-pack,The Reject Shop,Department stores,Quilton 3 Ply Toilet Paper 36 pack,Household,19,,,53c a roll
 2026-10-21,the-reject-shop--glen-20-disinfectant-spray-300g,The Reject Shop,Department stores,Glen 20 Disinfectant Spray 300g,Household,5,,,Woolworths' half price was $5.50 on 14 Oct
 2026-10-21,the-reject-shop--ozkleen-multi-purpose-power-lemon-500ml,The Reject Shop,Department stores,OzKleen Multi-Purpose Power Lemon 500mL,Household,3.5,,,
@@ -421,6 +456,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-21,the-good-guys--philips-5000-series-kettle,The Good Guys,"Home, hardware & tech",Philips 5000 Series Kettle,Home,42,,,Price shown with The Good Guys' Price Check button
 2026-10-21,the-good-guys--google-home-speaker,The Good Guys,"Home, hardware & tech",Google Home Speaker,Electronics,148,,,Price shown with The Good Guys' Price Check button
 2026-10-21,the-good-guys--dell-27-qhd-144hz-monitor-se2726d,The Good Guys,"Home, hardware & tech","Dell 27"" QHD 144Hz Monitor SE2726D",Electronics,174,,,Price shown with The Good Guys' Price Check button
+2026-10-21,the-good-guys--wahl-lithium-pro-plus-cordless-clipper,The Good Guys,"Home, hardware & tech",Wahl Lithium Pro Plus Cordless Clipper,Health & beauty,85,,,Price shown with The Good Guys' Price Check button
+2026-10-21,the-good-guys--apple-ipad-pro-11-m4-wi-fi-1tb,The Good Guys,"Home, hardware & tech","Apple iPad Pro 11"" M4 Wi-Fi 1TB",Electronics,2314,,,
 2026-10-21,ikea--medga-ng-fridge-freezer-219-83l,IKEA,"Home, hardware & tech",MEDGÅNG Fridge/Freezer 219/83L,Home,599,1099,45,IKEA Family is free to join
 2026-10-21,ikea--mattradition-forced-air-oven-300-stainless-steel,IKEA,"Home, hardware & tech",MATTRADITION Forced Air Oven 300 Stainless Steel,Home,399,699,43,IKEA Family is free to join
 2026-10-21,ikea--mattradition-microwave-oven-300-black,IKEA,"Home, hardware & tech",MATTRADITION Microwave Oven 300 Black,Home,399,649,39,IKEA Family is free to join
