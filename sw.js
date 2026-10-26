@@ -1,7 +1,7 @@
 // Offline support for the Adelaide Deal Sheet app.
 // Pages and the price list are fetched fresh when online (so Wednesday updates show up),
 // and the last copy is used when the phone is offline.
-const CACHE = "deal-sheet-v1";
+const CACHE = "deal-sheet-v2";
 const SHELL = ["./", "./index.html", "./history.html", "./data/prices.csv", "./manifest.webmanifest",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"];
 
@@ -20,7 +20,8 @@ self.addEventListener("fetch", e => {
   if (fresh){
     // network first, fall back to the saved copy
     const key = url.pathname.endsWith(".csv") ? "./data/prices.csv" : (url.pathname.endsWith("history.html") ? "./history.html" : "./index.html");
-    e.respondWith(fetch(req).then(res => {
+    // "no-cache" asks the server whether the page changed, so updates show on the very next open
+    e.respondWith(fetch(url.href, {cache:"no-cache", credentials:"same-origin"}).then(res => {
       if (res.ok){ const copy = res.clone(); caches.open(CACHE).then(c => c.put(key, copy)); }
       return res;
     }).catch(() => caches.match(key)));
