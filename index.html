@@ -279,6 +279,49 @@ details.weeks summary{cursor:pointer;font-weight:700;font-size:15px}
 .btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:12px;border:1.5px solid var(--line-2);background:var(--card);font-weight:600;font-size:14.5px;text-decoration:none;cursor:pointer}
 .btn.primary{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .btn svg{width:17px;height:17px}
+.add{position:absolute;right:8px;top:8px;z-index:3;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:0;cursor:pointer;background:color-mix(in srgb,var(--card) 92%,transparent);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.add svg{width:18px;height:18px}
+.add[aria-pressed="true"]{background:var(--ink);color:var(--ticket)}
+.add:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+.jump a{position:relative}
+.jb{position:absolute;top:2px;right:6px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--sale);color:#fff;font:800 11px/18px var(--body);text-align:center}
+.jb.dot::after{content:"";position:absolute;right:-2px;top:-2px;width:8px;height:8px;border-radius:50%;background:var(--ticket);border:2px solid var(--paper)}
+.box2{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:0 0 16px}
+.box2 h3{font-family:var(--display);font-weight:800;font-stretch:72%;font-size:24px;line-height:1.05;margin:0}
+.box2 .sub{margin:4px 0 12px;color:var(--muted);font-size:14px}
+.lh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.lh .acts{display:flex;flex-wrap:wrap;gap:8px}
+.lg{border-top:1px solid var(--line);padding:10px 0 4px}
+.lg h4{display:flex;align-items:center;gap:8px;margin:0 0 4px;font-size:15px}
+.lg h4 .dot{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.lg h4 small{margin-left:auto;font-weight:700;font-variant-numeric:tabular-nums}
+.li{display:grid;grid-template-columns:28px 1fr auto 32px;align-items:center;gap:8px;padding:7px 0}
+.li input{width:20px;height:20px;accent-color:var(--ink)}
+.li .ln{all:unset;cursor:pointer;font-weight:600;font-size:14.5px;line-height:1.3}
+.li .ln:focus-visible{outline:2px solid var(--focus)}
+.li .le{display:block;font-size:12.5px;color:var(--muted);margin-top:1px}
+.li .lp{text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
+.li .lp s{display:block;font-weight:500;font-size:12px;color:var(--muted)}
+.li .lx{all:unset;cursor:pointer;display:grid;place-items:center;width:32px;height:32px;border-radius:8px;color:var(--muted);font-size:20px}
+.li .lx:hover{background:var(--paper)}
+.li.done .ln,.li.done .lp{text-decoration:line-through;opacity:.55}
+.li.gone .ln{color:var(--muted)}
+.ltot{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-top:10px}
+.ltot div{background:var(--paper);border-radius:12px;padding:10px 12px}
+.ltot b{display:block;font:900 26px/1 var(--display);font-stretch:62%}
+.ltot span{font-size:12.5px;color:var(--muted)}
+.ltot .sv b{color:#1E8E3E}
+.lempty{padding:18px;text-align:center;color:var(--muted);border:1.5px dashed var(--line-2);border-radius:12px}
+.wf{display:flex;gap:8px;flex-wrap:wrap}
+.wf input{flex:1 1 200px;height:44px;padding:0 14px;border:1.5px solid var(--line-2);border-radius:12px;background:var(--paper);font:inherit;color:var(--ink)}
+.wchips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px}
+.wchip{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 6px 0 12px;border-radius:999px;background:var(--paper);border:1.5px solid var(--line);font-weight:600;font-size:13.5px}
+.wchip .n{color:var(--muted);font-weight:500}
+.wchip button{all:unset;cursor:pointer;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;color:var(--muted)}
+.wchip button:hover{background:var(--line)}
+.wnew{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;background:var(--sale);color:#fff;font:800 11px/1.6 var(--body);vertical-align:2px}
+.shared{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:color-mix(in srgb,var(--ticket) 30%,var(--card));border:1.5px solid var(--ticket);border-radius:14px;padding:12px 14px;margin:0 0 16px;font-weight:600}
+.shared .acts{margin-left:auto;display:flex;gap:8px}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
 
 
@@ -456,6 +499,7 @@ details.so-group{margin:0 0 18px}
   <a href="#best"><span class="ji" aria-hidden="true">🔥</span><span class="jl-long">Best deals</span><span class="jl-short">Best</span></a>
   <a href="#promos"><span class="ji" aria-hidden="true">📣</span><span class="jl-long">Store-wide offers</span><span class="jl-short">Offers</span></a>
   <a href="#next"><span class="ji" aria-hidden="true">📅</span><span class="jl-long">Coming up</span><span class="jl-short">Dates</span></a>
+  <a href="#saved"><span class="ji" aria-hidden="true">⭐</span><span class="jl-long">My list</span><span class="jl-short">List</span><b class="jb" id="listBadge" hidden></b></a>
 </div></nav>
 
 <main class="wrap">
@@ -493,6 +537,10 @@ details.so-group{margin:0 0 18px}
         <label class="tog"><input type="checkbox" id="half"><span class="box" aria-hidden="true"></span>½ price or better</label>
         <label class="tog"><input type="checkbox" id="low"><span class="box" aria-hidden="true"></span>Record lows</label>
         <select class="sel" id="cat" aria-label="Category"></select>
+        <select class="sel" id="price" aria-label="Price">
+          <option value="All">Any price</option><option value="10">Under $10</option><option value="25">Under $25</option><option value="50">Under $50</option>
+          <option value="100">Under $100</option><option value="250">Under $250</option><option value="500">Under $500</option><option value="500+">$500 and up</option>
+        </select>
         <select class="sel" id="sort" aria-label="Sort deals">
           <option value="save">Biggest % off</option>
           <option value="dollars">Biggest $ saving</option>
@@ -527,6 +575,23 @@ details.so-group{margin:0 0 18px}
       </div>
     </details>
     <div class="offers" id="promoGrid"></div>
+  </section>
+
+  <section id="saved" aria-labelledby="sv-h">
+    <div class="sec-head"><h2 id="sv-h">My list</h2><p>Saved on this phone · share it to send it to another phone</p></div>
+    <div id="sharedIn"></div>
+    <div class="box2">
+      <div class="lh"><div><h3>Shopping list</h3><p class="sub" id="listSub">Tap + on any deal to add it here.</p></div>
+        <div class="acts"><button class="btn primary" type="button" id="shareList" hidden>Share list</button><button class="btn" type="button" id="clearDone" hidden>Remove ticked</button></div></div>
+      <div id="listBody"></div>
+    </div>
+    <div class="box2">
+      <h3>Watch for deals</h3>
+      <p class="sub">Add a brand or product, like Dyson, Samba or nappies. Whenever the sheet updates, matching deals show up here and the List tab gets a dot.</p>
+      <form class="wf" id="watchForm"><input id="watchIn" type="text" placeholder="e.g. Dyson" aria-label="Brand or product to watch" autocomplete="off" maxlength="40"><button class="btn primary" type="submit">Watch</button></form>
+      <div class="wchips" id="watchChips"></div>
+      <div class="grid" id="watchGrid"></div>
+    </div>
   </section>
 
   <section id="next" aria-labelledby="nx-h">
@@ -1320,7 +1385,7 @@ function card(d){
   if (d.I && d.I.tracked && (d.I.count > 1 || GROC.has(d.r)))
     hist = `<div class="hist-row">${barcode(d, d.I)}<span title="On special in ${d.I.count} of the last ${d.I.weeks.length} weeks">On special ${d.I.count} of ${d.I.weeks.length} wks</span></div>`;
   return `<article class="deal" style="--c:${c}">
-    ${pic(d)}
+    ${addBtn(d)}${pic(d)}
     <div class="body">
       <div class="meta"><span class="pill">${esc(d.r)}</span><span class="cat">${esc(d.cat)}</span></div>
       <h3><button class="nm" type="button" data-i="${d.i}" aria-haspopup="dialog">${esc(d.n)}</button></h3>
@@ -1332,7 +1397,7 @@ function card(d){
 }
 
 // ---- filters & list
-let state = {g:"All", r:"All", half:false, low:false, cat:"All", sort:"save", q:"", tab:"stores"};
+let state = {g:"All", r:"All", half:false, low:false, cat:"All", price:"All", sort:"save", q:"", tab:"stores"};
 try { const s = JSON.parse(localStorage.getItem("ads-state") || "null"); if (s) state = {...state, ...s, q:""}; } catch(e){}
 const persist = () => { try { localStorage.setItem("ads-state", JSON.stringify(state)); } catch(e){} };
 let VIS = [];
@@ -1355,12 +1420,13 @@ function renderCats(){
   $("#cat").innerHTML = cats.map(c => `<option value="${esc(c)}">${c === "All" ? "All categories" : esc(c)}</option>`).join("");
   $("#cat").value = cats.includes(state.cat) ? state.cat : (state.cat = "All");
 }
-const isActive = () => state.g !== "All" || state.r !== "All" || state.half || state.low || state.cat !== "All" || state.q.trim() !== "";
+const priceOk = d => state.price === "All" || (state.price === "500+" ? d.now >= 500 : d.now < +state.price);
+const isActive = () => state.g !== "All" || state.r !== "All" || state.half || state.low || state.cat !== "All" || state.price !== "All" || state.q.trim() !== "";
 function render(){
   const q = state.q.trim().toLowerCase();
   const list = DEALS.filter(d =>
     (state.g === "All" || GROUP_OF[d.r] === state.g) && (state.r === "All" || d.r === state.r) && (state.cat === "All" || d.cat === state.cat) &&
-    (!state.half || d.p >= 50) && (!state.low || (d.I && d.I.v === "low")) && (!q || (d.n + " " + d.r + " " + d.cat).toLowerCase().includes(q)));
+    (!state.half || d.p >= 50) && (!state.low || (d.I && d.I.v === "low")) && priceOk(d) && (!q || (d.n + " " + d.r + " " + d.cat).toLowerCase().includes(q)));
   const by = {
     save:(a,b) => b.p - a.p || b.save - a.save,
     dollars:(a,b) => b.save - a.save,
@@ -1380,17 +1446,18 @@ function render(){
   persist();
 }
 function clearAll(){
-  state = {...state, g:"All", r:"All", half:false, low:false, cat:"All", q:""};
-  $("#half").checked = false; $("#low").checked = false; $("#cat").value = "All"; $("#q").value = "";
+  state = {...state, g:"All", r:"All", half:false, low:false, cat:"All", price:"All", q:""};
+  $("#half").checked = false; $("#low").checked = false; $("#cat").value = "All"; $("#price").value = "All"; $("#q").value = "";
   renderSelects(); render();
 }
 // ---- tabs: each section of the bar is its own screen
-const TABS = {stores:["stores"], deals:["deals"], best:["best","standouts"], promos:["promos"], next:["next"]};
+const TABS = {stores:["stores"], deals:["deals"], best:["best","standouts"], promos:["promos"], next:["next"], saved:["saved"]};
 function showTab(t, scroll = true){
   if (!TABS[t]) t = "stores";
   state.tab = t; persist();
   document.querySelectorAll("main > section").forEach(sec => sec.toggleAttribute("data-off", !TABS[t].includes(sec.id)));
   document.querySelectorAll(".jump a").forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + t));
+  if (t === "saved") renderSaved(true);
   if (scroll){
     const off = matchMedia("(max-width:719px)").matches ? 0 : 56;
     const top = $("main").getBoundingClientRect().top + scrollY - off;
@@ -1675,10 +1742,12 @@ function openDeal(i, push = true){
       ${HIST_OK && I.tracked ? statsHTML(d, I) : ""}
       ${adv ? `<p class="tipline">${esc(adv)}</p>` : ""}
       ${compareHTML(d)}
-      ${PROMOS.filter(x => x.r === d.r).map(x => `<section class="sh-sec"><h3>Store-wide offers at ${esc(d.r)}</h3><div class="sh-store store" style="--c:${c}"><ul>${x.items.map(([a,b,cc]) => `<li><b>${esc(a)}</b><span>${esc(b)}${cc ? `<small>${esc(cc)}</small>` : ""}</span></li>`).join("")}</ul></div></section>`).join("")}
+      ${PROMOS.filter(x => x.r === d.r).map(x => `<section class="sh-sec"><h3>Store-wide offers at ${esc(d.r)}</h3><div class="sh-store store" style="--c:${c}"><ul>${x.items.map(it => { const [a,b,cc] = it; return `<li><b>${esc(a)}</b><span>${esc(b)}${kindChip(it)}${cc ? `<small>${esc(cc)}</small>` : ""}</span></li>`; }).join("")}</ul></div></section>`).join("")}
       ${weekList}
       <div class="sh-actions">
-        <button class="btn primary" type="button" data-share>${ICON.share}Share this deal</button>
+        <button class="btn primary" type="button" data-add="${esc(d.id)}" aria-pressed="${inList(d.id)}">${inList(d.id) ? "✓ On my list" : "+ Add to my list"}</button>
+        <button class="btn" type="button" data-share>${ICON.share}Share this deal</button>
+        <a class="btn" href="https://www.google.com/search?tbm=shop&gl=au&hl=en-AU&q=${encodeURIComponent(d.n)}" target="_blank" rel="noopener">🔍 Compare prices online</a>
         <a class="btn" href="https://likku2019.github.io/Adelaide-deals/history.html?q=${encodeURIComponent(d.n.split(" ").slice(0, 3).join(" "))}">${ICON.trend}Open in price tracker</a>
       </div>
     </div>`;
@@ -1720,6 +1789,106 @@ function toast(msg){
   (sheet.open ? sheet : document.body).appendChild(t); setTimeout(() => t.remove(), 2400);
 }
 
+// ---- my list (shopping list + watch words), kept on this phone
+const LS = {get(k, f){ try { const v = JSON.parse(localStorage.getItem(k)); return v == null ? f : v; } catch(e){ return f; } }, set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }};
+let LIST = LS.get("ads-list", []), WATCH = LS.get("ads-watch", []), SEEN = new Set(LS.get("ads-seen", []));
+const BY_ID = {}; DEALS.forEach(d => BY_ID[d.id] = d);
+const inList = id => LIST.some(x => x.id === id);
+const PLUS = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>`;
+const TICK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`;
+const addBtn = d => { const on = inList(d.id); return `<button class="add" type="button" data-add="${esc(d.id)}" aria-pressed="${on}" aria-label="${on ? "Remove from" : "Add to"} my list: ${esc(d.n)}">${on ? TICK : PLUS}</button>`; };
+function toggleList(id){
+  const d = BY_ID[id]; if (!d) return;
+  if (inList(id)){ LIST = LIST.filter(x => x.id !== id); toast("Removed from your list"); }
+  else { LIST.push({id, n:d.n, r:d.r, now:d.now, was:d.was || null, end:d.end, added:WEEK.start, done:false}); toast("Added to your list"); }
+  LS.set("ads-list", LIST); syncAdd(id); renderSaved();
+}
+function syncAdd(id){
+  const on = inList(id);
+  document.querySelectorAll(`[data-add="${CSS.escape(id)}"]`).forEach(b => {
+    b.setAttribute("aria-pressed", String(on));
+    if (b.classList.contains("add")){ b.innerHTML = on ? TICK : PLUS; b.setAttribute("aria-label", `${on ? "Remove from" : "Add to"} my list: ${BY_ID[id] ? BY_ID[id].n : ""}`); }
+    else b.textContent = on ? "✓ On my list" : "+ Add to my list";
+  });
+}
+const wordRe = w => new RegExp("(^|[^a-z0-9])" + w.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i");
+const watchHits = w => DEALS.filter(d => wordRe(w).test(`${d.n} ${d.r} ${d.cat}`));
+function renderSaved(seeing = false){
+  // shopping list
+  const live = LIST.map(x => ({...x, d:BY_ID[x.id]}));
+  const groups = {}; live.forEach(x => (groups[x.r] = groups[x.r] || []).push(x));
+  const order = Object.keys(groups).sort((a, b) => (RANK_OF[a] ? RANK_OF[a].i : 99) - (RANK_OF[b] ? RANK_OF[b].i : 99));
+  let total = 0, saved = 0;
+  live.forEach(x => { if (x.d && !x.done){ total += x.d.now; if (x.d.was) saved += x.d.was - x.d.now; } });
+  const storesLeft = new Set(live.filter(x => x.d && !x.done).map(x => x.r)).size;
+  $("#listBody").innerHTML = !LIST.length ? `<div class="lempty">Your list is empty. Tap <b>+</b> on any deal to add it.</div>` :
+    order.map(r => { const xs = groups[r], sub = xs.reduce((t, x) => t + (x.d && !x.done ? x.d.now : 0), 0);
+      return `<div class="lg" style="--c:${RETAILERS[r]?.c || "var(--brand)"}"><h4><span class="dot" aria-hidden="true"></span>${esc(r)}<small>${money(sub)}</small></h4>${xs.map(x => {
+        const d = x.d, cls = !d ? "gone" : x.done ? "done" : "";
+        return `<div class="li ${cls}"><input type="checkbox" data-done="${esc(x.id)}" ${x.done ? "checked" : ""} aria-label="Got it: ${esc(x.n)}">
+          <div>${d ? `<button class="ln" type="button" data-open="${d.i}">${esc(d.n)}</button>` : `<span class="ln">${esc(x.n)}</span>`}<span class="le">${d ? esc(d.end) : "No longer on the sheet: this deal has ended"}</span></div>
+          <div class="lp">${money(d ? d.now : x.now)}${d && d.was ? `<s>${money(d.was)}</s>` : ""}</div>
+          <button class="lx" type="button" data-del="${esc(x.id)}" aria-label="Remove ${esc(x.n)}">×</button></div>`; }).join("")}</div>`; }).join("") +
+    `<div class="ltot"><div><b>${money(total)}</b><span>Still to buy</span></div><div class="sv"><b>${money(saved)}</b><span>Saving vs usual prices</span></div><div><b>${storesLeft}</b><span>${storesLeft === 1 ? "Store" : "Stores"} to visit</span></div></div>`;
+  const n = LIST.length, ended = live.filter(x => !x.d).length;
+  $("#listSub").textContent = n ? `${plural(n, "item")}${ended ? ` · ${ended} ended` : ""} · ticked items stay until you remove them` : "Tap + on any deal to add it here.";
+  $("#shareList").hidden = !n; $("#clearDone").hidden = !live.some(x => x.done || !x.d);
+  // watch words
+  let fresh = 0;
+  const hitsAll = [];
+  $("#watchChips").innerHTML = WATCH.map(w => { const h = watchHits(w), nw = h.filter(d => !SEEN.has(d.id)).length; fresh += nw; hitsAll.push(...h);
+    return `<span class="wchip">${esc(w)} <span class="n">${h.length}</span>${nw ? `<span class="wnew">${nw} new</span>` : ""}<button type="button" data-unwatch="${esc(w)}" aria-label="Stop watching ${esc(w)}">×</button></span>`; }).join("");
+  const uniq = [...new Map(hitsAll.map(d => [d.id, d])).values()].sort((a, b) => (SEEN.has(a.id) - SEEN.has(b.id)) || b.p - a.p);
+  $("#watchGrid").innerHTML = !WATCH.length ? "" : uniq.length ? uniq.map(card).join("") : `<div class="empty"><p>No deals match your watch list this week. They'll show here as soon as one turns up.</p></div>`;
+  const badge = $("#listBadge");
+  badge.hidden = !n && !fresh; badge.textContent = n || ""; badge.classList.toggle("dot", fresh > 0);
+  if (!n && fresh){ badge.textContent = fresh; badge.classList.remove("dot"); }
+  if (seeing && fresh){ uniq.forEach(d => SEEN.add(d.id)); LS.set("ads-seen", [...SEEN]); }
+}
+function shareText(){
+  const groups = {}; LIST.forEach(x => (groups[x.r] = groups[x.r] || []).push(x));
+  const lines = ["My shopping list (Adelaide Deal Sheet)"];
+  Object.keys(groups).forEach(r => { lines.push("", r.toUpperCase()); groups[r].forEach(x => { const d = BY_ID[x.id]; lines.push(`${x.done ? "☑" : "☐"} ${x.n}: ${money(d ? d.now : x.now)}${d ? "" : " (ended)"}`); }); });
+  return lines.join("\n");
+}
+async function shareList(){
+  const ids = LIST.filter(x => BY_ID[x.id]).map(x => x.id);
+  const url = "https://likku2019.github.io/Adelaide-deals/?list=" + ids.map(encodeURIComponent).join(".");
+  const text = shareText() + "\n\nOpen it in the deal sheet:";
+  if (window.DealSheetApp && window.DealSheetApp.share){ window.DealSheetApp.share(text + " " + url); return; }
+  try { if (navigator.share){ await navigator.share({title:"My shopping list", text, url}); return; } } catch(err){ if (err && err.name === "AbortError") return; }
+  try { await navigator.clipboard.writeText(text + " " + url); toast("List copied: paste it in a message"); } catch(err){ toast("Couldn't copy the list"); }
+}
+function sharedIn(){
+  let ids = [];
+  try { const q = new URLSearchParams(location.search).get("list"); if (q) ids = q.split(".").map(decodeURIComponent).filter(Boolean); } catch(e){}
+  if (!ids.length) return;
+  const found = ids.filter(id => BY_ID[id]), missing = ids.length - found.length, todo = found.filter(id => !inList(id));
+  $("#sharedIn").innerHTML = `<div class="shared"><span>📩 Someone shared a list with ${plural(ids.length, "deal")}${missing ? ` (${missing} ended)` : ""}.${todo.length ? "" : " They're all on your list already."}</span><span class="acts">${todo.length ? `<button class="btn primary" type="button" id="takeShared">Add ${todo.length} to my list</button>` : ""}<button class="btn" type="button" id="skipShared">Dismiss</button></span></div>`;
+  const done = () => { $("#sharedIn").innerHTML = ""; try { history.replaceState(null, "", location.pathname + location.hash); } catch(e){} };
+  $("#skipShared").onclick = done;
+  if (todo.length) $("#takeShared").onclick = () => { todo.forEach(id => { const d = BY_ID[id]; LIST.push({id, n:d.n, r:d.r, now:d.now, was:d.was || null, end:d.end, added:WEEK.start, done:false}); syncAdd(id); }); LS.set("ads-list", LIST); renderSaved(); toast(`Added ${plural(todo.length, "deal")}`); done(); };
+  showTab("saved", false);
+}
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-add]"); if (a){ e.preventDefault(); e.stopPropagation(); toggleList(a.dataset.add); return; }
+  const o = e.target.closest("#saved [data-open], #watchGrid .nm"); if (o){ openDeal(+(o.dataset.open ?? o.dataset.i)); return; }
+  const del = e.target.closest("[data-del]"); if (del){ const id = del.dataset.del; LIST = LIST.filter(x => x.id !== id); LS.set("ads-list", LIST); syncAdd(id); renderSaved(); return; }
+  const uw = e.target.closest("[data-unwatch]"); if (uw){ WATCH = WATCH.filter(w => w !== uw.dataset.unwatch); LS.set("ads-watch", WATCH); renderSaved(); }
+}, true);
+document.addEventListener("change", e => {
+  const c = e.target.closest("[data-done]"); if (!c) return;
+  const x = LIST.find(y => y.id === c.dataset.done); if (x){ x.done = c.checked; LS.set("ads-list", LIST); renderSaved(); }
+});
+$("#shareList").addEventListener("click", shareList);
+$("#clearDone").addEventListener("click", () => { LIST = LIST.filter(x => !x.done && BY_ID[x.id]); LS.set("ads-list", LIST); DEALS.forEach(d => syncAdd(d.id)); renderSaved(); });
+$("#watchForm").addEventListener("submit", e => {
+  e.preventDefault(); const w = $("#watchIn").value.trim().replace(/\s+/g, " ");
+  if (w.length < 2) return;
+  if (!WATCH.some(x => x.toLowerCase() === w.toLowerCase())){ WATCH.push(w); LS.set("ads-watch", WATCH); watchHits(w).forEach(d => SEEN.add(d.id)); LS.set("ads-seen", [...SEEN]); }
+  $("#watchIn").value = ""; renderSaved(); const n = watchHits(w).length; toast(n ? `${plural(n, "deal")} match "${w}" this week` : `Watching "${w}"`);
+});
+
 // ---- start
 if (state.g !== "All" && !GROUPS.some(G => G.k === state.g)) state.g = "All";
 renderStatic(); renderCal(); renderEvents(); renderSelects(); renderCats(); renderPromos(); renderStores(); renderBest();
@@ -1738,10 +1907,14 @@ document.querySelector(".jump").addEventListener("click", e => {
   e.preventDefault();
   showTab(a.getAttribute("href").slice(1));
 });
+renderSaved();
 showTab(state.tab, false);
+sharedIn();
 $("#half").addEventListener("change", e => { state.half = e.target.checked; render(); });
 $("#low").addEventListener("change", e => { state.low = e.target.checked; if (state.low && state.sort === "save") {} render(); });
 $("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
+$("#price").value = state.price || "All";
+$("#price").addEventListener("change", e => { state.price = e.target.value; render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("#clear").addEventListener("click", () => { clearAll(); $("#deals").scrollIntoView({block:"start"}); });
