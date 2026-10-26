@@ -1,9 +1,11 @@
 package au.adelaide.dealsheet;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
@@ -12,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
+import android.webkit.PermissionRequest;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
@@ -29,6 +32,8 @@ public class MainActivity extends Activity {
   private static final String HOST = "likku2019.github.io";
   private static final String HOME = "https://likku2019.github.io/Adelaide-deals/?source=apk";
   private static final long RELOAD_AFTER_MS = 30 * 60 * 1000L;
+  private static final int CAMERA_REQUEST = 42;
+  private PermissionRequest pendingCamera = null;
 
   private WebView web;
   private long lastLoad = 0;
@@ -49,18 +54,36 @@ public class MainActivity extends Activity {
     s.setDatabaseEnabled(true);
     s.setLoadWithOverviewMode(true);
     s.setUseWideViewPort(true);
-    s.setMediaPlaybackRequiresUserGesture(true);
-    s.setUserAgentString(s.getUserAgentString() + " DealSheetApp/1.0");
+    s.setMediaPlaybackRequiresUserGesture(false);
+    s.setUserAgentString(s.getUserAgentString() + " DealSheetApp/1.1");
     s.setCacheMode(isOnline() ? WebSettings.LOAD_DEFAULT : WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
     web.addJavascriptInterface(new Bridge(), "DealSheetApp");
-    web.setWebChromeClient(new WebChromeClient());
+    web.setWebChromeClient(new WebChromeClient() {
+      // the barcode scanner on the page asks for the camera: pass that on to Android's permission prompt
+      @Override
+      public void onPermissionRequest(final PermissionRequest request) {
+        runOnUiThread(() -> {
+          boolean wantsCamera = false;
+          for (String r : request.getResources()) if (PermissionRequest.RESOURCE_VIDEO_CAPTURE.equals(r)) wantsCamera = true;
+          if (!wantsCamera || request.getOrigin() == null || !HOST.equals(request.getOrigin().getHost())) { request.deny(); return; }
+          if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+            request.grant(new String[]{PermissionRequest.RESOURCE_VIDEO_CAPTURE});
+          } else {
+            pendingCamera = request;
+            requestPermissions(new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST);
+          }
+        });
+      }
+    });
+    web.setDownloadListener((url, userAgent, contentDisposition, mimeType, length) -> openOutside(Uri.parse(url)));
     web.setWebViewClient(new WebViewClient() {
       @Override
       public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest req) {
         Uri u = req.getUrl();
         if ("app".equals(u.getScheme()) && "retry".equals(u.getHost())) { loadHome(); return true; }
-        if (HOST.equals(u.getHost())) return false;
+        String path = u.getPath();
+        if (HOST.equals(u.getHost()) && (path == null || !path.endsWith(".apk"))) return false;
         openOutside(u);
         return true;
       }
@@ -111,6 +134,15 @@ public class MainActivity extends Activity {
   }
 
   @Override
+  public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] results) {
+    super.onRequestPermissionsResult(requestCode, permissions, results);
+    if (requestCode != CAMERA_REQUEST || pendingCamera == null) return;
+    if (results.length > 0 && results[0] == PackageManager.PERMISSION_GRANTED) pendingCamera.grant(new String[]{PermissionRequest.RESOURCE_VIDEO_CAPTURE});
+    else pendingCamera.deny();
+    pendingCamera = null;
+  }
+
+  @Override
   protected void onPause() { web.onPause(); super.onPause(); }
 
   @Override
@@ -149,7 +181,7 @@ public class MainActivity extends Activity {
     }
 
     @JavascriptInterface
-    public String version() { return "1.0"; }
+    public String version() { return "1.1"; }
   }
 
   private static final String OFFLINE_PAGE =

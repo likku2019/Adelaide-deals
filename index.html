@@ -434,6 +434,38 @@ details.so-group{margin:0 0 18px}
 .sh-store li:first-child,.so-wrap .store li:first-child{border-top:0}
 .so-wrap .store ul{border-top:1px solid var(--line)}
 /* iPhone install guide */
+.scanmini{all:unset;cursor:pointer;display:grid;place-items:center;width:36px;height:36px;margin-right:-8px;border-radius:10px;color:var(--ink-2);flex:none}
+.scanmini:hover{background:var(--paper)}
+.scanmini:focus-visible{outline:2.5px solid var(--focus)}
+.scanmini svg{width:21px;height:21px}
+.scan-panel .sh-body{display:flex;flex-direction:column;gap:12px}
+.scan-cam{position:relative;border-radius:16px;overflow:hidden;background:#000;aspect-ratio:4/3}
+.scan-cam video{width:100%;height:100%;object-fit:cover;display:block}
+.scan-frame{position:absolute;left:12%;right:12%;top:30%;bottom:30%;border:3px solid var(--ticket);border-radius:12px;box-shadow:0 0 0 999px rgba(0,0,0,.35)}
+.scan-frame::after{content:"";position:absolute;left:6%;right:6%;top:50%;height:2px;background:var(--sale);animation:scanline 1.6s ease-in-out infinite alternate}
+@keyframes scanline{from{transform:translateY(-28px)}to{transform:translateY(28px)}}
+@media (prefers-reduced-motion:reduce){.scan-frame::after{animation:none}}
+.scan-msg{margin:0;font-size:14.5px;color:var(--ink-2)}
+.scan-type{display:flex;gap:8px}
+.scan-type input{flex:1;min-width:0;height:44px;padding:0 14px;border:1.5px solid var(--line-2);border-radius:12px;background:var(--paper);font:inherit;color:var(--ink);letter-spacing:.04em}
+.scan-prod{display:grid;grid-template-columns:72px 1fr;gap:12px;align-items:center;background:var(--paper);border-radius:14px;padding:10px}
+.scan-prod img,.scan-prod .emo{width:72px;height:72px;border-radius:10px;object-fit:contain;background:#fff;display:grid;place-items:center;font-size:36px}
+.scan-prod b{display:block;font-size:16px;line-height:1.3}
+.scan-prod small{color:var(--muted);font-size:12.5px}
+.scan-h{margin:4px 0 0;font-size:15px}
+.scan-list{display:flex;flex-direction:column;gap:8px}
+.scan-deal{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);border-left:5px solid var(--c);background:var(--card)}
+.scan-deal:hover{border-color:var(--c)}
+.scan-deal:focus-visible{outline:2.5px solid var(--focus)}
+.scan-deal .pill{justify-self:start}
+.scan-deal .sn{grid-column:1;font-weight:600;font-size:14.5px;line-height:1.3}
+.scan-deal .sp{grid-column:2;grid-row:1/3;align-self:center;text-align:right;font-weight:800;font-size:17px}
+.scan-deal .sp s{display:block;font-weight:500;font-size:12px;color:var(--muted)}
+.scan-deal small{grid-column:1;color:var(--muted);font-size:12px}
+.scan-none{margin:0;padding:12px 14px;border-radius:12px;background:var(--paper);font-size:14.5px}
+.scan-acts{display:flex;flex-wrap:wrap;gap:8px}
+.scan-recent{font-size:13px;color:var(--muted)}
+.scan-recent button{all:unset;cursor:pointer;text-decoration:underline;text-underline-offset:2px;color:var(--ink-2);margin-right:10px}
 .ios-hero{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start}
 .ios-hero img{border-radius:16px;box-shadow:0 4px 12px -6px rgba(0,0,0,.35)}
 .ios-hero h2{font-size:21px;font-weight:700}
@@ -490,6 +522,7 @@ details.so-group{margin:0 0 18px}
     <p class="facts" id="facts"></p>
     <div class="hdr-links">
       <a class="btn-ink" href="https://likku2019.github.io/Adelaide-deals/history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8"/><path d="M15 7h5v5"/></svg>Price tracker</a>
+      <button class="btn-ink btn-install" id="scanBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg>Scan a barcode</button>
       <button class="btn-ink btn-install" id="install" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Install app</button>
       <a class="btn-ink" id="getApk" href="app/deal-sheet.apk" download="deal-sheet.apk" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>Get the Android app</a>
       <button class="btn-ink btn-install" id="getIos" type="button" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2.1-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 .1-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.4-.6 3.1-1.5z"/></svg>Get the iPhone app</button>
@@ -537,7 +570,7 @@ details.so-group{margin:0 0 18px}
     <div class="bar" id="bar"><div class="bar-in">
       <div class="row1">
         <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-          <input type="search" id="q" placeholder="Search deals, e.g. coffee or Samba" aria-label="Search deals" autocomplete="off"></label>
+          <input type="search" id="q" placeholder="Search deals, e.g. coffee or Samba" aria-label="Search deals" autocomplete="off"><button type="button" class="scanmini" id="scanBtn2" aria-label="Scan a barcode" title="Scan a barcode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg></button></label>
         <select class="sel" id="grpSel" aria-label="Type of store"></select>
         <select class="sel" id="storeSel" aria-label="Store"></select>
       </div>
@@ -613,6 +646,16 @@ details.so-group{margin:0 0 18px}
 
 
 <dialog class="sheet" id="sheet" aria-labelledby="sh-title"><div class="panel" id="panel"></div></dialog>
+<dialog class="sheet" id="scanDlg" aria-labelledby="scan-h"><div class="panel scan-panel">
+  <div class="sh-top"><span class="pos" id="scan-h">Scan a barcode</span><button class="ibtn" type="button" data-close-scan aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="sh-body">
+    <div class="scan-cam" id="scanCam" hidden><video id="scanVid" playsinline muted autoplay></video><div class="scan-frame" aria-hidden="true"></div></div>
+    <p class="scan-msg" id="scanMsg" aria-live="polite">Point the camera at the barcode on a product to see if it's on special this week.</p>
+    <form class="scan-type" id="scanForm"><input id="scanCode" inputmode="numeric" autocomplete="off" placeholder="Or type the barcode number" maxlength="14" aria-label="Barcode number"><button class="btn" type="submit">Check</button></form>
+    <div id="scanOut"></div>
+  </div>
+</div></dialog>
+
 <dialog class="sheet" id="iosDlg" aria-labelledby="ios-h"><div class="panel ios-panel">
   <div class="sh-top"><span class="pos">Install on iPhone or iPad</span><button class="ibtn" type="button" data-close-ios aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
   <div class="sh-body">
@@ -1984,6 +2027,118 @@ $("#watchForm").addEventListener("submit", e => {
   if (w.length < 2) return;
   if (!WATCH.some(x => x.toLowerCase() === w.toLowerCase())){ WATCH.push(w); LS.set("ads-watch", WATCH); watchHits(w).forEach(d => SEEN.add(d.id)); LS.set("ads-seen", [...SEEN]); }
   $("#watchIn").value = ""; renderSaved(); const n = watchHits(w).length; toast(n ? `${plural(n, "deal")} match "${w}" this week` : `Watching "${w}"`);
+});
+
+// ---- barcode scanner: identify a product (Open Food Facts) and check if it's on special this week
+const ZXING = "https://cdn.jsdelivr.net/npm/@zxing/browser@0.1.5/+esm";
+const scanDlg = $("#scanDlg");
+let scanStop = null, scanBusy = false;
+function stopCam(){ if (scanStop){ try { scanStop(); } catch(e){} scanStop = null; } $("#scanCam").hidden = true; }
+function openScan(){
+  $("#scanOut").innerHTML = recentHTML(); $("#scanCode").value = "";
+  if (!scanDlg.open) scanDlg.showModal();
+  startCam();
+}
+async function startCam(){
+  const msg = $("#scanMsg"), vid = $("#scanVid");
+  stopCam(); scanBusy = false;
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){ msg.textContent = "This browser can't use the camera. Type the barcode number instead."; return; }
+  $("#scanCam").hidden = false; msg.textContent = "Starting the camera…";
+  const ready = "Point the camera at the barcode. Hold it steady inside the yellow box.";
+  try {
+    let native = false;
+    try { native = "BarcodeDetector" in window && (await BarcodeDetector.getSupportedFormats()).includes("ean_13"); } catch(e){}
+    if (native){
+      const stream = await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:"environment"}}, audio:false});
+      vid.srcObject = stream; await vid.play();
+      const det = new BarcodeDetector({formats:["ean_13","ean_8","upc_a","upc_e","code_128"]});
+      let alive = true;
+      scanStop = () => { alive = false; stream.getTracks().forEach(t => t.stop()); vid.srcObject = null; };
+      msg.textContent = ready;
+      const tick = async () => { if (!alive) return; try { const r = await det.detect(vid); if (r.length) return found(r[0].rawValue); } catch(e){} setTimeout(tick, 180); };
+      tick();
+    } else {
+      const { BrowserMultiFormatReader } = await import(ZXING);
+      const reader = new BrowserMultiFormatReader();
+      const ctl = await reader.decodeFromConstraints({video:{facingMode:{ideal:"environment"}}, audio:false}, vid, res => { if (res) found(res.getText()); });
+      scanStop = () => ctl.stop();
+      msg.textContent = ready;
+    }
+  } catch(err){
+    stopCam();
+    const denied = err && (err.name === "NotAllowedError" || err.name === "SecurityError");
+    let appV = 0; try { appV = window.DealSheetApp && DealSheetApp.version ? parseFloat(DealSheetApp.version()) : 0; } catch(e){}
+    msg.textContent = IN_APP && appV < 1.1 ? "This version of the Android app can't use the camera yet. Open likku2019.github.io/Adelaide-deals in Chrome and tap “Get the Android app” to install the update. Meanwhile, type the barcode number below."
+      : denied ? "Camera access is blocked. Allow the camera for this site (or app) in your phone's settings, or type the barcode number below."
+      : "The camera couldn't start. Type the barcode number below instead.";
+  }
+}
+function found(code){
+  if (scanBusy) return; scanBusy = true;
+  try { navigator.vibrate && navigator.vibrate(60); } catch(e){}
+  stopCam(); lookup(String(code).trim());
+}
+async function lookup(code){
+  code = code.replace(/\D/g, "");
+  if (!/^\d{6,14}$/.test(code)){ $("#scanMsg").textContent = "That doesn't look like a product barcode. Check the number and try again."; scanBusy = false; return; }
+  $("#scanMsg").textContent = `Barcode ${code} · looking it up…`;
+  let p = null;
+  for (const host of ["world.openfoodfacts.org", "world.openbeautyfacts.org", "world.openproductsfacts.org"]){
+    try {
+      const r = await fetch(`https://${host}/api/v2/product/${code}.json?fields=product_name,product_name_en,brands,quantity,image_front_small_url`);
+      if (r.ok){ const j = await r.json(); if (j.status === 1 && j.product && (j.product.product_name_en || j.product.product_name)){ p = j.product; break; } }
+    } catch(e){}
+  }
+  showScan(code, p);
+}
+function scanMatches(p){
+  const brand = (p.brands || "").split(",")[0].trim(), nm = p.product_name_en || p.product_name;
+  const all = new Set(toks(`${brand} ${nm}`).filter(x => !/\d/.test(x)));
+  const own = toks(nm).filter(x => !/\d/.test(x));
+  const bt = toks(brand)[0];
+  if (!all.size) return [];
+  return DEALS.map(d => {
+    const dt = new Set(d.t.filter(x => !/\d/.test(x)));
+    let n = 0; all.forEach(x => { if (dt.has(x)) n++; });
+    let sc = n / Math.min(all.size, dt.size || 1); if (bt && !dt.has(bt)) sc *= .5;
+    const cov = own.length ? own.filter(x => dt.has(x)).length / own.length : 0;
+    const ok = (n >= 2 && sc >= .5) || (cov === 1 && (own.length >= 2 || (own[0] || "").length >= 5));
+    return [d, ok ? sc + cov : 0];
+  }).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1] || a[0].now - b[0].now).slice(0, 6).map(x => x[0]);
+}
+function showScan(code, p){
+  const out = $("#scanOut"), msg = $("#scanMsg");
+  const nm = p ? (p.product_name_en || p.product_name).trim() : "";
+  const brand = p ? (p.brands || "").split(",")[0].trim() : "";
+  const full = p ? [brand && !nm.toLowerCase().includes(brand.toLowerCase()) ? brand : "", nm, p.quantity || ""].filter(Boolean).join(" ") : "";
+  const ms = p ? scanMatches(p) : [];
+  if (p) saveRecent(code, full);
+  const word = p ? (toks(nm).find(t => !/\d/.test(t) && t !== toks(brand)[0] && t.length >= 3) || toks(brand)[0] || "") : "";
+  const watchWord = word ? nm.split(/\s+/).find(w => w.toLowerCase().replace(/[(),'"’]/g, "") === word) || word : "";
+  msg.textContent = p ? (ms.length ? `Good news: ${plural(ms.length, "match")} on special this week.` : "Found it, but it isn't on special this week.") : `Barcode ${code} isn't in the free product database yet. You can still compare prices online.`;
+  out.innerHTML = `${p ? `<div class="scan-prod">${p.image_front_small_url ? `<img src="${esc(p.image_front_small_url)}" alt="">` : `<span class="emo" aria-hidden="true">📦</span>`}<div><b>${esc(full)}</b><small>Barcode ${esc(code)}</small></div></div>` : ""}
+    ${p ? (ms.length ? `<h3 class="scan-h">On special this week</h3><div class="scan-list">${ms.map(d => `<button type="button" class="scan-deal" data-open-deal="${d.i}" style="--c:${RETAILERS[d.r]?.c || "var(--brand)"}"><span class="pill">${esc(d.r)}</span><span class="sp">${money(d.now)}${d.was ? `<s>${money(d.was)}</s>` : ""}</span><span class="sn">${esc(d.n)}</span>${d.unit || d.end ? `<small>${esc([d.unit, endText(d)].filter(Boolean).join(" · "))}</small>` : ""}</button>`).join("")}</div>`
+      : `<p class="scan-none">Not on special at any of the ${Object.keys(RETAILERS).length} stores on the sheet this week.${word ? ` Watch it and the List tab will show it when it is.` : ""}</p>`) : ""}
+    <div class="scan-acts">
+      <a class="btn primary" href="https://www.google.com/search?tbm=shop&gl=au&hl=en-AU&q=${encodeURIComponent(p ? full : code)}" target="_blank" rel="noopener">🔍 Compare prices online</a>
+      ${watchWord ? `<button class="btn" type="button" data-watch-word="${esc(watchWord)}">⭐ Watch “${esc(watchWord)}”</button>` : ""}
+      <button class="btn" type="button" data-scan-again>Scan another</button>
+    </div>${recentHTML()}`;
+  scanBusy = false;
+}
+const RECENT_KEY = "ads-scans";
+function saveRecent(code, name){ const r = LS.get(RECENT_KEY, []).filter(x => x.c !== code); r.unshift({c:code, n:name}); LS.set(RECENT_KEY, r.slice(0, 6)); }
+function recentHTML(){ const r = LS.get(RECENT_KEY, []); return r.length ? `<p class="scan-recent">Recent: ${r.map(x => `<button type="button" data-rescan="${esc(x.c)}">${esc(x.n.length > 28 ? x.n.slice(0, 27) + "…" : x.n)}</button>`).join("")}</p>` : ""; }
+$("#scanBtn").addEventListener("click", openScan);
+$("#scanBtn2").addEventListener("click", e => { e.preventDefault(); openScan(); });
+$("#scanForm").addEventListener("submit", e => { e.preventDefault(); stopCam(); scanBusy = true; lookup($("#scanCode").value); });
+scanDlg.addEventListener("close", stopCam);
+scanDlg.addEventListener("click", e => {
+  if (e.target === scanDlg || e.target.closest("[data-close-scan]")) return scanDlg.close();
+  const od = e.target.closest("[data-open-deal]"); if (od){ scanDlg.close(); openDeal(+od.dataset.openDeal); return; }
+  const ww = e.target.closest("[data-watch-word]"); if (ww){ const w = ww.dataset.watchWord; if (!WATCH.some(x => x.toLowerCase() === w.toLowerCase())){ WATCH.push(w); LS.set("ads-watch", WATCH); watchHits(w).forEach(d => SEEN.add(d.id)); LS.set("ads-seen", [...SEEN]); renderSaved(); } toast(`Watching “${w}” · see the List tab`); ww.disabled = true; return; }
+  if (e.target.closest("[data-scan-again]")){ $("#scanOut").innerHTML = recentHTML(); $("#scanCode").value = ""; startCam(); return; }
+  const rs = e.target.closest("[data-rescan]"); if (rs){ stopCam(); scanBusy = true; lookup(rs.dataset.rescan); }
 });
 
 // ---- start
