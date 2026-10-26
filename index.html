@@ -322,6 +322,12 @@ details.weeks summary{cursor:pointer;font-weight:700;font-size:15px}
 .wnew{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;background:var(--sale);color:#fff;font:800 11px/1.6 var(--body);vertical-align:2px}
 .shared{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:color-mix(in srgb,var(--ticket) 30%,var(--card));border:1.5px solid var(--ticket);border-radius:14px;padding:12px 14px;margin:0 0 16px;font-weight:600}
 .shared .acts{margin-left:auto;display:flex;gap:8px}
+.newb{display:inline-block;margin-left:6px;padding:0 6px;border-radius:6px;background:var(--sale);color:#fff;font:800 10.5px/1.7 var(--body);letter-spacing:.04em;vertical-align:1px}
+.unit{font-size:12px;color:var(--ink-2);font-weight:600}
+.end.soon{color:var(--sale);font-weight:700}
+.factbtn{all:unset;cursor:pointer;text-decoration:underline;text-underline-offset:2px;font-weight:700}
+.factbtn:focus-visible{outline:2px solid var(--focus)}
+.maplink{display:inline-flex;align-items:center;gap:4px;margin:2px 0 6px;font-size:13px;font-weight:600;color:var(--ink-2)}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
 
 
@@ -506,7 +512,7 @@ details.so-group{margin:0 0 18px}
   <section id="best" aria-labelledby="bs-h">
     <div class="sec-head"><h2 id="bs-h">Best deals this week</h2><p>75% off or more, plus outlet deals at half price or better · <span id="bestCount"></span></p></div>
     <div class="grid" id="bestGrid"></div>
-    <div class="more-row"><button class="btn" type="button" id="bestMore" hidden></button></div>
+    <div class="more-row"><button class="btn" type="button" id="bestMore" hidden></button> <button class="btn primary" type="button" id="shareTop">Share this week's top deals</button></div>
     <div id="bigWrap">
       <h3 class="sub-h">Big store-wide sales</h3>
       <ul class="bigsales" id="bigSales"></ul>
@@ -536,6 +542,8 @@ details.so-group{margin:0 0 18px}
       <div class="controls">
         <label class="tog"><input type="checkbox" id="half"><span class="box" aria-hidden="true"></span>½ price or better</label>
         <label class="tog"><input type="checkbox" id="low"><span class="box" aria-hidden="true"></span>Record lows</label>
+        <label class="tog"><input type="checkbox" id="fresh"><span class="box" aria-hidden="true"></span>New for you</label>
+        <label class="tog"><input type="checkbox" id="soon"><span class="box" aria-hidden="true"></span>Ending soon</label>
         <select class="sel" id="cat" aria-label="Category"></select>
         <select class="sel" id="price" aria-label="Price">
           <option value="All">Any price</option><option value="10">Under $10</option><option value="25">Under $25</option><option value="50">Under $50</option>
@@ -1278,6 +1286,54 @@ DEALS.forEach((d, i) => {
   if (!d.end) d.end = GROC.has(d.r) ? WK : "While stocks last";
   d.h = [{w:WEEK.start, p:d.now, was:d.was || null}]; d.I = null;
 });
+// unit price for everyday items: "$1.10 / 100g", "$2.50 / L", "45c each"
+const UNIT_CATS = new Set(["Pantry","Household","Drinks","Meat & seafood","Frozen","Snacks","Health & beauty","Baby","Pet"]);
+function unitOf(d){
+  if (!UNIT_CATS.has(d.cat) || typeof d.now !== "number") return "";
+  const n = d.n.replace(/(\d),(\d{3})/g, "$1$2");
+  if (/\d\s*[–-]\s*\d/.test(n)) return "";                       // size ranges: price per unit varies
+  const sizes = n.match(/\d+(?:\.\d+)?\s*(?:kg|g|ml|l)\b/gi) || [];
+  const packs = n.match(/\b\d+\s*(?:pack|rolls?|tablets|capsules|sachets|pods|wipes)\b/gi) || [];
+  if (sizes.length > 1 || packs.length > 1 || (/\bor\b/i.test(n) && sizes.length + packs.length > 1)) return "";
+  const per = (v, u) => v < 1 ? Math.round(v * 100) + "c" + u : money(Math.round(v * 100) / 100) + u;
+  if (sizes.length){
+    const m = n.match(/(?:(\d+)\s*[x×]\s*)?(\d+(?:\.\d+)?)\s*(kg|g|ml|l)\b/i);
+    const k = m[1] ? +m[1] : (n.match(/\b(\d+)\s*pack\b/i) && /ml|l$/i.test(m[3]) ? +n.match(/\b(\d+)\s*pack\b/i)[1] : 1);
+    const u = m[3].toLowerCase(), q = +m[2] * k * (u === "kg" || u === "l" ? 1000 : 1);
+    if (!q) return "";
+    const liquid = u === "ml" || u === "l";
+    return q >= 1000 ? per(d.now / q * 1000, liquid ? " / L" : " / kg") : per(d.now / q * 100, liquid ? " / 100mL" : " / 100g");
+  }
+  if (packs.length){ const c = parseInt(packs[0]); if (c >= 4) return per(d.now / c, " each"); }
+  return "";
+}
+// days until a deal ends (null when it has no end date)
+const MONTHS = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+const TODAY = (() => { const t = new Date(); t.setHours(0,0,0,0); return t; })();
+function daysLeft(d){
+  let end = null;
+  if (GROC.has(d.r) && d.end === WK) end = toDate(WEEK.end);
+  else { const m = String(d.end).match(/(?:ends|until)\s+(?:\w{3}\s+)?(\d{1,2})\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i);
+    if (m){ end = new Date(TODAY.getFullYear(), MONTHS[m[2].toLowerCase()], +m[1]); if (end - TODAY < -180 * 864e5) end.setFullYear(end.getFullYear() + 1); } }
+  return end ? Math.round((end - TODAY) / 864e5) : null;
+}
+const endText = d => {
+  if (d.left == null || d.left > 2) return d.end;
+  const lt = leftText(d.left), m = String(d.end).match(/^(?:ends|until)\s+(?:\w{3}\s+)?\d{1,2}\s+\w{3}\b\s*(.*)$/i);
+  return m ? lt + (m[1] ? " " + m[1] : "") : lt + " · " + d.end;
+};
+const leftText = n => n < 0 ? "Ended" : n === 0 ? "Ends today" : n === 1 ? "Ends tomorrow" : `Ends in ${n} days`;
+// "new for you": deals that appeared since you first saw the sheet on this phone
+const FIRST_SEEN = (() => { try { return JSON.parse(localStorage.getItem("ads-first") || "{}"); } catch(e){ return {}; } })();
+const FIRST_VISIT = !Object.keys(FIRST_SEEN).length;
+const TODAY_ISO = `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}-${String(TODAY.getDate()).padStart(2, "0")}`;
+DEALS.forEach(d => {
+  d.unit = unitOf(d); d.left = daysLeft(d);
+  if (!FIRST_SEEN[d.id]) FIRST_SEEN[d.id] = FIRST_VISIT ? "0" : TODAY_ISO;
+  d.isNew = FIRST_SEEN[d.id] !== "0" && (TODAY - toDate(FIRST_SEEN[d.id])) / 864e5 <= 2;
+});
+try { const keep = {}; DEALS.forEach(d => keep[d.id] = FIRST_SEEN[d.id]); localStorage.setItem("ads-first", JSON.stringify(keep)); } catch(e){}
+const NEW_COUNT = DEALS.filter(d => d.isNew).length;
 
 // ---- matching the same product across stores
 const STOP = new Set(["or","and","the","with","from","of","for","in","a","x","×","–","-","&","pack","pk","each","men's","women's"]);
@@ -1387,17 +1443,17 @@ function card(d){
   return `<article class="deal" style="--c:${c}">
     ${addBtn(d)}${pic(d)}
     <div class="body">
-      <div class="meta"><span class="pill">${esc(d.r)}</span><span class="cat">${esc(d.cat)}</span></div>
+      <div class="meta"><span class="pill">${esc(d.r)}${d.isNew ? `<span class="newb">NEW</span>` : ""}</span><span class="cat">${esc(d.cat)}</span></div>
       <h3><button class="nm" type="button" data-i="${d.i}" aria-haspopup="dialog">${esc(d.n)}</button></h3>
       ${d.note ? `<p class="note">${esc(d.note)}</p>` : ""}
     </div>
     <div class="tkt">${flagOf(d)}<div class="pr">${priceHTML(d.now)}${was}</div></div>
-    <div class="foot">${hist}<span class="end">${esc(d.end)}</span></div>
+    <div class="foot">${d.unit ? `<span class="unit">${esc(d.unit)}</span>` : ""}${hist}<span class="end${d.left != null && d.left <= 2 ? " soon" : ""}">${esc(endText(d))}</span></div>
   </article>`;
 }
 
 // ---- filters & list
-let state = {g:"All", r:"All", half:false, low:false, cat:"All", price:"All", sort:"save", q:"", tab:"stores"};
+let state = {g:"All", r:"All", half:false, low:false, fresh:false, soon:false, cat:"All", price:"All", sort:"save", q:"", tab:"stores"};
 try { const s = JSON.parse(localStorage.getItem("ads-state") || "null"); if (s) state = {...state, ...s, q:""}; } catch(e){}
 const persist = () => { try { localStorage.setItem("ads-state", JSON.stringify(state)); } catch(e){} };
 let VIS = [];
@@ -1421,12 +1477,12 @@ function renderCats(){
   $("#cat").value = cats.includes(state.cat) ? state.cat : (state.cat = "All");
 }
 const priceOk = d => state.price === "All" || (state.price === "500+" ? d.now >= 500 : d.now < +state.price);
-const isActive = () => state.g !== "All" || state.r !== "All" || state.half || state.low || state.cat !== "All" || state.price !== "All" || state.q.trim() !== "";
+const isActive = () => state.g !== "All" || state.r !== "All" || state.half || state.low || state.fresh || state.soon || state.cat !== "All" || state.price !== "All" || state.q.trim() !== "";
 function render(){
   const q = state.q.trim().toLowerCase();
   const list = DEALS.filter(d =>
     (state.g === "All" || GROUP_OF[d.r] === state.g) && (state.r === "All" || d.r === state.r) && (state.cat === "All" || d.cat === state.cat) &&
-    (!state.half || d.p >= 50) && (!state.low || (d.I && d.I.v === "low")) && priceOk(d) && (!q || (d.n + " " + d.r + " " + d.cat).toLowerCase().includes(q)));
+    (!state.half || d.p >= 50) && (!state.low || (d.I && d.I.v === "low")) && priceOk(d) && (!state.fresh || d.isNew) && (!state.soon || (d.left != null && d.left <= 2)) && (!q || (d.n + " " + d.r + " " + d.cat).toLowerCase().includes(q)));
   const by = {
     save:(a,b) => b.p - a.p || b.save - a.save,
     dollars:(a,b) => b.save - a.save,
@@ -1446,8 +1502,8 @@ function render(){
   persist();
 }
 function clearAll(){
-  state = {...state, g:"All", r:"All", half:false, low:false, cat:"All", price:"All", q:""};
-  $("#half").checked = false; $("#low").checked = false; $("#cat").value = "All"; $("#price").value = "All"; $("#q").value = "";
+  state = {...state, g:"All", r:"All", half:false, low:false, fresh:false, soon:false, cat:"All", price:"All", q:""};
+  $("#half").checked = false; $("#low").checked = false; $("#fresh").checked = false; $("#soon").checked = false; $("#cat").value = "All"; $("#price").value = "All"; $("#q").value = "";
   renderSelects(); render();
 }
 // ---- tabs: each section of the bar is its own screen
@@ -1588,7 +1644,7 @@ function renderStatic(){
   const end = new Date(WEEK.end + "T23:59:00+10:30");
   const days = Math.max(0, Math.ceil((end - new Date()) / 86400000));
   $("#week").textContent = `Week of ${WEEK.label}`;
-  $("#facts").innerHTML = `<b>${DEALS.length}</b> deals from <b>${stores}</b> stores and centres, <b>${half}</b> of them half price or better. Coles and Woolworths specials end ${esc(WEEK.ends)}${days ? `, <b>${days}</b> ${days === 1 ? "day" : "days"} from now` : ""}. Updated ${esc(WEEK.updated)}.`;
+  $("#facts").innerHTML = `<b>${DEALS.length}</b> deals from <b>${stores}</b> stores and centres, <b>${half}</b> of them half price or better. Coles and Woolworths specials end ${esc(WEEK.ends)}${days ? `, <b>${days}</b> ${days === 1 ? "day" : "days"} from now` : ""}. Updated ${esc(WEEK.updated)}.${NEW_COUNT ? ` <button class="factbtn" type="button" id="seeNew">${plural(NEW_COUNT, "new deal")} since you last looked</button>` : ""}`;
   $("#stand").innerHTML = PICKS.map(([r, p, t, x, e]) => {
     const m = DEALS.filter(d => d.r === r).map(d => [d, alike({t:toks(t), sz:[]}, {...d, sz:[]})]).sort((a,b) => b[1] - a[1])[0];
     const di = m && m[1] >= .3 ? m[0].i : null;
@@ -1596,8 +1652,10 @@ function renderStatic(){
     return `<${tag} class="pick" ${di === null ? "" : `type="button" data-i="${di}" aria-haspopup="dialog"`} style="--c:${RETAILERS[r]?.c || "var(--brand)"}"><span class="st">${esc(r)}</span><span class="emo" aria-hidden="true">${e}</span><span class="pp">${esc(p)}</span><strong>${esc(t)}</strong><p>${esc(x)}</p></${tag}>`;
   }).join("");
 }
+const ONLINE = new Set(["Amazon"]);
+const mapLink = r => ONLINE.has(r) ? "" : `<a class="maplink" href="https://www.google.com/maps/search/${encodeURIComponent((GROUP_OF[r] === "Shopping centres" ? r : r + " near me") + " Adelaide SA")}" target="_blank" rel="noopener">📍 Nearest store &amp; opening hours</a>`;
 function storeCardHTML(s, withId){
-  return `<div class="store"${withId ? ` id="offer-${slug(s.r)}"` : ""} style="--c:${RETAILERS[s.r]?.c || "var(--brand)"}"><h3><span class="dot" aria-hidden="true"></span>${esc(s.r)}</h3><div class="where">${esc(s.where)}</div><ul>${s.items.map(it => { const [a,b,c] = it; return `<li><b>${esc(a)}</b><span>${esc(b)}${kindChip(it)}${c ? `<small>${esc(c)}</small>` : ""}</span></li>`; }).join("")}</ul></div>`;
+  return `<div class="store"${withId ? ` id="offer-${slug(s.r)}"` : ""} style="--c:${RETAILERS[s.r]?.c || "var(--brand)"}"><h3><span class="dot" aria-hidden="true"></span>${esc(s.r)}</h3><div class="where">${esc(s.where)}</div>${mapLink(s.r)}<ul>${s.items.map(it => { const [a,b,c] = it; return `<li><b>${esc(a)}</b><span>${esc(b)}${kindChip(it)}${c ? `<small>${esc(c)}</small>` : ""}</span></li>`; }).join("")}</ul></div>`;
 }
 function renderStoreOffers(){
   let html = "";
@@ -1736,7 +1794,7 @@ function openDeal(i, push = true){
     </div>
     <div class="sh-body" style="--c:${c}">
       <div class="sh-hero">${pic({...d, I:null})}<div><div class="meta"><span class="pill">${esc(d.r)}</span><span class="cat">${esc(d.cat)}</span></div><h2 id="sh-title">${esc(d.n)}</h2>${d.note ? `<p class="note">${esc(d.note)}</p>` : ""}</div></div>
-      <div class="sh-tkt">${flagOf(d)}${priceHTML(d.now)}${d.was ? `<span class="was"><s>was ${money(d.was)}</s><br>save ${money(d.save)}</span>` : "<span></span>"}<span class="end">${esc(d.end)}</span></div>
+      <div class="sh-tkt">${flagOf(d)}${priceHTML(d.now)}${d.was ? `<span class="was"><s>was ${money(d.was)}</s><br>save ${money(d.save)}</span>` : "<span></span>"}<span class="end">${d.unit ? esc(d.unit) + " · " : ""}${d.left != null && d.left <= 6 ? leftText(d.left) + " · " : ""}${esc(d.end)}</span></div>
       <div class="verdict v-${vd.v}"><span class="vi">${ICON[vd.v] || ICON.none}</span><strong>${esc(vd.h)}</strong><p>${esc(vd.p)}</p></div>
       ${chart}
       ${HIST_OK && I.tracked ? statsHTML(d, I) : ""}
@@ -1787,6 +1845,20 @@ sheet.addEventListener("keydown", e => {
 function toast(msg){
   const t = document.createElement("div"); t.className = "toast"; t.setAttribute("role","status"); t.textContent = msg;
   (sheet.open ? sheet : document.body).appendChild(t); setTimeout(() => t.remove(), 2400);
+}
+
+// ---- share any text (Android app share sheet, phone share sheet, or copy)
+async function shareOut(text, url, title = "Adelaide Deal Sheet"){
+  if (window.DealSheetApp && window.DealSheetApp.share){ window.DealSheetApp.share(text + " " + url); return; }
+  try { if (navigator.share){ await navigator.share({title, text, url}); return; } } catch(err){ if (err && err.name === "AbortError") return; }
+  try { await navigator.clipboard.writeText(text + " " + url); toast("Copied: paste it in a message"); } catch(err){ toast("Couldn't copy"); }
+}
+function topDealsText(){
+  const best = DEALS.filter(d => d.was).sort((a, b) => b.p - a.p || b.save - a.save);
+  const per = {}, picks = best.filter(d => (per[d.r] = (per[d.r] || 0) + 1) <= 2).slice(0, 10);
+  const big = RANK.filter(s => s.best && s.offer >= 40).slice(0, 4);
+  return [`🔥 Top deals in Adelaide this week (${WEEK.label})`, "", ...picks.map((d, k) => `${k + 1}. ${d.n} at ${d.r}: ${money(d.now)} (was ${money(d.was)}, ${d.p}% off)`),
+    ...(big.length ? ["", "Store-wide sales:", ...big.map(s => `• ${s.r}: ${offerHeadline(s.best)} (${String(s.best[1]).replace(/^off\s+/i, "")})`)] : []), "", "All deals:"].join("\n");
 }
 
 // ---- my list (shopping list + watch words), kept on this phone
@@ -1914,6 +1986,11 @@ $("#half").addEventListener("change", e => { state.half = e.target.checked; rend
 $("#low").addEventListener("change", e => { state.low = e.target.checked; if (state.low && state.sort === "save") {} render(); });
 $("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
 $("#price").value = state.price || "All";
+$("#fresh").checked = !!state.fresh; $("#soon").checked = !!state.soon;
+$("#fresh").addEventListener("change", e => { state.fresh = e.target.checked; render(); });
+$("#soon").addEventListener("change", e => { state.soon = e.target.checked; render(); });
+$("#shareTop").addEventListener("click", () => shareOut(topDealsText(), "https://likku2019.github.io/Adelaide-deals/"));
+document.addEventListener("click", e => { if (e.target.closest("#seeNew")){ clearAll(); state.fresh = true; $("#fresh").checked = true; render(); showTab("deals"); } });
 $("#price").addEventListener("change", e => { state.price = e.target.value; render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
