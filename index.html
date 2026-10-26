@@ -315,7 +315,32 @@ main>section:first-of-type .sec-head,main>section:not([data-off]) .sec-head{marg
 .tile:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
 .tile .tn{font-weight:700;font-size:15px;line-height:1.25}
 .tile .tm{font-size:12.5px;color:var(--muted)}
-.tile .tb{font-size:12.5px;font-weight:700;color:var(--sale)}
+.tile .tb{font-size:12.5px;font-weight:700;color:var(--sale);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tile .rk{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 4px;margin-right:7px;border-radius:6px;background:var(--ink);color:var(--card);font:800 11.5px/1 var(--body);vertical-align:1px}
+.tile.top3{border-width:1.5px;border-top-width:4px;border-color:color-mix(in srgb,var(--c) 45%,var(--line))}
+.seg{display:inline-flex;padding:3px;border-radius:999px;background:var(--card);border:1.5px solid var(--line-2)}
+.seg button{all:unset;cursor:pointer;padding:6px 12px;border-radius:999px;font-weight:600;font-size:13.5px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--card)}
+.seg button:focus-visible{outline:2.5px solid var(--focus);outline-offset:1px}
+.sd-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.kind{display:inline-block;padding:1px 7px;border-radius:999px;font:700 11px/1.6 var(--body);font-style:normal;white-space:nowrap;vertical-align:1px}
+.store li .kind{margin-left:6px}
+.k-extra{background:color-mix(in srgb,#1E8E3E 16%,var(--card));color:color-mix(in srgb,#1E8E3E 78%,var(--ink))}
+.k-store{background:color-mix(in srgb,var(--focus) 14%,var(--card));color:color-mix(in srgb,var(--focus) 72%,var(--ink))}
+.k-sel{background:color-mix(in srgb,#B26A00 16%,var(--card));color:color-mix(in srgb,#B26A00 78%,var(--ink))}
+.k-upto{background:color-mix(in srgb,var(--sale) 13%,var(--card));color:color-mix(in srgb,var(--sale) 78%,var(--ink))}
+.signs{margin:0 0 14px;background:var(--card);border:1.5px solid var(--line);border-radius:14px}
+.signs summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;padding:12px 16px;font-weight:700;font-size:15.5px}
+.signs summary::-webkit-details-marker{display:none}
+.signs summary small{font-weight:500;color:var(--muted);font-size:13px}
+.signs summary::after{content:"+";margin-left:auto;font-weight:800;font-size:18px;line-height:1;color:var(--muted)}
+.signs[open] summary::after{content:"\2013"}
+.signs-b{padding:0 16px 14px;font-size:14px;line-height:1.45}
+.signs dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 16px;margin:0 0 12px}
+.signs dl div{border-top:1px solid var(--line);padding-top:8px}
+.signs dd{margin:4px 0 0;color:var(--ink-2)}
+.signs ul{margin:0;padding-left:18px;color:var(--ink-2)}
+.signs li{margin:5px 0}
 /* store-wide offers */
 .linkbtn{all:unset;cursor:pointer;color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .linkbtn:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
@@ -451,7 +476,7 @@ details.so-group{margin:0 0 18px}
   </section>
 
   <section id="stores" aria-labelledby="sd-h">
-    <div class="sec-head"><h2 id="sd-h">Stores</h2><p>Tap a store to see its deals</p></div>
+    <div class="sec-head"><h2 id="sd-h">Stores</h2><div class="sd-tools"><p id="sdNote">Best deals first · tap a store to see its deals</p><div class="seg" role="group" aria-label="Order stores"><button type="button" data-sv="best">Best deals first</button><button type="button" data-sv="type">By type</button></div></div></div>
     <div class="dir" id="storeDir"></div>
   </section>
 
@@ -484,6 +509,23 @@ details.so-group{margin:0 0 18px}
 
   <section id="promos" aria-labelledby="pr-h">
     <div class="sec-head"><h2 id="pr-h">Store-wide offers</h2><p>Sales that cover a whole store or shopping centre · <button class="linkbtn" type="button" id="openAll">Open all</button></p></div>
+    <details class="signs" id="signs"><summary><span aria-hidden="true">🔎</span>How to read sale signs<small>Each offer below is labelled</small></summary>
+      <div class="signs-b">
+        <dl>
+          <div><dt><i class="kind k-extra">Extra off ticket</i></dt><dd>"Extra", "further" or "additional" % off comes off the price already on the ticket, at the register. A $60 ticket with an extra 50% off costs $30.</dd></div>
+          <div><dt><i class="kind k-upto">Up to · few items</i></dt><dd>"Up to 50%" means only a few items get the full discount, often one rack in a corner. Most get less or nothing.</dd></div>
+          <div><dt><i class="kind k-sel">Selected items</i></dt><dd>Only part of the store is included. Ask which racks or styles before trying things on.</dd></div>
+          <div><dt><i class="kind k-store">Storewide</i></dt><dd>Almost everything, but look for "not included in further sales" stickers and new-arrival exclusions.</dd></div>
+        </dl>
+        <ul>
+          <li><b>Ask at the counter:</b> "Is the discount taken off the ticket price?" It settles it in five seconds.</li>
+          <li><b>Check the style code</b> on the tongue or box label (e.g. HB8150-802) on the brand's own website. Outlet "was" prices are often old full prices.</li>
+          <li><b>Outlet-only ranges</b> are made for outlets. They're cheaper because they're simpler models, not because they're marked down.</li>
+          <li><b>Go on event weekends.</b> The deepest outlet sales run on long weekends, school holidays and Black Friday; in between it's usually the normal outlet price.</li>
+          <li><b>Check your size.</b> The biggest cuts are often on the very small and very large sizes.</li>
+        </ul>
+      </div>
+    </details>
     <div class="offers" id="promoGrid"></div>
   </section>
 
@@ -1391,8 +1433,68 @@ function renderBest(){
   $("#bigWrap").hidden = !big.length;
 }
 
+// ---- what kind of offer a sale sign is (extra off ticket / up to / selected / storewide)
+const KIND = {
+  extra:{t:"Extra off ticket", tip:"Taken off the price already on the ticket, at the register"},
+  upto:{t:"Up to · few items", tip:"Only a few items get the top discount; most get less"},
+  sel:{t:"Selected items", tip:"Only part of the store is included"},
+  store:{t:"Storewide", tip:"Almost everything in store; check for exclusions"}
+};
+function kindOf(it){
+  const [a, b = "", c = "", k] = it;
+  if (k !== undefined) return KIND[k] ? k : "";
+  const A = String(a).trim(), t = `${b} ${c}`;
+  if (!/\d\s*%/.test(A) || /price (match|beat)|beats competitors/i.test(t)) return "";
+  if (/^≤|^up to/i.test(A) || /\d\s*[–-]\s*\d+\s*%/.test(A)) return "upto";
+  if (/^\+\s*\d/.test(A) || /\b(further|extra|additional)\b/i.test(t)) return "extra";
+  if (/\bup to\b/i.test(t)) return "upto";
+  if (/store-?wide|site-?wide|all stock|entire store/i.test(t)) return "store";
+  if (/selected|\bselect\b|range of|some styles|clearance/i.test(t)) return "sel";
+  return "";
+}
+const kindChip = it => { const k = kindOf(it); return k ? `<i class="kind k-${k}" title="${esc(KIND[k].tip)}">${KIND[k].t}</i>` : ""; };
+function offerValue(it){
+  const m = String(it[0]).match(/\d+(?=\s*%)/g); if (!m || /price (match|beat)|beats competitors/i.test(`${it[1]} ${it[2] || ""}`)) return 0;
+  const pct = Math.max(...m.map(Number));
+  return Math.round(pct * ({extra:1, store:1, sel:.85, upto:.65}[kindOf(it)] ?? .9));
+}
+function offerHeadline(it){
+  const A = String(it[0]).trim(), k = kindOf(it), n = A.replace(/^[+≤]\s*/, "").replace(/\s*%.*/, "%");
+  if (/\d\s*[–-]\s*\d/.test(n)) return `${n} off`;
+  if (k === "extra") return `Extra ${n} off ticket`;
+  if (k === "upto") return `Up to ${n} off (few items)`;
+  return `${n} off${k === "store" ? " storewide" : k === "sel" ? " selected items" : ""}`;
+}
+// stores ranked by their best deal or store-wide offer, plus how many deep discounts they have
+function storeRanking(){
+  const S = {}, get = r => S[r] || (S[r] = {r, deals:0, top:0, deep:0, offer:0, best:null, score:0});
+  DEALS.forEach(d => { const s = get(d.r); s.deals++; s.top = Math.max(s.top, d.p); if (d.p >= 40) s.deep++; });
+  PROMOS.forEach(p => p.items.forEach(it => { const s = get(p.r), v = offerValue(it); if (v > s.offer){ s.offer = v; s.best = it; } }));
+  const list = Object.values(S);
+  list.forEach(s => s.score = Math.max(s.top, s.offer) + Math.min(s.deep, 10) * 1.5 + Math.min(s.deals, 20) * .2);
+  return list.sort((a, b) => b.score - a.score || a.r.localeCompare(b.r));
+}
+const RANK = storeRanking(), RANK_OF = {}; RANK.forEach((s, i) => RANK_OF[s.r] = {...s, i});
+function storeBadge(s){
+  if (s.best && s.offer >= s.top * .9){
+    const what = String(s.best[1]).replace(/^off\s+/i, "").replace(/^rrp\s+on\s+/i, ""), h = offerHeadline(s.best).replace(/ storewide$/, /storewide/i.test(what) ? "" : " storewide");
+    return !kindOf(s.best) || /centre|mall/i.test(GROUP_OF[s.r] || "") || /Harbour Town|Village|Westfield|Rundle/.test(s.r) ? `${h} · ${what}` : h;
+  }
+  return s.top >= 20 ? `Up to ${s.top}% off a deal` : "";
+}
+
 // ---- store directory
 function renderStores(){
+  const sv = state.sv === "type" ? "type" : "best";
+  document.querySelectorAll("[data-sv]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.sv === sv)));
+  $("#sdNote").textContent = sv === "best" ? "Best deals first · tap a store to see its deals" : "Tap a store to see its deals";
+  if (sv === "best"){
+    $("#storeDir").innerHTML = `<div class="dir-g"><div class="dir-grid">${RANK.map((s, i) => {
+      const promo = PROMOS.some(p => p.r === s.r), b = storeBadge(s);
+      return `<button class="tile${i < 3 ? " top3" : ""}" type="button" data-store="${esc(s.r)}" style="--c:${RETAILERS[s.r]?.c || "var(--brand)"}"><span class="tn"><span class="rk" aria-label="Rank ${i + 1}">${i + 1}</span>${esc(s.r)}</span><span class="tm">${s.deals ? plural(s.deals, "deal") + (promo ? " + offers" : "") : "Store-wide offers"}</span>${b ? `<span class="tb">${esc(b)}</span>` : ""}</button>`;
+    }).join("")}</div></div>`;
+    return;
+  }
   const counts = {}, top = {};
   DEALS.forEach(d => { counts[d.r] = (counts[d.r] || 0) + 1; top[d.r] = Math.max(top[d.r] || 0, d.p); });
   const promo = new Set(PROMOS.map(p => p.r));
@@ -1428,7 +1530,7 @@ function renderStatic(){
   }).join("");
 }
 function storeCardHTML(s, withId){
-  return `<div class="store"${withId ? ` id="offer-${slug(s.r)}"` : ""} style="--c:${RETAILERS[s.r]?.c || "var(--brand)"}"><h3><span class="dot" aria-hidden="true"></span>${esc(s.r)}</h3><div class="where">${esc(s.where)}</div><ul>${s.items.map(([a,b,c]) => `<li><b>${esc(a)}</b><span>${esc(b)}${c ? `<small>${esc(c)}</small>` : ""}</span></li>`).join("")}</ul></div>`;
+  return `<div class="store"${withId ? ` id="offer-${slug(s.r)}"` : ""} style="--c:${RETAILERS[s.r]?.c || "var(--brand)"}"><h3><span class="dot" aria-hidden="true"></span>${esc(s.r)}</h3><div class="where">${esc(s.where)}</div><ul>${s.items.map(it => { const [a,b,c] = it; return `<li><b>${esc(a)}</b><span>${esc(b)}${kindChip(it)}${c ? `<small>${esc(c)}</small>` : ""}</span></li>`; }).join("")}</ul></div>`;
 }
 function renderStoreOffers(){
   let html = "";
@@ -1443,11 +1545,12 @@ function renderStoreOffers(){
   $("#storeOffers").innerHTML = html;
 }
 function renderPromos(){
-  const storeCard = s => `<div class="store" id="offer-${slug(s.r)}" style="--c:${RETAILERS[s.r]?.c || "var(--brand)"}"><h3><span class="dot" aria-hidden="true"></span>${esc(s.r)}</h3><div class="where">${esc(s.where)}</div><ul>${s.items.map(([a,b,c]) => `<li><b>${esc(a)}</b><span>${esc(b)}${c ? `<small>${esc(c)}</small>` : ""}</span></li>`).join("")}</ul></div>`;
-  $("#promoGrid").innerHTML = GROUPS.map(G => {
-    const ps = PROMOS.filter(p => GROUP_OF[p.r] === G.k); if (!ps.length) return "";
+  const rk = r => RANK_OF[r] ? RANK_OF[r].i : 999;
+  const groups = GROUPS.map(G => ({G, ps: PROMOS.filter(p => GROUP_OF[p.r] === G.k).sort((a, b) => rk(a.r) - rk(b.r))})).filter(x => x.ps.length);
+  groups.sort((a, b) => rk(a.ps[0].r) - rk(b.ps[0].r));
+  $("#promoGrid").innerHTML = groups.map(({G, ps}) => {
     const top = Math.max(0, ...ps.flatMap(p => p.items.map(([a]) => +((String(a).match(/(\d+)\s*%/) || [])[1] || 0))));
-    return `<details class="og" style="--g:${G.g}"><summary><span aria-hidden="true">${G.ic}</span>${esc(G.k)}<small>${plural(ps.length, "store")}${top >= 20 ? `<br>up to ${top}% off` : ""}</small></summary><div class="og-body">${ps.map(storeCard).join("")}</div></details>`;
+    return `<details class="og" style="--g:${G.g}"><summary><span aria-hidden="true">${G.ic}</span>${esc(G.k)}<small>${plural(ps.length, "store")}${top >= 20 ? `<br>up to ${top}% off` : ""}</small></summary><div class="og-body">${ps.map(p => storeCardHTML(p, true)).join("")}</div></details>`;
   }).join("");
 }
 function renderCal(){
@@ -1624,6 +1727,7 @@ $("#half").checked = state.half; $("#low").checked = state.low; $("#sort").value
 $("#grpSel").addEventListener("change", e => { state.g = e.target.value; state.r = "All"; renderSelects(); render(); });
 $("#storeSel").addEventListener("change", e => { state.r = e.target.value; if (state.r !== "All" && state.g === "All"){} render(); });
 $("#storeDir").addEventListener("click", e => { const b = e.target.closest(".tile"); if (b) selectStore(b.dataset.store); });
+document.querySelectorAll("[data-sv]").forEach(b => b.addEventListener("click", () => { state.sv = b.dataset.sv; persist(); renderStores(); }));
 $("#bestGrid").addEventListener("click", e => { const b = e.target.closest(".nm"); if (b) openDeal(+b.dataset.i); });
 $("#bestMore").addEventListener("click", () => { bestAll = true; renderBest(); });
 $("#bigMore").addEventListener("click", () => { bigAll = true; renderBest(); });
