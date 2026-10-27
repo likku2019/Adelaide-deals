@@ -555,9 +555,49 @@ details.so-group{margin:0 0 18px}
 @media (max-width:400px){.deal .meta .cat{display:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 @media (forced-colors:active){.tkt,.sh-tkt{border:2px solid CanvasText}}
+
+/* what's on */
+.btn.sm{min-height:44px;padding:0 12px;font-size:14px;gap:6px}
+.btn.sm .ico{width:18px;height:18px}
+.wo-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}
+.wo-chip{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line-2);background:var(--card);color:var(--ink);font:600 14px/1 var(--body);cursor:pointer;transition:background var(--t-fast),border-color var(--t-fast)}
+.wo-chip .dot{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.wo-chip .n{color:var(--muted);font-weight:500}
+.wo-chip .ico{width:16px;height:16px}
+.wo-chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.wo-chip[aria-pressed="true"] .n{color:inherit;opacity:.8}
+.wo-chip[aria-pressed="true"] .dot{box-shadow:0 0 0 2px var(--paper)}
+.wo-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px}
+.wo{display:grid;grid-template-columns:56px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:14px;box-shadow:var(--shadow-1);min-width:0}
+.wo-d{display:flex;flex-direction:column;align-items:center;justify-content:center;height:60px;border-radius:var(--r-md);background:color-mix(in srgb,var(--c) 13%,var(--card));color:var(--ink);border:1px solid color-mix(in srgb,var(--c) 35%,var(--line))}
+.wo-d b{font:700 22px/1 var(--display)}
+.wo-d span{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
+.wo-b{min-width:0}
+.wo-k{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 2px;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.02em}
+.wo-k .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.wo-free,.wo-now{font-style:normal;font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px}
+.wo-free{background:var(--good-bg);color:var(--ink)}
+.wo-now{background:var(--ticket);color:var(--ticket-ink)}
+.wo h3{margin:0 0 4px;font:700 17px/1.3 var(--display)}
+.wo h3 a{color:inherit;text-decoration:none}
+.wo h3 a:hover{text-decoration:underline}
+.wo-w{margin:0;font-size:14px;color:var(--ink-2)}
+.wo-x{margin:6px 0 0;font-size:14px;color:var(--muted);line-height:1.45}
+.wo-a{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.sub-h small{font:500 14px var(--body);color:var(--muted);margin-left:6px}
+.wo-note{margin:18px 0 0;font-size:14px;color:var(--muted)}
+.places{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:12px}
+.place{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px;box-shadow:var(--shadow-1)}
+.place h3{margin:0;font:700 17px/1.3 var(--display)}
+.place p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.place .pl-a{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--muted)}
+.place .pl-a .ico{width:15px;height:15px}
+.place .pl-t{font-size:13.5px;color:var(--muted)}
+.place .btn{margin-top:auto;align-self:flex-start}
+@media (max-width:719px){.jump a .ji{padding:4px 12px}.wo-chips{flex-wrap:nowrap;overflow-x:auto;margin-inline:-16px;padding:0 16px 4px;scrollbar-width:none}.wo-chips::-webkit-scrollbar{display:none}.wo-chip{flex:none}}
 </style>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
 <a class="skip" href="#deals">Skip to the deals</a>
 <div class="updbar" id="appUpdate" hidden><div class="wrap updbar-in"><span class="ui"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg></span><div class="ut"><b>App update available</b><span id="updText">The new version adds the barcode scanner.</span></div><a class="btn primary" id="updBtn" href="#" target="_blank" rel="noopener">Update now</a><button class="ux" type="button" id="updLater" aria-label="Remind me later">×</button></div><p class="wrap updhow" id="updHow" hidden>Chrome is downloading <b>deal-sheet.apk</b>. When it finishes, tap <b>Open</b> (or find it in Downloads), then tap <b>Update</b>. Your list and watch words are kept.</p></div>
 <header class="top"><div class="wrap top-in">
@@ -584,6 +624,7 @@ details.so-group{margin:0 0 18px}
   <a href="#deals"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-tag"/></svg></span><span class="jl-long">All deals</span><span class="jl-short">Deals</span></a>
   <a href="#best"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="jl-long">Best deals</span><span class="jl-short">Best</span></a>
   <a href="#promos"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-megaphone"/></svg></span><span class="jl-long">Offers &amp; dates</span><span class="jl-short">Offers</span></a>
+  <a href="#whatson"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-ticket"/></svg></span><span class="jl-long">What's on</span><span class="jl-short">Events</span></a>
   <a href="#saved"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></span><span class="jl-long">My list</span><span class="jl-short">List</span><b class="jb" id="listBadge" hidden></b></a>
 </div></nav>
 
@@ -679,6 +720,19 @@ details.so-group{margin:0 0 18px}
       <div class="wchips" id="watchChips"></div>
       <div class="grid" id="watchGrid"></div>
     </div>
+  </section>
+
+  <section id="whatson" aria-labelledby="wo-h">
+    <div class="sec-head"><h2 id="wo-h">What's on in Adelaide</h2><p id="woCount"></p></div>
+    <div class="wo-chips" id="woChips" role="group" aria-label="Type of event"></div>
+    <div id="woList"></div>
+    <p class="wo-note" id="woNote"></p>
+  </section>
+
+  <section id="places" aria-labelledby="pl-h">
+    <div class="sec-head"><h2 id="pl-h">Places to go this season</h2><p>Late spring into summer · best before the real heat arrives</p></div>
+    <ul class="places" id="placeGrid"></ul>
+    <p class="wo-note">On hot or windy days, check for total fire bans before heading to the Hills or national parks.</p>
   </section>
 
   <section id="next" aria-labelledby="nx-h">
@@ -1411,6 +1465,77 @@ const EVENTS = [
  {n:"Boxing Day sales",s:"2026-12-26",e:"2026-12-31",d:"Sat 26 Dec",x:""},
 ];
 
+// ---- What's on: Adelaide events for the coming weeks (c = category key, t = time, w = where, f = free)
+const WO_CATS = {motor:["Motorsport","#C2410C"], cricket:["Cricket","#15803D"], football:["Football","#1D4ED8"], basket:["Basketball","#B45309"], racing:["Horse racing","#7C3AED"], fest:["Festivals","#BE185D"], music:["Concerts & shows","#6D28D9"], xmas:["Christmas","#B91C1C"], market:["Markets & fairs","#0F766E"]};
+const WHATSON = [
+ {n:"Adelaide United v Lion City Sailors",c:"football",s:"2026-10-29",e:"2026-10-29",t:"Evening · check kick-off time",w:"Coopers Stadium, Hindmarsh",x:"AFC Champions League Two",u:"https://www.adelaideunited.com.au/"},
+ {n:"OzAsia Lucky Dumpling Market",c:"market",s:"2026-10-28",e:"2026-11-01",t:"Evenings",w:"Elder Park",x:"Asian street food by the river, last days of OzAsia Festival",u:"https://www.ozasiafestival.com.au/",f:1},
+ {n:"Harry Potter and the Deathly Hallows Part 2 in Concert",c:"music",s:"2026-10-31",e:"2026-10-31",t:"",w:"Adelaide Entertainment Centre",x:"Film on the big screen with a live orchestra",u:"https://www.adelaideentertainmentcentre.com.au/events"},
+ {n:"Adelaide 36ers v Brisbane Bullets",c:"basket",s:"2026-11-01",e:"2026-11-01",t:"4:30pm",w:"Adelaide Entertainment Centre",x:"NBL",u:"https://www.adelaide36ers.com.au/"},
+ {n:"Feast Festival",c:"fest",s:"2026-11-01",e:"2026-11-22",t:"",w:"Venues across Adelaide",x:"Queer arts festival: drag, cabaret, theatre, film. Free Picnic in the Park closes it on Sun 22 Nov",u:"https://feast.org.au/"},
+ {n:"Adelaide Italian Festival",c:"fest",s:"2026-11-01",e:"2026-11-22",t:"",w:"Venues across Adelaide",x:"Three weeks, 60+ events: food, wine, music, film",u:"https://southaustralia.com/whats-on"},
+ {n:"Melbourne Cup Day at Morphettville",c:"racing",s:"2026-11-03",e:"2026-11-03",t:"",w:"Morphettville Racecourse",x:"Race-day party with the Cup on the big screens. From $25; under-18s free in general admission",u:"https://southaustralia.com/products/adelaide/event/melbourne-cup-at-morphettville"},
+ {n:"5 Seconds of Summer",c:"music",s:"2026-11-04",e:"2026-11-04",t:"",w:"Adelaide Entertainment Centre",x:"",u:"https://www.adelaideentertainmentcentre.com.au/events"},
+ {n:"Urban Wine Walk Port Adelaide",c:"fest",s:"2026-11-07",e:"2026-11-07",t:"",w:"Port Adelaide",x:"Tastings along the Port's streets with a pop-up wine bar · $79",u:"https://southaustralia.com/whats-on"},
+ {n:"Adelaide 36ers v Illawarra Hawks",c:"basket",s:"2026-11-07",e:"2026-11-07",t:"5:00pm",w:"Adelaide Entertainment Centre",x:"NBL",u:"https://www.adelaide36ers.com.au/"},
+ {n:"Adelaide United v Melbourne Victory",c:"football",s:"2026-11-08",e:"2026-11-08",t:"4:30pm",w:"Coopers Stadium, Hindmarsh",x:"A-League Men",u:"https://www.adelaideunited.com.au/"},
+ {n:"Diwali",c:"fest",s:"2026-11-08",e:"2026-11-08",t:"",w:"Across Adelaide",x:"Festival of lights. Local melas and temple events are posted on community pages; Indian grocers stock sweets and diyas the week before"},
+ {n:"Iron Maiden with Megadeth",c:"music",s:"2026-11-11",e:"2026-11-11",t:"6:30pm",w:"Adelaide Entertainment Centre",x:"",u:"https://www.adelaideentertainmentcentre.com.au/events"},
+ {n:"Adelaide 36ers v Melbourne United",c:"basket",s:"2026-11-12",e:"2026-11-12",t:"7:00pm",w:"Adelaide Entertainment Centre",x:"NBL",u:"https://www.adelaide36ers.com.au/"},
+ {n:"Christmas Pageant",c:"xmas",s:"2026-11-14",e:"2026-11-14",t:"9:30am",w:"City streets, ending at Rundle Mall",x:"The 94th pageant, with Father Christmas at Beehive Corner. Arrive early for a spot on the route",u:"https://www.christmaspageant.com.au/",f:1},
+ {n:"The Wiggles: Sparkle! Big Show",c:"music",s:"2026-11-14",e:"2026-11-14",t:"",w:"Adelaide Entertainment Centre",x:"For little ones",u:"https://www.adelaideentertainmentcentre.com.au/events"},
+ {n:"Handpicked Festival",c:"fest",s:"2026-11-14",e:"2026-11-14",t:"",w:"Fleurieu Peninsula",x:"Live music and local wine in the vines · $109.95",u:"https://southaustralia.com/whats-on"},
+ {n:"Willunga Quarry Market",c:"market",s:"2026-11-14",e:"2026-11-14",t:"Morning",w:"Willunga",x:"Second-Saturday market: food, plants, crafts",u:"https://southaustralia.com/whats-on",f:1},
+ {n:"Australia v England, 2nd ODI",c:"cricket",s:"2026-11-15",e:"2026-11-15",t:"Day-night",w:"Adelaide Oval",x:"Men's one-day international",u:"https://www.cricket.com.au/"},
+ {n:"Two Door Cinema Club",c:"music",s:"2026-11-18",e:"2026-11-18",t:"",w:"Adelaide Entertainment Centre",x:"",u:"https://www.adelaideentertainmentcentre.com.au/events"},
+ {n:"Feast Picnic in the Park",c:"fest",s:"2026-11-22",e:"2026-11-22",t:"11:00am",w:"Whitmore Square / Iparrityi",x:"Closing day of Feast Festival",u:"https://feast.org.au/",f:1},
+ {n:"Dermot Kennedy",c:"music",s:"2026-11-22",e:"2026-11-22",t:"",w:"Adelaide Entertainment Centre",x:"",u:"https://www.adelaideentertainmentcentre.com.au/events"},
+ {n:"Supercars parade",c:"motor",s:"2026-11-25",e:"2026-11-25",t:"",w:"City streets",x:"The race cars drive through the city the day before the Grand Final starts",u:"https://southaustralia.com/whats-on",f:1},
+ {n:"bp Adelaide Grand Final (Supercars)",c:"motor",s:"2026-11-26",e:"2026-11-29",t:"Races Fri 4:20pm · Sat 3:20pm · Sun 3:15pm",w:"Adelaide Street Circuit, East Parklands",x:"Supercars season finale with GT World Challenge, Porsche Carrera Cup, V8 SuperUtes and Super2 support races",u:"https://www.supercars.com/calendar"},
+ {n:"AFLW Grand Final",c:"football",s:"2026-11-27",e:"2026-11-27",t:"Night",w:"Norwood Oval or Alberton Oval, if the Crows or Port host",x:"Played in Adelaide only if the Crows or Port are the higher-ranked grand finalist. Check after the preliminary finals",u:"https://www.afl.com.au/aflw"},
+ {n:"Dirty Dancing in Concert",c:"music",s:"2026-11-27",e:"2026-11-27",t:"",w:"Adelaide Entertainment Centre",x:"",u:"https://www.adelaideentertainmentcentre.com.au/events"},
+ {n:"Semaphore Street Fair",c:"market",s:"2026-11-29",e:"2026-11-29",t:"",w:"Semaphore Road",x:"Stalls, rides and family activities by the beach",u:"https://southaustralia.com/whats-on",f:1},
+ {n:"Macclesfield Strawberry Fete",c:"market",s:"2026-11-29",e:"2026-11-29",t:"",w:"Macclesfield, Adelaide Hills",x:"Village fete in strawberry season",u:"https://southaustralia.com/whats-on",f:1},
+ {n:"Adelaide 36ers v South East Melbourne Phoenix",c:"basket",s:"2026-12-02",e:"2026-12-02",t:"7:00pm",w:"Adelaide Entertainment Centre",x:"NBL",u:"https://www.adelaide36ers.com.au/"},
+ {n:"Adelaide 36ers v Tasmania JackJumpers",c:"basket",s:"2026-12-05",e:"2026-12-05",t:"7:00pm",w:"Adelaide Entertainment Centre",x:"NBL",u:"https://www.adelaide36ers.com.au/"},
+ {n:"Vegan Festival Adelaide",c:"fest",s:"2026-12-05",e:"2026-12-05",t:"",w:"Adelaide",x:"Food stalls and family activities · $5",u:"https://southaustralia.com/whats-on"},
+ {n:"Glitter Pines",c:"xmas",s:"2026-12-05",e:"2026-12-24",t:"",w:"Adelaide",x:"Christmas light walk · $16",u:"https://southaustralia.com/whats-on"},
+ {n:"Ebenezer Night Markets",c:"market",s:"2026-12-05",e:"2027-03-20",t:"Evenings",w:"Ebenezer Place, East End",x:"Summer night market: street food, bars, makers. Runs into March",u:"https://southaustralia.com/whats-on",f:1},
+ {n:"Air Supply",c:"music",s:"2026-12-10",e:"2026-12-10",t:"",w:"Adelaide Entertainment Centre",x:"",u:"https://www.adelaideentertainmentcentre.com.au/events"},
+ {n:"Adelaide United v Macarthur FC",c:"football",s:"2026-12-11",e:"2026-12-11",t:"7:10pm",w:"Coopers Stadium, Hindmarsh",x:"A-League Men",u:"https://www.adelaideunited.com.au/"},
+ {n:"Carols by Candlelight",c:"xmas",s:"2026-12-12",e:"2026-12-12",t:"Gates 3pm · concert 8:30pm · fireworks 10:30pm",w:"Elder Park",x:"Adelaide's big carols night by the river. Ticketed; book parking ahead",u:"https://adelaidecarols.com.au/"},
+ {n:"Adelaide 36ers v Sydney Kings",c:"basket",s:"2026-12-13",e:"2026-12-13",t:"2:30pm",w:"Adelaide Entertainment Centre",x:"NBL",u:"https://www.adelaide36ers.com.au/"},
+ {n:"Adelaide Town Hall Christmas Concert",c:"xmas",s:"2026-12-16",e:"2026-12-16",t:"",w:"Adelaide Town Hall",x:"",u:"https://southaustralia.com/whats-on",f:1},
+ {n:"Christmas Test: Australia v New Zealand",c:"cricket",s:"2026-12-17",e:"2026-12-21",t:"Five days",w:"Adelaide Oval",x:"Second Test of the series",u:"https://www.cricket.com.au/"},
+ {n:"Adelaide 36ers v Brisbane Bullets",c:"basket",s:"2026-12-19",e:"2026-12-19",t:"5:00pm",w:"Adelaide Entertainment Centre",x:"NBL",u:"https://www.adelaide36ers.com.au/"},
+ {n:"Adelaide Strikers v Sydney Thunder",c:"cricket",s:"2026-12-23",e:"2026-12-23",t:"",w:"Adelaide Oval",x:"BBL. The Oval is dressed up as a Christmas wonderland, so wear a Santa hat",u:"https://www.adelaidestrikers.com.au/"},
+ {n:"Lobethal Christmas Pageant",c:"xmas",s:"2026-12-23",e:"2026-12-23",t:"7:00pm",w:"Main Street, Lobethal",x:"Night pageant in the Lights of Lobethal town. The lights run through December; check the festival's page for dates",u:"https://lobethalpageant.com.au/",f:1},
+ {n:"Adelaide 36ers v Perth Wildcats",c:"basket",s:"2026-12-24",e:"2026-12-24",t:"6:30pm",w:"Adelaide Entertainment Centre",x:"NBL",u:"https://www.adelaide36ers.com.au/"},
+ {n:"Adelaide United v Central Coast Mariners",c:"football",s:"2026-12-27",e:"2026-12-27",t:"7:30pm",w:"Coopers Stadium, Hindmarsh",x:"A-League Men",u:"https://www.adelaideunited.com.au/"},
+ {n:"Bay Sheffield Carnival",c:"fest",s:"2026-12-27",e:"2026-12-28",t:"",w:"Colley Reserve, Glenelg",x:"140th running of the famous footrace, plus a family carnival",u:"https://southaustralia.com/whats-on",f:1},
+ {n:"Adelaide Strikers v Melbourne Stars",c:"cricket",s:"2026-12-31",e:"2026-12-31",t:"New Year's Eve",w:"Adelaide Oval",x:"BBL",u:"https://www.adelaidestrikers.com.au/"},
+ {n:"Adelaide Strikers v Melbourne Renegades",c:"cricket",s:"2027-01-06",e:"2027-01-06",t:"",w:"Adelaide Oval",x:"BBL",u:"https://www.adelaidestrikers.com.au/"},
+ {n:"Adelaide Strikers v Hobart Hurricanes",c:"cricket",s:"2027-01-12",e:"2027-01-12",t:"",w:"Adelaide Oval",x:"BBL",u:"https://www.adelaidestrikers.com.au/"},
+ {n:"Adelaide Strikers v Perth Scorchers",c:"cricket",s:"2027-01-16",e:"2027-01-16",t:"",w:"Adelaide Oval",x:"BBL First Nations round",u:"https://www.adelaidestrikers.com.au/"},
+];
+// things not on in Adelaide right now, shown under the list
+const WO_NOTE = "Rugby: no union or league matches are scheduled in Adelaide over the coming weeks. Adelaide Oval hosts Men's Rugby World Cup games in October 2027.";
+// ---- places to visit this season (late spring into summer)
+const PLACES = [
+ {n:"Pick your own strawberries",q:"Beerenberg Farm Hahndorf",a:"Beerenberg Farm, Hahndorf",why:"Strawberry season is on. Pick a punnet, then walk the Hahndorf main street.",tip:"Go in the morning before the heat"},
+ {n:"Cherry picking",q:"cherry picking Adelaide Hills",a:"Adelaide Hills orchards",why:"Pick-your-own cherry orchards around Lenswood and Basket Range usually open in December.",tip:"Check orchard pages for opening days"},
+ {n:"Glenelg & Jetty Road",q:"Jetty Road Glenelg",a:"Glenelg",why:"Long summer evenings on the beach, the jetty and the tram straight from the city.",tip:"Take the tram to skip parking"},
+ {n:"Henley Square at sunset",q:"Henley Square Henley Beach",a:"Henley Beach",why:"Sunset over the water with fish and chips or gelato on the square.",tip:"Sunset is around 8pm in December"},
+ {n:"Port Noarlunga reef",q:"Port Noarlunga jetty",a:"Port Noarlunga",why:"Snorkel trail along a natural reef right off the jetty once the water warms up.",tip:"Go at low tide on a calm day"},
+ {n:"Dolphins in the Port River",q:"Port Adelaide dolphin cruise",a:"Port Adelaide",why:"Dolphin cruises leave from the Port most days; dolphins live in the river all year.",tip:"Pair it with the Port's maritime museums"},
+ {n:"Waterfall Gully to Mount Lofty",q:"Waterfall Gully",a:"Adelaide Hills",why:"The classic city hike up to the summit lookout and café, with views over the whole plain.",tip:"Start early and skip it on hot days"},
+ {n:"Morialta Falls",q:"Morialta Conservation Park",a:"Woodforde",why:"The falls still run in late spring. Easy walking trails and koalas in the gum trees.",tip:"Best before the summer dries them up"},
+ {n:"Cleland Wildlife Park",q:"Cleland Wildlife Park",a:"Crafers",why:"Hand-feed kangaroos and see koalas up close, 20 minutes from the city.",tip:"Book koala sessions ahead"},
+ {n:"Barossa Valley",q:"Barossa Valley",a:"Barossa",why:"Wineries, the Saturday Barossa Farmers Market and Christmas in the Barossa events.",tip:"Pick a driver or book a tour"},
+ {n:"Monarto Safari Park",q:"Monarto Safari Park",a:"Monarto",why:"Lions, giraffes and rhinos on a huge open-range park, an hour from the city.",tip:"Go early when the animals are active"},
+ {n:"Victor Harbor & Granite Island",q:"Granite Island Victor Harbor",a:"Victor Harbor",why:"Walk the causeway to Granite Island and ride the horse-drawn tram along it.",tip:"Good day trip with kids"},
+];
+
 // ======================================================================
 // Page code below. Weekly updates only change the data above this line.
 // ======================================================================
@@ -1673,12 +1798,12 @@ function clearAll(){
   renderSelects(); render();
 }
 // ---- tabs: each section of the bar is its own screen
-const TABS = {stores:["stores"], deals:["deals"], best:["best","standouts"], promos:["promos","next"], next:["promos","next"], saved:["saved"]};
+const TABS = {stores:["stores"], deals:["deals"], best:["best","standouts"], promos:["promos","next"], next:["promos","next"], whatson:["whatson","places"], places:["whatson","places"], saved:["saved"]};
 function showTab(t, scroll = true){
   if (!TABS[t]) t = "stores";
   state.tab = t; persist();
   document.querySelectorAll("main > section").forEach(sec => sec.toggleAttribute("data-off", !TABS[t].includes(sec.id)));
-  const navT = t === "next" ? "promos" : t;
+  const navT = t === "next" ? "promos" : t === "places" ? "whatson" : t;
   document.querySelectorAll(".jump a").forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + navT));
   if (t === "saved") renderSaved(true);
   if (scroll){
@@ -2252,12 +2377,62 @@ $("#bestMore").addEventListener("click", () => { bestAll = true; renderBest(); }
 $("#bigMore").addEventListener("click", () => { bigAll = true; renderBest(); });
 document.addEventListener("click", e => { const b = e.target.closest("[data-offer]"); if (b && !e.target.closest("#panel")) openOffer(b.dataset.offer); });
 $("#openAll").addEventListener("click", e => { const all = [...document.querySelectorAll("details.og")]; const open = !all.every(d => d.open); all.forEach(d => d.open = open); e.target.textContent = open ? "Close all" : "Open all"; });
+// ---- What's on tab
+const woDate = s => toDate(s);
+const WO_DAY = new Intl.DateTimeFormat("en-AU", {weekday:"short"}), WO_MON = new Intl.DateTimeFormat("en-AU", {month:"short"});
+function woRange(e){
+  const a = woDate(e.s), b = woDate(e.e), f = d => `${WO_DAY.format(d)} ${d.getDate()} ${WO_MON.format(d)}`;
+  if (e.s === e.e) return f(a);
+  return a.getMonth() === b.getMonth() && b - a < 7 * 864e5 ? `${WO_DAY.format(a)} ${a.getDate()} – ${f(b)}` : `${f(a)} – ${f(b)}`;
+}
+function woCal(e){
+  const ymd = d => `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
+  const end = woDate(e.e); end.setDate(end.getDate() + 1);
+  const q = new URLSearchParams({action:"TEMPLATE", text:e.n, dates:`${ymd(woDate(e.s))}/${ymd(end)}`, details:[e.t, e.x, e.u].filter(Boolean).join("\n"), location:e.w ? e.w + ", South Australia" : "Adelaide SA"});
+  return "https://calendar.google.com/calendar/render?" + q.toString();
+}
+let woCat = "All", woFree = false;
+function woCard(e){
+  const [cn, cc] = WO_CATS[e.c] || ["Event", "#566176"], s = woDate(e.s);
+  const on = woDate(e.s) <= TODAY;
+  const map = e.w && !/^across|^venues|^city streets|^adelaide$/i.test(e.w) ? `<a class="btn sm" href="https://www.google.com/maps/search/${encodeURIComponent(e.w + " South Australia")}" target="_blank" rel="noopener">${ico("pin")}Map</a>` : "";
+  return `<li class="wo" style="--c:${cc}">
+    <div class="wo-d" aria-hidden="true"><b>${s.getDate()}</b><span>${WO_MON.format(s)}</span></div>
+    <div class="wo-b">
+      <p class="wo-k"><span class="dot"></span>${esc(cn)}${e.f ? `<i class="wo-free">Free</i>` : ""}${on ? `<i class="wo-now">On now</i>` : ""}</p>
+      <h3>${e.u ? `<a href="${esc(e.u)}" target="_blank" rel="noopener">${esc(e.n)}</a>` : esc(e.n)}</h3>
+      <p class="wo-w">${esc(woRange(e))}${e.t ? " · " + esc(e.t) : ""}${e.w ? `<br>${esc(e.w)}` : ""}</p>
+      ${e.x ? `<p class="wo-x">${esc(e.x)}</p>` : ""}
+      <div class="wo-a"><a class="btn sm" href="${esc(woCal(e))}" target="_blank" rel="noopener">${ico("calendar")}Add to calendar</a>${map}</div>
+    </div></li>`;
+}
+function renderWhatsOn(){
+  const live = WHATSON.filter(e => woDate(e.e) >= TODAY).sort((a, b) => a.s.localeCompare(b.s) || a.n.localeCompare(b.n));
+  const n = {}; live.forEach(e => n[e.c] = (n[e.c] || 0) + 1);
+  const chips = [["All", "All events", live.length, "var(--ink)"], ...Object.keys(WO_CATS).filter(k => n[k]).map(k => [k, WO_CATS[k][0], n[k], WO_CATS[k][1]])];
+  if (!chips.some(c => c[0] === woCat)) woCat = "All";
+  $("#woChips").innerHTML = chips.map(([k, l, c, col]) => `<button type="button" class="wo-chip" data-wc="${k}" style="--c:${col}" aria-pressed="${k === woCat}">${k === "All" ? "" : `<span class="dot"></span>`}${esc(l)}<span class="n">${c}</span></button>`).join("")
+    + `<button type="button" class="wo-chip wo-fchip" data-wfree aria-pressed="${woFree}">${ico("check")}Free only</button>`;
+  const list = live.filter(e => (woCat === "All" || e.c === woCat) && (!woFree || e.f));
+  const days = e => Math.round((woDate(e.s) - TODAY) / 864e5);
+  const groups = [["This week", e => days(e) <= 6], ["Next two weeks", e => days(e) > 6 && days(e) <= 20], ["Later", e => days(e) > 20]];
+  $("#woList").innerHTML = list.length ? groups.map(([h, f]) => { const g = list.filter(f); return g.length ? `<h3 class="sub-h">${h} <small>${plural(g.length, "event")}</small></h3><ol class="wo-grid">${g.map(woCard).join("")}</ol>` : ""; }).join("")
+    : `<div class="empty"><p>Nothing in this category coming up.</p><button class="btn" type="button" data-wc="All">Show all events</button></div>`;
+  $("#woCount").textContent = `${plural(live.length, "event")} · updated with the sheet`;
+  $("#woNote").textContent = WO_NOTE || "";
+  $("#placeGrid").innerHTML = PLACES.map(p => `<li class="place"><h3>${esc(p.n)}</h3><p class="pl-a">${ico("pin")}${esc(p.a)}</p><p>${esc(p.why)}</p>${p.tip ? `<p class="pl-t"><b>Tip:</b> ${esc(p.tip)}</p>` : ""}<a class="btn sm" href="https://www.google.com/maps/search/${encodeURIComponent((p.q || p.n) + " South Australia")}" target="_blank" rel="noopener">${ico("pin")}Directions</a></li>`).join("");
+}
+document.addEventListener("click", e => {
+  const c = e.target.closest("[data-wc]"); if (c){ woCat = c.dataset.wc; if (c.closest("#woList")) woFree = false; renderWhatsOn(); return; }
+  if (e.target.closest("[data-wfree]")){ woFree = !woFree; renderWhatsOn(); }
+});
 document.querySelector(".jump").addEventListener("click", e => {
   const a = e.target.closest("a"); if (!a) return;
   e.preventDefault();
   showTab(a.getAttribute("href").slice(1));
 });
 renderSaved();
+renderWhatsOn();
 showTab(state.tab, false);
 sharedIn();
 $("#half").addEventListener("change", e => { state.half = e.target.checked; render(); });
