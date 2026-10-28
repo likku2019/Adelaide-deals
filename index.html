@@ -771,7 +771,7 @@ details.so-group{margin:0 0 18px}
 
 <script>
 // ---- this week (the Wednesday-to-Tuesday catalogue week)
-const WEEK = {start:"2026-10-28", end:"2026-11-03", label:"Wed 28 Oct – Tue 3 Nov 2026", ends:"Tue 3 Nov", updated:"Wed 28 Oct 2026"};
+const WEEK = {start:"2026-10-28", end:"2026-11-03", label:"Wed 28 Oct – Tue 3 Nov 2026", ends:"Tue 3 Nov", updated:"Thu 29 Oct 2026"};
 
 const RETAILERS = {
   "Coles":{c:"var(--coles)"}, "Woolworths":{c:"var(--woolies)"}, "ALDI":{c:"var(--aldi)"},
@@ -905,6 +905,8 @@ const DEALS = [
  {r:"Costco",n:"Apple MacBook Air 13\" M5 16GB/512GB",now:1649.99,cat:"Electronics",end:"While stocks last · delivered",note:"Membership required"},
  {r:"Costco",n:"Logitech MX Keys S + MX Master 3S Bundle",now:199.99,cat:"Electronics",end:"While stocks last · delivered"},
  {r:"Costco",n:"ThermoFlask Insulated Bottle 950mL 2 pack",now:27,cat:"Home",end:"In-store · while stocks last",note:"$37.99 delivered"},
+ {r:"Costco",n:"adidas Men's Boxers 3 pack",now:19.99,cat:"Clothing",end:"While stocks last · delivered",note:"Membership required"},
+ {r:"Costco",n:"Weiwu DC Electric Pedestal Fan",now:59.99,cat:"Home",end:"While stocks last · delivered",note:"Membership required"},
  // ---- Nike (online sale, further markdowns)
  {r:"Nike",n:"Nike SB Dunk Low Pro Skate Shoes",now:108,was:180,cat:"Footwear",end:"Online sale · while stocks last"},
  {r:"Nike",n:"Nike Air Force 1 Older Kids' Shoes",now:90,was:150,cat:"Footwear",end:"Online sale · while stocks last"},
@@ -938,6 +940,7 @@ const DEALS = [
  {r:"Kmart",n:"anko Shave & Trim Set AD-320R",now:29,cat:"Health & beauty",end:"Free click & collect or $65+ delivery"},
  {r:"Kmart",n:"Dad Cap",now:3,cat:"Clothing",end:"Limited stores · click & collect"},
  {r:"Kmart",n:"Set of 3 Cleaning Brushes",now:1,was:1.5,cat:"Household",end:"Free click & collect or $65+ delivery"},
+ {r:"Kmart",n:"4-Piece Cleaning Tool Set",now:2,cat:"Household",end:"Free click & collect or $65+ delivery"},
  // ---- Target
  {r:"Target",n:"Mario Kart World (Switch 2)",now:95,cat:"Gaming",end:"While stocks last",note:"$85 with Target's $10 newsletter voucher"},
  {r:"Target",n:"Pokémon GO Plus +",now:74,cat:"Gaming",end:"While stocks last",note:"$64 with $10 newsletter voucher"},
@@ -971,6 +974,7 @@ const DEALS = [
  {r:"JB Hi-Fi",n:"Amazon Fire TV Stick 4K Select",now:39,cat:"Electronics",end:"Free click & collect or in-store",note:"Same price at Bunnings"},
  {r:"JB Hi-Fi",n:"Dreame L50s Pro Ultra Robot Vacuum",now:999,cat:"Home",end:"Free click & collect or in-store"},
  {r:"JB Hi-Fi",n:"Lenovo Legion Tab 8.8\" 12GB/256GB",now:499,cat:"Electronics",end:"Free click & collect or in-store"},
+ {r:"JB Hi-Fi",n:"Google Pixel 11 Pro + Bonus Nintendo Switch 2",now:1849,cat:"Electronics",end:"Free click & collect or in-store",note:"Switch 2 console free with the phone · Pixel 11 Pro XL $2,099"},
  // ---- Uniqlo
  {r:"Uniqlo",n:"Men's PUFFTECH Parka",now:59.9,was:99.9,cat:"Clothing",end:"While stocks last",note:"Free click & collect or $75+ delivery"},
  // ---- Typo (Cotton On Group)
@@ -1005,6 +1009,7 @@ const DEALS = [
  {r:"Chemist Warehouse",n:"Bambi Mini Co. Baby Singlet Suits & Onesies",now:4.99,cat:"Baby"},
  {r:"Chemist Warehouse",n:"INC 100% Dynamic Whey 2kg",now:77.99,cat:"Health & beauty",end:"In-store or click & collect"},
  {r:"Chemist Warehouse",n:"Optimum Nutrition Gold Standard Isolate 2.28kg",now:134.44,cat:"Health & beauty",end:"In-store or click & collect"},
+ {r:"Chemist Warehouse",n:"Hamilton Everyday Face Sunscreen 200ml",now:15.99,cat:"Health & beauty",end:"In-store or click & collect",note:"Advertised as ½ price · 75g $8.49"},
  // ---- Harris Scarfe (HS Friends prices)
  {r:"Harris Scarfe",n:"My Genie IQ500 Laser Smart Robotic Vacuum",now:249,was:1799.99,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP667980001-black.jpg",note:"HS Friends price (free to join)"},
  {r:"Harris Scarfe",n:"Smith + Nobel Deluxe Digital Slushie Maker",now:179.99,was:499.99,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP667454001-black.jpg",note:"HS Friends price"},
@@ -1077,12 +1082,7 @@ const DEALS = [
  {r:"Harvey Norman",n:"Roborock Qrevo Edge 2 Flow Robot Vacuum & Mop",now:1548,cat:"Home",end:"Free click & collect"},
  {r:"Harvey Norman",n:"HMD Skyline 12GB/256GB",now:399,cat:"Electronics",end:"Free click & collect or in-store"},
  {r:"Harvey Norman",n:"Samsung Galaxy Watch Ultra (2025) LTE 47mm",now:648,was:1299,cat:"Electronics",end:"Free click & collect or in-store",note:"$49 less than Officeworks"},
- // ---- Amazon (amazon.com.au, prices as posted 20–28 Oct)
- {r:"Amazon",n:"Tefal Hard Anodised Frypan 26cm",now:36.54,cat:"Home",end:"Online · price can change any time",note:"32cm wok $55.99"},
- {r:"Amazon",n:"Lenovo Legion R45w-30 44.5\" Dual QHD Curved Gaming Monitor",now:799,was:1299,cat:"Electronics",end:"Online · price can change any time"},
- {r:"Amazon",n:"Nintendo Switch 2 Console",now:728,cat:"Gaming",end:"Online · price can change any time",note:"Officeworks Price Beat makes it $691.60"},
- {r:"Amazon",n:"Apple MacBook Air 13\" M5 16GB/512GB",now:1747,cat:"Electronics",end:"Online · price can change any time"},
- {r:"Amazon",n:"Sunrise Alarm Clock & White Noise Machine",now:41.99,was:69.99,cat:"Home",end:"Online · price can change any time"},
+ // ---- Amazon (amazon.com.au, prices as posted 21–29 Oct)
  {r:"Amazon",n:"OXO Good Grips Hand-Held Mandoline Slicer",now:18.95,was:39.95,cat:"Home",end:"Online · price can change any time"},
  {r:"Amazon",n:"Brut Roll-on Deodorant 50ml 3 pack",now:6.75,was:11.07,cat:"Health & beauty",end:"Online · price can change any time"},
  {r:"Amazon",n:"Palmolive Naturals Hand Wash Refill 3 × 1L",now:9.6,cat:"Household",end:"Online · price can change any time",note:"$8.64 with Subscribe & Save"},
@@ -1099,8 +1099,14 @@ const DEALS = [
  {r:"Amazon",n:"Fisher-Price Little People Animal Farm Playset",now:59,was:93.99,cat:"Kids & toys",end:"Online · price can change any time"},
  {r:"Amazon",n:"Panasonic Eneloop AA or AAA Rechargeable Batteries 4 pack",now:19,cat:"Household",end:"Online · price can change any time",note:"$17.10 with Subscribe & Save · same price at The Good Guys"},
  {r:"Amazon",n:"Doritos or Smith's Chips 380g",now:4.25,cat:"Snacks",end:"Online · price can change any time",note:"$3.82 with Subscribe & Save"},
+ {r:"Amazon",n:"Hydralyte Effervescent Electrolyte Tablets 40 pack",now:13,cat:"Health & beauty",end:"Online · price can change any time",note:"$11.70 with Subscribe & Save · same price as Woolworths' ½-price deal"},
+ {r:"Amazon",n:"Singleton of Dufftown 15 Year Old Single Malt Scotch",now:84.99,was:127.99,cat:"Liquor",end:"Online · price can change any time",note:"Delivered for Prime members"},
+ {r:"Amazon",n:"Fisher-Price Little People My Mario Adventure Playset",now:40.36,was:99.99,cat:"Kids & toys",end:"Online · price can change any time"},
+ {r:"Amazon",n:"Plug-in Sensor Night Lights 4 pack",now:9.99,cat:"Home",end:"Online · price can change any time",note:"Sold by YH-AU Store"},
+ {r:"Amazon",n:"SteelSeries Arctis Nova 3P Wireless Gaming Headset",now:105.83,was:229,cat:"Gaming",end:"Online · price can change any time",note:"Delivered · ships from Amazon Germany"},
  // ---- Kogan
  {r:"Kogan",n:"Kogan TravelBoost 20000mAh 20W Power Bank",now:29.99,cat:"Electronics",end:"Online · price can change any time",note:"Kogan First price, delivered"},
+ {r:"Kogan",n:"Samsung Galaxy S25 Ultra 256GB",now:1399,cat:"Electronics",end:"Online · price can change any time",note:"Free delivery with Kogan First"},
  {r:"Kogan",n:"Kogan Mobile 365-day Prepaid SIM 300GB",now:159,cat:"Phone & SIM",end:"Buy by 10 Nov",note:"Also 900GB for $199"},
  {r:"eBay",n:"Dyson Supersonic Travel Hair Dryer",now:389,cat:"Health & beauty",end:"Online · price can change any time",note:"Sold by Dyson's eBay store · $369 for some eBay Plus members"},
  {r:"eBay",n:"EcoFlow Delta 2 1024Wh Portable Power Station",now:719.28,cat:"Electronics",end:"Online · price can change any time",note:"Sold by EcoFlow's official eBay store"},
@@ -1263,7 +1269,6 @@ const PROMOS = [
    ["Weekly","Specials posted on Facebook","Latest flyer: 24 Oct (Daawat basmati 20kg $41.99)"],
    ["New","Horn bananas and water apples ($12.99/kg) in stock","Also sold at its sister stores Golden India and Golden Fresh"]]},
  {r:"Indian PLAZA",where:"Enfield, Firle, Torrensville & Plympton · Facebook page",items:[
-   ["Free","Mehndi for Karwa Chauth, Wed 28 Oct, 9:30am–7pm","Book a slot online · food stalls with kachori, dabeli, vada pav & pani puri"],
    ["Weekly","Fresh produce specials posted on Facebook","Coriander 3 for $3, KP mangoes $45 a tray, tomatoes $3.99/kg"],
    ["$100","Monthly shopping voucher draw for mailing-list members","Sign up at indianplaza.com.au · stores also at Firle, Torrensville & Plympton (Indian Traders)"]]},
  {r:"Ekam Indian Groceries",where:"Blair Athol (492 Main North Rd) & Enfield Plaza · ekamindiangroceries.com.au",items:[
@@ -1415,7 +1420,6 @@ const PROMOS = [
 
 const CAL = [
  ["Now – Fri 30 Oct","Click Frenzy Main Event (ends midnight Sydney time, 11:30pm Adelaide)"],
- ["Wed 28 Oct","New Coles & Woolworths specials · ALDI kids' toys, meat & pet essentials · Karwa Chauth free mehndi at Indian PLAZA, 9:30am–7pm"],
  ["Thu 29 Oct","New BIG W catalogue"],
  ["Fri 30 Oct","Gathered Market in Rundle Mall, 9am–9pm"],
  ["Sat 31 Oct","Halloween · ALDI electrical sale & family fashion · Westfield $1K spree closes"],
@@ -1435,12 +1439,13 @@ const PICKS = [
  ["Woolworths","$12.50","Cobram Estate Extra Virgin Olive Oil 750mL","Rarely half price: the last time was 25 weeks ago.","🫒"],
  ["Coles","$12","KB's Raw Prawns Tail On Large 500g","Only the second time at half price; usually just 30% off.","🦐"],
  ["Woolworths","$42","Finish Ultimate Plus Dishwasher Tablets 80 pack","Half price, 53c a tablet. Big pack to stock up on.","🍽️"],
- ["Coles","$7","Häagen-Dazs Ice Cream Tub","Half price for the first time in 11 weeks.","🍦"],
+ ["Coles","$7","Häagen-Dazs Ice Cream Tub 420–457mL","Half price for the first time in 11 weeks.","🍦"],
  ["Harris Scarfe","$249","My Genie IQ500 Laser Smart Robotic Vacuum","86% off the $1,799.99 regular price (HS Friends price).","🤖"],
  ["Reebok","$48","Reebok Classic Leather Shoes","70% off in Reebok's Final Sale. Were $160.","👟"],
 ];
 
 const PICS = [
+ [/pixel 11|galaxy s25/i,"📱"],[/boxers/i,"🩲"],[/pedestal fan/i,"🌀"],[/cleaning tool/i,"🧽"],[/single malt|scotch/i,"🥃"],[/night lights?\b/i,"💡"],
  [/fish oil/i,"💊"],[/deviate nitro/i,"👟"],[/camera crossbody/i,"👜"],[/rc car/i,"🏎️"],[/golden books/i,"📚"],[/dump truck/i,"🚚"],[/pet advent/i,"🎁"],[/poo bags/i,"🐕"],[/schmackos|dentastix|dog treat/i,"🐶"],
  [/pork|porterhouse/i,"🥩"],[/beef burger/i,"🍔"],[/upright freezer/i,"🧊"],[/cordless vacuum/i,"🧹"],[/induction cooking/i,"🍳"],[/nappy/i,"👶"],[/linen blend pants/i,"👖"],
  [/aioli|mayonnaise/i,"🥫"],[/crumpet/i,"🥞"],[/monster energy/i,"⚡"],[/magnum/i,"🍦"],[/häagen/i,"🍦"],[/lindt|lindor|quality street|toblerone/i,"🍫"],[/pringles/i,"🍟"],
