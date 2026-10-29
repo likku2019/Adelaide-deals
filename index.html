@@ -595,9 +595,41 @@ details.so-group{margin:0 0 18px}
 .place .pl-t{font-size:13.5px;color:var(--muted)}
 .place .btn{margin-top:auto;align-self:flex-start}
 @media (max-width:719px){.jump a .ji{padding:4px 12px}.wo-chips{flex-wrap:nowrap;overflow-x:auto;margin-inline:-16px;padding:0 16px 4px;scrollbar-width:none}.wo-chips::-webkit-scrollbar{display:none}.wo-chip{flex:none}}
+
+/* things I buy regularly */
+.rgs{list-style:none;margin:0 0 16px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:12px}
+.rg{border:1.5px solid var(--line);border-radius:var(--r-lg);padding:14px;background:var(--paper);min-width:0}
+.rg-good{border-color:var(--good);background:color-mix(in srgb,var(--good-bg) 70%,var(--card))}
+.rg-top{display:flex;gap:8px;align-items:flex-start}
+.rg-top>div:first-child{flex:1;min-width:0}
+.rg h4{margin:0;font:700 18px/1.25 var(--display)}
+.rg-use{margin:2px 0 0;font-size:13.5px;color:var(--muted)}
+.rg-tools{display:flex;gap:4px}
+.rg-tools .ibtn{font-size:22px;color:var(--muted)}
+.rg-tools .ico{width:18px;height:18px}
+.rg-head{margin:10px 0 2px;font-weight:800;font-size:15px}
+.rg-good .rg-head{color:var(--good)}
+.rg-body{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.rg-more{margin:6px 0 0;font-size:13.5px;color:var(--muted)}
+.rg-hist{display:flex;gap:6px;align-items:flex-start;margin:8px 0 0;font-size:13.5px;color:var(--muted)}
+.rg-hist .ico{width:16px;height:16px;margin-top:2px}
+.rg-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.rg-buy{display:flex;flex-wrap:wrap;align-items:flex-end;gap:8px;margin-top:10px;font-size:14px;font-weight:600}
+.rg-buy[hidden]{display:none}
+.rg-in{display:flex;align-items:center;gap:6px;margin-top:4px}
+.rg-buy input,.rgf input{height:44px;padding:0 12px;border:1.5px solid var(--line-2);border-radius:12px;background:var(--card);font:inherit;color:var(--ink);min-width:0}
+.rg-buy input{width:110px}
+.rgf{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:10px;align-items:end;border-top:1px solid var(--line);padding-top:14px}
+.rgf label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:700;color:var(--muted);min-width:0}
+.rgf input{background:var(--paper);width:100%;box-sizing:border-box}
+.rgf .sel{width:100%;padding:0 32px 0 12px}
+.rgf-more{grid-column:1/-1;order:9}
+.rgf-more summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700;font-size:14px;color:var(--ink-2)}
+.rgf-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;padding-bottom:4px}
+@media (max-width:719px){.rgf{grid-template-columns:1fr 1fr}.rgf-n{grid-column:1/-1}#regSave{grid-column:1/-1;order:10}}
 </style>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
 <a class="skip" href="#deals">Skip to the deals</a>
 <div class="updbar" id="appUpdate" hidden><div class="wrap updbar-in"><span class="ui"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg></span><div class="ut"><b>App update available</b><span id="updText">The new version adds the barcode scanner.</span></div><a class="btn primary" id="updBtn" href="#" target="_blank" rel="noopener">Update now</a><button class="ux" type="button" id="updLater" aria-label="Remind me later">×</button></div><p class="wrap updhow" id="updHow" hidden>Chrome is downloading <b>deal-sheet.apk</b>. When it finishes, tap <b>Open</b> (or find it in Downloads), then tap <b>Update</b>. Your list and watch words are kept.</p></div>
 <header class="top"><div class="wrap top-in">
@@ -706,8 +738,27 @@ details.so-group{margin:0 0 18px}
   </section>
 
   <section id="saved" aria-labelledby="sv-h">
-    <div class="sec-head"><h2 id="sv-h">My list</h2><p>Saved on this phone · share it to send it to another phone</p></div>
+    <div class="sec-head"><h2 id="sv-h">My list</h2><p>Saved on this phone, so each person has their own · share to send it to another phone</p></div>
     <div id="sharedIn"></div>
+    <div class="box2" id="regBox">
+      <div class="lh"><div><h3>Things I buy regularly</h3><p class="sub" id="regSub"></p></div><div class="acts"><button class="btn" type="button" id="regShare" hidden>Share with another phone</button></div></div>
+      <div id="regList"></div>
+      <form class="rgf" id="regForm" data-idx="" autocomplete="off">
+        <label class="rgf-n"><span>Item</span><input name="n" type="text" placeholder="e.g. Milk" maxlength="40" list="regNames"></label>
+        <label class="rgf-q"><span>I use</span><input name="q" type="number" inputmode="decimal" min="0" step="any" placeholder="5"></label>
+        <label class="rgf-u"><span>Unit</span><select name="u" class="sel"><option value="L">litres</option><option value="kg" selected>kg</option><option value="items">items</option></select></label>
+        <label class="rgf-p"><span>Every</span><select name="per" class="sel"><option value="week">week</option><option value="fortnight">fortnight</option><option value="month">month</option></select></label>
+        <details class="rgf-more" id="regMore"><summary>More options</summary>
+          <div class="rgf-row">
+            <label><span>Stock up for at most</span><select name="keep" class="sel"><option value="">Guess from the item</option><option value="1">1 week</option><option value="2">2 weeks</option><option value="4">1 month</option><option value="8">2 months</option><option value="13">3 months</option><option value="26">6 months</option></select></label>
+            <label><span>Price I usually pay (per kg, litre or item)</span><input name="usual" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 1.30"></label>
+            <label><span>How much I have at home now</span><input name="have" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 2"></label>
+          </div>
+        </details>
+        <button class="btn primary" type="submit" id="regSave">Add</button>
+        <datalist id="regNames"><option value="Milk"><option value="Sugar"><option value="Rice"><option value="Basmati rice"><option value="Atta"><option value="Toor dal"><option value="Eggs"><option value="Bread"><option value="Butter"><option value="Yoghurt"><option value="Plain flour"><option value="Oats"><option value="Potatoes"><option value="Onions"><option value="Ghee"><option value="Cooking oil"><option value="Toilet paper"><option value="Dishwashing liquid"></datalist>
+      </form>
+    </div>
     <div class="box2">
       <div class="lh"><div><h3>Shopping list</h3><p class="sub" id="listSub">Tap + on any deal to add it here.</p></div>
         <div class="acts"><button class="btn primary" type="button" id="shareList" hidden>Share list</button><button class="btn" type="button" id="clearDone" hidden>Remove ticked</button></div></div>
@@ -1514,6 +1565,32 @@ const EVENTS = [
  {n:"Boxing Day sales",s:"2026-12-26",e:"2026-12-31",d:"Sat 26 Dec",x:""},
 ];
 
+// ---- everyday shelf prices for staples (cheapest home-brand price per kg / L / item, specials excluded)
+// k = words that identify the item, x = words that rule it out, u = "kg" | "L" | "items", p = [store, price per unit, pack]
+const STAPLES_ASOF = "22 Oct 2026";
+const STAPLES = [
+ {n:"Full cream milk",k:/\bmilk\b/i,x:/almond|soy|oat|choc|flavou?r|powder|coconut|condensed|lactose|long life|uht|frother|frothing|jug|formula|shake|iced/i,u:"L",p:[["Coles",1.65,"3L $4.95"],["Woolworths",1.65,"3L $4.95"],["ALDI",1.65,"3L $4.95"]]},
+ {n:"White sugar",k:/\bsugar\b/i,x:/brown|raw|icing|caster|zero|free|cola|coke|syrup|cane juice/i,u:"kg",p:[["Coles",1.30,"2kg $2.60"],["Woolworths",1.30,"2kg $2.60"],["ALDI",1.30,"2kg $2.59"]]},
+ {n:"Long grain white rice",k:/\brice\b/i,x:/basmati|jasmine|brown|arborio|sushi|cake|cracker|noodle|paper|bran|puffed|pudding|wild|medium/i,u:"kg",p:[["Coles",1.80,"1kg"],["Woolworths",1.80,"1kg"],["ALDI",1.80,"1kg"]]},
+ {n:"Plain flour",k:/\bflour\b/i,x:/self|corn|rice|atta|ragi|besan|gram|almond|bread|wholemeal|tapioca/i,u:"kg",p:[["Coles",1.20,"1kg"],["Woolworths",1.20,"1kg"],["ALDI",1.20,"1kg"]]},
+ {n:"Eggs",k:/\beggs?\b/i,x:/easter|chocolate|noodle|choc|kinder|poacher|cooker|plant/i,u:"items",p:[["Woolworths",0.44,"12 pack"]]},
+ {n:"Butter",k:/\bbutter\b/i,x:/peanut|nut|cake|chicken|milk|cookie|biscuit|bean|cocoa|shea|body/i,u:"kg",p:[["ALDI",14.00,"250g block"]]},
+ {n:"Cheddar cheese block",k:/\b(cheddar|tasty)\b/i,x:/sliced|grated|shredded|cracker|snack/i,u:"kg",p:[["ALDI",8.99,"500g block"]]},
+ {n:"Natural yoghurt",k:/\b(yoghurt|yogurt|curd|dahi)\b/i,x:/drink|pouch|tub kids|frozen|coated/i,u:"kg",p:[["ALDI",3.90,"1kg tub"]]},
+ {n:"White bread",k:/\bbread\b/i,x:/crumb|flour|maker|roll|naan|garlic|pita|wrap|board|knife/i,u:"items",p:[["ALDI",2.59,"700g loaf"]]},
+ {n:"Rolled oats",k:/\boats\b/i,x:/milk|bar|cookie|biscuit|cluster/i,u:"kg",p:[["ALDI",2.00,"1kg bag"]]},
+ {n:"Spaghetti",k:/\b(spaghetti|pasta)\b/i,x:/sauce|tinned|canned|jar|maker/i,u:"kg",p:[["Woolworths",1.80,"500g"],["ALDI",1.80,"500g"]]},
+ {n:"Canned diced tomatoes",k:/\btomatoes\b.*\b(diced|canned|tin|crushed|chopped)\b|\b(diced|canned|crushed|chopped)\b.*\btomatoes\b/i,x:/fresh|cherry|truss|roma/i,u:"kg",p:[["Coles",2.38,"400g can"],["Woolworths",2.38,"400g can"]]},
+ {n:"Frozen peas",k:/\bpeas\b/i,x:/snow|sugar snap|chick|split/i,u:"kg",p:[["ALDI",2.49,"1kg bag"],["Woolworths",2.50,"1kg bag"]]},
+ {n:"Potatoes",k:/\bpotato(es)?\b/i,x:/chips|crisps|wedges|gems|mash|sweet|salad|cake/i,u:"kg",p:[["ALDI",2.12,"washed, 2kg bag"]]},
+ {n:"Brown onions",k:/\bonions?\b/i,x:/rings|powder|flakes|spring|red|chips|soup/i,u:"kg",p:[["Coles",2.65,"loose"]]},
+ {n:"Carrots",k:/\bcarrots?\b/i,x:/cake|juice|baby food/i,u:"kg",p:[["Coles",1.73,"bag"]]},
+ {n:"Apples",k:/\bapples?\b/i,x:/juice|cider|sauce|pie|chips|watch|airpods|iphone|ipad|mac/i,u:"kg",p:[["ALDI",6.99,"Royal Gala"]]},
+ {n:"Chicken breast",k:/\bchicken\b.*\b(breast|fillets?)\b/i,x:/nugget|crumbed|schnitzel|tender|pet|dog|cat|soup|stock/i,u:"kg",p:[["Woolworths",9.50,"fillets"]]},
+ {n:"Orange juice",k:/\borange juice\b/i,x:/cordial/i,u:"L",p:[["ALDI",2.00,"2L"],["Woolworths",2.10,"2L"]]},
+ {n:"Dishwashing liquid",k:/\b(dishwashing|dish washing) liquid\b/i,x:/tablet|pod|powder|rinse/i,u:"L",p:[["Coles",1.40,"1L"],["Woolworths",1.40,"1L"],["ALDI",1.40,"1L"]]},
+];
+
 // ---- What's on: Adelaide events for the coming weeks (c = category key, t = time, w = where, f = free)
 const WO_CATS = {motor:["Motorsport","#C2410C"], cricket:["Cricket","#15803D"], football:["Football","#1D4ED8"], basket:["Basketball","#B45309"], racing:["Horse racing","#7C3AED"], fest:["Festivals","#BE185D"], music:["Concerts & shows","#6D28D9"], xmas:["Christmas","#B91C1C"], market:["Markets & fairs","#0F766E"]};
 const WHATSON = [
@@ -1712,6 +1789,7 @@ async function loadHistory(){
   return null;
 }
 function applyHistory(rows){
+  HROWS = rows;
   const by = {};
   rows.forEach(r => {
     if (!STORE_START[r.retailer] || r.week < STORE_START[r.retailer]) STORE_START[r.retailer] = r.week;
@@ -2257,7 +2335,8 @@ function renderSaved(seeing = false){
   const uniq = [...new Map(hitsAll.map(d => [d.id, d])).values()].sort((a, b) => (SEEN.has(a.id) - SEEN.has(b.id)) || b.p - a.p);
   $("#watchGrid").innerHTML = !WATCH.length ? "" : uniq.length ? uniq.map(card).join("") : `<div class="empty"><p>No deals match your watch list this week. They'll show here as soon as one turns up.</p></div>`;
   const badge = $("#listBadge");
-  badge.hidden = !n && !fresh; badge.textContent = n || ""; badge.classList.toggle("dot", fresh > 0);
+  const rg = regGood();
+  badge.hidden = !n && !fresh && !rg; badge.textContent = n || ""; badge.classList.toggle("dot", fresh > 0 || rg > 0);
   if (!n && fresh){ badge.textContent = fresh; badge.classList.remove("dot"); }
   if (seeing && fresh){ uniq.forEach(d => SEEN.add(d.id)); LS.set("ads-seen", [...SEEN]); }
 }
@@ -2305,6 +2384,192 @@ $("#watchForm").addEventListener("submit", e => {
   $("#watchIn").value = ""; renderSaved(); const n = watchHits(w).length; toast(n ? `${plural(n, "deal")} match "${w}" this week` : `Watching "${w}"`);
 });
 
+// ---- things I buy regularly: how much you use, where it's cheapest, when to stock up
+let REGS = LS.get("ads-regs", []), HROWS = [];
+const REG_PER = {week:1, fortnight:2, month:4.345};
+const REG_PER_TXT = {week:"a week", fortnight:"a fortnight", month:"a month"};
+const REG_UNIT_TXT = {kg:"kg", L:"L", items:""};
+const KEEP_OPTS = [[1,"1 week"],[2,"2 weeks"],[4,"1 month"],[8,"2 months"],[13,"3 months"],[26,"6 months"]];
+// how long it keeps, guessed from the name (you can change it)
+function guessKeep(n){
+  if (/\b(milk|bread|yoghurt|yogurt|curd|dahi|paneer|banana|tomato|lettuce|spinach|coriander|fish|chicken|mince|meat|fruit|veg|vegetables)\b/i.test(n)) return 1;
+  if (/\b(eggs?|butter|cheese|potato|onion|carrot|apple)\b/i.test(n)) return 4;
+  if (/\b(oil|ghee|coffee|tea|cereal|oats|frozen)\b/i.test(n)) return 13;
+  return 8;
+}
+const fmtQty = (q, u) => { const r = q >= 10 ? Math.round(q) : Math.round(q * 10) / 10; return u === "items" ? String(r) : r + " " + REG_UNIT_TXT[u]; };
+const perUnitTxt = (v, u) => u === "items" ? (v < 1 ? Math.round(v * 100) + "c each" : money(Math.round(v * 100) / 100) + " each") : money(Math.round(v * 100) / 100) + " / " + REG_UNIT_TXT[u];
+// pack size and price per kg / L / item worked out from a product name
+function packOf(name, price, u){
+  if (typeof price !== "number" || !price) return null;
+  const n = name.replace(/(\d),(\d{3})/g, "$1$2");
+  if (/\d\s*[–-]\s*\d/.test(n)) return null;
+  if (u === "items"){
+    const m = n.match(/\b(\d+)\s*(?:pack|pk|eggs|rolls?|loaves|dozen)\b/i) || n.match(/\b(\d+)\s*[x×]\b/i);
+    const c = m ? +m[1] * (/dozen/i.test(m[0]) ? 12 : 1) : 1;
+    return {q:c, v:price / c};
+  }
+  const sizes = n.match(/\d+(?:\.\d+)?\s*(?:kg|g|ml|l)\b/gi) || [];
+  if (sizes.length !== 1) return null;
+  const m = n.match(/(?:(\d+)\s*[x×]\s*)?(\d+(?:\.\d+)?)\s*(kg|g|ml|l)\b/i);
+  const unit = m[3].toLowerCase(), liquid = unit === "ml" || unit === "l";
+  if (liquid !== (u === "L")) return null;
+  const q = +m[2] * (m[1] ? +m[1] : 1) / (unit === "g" || unit === "ml" ? 1000 : 1);
+  return q ? {q, v:price / q} : null;
+}
+const regWords = r => (r.m || r.n).toLowerCase().split(/[\s,]+/).filter(w => w.length > 1 && !STOP.has(w));
+const stapleOf = r => STAPLES.find(s => s.u === r.u && s.k.test(r.n) && !s.x.test(r.n));
+function regMatches(r, name){
+  const s = stapleOf(r);
+  if (s && s.x.test(name)) return false;
+  return regWords(r).every(w => { const b = w.replace(/(es|s)$/, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); return new RegExp("(^|[^a-z0-9])" + b + "(e?s)?($|[^a-z0-9])", "i").test(name); });
+}
+// current deals for this item, cheapest per unit first
+function regDeals(r){
+  return DEALS.filter(d => (d.left == null || d.left >= 0) && regMatches(r, d.n))
+    .map(d => ({d, ...(packOf(d.n, d.now, r.u) || {})})).filter(x => x.v).sort((a, b) => a.v - b.v);
+}
+// what the saved price history says: weeks it was on special and the lowest price seen
+function regHistory(r){
+  if (!HROWS.length) return null;
+  const hits = HROWS.filter(x => x.week < WEEK.start && x.was && regMatches(r, x.item)).map(x => ({w:x.week, r:x.retailer, ...(packOf(x.item, +x.price, r.u) || {})})).filter(x => x.v);
+  if (!hits.length) return {n:0};
+  const weeks = [...new Set(hits.map(h => h.w))].sort(), last = hits.filter(h => h.w === weeks[weeks.length - 1]).sort((a, b) => a.v - b.v)[0];
+  const low = hits.reduce((a, b) => b.v < a.v ? b : a);
+  let gap = null;
+  if (weeks.length >= 3){ const g = []; for (let i = 1; i < weeks.length; i++) g.push((toDate(weeks[i]) - toDate(weeks[i - 1])) / 864e5 / 7); gap = Math.round(g.reduce((a, b) => a + b, 0) / g.length); }
+  return {n:weeks.length, last, low, gap, ago:Math.round((toDate(WEEK.start) - toDate(last.w)) / 864e5 / 7)};
+}
+const regRate = r => r.q / REG_PER[r.per];                          // amount used per week
+function regStock(r){
+  if (!r.st) return null;
+  const used = regRate(r) * (TODAY - toDate(r.st.d)) / 864e5 / 7;
+  return Math.max(0, r.st.a - used);
+}
+const fmtDay = d => d.toLocaleDateString("en-AU", {weekday:"short", day:"numeric", month:"short"}).replace(",", "");
+function regAdvice(r){
+  const rate = regRate(r), stock = regStock(r), deals = regDeals(r), best = deals[0], staple = stapleOf(r);
+  const everyday = r.usual ? {v:r.usual, src:"what you usually pay"} : staple ? {v:Math.min(...staple.p.map(p => p[1])), src:"everyday price", s:staple} : null;
+  const keep = r.keep || guessKeep(r.n);
+  const runOut = stock != null ? new Date(+TODAY + stock / rate * 7 * 864e5) : null;
+  const weeksLeft = stock != null ? stock / rate : null;
+  let level = "none", saving = 0, buy = 0, packs = 0;
+  if (best){
+    const cut = everyday ? 1 - best.v / everyday.v : (best.d.was ? 1 - best.d.now / best.d.was : 0);
+    level = cut >= .15 ? "good" : everyday && best.v <= everyday.v * 1.02 ? "ok" : "dear";
+    const cover = level === "good" ? Math.max(keep, 1) : Math.max(1, Math.min(keep, 2));
+    buy = Math.max(0, rate * cover - (stock || 0));
+    packs = buy > 0 ? Math.max(1, Math.ceil(buy / best.q - .15)) : 0;
+    if (everyday && best.v < everyday.v) saving = (everyday.v - best.v) * packs * best.q;
+  }
+  return {rate, stock, runOut, weeksLeft, deals, best, everyday, keep, level, buy, packs, saving, hist:regHistory(r)};
+}
+function regCard(r, i){
+  const A = regAdvice(r), u = r.u, B = A.best;
+  const use = `${fmtQty(r.q, u)}${u === "items" ? "" : ""} ${REG_PER_TXT[r.per]}`;
+  let head = "", body = "", cls = "";
+  const stockTxt = A.stock == null ? "" : A.stock <= 0 ? "You've probably run out." : `About ${fmtQty(A.stock, u)} left at home, enough until ${fmtDay(A.runOut)}.`;
+  if (B && A.level === "good"){
+    cls = "rg-good";
+    head = A.keep > 2 ? `Stock up now` : `Cheaper this week`;
+    body = `<b>${esc(B.d.r)}</b>: ${esc(B.d.n)} for <b>${money(B.d.now)}</b> (${perUnitTxt(B.v, u)}${A.everyday ? `, ${Math.round((1 - B.v / A.everyday.v) * 100)}% under the ${A.everyday.src}` : ""}). ${esc(endText(B.d))}.<br>`
+      + (A.packs ? `Buy <b>${A.packs} × ${esc(B.d.n.match(/\d+(?:\.\d+)?\s*(?:kg|g|ml|l)\b|\b\d+\s*(?:pack|pk)\b/i)?.[0] || "pack")}</b> (${fmtQty(A.packs * B.q, u)}) to cover about ${A.keep >= 4 ? Math.round(A.keep / 4.345) + (A.keep >= 8 ? " months" : " month") : plural(A.keep, "week")}${A.saving >= 1 ? `, saving about <b>${money(Math.round(A.saving))}</b>` : ""}.` : `You have enough at home to last past this deal.`);
+  } else if (B && A.level === "ok"){
+    cls = "rg-ok";
+    head = `Fair price this week`;
+    body = `<b>${esc(B.d.r)}</b>: ${esc(B.d.n)} ${money(B.d.now)} (${perUnitTxt(B.v, u)}), about the same as the ${A.everyday.src}. Buy only what you need.`;
+  } else {
+    head = B ? `No real bargain this week` : `Not on special this week`;
+    const ev = A.everyday && A.everyday.s ? `Cheapest everyday: ${A.everyday.s.p.map(p => esc(p[0])).join(", ")} home brand at ${perUnitTxt(A.everyday.v, u)}${A.everyday.s.p[0][2] ? ` (${esc(A.everyday.s.p[0][2])})` : ""}.` : A.everyday ? `You usually pay ${perUnitTxt(A.everyday.v, u)}.` : "";
+    const nextWed = toDate(WEEK.end); nextWed.setDate(nextWed.getDate() + 1);
+    const wait = A.runOut && A.runOut > nextWed ? ` You have enough at home, so no need to buy yet.` : ` Buy just enough to last until the next specials on ${fmtDay(nextWed)}.`;
+    body = (B ? `Best price on the sheet: ${esc(B.d.r)} ${esc(B.d.n)} ${money(B.d.now)} (${perUnitTxt(B.v, u)}). ` : "") + ev + wait;
+  }
+  const H = A.hist;
+  const histTxt = !H ? "" : !H.n ? `No specials on this in the weeks we've tracked so far.` :
+    `Last on special ${H.ago <= 1 ? "last week" : H.ago + " weeks ago"} at ${esc(H.last.r)} (${perUnitTxt(H.last.v, u)})${H.gap ? `, about every ${H.gap} weeks` : ""}. Lowest seen: ${perUnitTxt(H.low.v, u)} at ${esc(H.low.r)}.`;
+  const more = A.deals.slice(1, 4);
+  return `<li class="rg ${cls}">
+    <div class="rg-top"><div><h4>${esc(r.n)}</h4><p class="rg-use">${esc(use)}${stockTxt ? " · " + esc(stockTxt) : ""}</p></div>
+      <div class="rg-tools"><button class="ibtn" type="button" data-reg-edit="${i}" aria-label="Edit ${esc(r.n)}">${ico("edit")}</button><button class="ibtn" type="button" data-reg-del="${i}" aria-label="Remove ${esc(r.n)}">×</button></div></div>
+    <p class="rg-head">${esc(head)}</p>
+    <p class="rg-body">${body}</p>
+    ${more.length ? `<p class="rg-more">Also: ${more.map(x => `${esc(x.d.r)} ${perUnitTxt(x.v, u)}`).join(" · ")}</p>` : ""}
+    ${histTxt ? `<p class="rg-hist">${ico("calendar")}${histTxt}</p>` : ""}
+    <div class="rg-acts">${B ? `<button class="btn sm" type="button" data-add="${esc(B.d.id)}">${inList(B.d.id) ? ico("check") + "On my list" : ico("plus") + "Add to my list"}</button><button class="btn sm" type="button" data-open-deal="${B.d.i}">See deal</button>` : ""}
+      <button class="btn sm" type="button" data-reg-bought="${i}">${ico("cart")}I bought some</button></div>
+    <form class="rg-buy" data-reg-buyform="${i}" hidden><label>How much did you buy? <span class="rg-in"><input type="number" inputmode="decimal" min="0" step="any" value="${A.packs && B ? Math.round(A.packs * B.q * 10) / 10 : r.q}" aria-label="Amount bought"> ${esc(REG_UNIT_TXT[u] || "items")}</span></label><button class="btn primary sm" type="submit">Save</button></form>
+  </li>`;
+}
+function renderRegs(){
+  const box = $("#regList"); if (!box) return;
+  box.innerHTML = REGS.length ? `<ol class="rgs">${REGS.map(regCard).join("")}</ol>` : `<div class="lempty">Add the things you buy every week or month. Try one: ${["Milk","Sugar","Rice","Eggs","Bread","Atta"].map(n => `<button class="linkbtn" type="button" data-reg-try="${n}">${n}</button>`).join(", ")}</div>`;
+  $("#regSub").textContent = REGS.length ? `${plural(REGS.length, "item")} · checked against every deal on the sheet, every time it updates` : "Tell the sheet how much you use. It finds the cheapest place each week and tells you when a deal is worth stocking up on.";
+  $("#regShare").hidden = !REGS.length;
+}
+const REG_EX = {Milk:[5,"L","week"], Sugar:[4,"kg","month"], Rice:[5,"kg","month"], Eggs:[12,"items","week"], Bread:[2,"items","week"], Atta:[10,"kg","month"]};
+function regFill(r, idx = ""){
+  const f = $("#regForm");
+  f.n.value = r.n || ""; f.q.value = r.q || ""; f.u.value = r.u || "kg"; f.per.value = r.per || "week";
+  f.keep.value = r.keep || ""; f.usual.value = r.usual || ""; f.have.value = r.st ? Math.round(regStock(r) * 10) / 10 : "";
+  f.dataset.idx = idx; $("#regSave").textContent = idx === "" ? "Add" : "Save changes";
+  $("#regMore").open = idx !== "" || !!(r.keep || r.usual);
+  f.n.focus();
+}
+$("#regForm").addEventListener("submit", e => {
+  e.preventDefault(); const f = e.target;
+  const n = f.n.value.trim().replace(/\s+/g, " "), q = parseFloat(f.q.value);
+  if (n.length < 2 || !(q > 0)){ toast("Add a name and how much you use"); return; }
+  const r = {n, q, u:f.u.value, per:f.per.value};
+  if (f.keep.value) r.keep = +f.keep.value;
+  const us = parseFloat(f.usual.value); if (us > 0) r.usual = us;
+  const have = parseFloat(f.have.value); if (have >= 0 && f.have.value !== "") r.st = {a:have, d:TODAY_ISO};
+  const idx = f.dataset.idx;
+  if (idx !== "" && REGS[+idx]){ if (f.have.value === "" && REGS[+idx].st) r.st = REGS[+idx].st; REGS[+idx] = r; toast("Saved"); }
+  else { REGS.push(r); toast(`Added ${n}`); }
+  LS.set("ads-regs", REGS); f.reset(); f.dataset.idx = ""; $("#regSave").textContent = "Add"; $("#regMore").open = false; renderRegs(); renderSaved();
+});
+$("#regForm").n.addEventListener("change", e => {
+  const f = $("#regForm"); if (f.dataset.idx) return;
+  const ex = REG_EX[Object.keys(REG_EX).find(k => k.toLowerCase() === e.target.value.trim().toLowerCase())];
+  if (ex && !f.q.value){ f.u.value = ex[1]; f.per.value = ex[2]; }
+});
+$("#regShare").addEventListener("click", async () => {
+  const url = "https://likku2019.github.io/Adelaide-deals/?regs=" + encodeURIComponent(REGS.map(r => [r.n, r.q, r.u, r.per, r.keep || ""].join("~")).join("|"));
+  const text = "My regular buys on the Adelaide Deal Sheet: " + REGS.map(r => `${r.n} ${fmtQty(r.q, r.u)} ${REG_PER_TXT[r.per]}`).join(", ") + ". Open to copy them to your phone:";
+  if (window.DealSheetApp && window.DealSheetApp.share){ window.DealSheetApp.share(text + " " + url); return; }
+  try { if (navigator.share){ await navigator.share({title:"My regular buys", text, url}); return; } } catch(err){ if (err && err.name === "AbortError") return; }
+  try { await navigator.clipboard.writeText(text + " " + url); toast("Copied: paste it in a message"); } catch(err){ toast("Couldn't copy"); }
+});
+function regsIn(){
+  let q = null; try { q = new URLSearchParams(location.search).get("regs"); } catch(e){}
+  if (!q) return;
+  const got = q.split("|").map(s => { const [n, qq, u, per, keep] = s.split("~"); const r = {n, q:+qq, u, per}; if (+keep) r.keep = +keep; return r; })
+    .filter(r => r.n && r.q > 0 && REG_UNIT_TXT[r.u] != null && REG_PER[r.per]);
+  const todo = got.filter(r => !REGS.some(x => x.n.toLowerCase() === r.n.toLowerCase()));
+  if (!got.length) return;
+  $("#sharedIn").insertAdjacentHTML("beforeend", `<div class="shared" id="regsShared">${ico("mail")}<span>Someone shared ${plural(got.length, "regular buy")}: ${got.map(r => esc(r.n)).join(", ")}.</span><span class="acts">${todo.length ? `<button class="btn primary" type="button" id="takeRegs">Add ${todo.length} to mine</button>` : ""}<button class="btn" type="button" id="skipRegs">Dismiss</button></span></div>`);
+  const done = () => { $("#regsShared").remove(); try { history.replaceState(null, "", location.pathname + location.hash); } catch(e){} };
+  $("#skipRegs").onclick = done;
+  if (todo.length) $("#takeRegs").onclick = () => { REGS.push(...todo); LS.set("ads-regs", REGS); renderRegs(); renderSaved(); toast(`Added ${plural(todo.length, "item")}`); done(); };
+  showTab("saved", false);
+}
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-reg-try]"); if (t){ const n = t.dataset.regTry, ex = REG_EX[n]; regFill({n, q:ex[0], u:ex[1], per:ex[2]}); return; }
+  const ed = e.target.closest("[data-reg-edit]"); if (ed){ regFill(REGS[+ed.dataset.regEdit], ed.dataset.regEdit); $("#regForm").scrollIntoView({block:"center"}); return; }
+  const del = e.target.closest("[data-reg-del]"); if (del){ const r = REGS.splice(+del.dataset.regDel, 1)[0]; LS.set("ads-regs", REGS); renderRegs(); renderSaved(); toast(`Removed ${r.n}`); return; }
+  const b = e.target.closest("[data-reg-bought]"); if (b){ const f = document.querySelector(`[data-reg-buyform="${b.dataset.regBought}"]`); f.hidden = !f.hidden; if (!f.hidden) f.querySelector("input").select(); return; }
+  const o = e.target.closest("[data-open-deal]"); if (o){ openDeal(+o.dataset.openDeal); }
+});
+document.addEventListener("submit", e => {
+  const f = e.target.closest("[data-reg-buyform]"); if (!f) return;
+  e.preventDefault(); const r = REGS[+f.dataset.regBuyform], a = parseFloat(f.querySelector("input").value);
+  if (!r || !(a > 0)) return;
+  r.st = {a:(regStock(r) || 0) + a, d:TODAY_ISO}; LS.set("ads-regs", REGS); renderRegs(); renderSaved();
+  toast(`Got it: ${fmtQty(r.st.a, r.u)} of ${r.n} at home`);
+});
+// regular buys with a stock-up deal count towards the dot on the List tab
+const regGood = () => REGS.filter(r => { const A = regAdvice(r); return A.level === "good" && A.packs > 0; }).length;
 // ---- barcode scanner: identify a product (Open Food Facts) and check if it's on special this week
 const ZXING = "https://cdn.jsdelivr.net/npm/@zxing/browser@0.1.5/+esm";
 const scanDlg = $("#scanDlg");
@@ -2485,9 +2750,11 @@ document.querySelector(".jump").addEventListener("click", e => {
   showTab(a.getAttribute("href").slice(1));
 });
 renderSaved();
+renderRegs();
 renderWhatsOn();
 showTab(state.tab, false);
 sharedIn();
+regsIn();
 $("#half").addEventListener("change", e => { state.half = e.target.checked; render(); });
 $("#low").addEventListener("change", e => { state.low = e.target.checked; if (state.low && state.sort === "save") {} render(); });
 $("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
@@ -2506,7 +2773,7 @@ $("#stand").addEventListener("click", e => { const b = e.target.closest("button.
 render();
 const fromHash = () => { const m = location.hash.match(/^#deal=(.+)$/); if (m){ const d = DEALS.find(x => x.id === decodeURIComponent(m[1])); if (d) openDeal(d.i, false); } };
 loadHistory().then(rows => {
-  if (rows){ applyHistory(rows); DEALS.forEach(d => d.I = insight(d)); render(); renderBest(); }
+  if (rows){ applyHistory(rows); DEALS.forEach(d => d.I = insight(d)); render(); renderBest(); renderRegs(); }
   else DEALS.forEach(d => d.I = insight(d));
   if (OPEN !== null) openDeal(OPEN, false); else fromHash();
 });
