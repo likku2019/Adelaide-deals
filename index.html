@@ -627,6 +627,9 @@ details.so-group{margin:0 0 18px}
 .rgf-more summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700;font-size:14px;color:var(--ink-2)}
 .rgf-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;padding-bottom:4px}
 @media (max-width:719px){.rgf{grid-template-columns:1fr 1fr}.rgf-n{grid-column:1/-1}#regSave{grid-column:1/-1;order:10}}
+.pastebox{margin:0 0 16px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:4px 16px}
+.pastebox summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700;font-size:15px}
+.pastebox[open]{padding-bottom:16px}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
@@ -740,6 +743,11 @@ details.so-group{margin:0 0 18px}
   <section id="saved" aria-labelledby="sv-h">
     <div class="sec-head"><h2 id="sv-h">My list</h2><p>Saved on this phone, so each person has their own · share to send it to another phone</p></div>
     <div id="sharedIn"></div>
+    <div id="appHint"></div>
+    <details class="pastebox" id="pasteBox"><summary>Got a shared list? Paste the link</summary>
+      <p class="sub">If a shared list opened in the web browser instead of the app, copy the link from the message, paste it here and tap Add.</p>
+      <form class="wf" id="pasteForm"><input id="pasteIn" type="text" inputmode="url" placeholder="Paste the link here" aria-label="Shared link" autocomplete="off"><button class="btn primary" type="submit">Add</button></form>
+    </details>
     <div class="box2" id="regBox">
       <div class="lh"><div><h3>Things I buy regularly</h3><p class="sub" id="regSub"></p></div><div class="acts"><button class="btn" type="button" id="regShare" hidden>Share with another phone</button></div></div>
       <div id="regList"></div>
@@ -2350,14 +2358,14 @@ function shareText(){
 async function shareList(){
   const ids = LIST.filter(x => BY_ID[x.id]).map(x => x.id);
   const url = "https://likku2019.github.io/Adelaide-deals/?list=" + ids.map(encodeURIComponent).join(".");
-  const text = shareText() + "\n\nOpen it in the deal sheet:";
+  const text = shareText() + "\n\nOpen it in the deal sheet (in the app: copy this link and paste it on the List tab):";
   if (window.DealSheetApp && window.DealSheetApp.share){ window.DealSheetApp.share(text + " " + url); return; }
   try { if (navigator.share){ await navigator.share({title:"My shopping list", text, url}); return; } } catch(err){ if (err && err.name === "AbortError") return; }
   try { await navigator.clipboard.writeText(text + " " + url); toast("List copied: paste it in a message"); } catch(err){ toast("Couldn't copy the list"); }
 }
-function sharedIn(){
+function sharedIn(src = location.search){
   let ids = [];
-  try { const q = new URLSearchParams(location.search).get("list"); if (q) ids = q.split(".").map(decodeURIComponent).filter(Boolean); } catch(e){}
+  try { const q = new URLSearchParams(src).get("list"); if (q) ids = q.split(".").map(decodeURIComponent).filter(Boolean); } catch(e){}
   if (!ids.length) return;
   const found = ids.filter(id => BY_ID[id]), missing = ids.length - found.length, todo = found.filter(id => !inList(id));
   $("#sharedIn").innerHTML = `<div class="shared">${ico("mail")}<span>Someone shared a list with ${plural(ids.length, "deal")}${missing ? ` (${missing} ended)` : ""}.${todo.length ? "" : " They're all on your list already."}</span><span class="acts">${todo.length ? `<button class="btn primary" type="button" id="takeShared">Add ${todo.length} to my list</button>` : ""}<button class="btn" type="button" id="skipShared">Dismiss</button></span></div>`;
@@ -2387,6 +2395,7 @@ $("#watchForm").addEventListener("submit", e => {
 
 // ---- things I buy regularly: how much you use, where it's cheapest, when to stock up
 let REGS = LS.get("ads-regs", []), HROWS = [];
+const IN_APP_EARLY = /DealSheetApp/.test(navigator.userAgent);
 const REG_PER = {week:1, fortnight:2, month:4.345};
 const REG_PER_TXT = {week:"a week", fortnight:"a fortnight", month:"a month"};
 const REG_UNIT_TXT = {kg:"kg", L:"L", items:""};
@@ -2543,13 +2552,13 @@ $("#regForm").n.addEventListener("change", e => {
 });
 $("#regShare").addEventListener("click", async () => {
   const url = "https://likku2019.github.io/Adelaide-deals/?regs=" + encodeURIComponent(REGS.map(r => [r.n, r.q, r.u, r.per, r.keep || ""].join("~")).join("|"));
-  const text = "My regular buys on the Adelaide Deal Sheet: " + REGS.map(r => `${r.n} ${fmtQty(r.q, r.u)} ${REG_PER_TXT[r.per]}`).join(", ") + ". Open to copy them to your phone:";
+  const text = "My regular buys on the Adelaide Deal Sheet: " + REGS.map(r => `${r.n} ${fmtQty(r.q, r.u)} ${REG_PER_TXT[r.per]}`).join(", ") + ". Open to copy them to your phone (in the app: copy this link and paste it on the List tab):";
   if (window.DealSheetApp && window.DealSheetApp.share){ window.DealSheetApp.share(text + " " + url); return; }
   try { if (navigator.share){ await navigator.share({title:"My regular buys", text, url}); return; } } catch(err){ if (err && err.name === "AbortError") return; }
   try { await navigator.clipboard.writeText(text + " " + url); toast("Copied: paste it in a message"); } catch(err){ toast("Couldn't copy"); }
 });
-function regsIn(){
-  let q = null; try { q = new URLSearchParams(location.search).get("regs"); } catch(e){}
+function regsIn(src = location.search){
+  let q = null; try { q = new URLSearchParams(src).get("regs"); } catch(e){}
   if (!q) return;
   const got = q.split("|").map(s => { const [n, qq, u, per, keep] = s.split("~"); const r = {n, q:+qq, u, per}; if (+keep) r.keep = +keep; return r; })
     .filter(r => r.n && r.q > 0 && REG_UNIT_TXT[r.u] != null && REG_PER[r.per]);
@@ -2577,6 +2586,22 @@ document.addEventListener("submit", e => {
 });
 // regular buys with a stock-up deal count towards the dot on the List tab
 const regGood = () => REGS.filter(r => { const A = regAdvice(r); return A.level === "good" && A.packs > 0; }).length;
+
+// ---- shared lists: paste a link (for the phone apps, which open links in the browser) 
+function pasteShared(text){
+  const m = String(text).match(/[?&](list|regs)=[^\s]*/g);
+  if (!m){ toast("That doesn't look like a shared list link"); return false; }
+  const qs = "?" + m.map(x => x.slice(1)).join("&");
+  if (/[?&]list=/.test(qs)) sharedIn(qs);
+  if (/[?&]regs=/.test(qs)) regsIn(qs);
+  return true;
+}
+$("#pasteForm").addEventListener("submit", e => { e.preventDefault(); if (pasteShared($("#pasteIn").value)){ $("#pasteIn").value = ""; $("#pasteBox").open = false; } });
+// opened a shared link in a phone browser: the app keeps its own list, so offer to copy the link for it
+if (!IN_APP_EARLY && /[?&](list|regs)=/.test(location.search) && /Android|iPhone|iPad/i.test(navigator.userAgent)){
+  $("#appHint").innerHTML = `<div class="shared">${ico("phone")}<span>Using the Deal Sheet app? The app keeps its own list. Copy this link, open the app, go to List and paste it under "Got a shared list?".</span><span class="acts"><button class="btn" type="button" id="copyForApp">Copy link</button></span></div>`;
+  $("#copyForApp").onclick = async () => { try { await navigator.clipboard.writeText(location.href); toast("Link copied: now open the app"); } catch(e){ toast("Couldn't copy. Long-press the address bar to copy it"); } };
+}
 // ---- barcode scanner: identify a product (Open Food Facts) and check if it's on special this week
 const ZXING = "https://cdn.jsdelivr.net/npm/@zxing/browser@0.1.5/+esm";
 const scanDlg = $("#scanDlg");
