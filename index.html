@@ -752,6 +752,7 @@ details.so-group{margin:0 0 18px}
           <div class="rgf-row">
             <label><span>Stock up for at most</span><select name="keep" class="sel"><option value="">Guess from the item</option><option value="1">1 week</option><option value="2">2 weeks</option><option value="4">1 month</option><option value="8">2 months</option><option value="13">3 months</option><option value="26">6 months</option></select></label>
             <label><span>Price I usually pay (per kg, litre or item)</span><input name="usual" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 1.30"></label>
+            <label><span>Where I buy it</span><input name="at" type="text" maxlength="30" placeholder="e.g. Costco Kilburn"></label>
             <label><span>How much I have at home now</span><input name="have" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 2"></label>
           </div>
         </details>
@@ -2449,7 +2450,9 @@ function regStock(r){
 const fmtDay = d => d.toLocaleDateString("en-AU", {weekday:"short", day:"numeric", month:"short"}).replace(",", "");
 function regAdvice(r){
   const rate = regRate(r), stock = regStock(r), deals = regDeals(r), best = deals[0], staple = stapleOf(r);
-  const everyday = r.usual ? {v:r.usual, src:"what you usually pay"} : staple ? {v:Math.min(...staple.p.map(p => p[1])), src:"everyday price", s:staple} : null;
+  const shelf = staple ? {v:Math.min(...staple.p.map(p => p[1])), src:"supermarket everyday price", s:staple} : null;
+  const mine = r.usual ? {v:r.usual, src:r.at ? `${esc(r.at)} price you pay` : "price you usually pay", mine:true} : null;
+  const everyday = mine && (!shelf || mine.v <= shelf.v) ? mine : shelf || mine;
   const keep = r.keep || guessKeep(r.n);
   const runOut = stock != null ? new Date(+TODAY + stock / rate * 7 * 864e5) : null;
   const weeksLeft = stock != null ? stock / rate : null;
@@ -2480,7 +2483,10 @@ function regCard(r, i){
     body = `<b>${esc(B.d.r)}</b>: ${esc(B.d.n)} ${money(B.d.now)} (${perUnitTxt(B.v, u)}), about the same as the ${A.everyday.src}. Buy only what you need.`;
   } else {
     head = B ? `No real bargain this week` : `Not on special this week`;
-    const ev = A.everyday && A.everyday.s ? `Cheapest everyday: ${A.everyday.s.p.map(p => esc(p[0])).join(", ")} home brand at ${perUnitTxt(A.everyday.v, u)}${A.everyday.s.p[0][2] ? ` (${esc(A.everyday.s.p[0][2])})` : ""}.` : A.everyday ? `You usually pay ${perUnitTxt(A.everyday.v, u)}.` : "";
+    const st = staple => `${staple.p.map(p => esc(p[0])).join(", ")} home brand at ${perUnitTxt(Math.min(...staple.p.map(p => p[1])), u)}${staple.p[0][2] ? ` (${esc(staple.p[0][2])})` : ""}`;
+    const sp = stapleOf(r), at = r.at ? esc(r.at) : "where you usually buy it";
+    const ev = r.usual && sp ? (r.usual <= Math.min(...sp.p.map(p => p[1])) ? `Cheapest is still ${at} at ${perUnitTxt(r.usual, u)}. Supermarkets: ${st(sp)}.` : `${st(sp)} beats the ${perUnitTxt(r.usual, u)} you pay at ${at}.`)
+      : sp ? `Cheapest everyday: ${st(sp)}.` : r.usual ? `You usually pay ${perUnitTxt(r.usual, u)} at ${at}.` : "";
     const nextWed = toDate(WEEK.end); nextWed.setDate(nextWed.getDate() + 1);
     const wait = A.runOut && A.runOut > nextWed ? ` You have enough at home, so no need to buy yet.` : ` Buy just enough to last until the next specials on ${fmtDay(nextWed)}.`;
     body = (B ? `Best price on the sheet: ${esc(B.d.r)} ${esc(B.d.n)} ${money(B.d.now)} (${perUnitTxt(B.v, u)}). ` : "") + ev + wait;
@@ -2511,9 +2517,9 @@ const REG_EX = {Milk:[5,"L","week"], Sugar:[4,"kg","month"], Rice:[5,"kg","month
 function regFill(r, idx = ""){
   const f = $("#regForm");
   f.n.value = r.n || ""; f.q.value = r.q || ""; f.u.value = r.u || "kg"; f.per.value = r.per || "week";
-  f.keep.value = r.keep || ""; f.usual.value = r.usual || ""; f.have.value = r.st ? Math.round(regStock(r) * 10) / 10 : "";
+  f.keep.value = r.keep || ""; f.usual.value = r.usual || ""; f.at.value = r.at || ""; f.have.value = r.st ? Math.round(regStock(r) * 10) / 10 : "";
   f.dataset.idx = idx; $("#regSave").textContent = idx === "" ? "Add" : "Save changes";
-  $("#regMore").open = idx !== "" || !!(r.keep || r.usual);
+  $("#regMore").open = idx !== "" || !!(r.keep || r.usual || r.at);
   f.n.focus();
 }
 $("#regForm").addEventListener("submit", e => {
@@ -2523,6 +2529,7 @@ $("#regForm").addEventListener("submit", e => {
   const r = {n, q, u:f.u.value, per:f.per.value};
   if (f.keep.value) r.keep = +f.keep.value;
   const us = parseFloat(f.usual.value); if (us > 0) r.usual = us;
+  const at = f.at.value.trim().replace(/\s+/g, " "); if (at) r.at = at;
   const have = parseFloat(f.have.value); if (have >= 0 && f.have.value !== "") r.st = {a:have, d:TODAY_ISO};
   const idx = f.dataset.idx;
   if (idx !== "" && REGS[+idx]){ if (f.have.value === "" && REGS[+idx].st) r.st = REGS[+idx].st; REGS[+idx] = r; toast("Saved"); }
