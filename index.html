@@ -831,7 +831,7 @@ details.so-group{margin:0 0 18px}
 
 <script>
 // ---- this week (the Wednesday-to-Tuesday catalogue week)
-const WEEK = {start:"2026-10-28", end:"2026-11-03", label:"Wed 28 Oct – Tue 3 Nov 2026", ends:"Tue 3 Nov", updated:"Thu 29 Oct 2026"};
+const WEEK = {start:"2026-10-28", end:"2026-11-03", label:"Wed 28 Oct – Tue 3 Nov 2026", ends:"Tue 3 Nov", updated:"Fri 30 Oct 2026"};
 
 const RETAILERS = {
   "Coles":{c:"var(--coles)"}, "Woolworths":{c:"var(--woolies)"}, "ALDI":{c:"var(--aldi)"},
@@ -958,7 +958,6 @@ const DEALS = [
  {r:"ALDI",n:"Cordless Robotic Pool Cleaner",now:499,cat:"Tools & garden",tag:"sb",end:"From Sat 24 Oct · while stocks last"},
  {r:"ALDI",n:"Little Town Outdoor Mud Kitchen",now:49.99,cat:"Kids & toys",tag:"sb",end:"From Sat 24 Oct · while stocks last"},
  // ---- Costco
- {r:"Costco",n:"Sony WH-1000XM5 Noise Cancelling Headphones",now:299.99,cat:"Electronics",end:"Ends 29 Oct · delivered"},
  {r:"Costco",n:"LEGO Scuderia Ferrari HP Helmet (Leclerc or Hamilton)",now:69.99,cat:"Kids & toys",end:"Ends 23 Nov · in-store"},
  {r:"Costco",n:"adidas Originals Project Two Strap Watch",now:49.97,cat:"Clothing",end:"While stocks last · delivered"},
  {r:"Costco",n:"Apple MacBook Air 15\" M5 24GB/1TB",now:2599.99,cat:"Electronics",end:"While stocks last",note:"Membership required"},
@@ -967,6 +966,8 @@ const DEALS = [
  {r:"Costco",n:"ThermoFlask Insulated Bottle 950mL 2 pack",now:27,cat:"Home",end:"In-store · while stocks last",note:"$37.99 delivered"},
  {r:"Costco",n:"adidas Men's Boxers 3 pack",now:19.99,cat:"Clothing",end:"While stocks last · delivered",note:"Membership required"},
  {r:"Costco",n:"Weiwu DC Electric Pedestal Fan",now:59.99,cat:"Home",end:"While stocks last · delivered",note:"Membership required"},
+ {r:"Costco",n:"Hisense 145L Hybrid Chest Freezer HRCF146",now:279.99,cat:"Home",end:"While stocks last · delivered",note:"Membership required"},
+ {r:"Costco",n:"Apple iPhone 17 Pro Max 256GB",now:1799.99,cat:"Electronics",end:"While stocks last · delivered",note:"Membership required · $79 less than JB Hi-Fi & Officeworks"},
  // ---- Nike (online sale, further markdowns)
  {r:"Nike",n:"Nike SB Dunk Low Pro Skate Shoes",now:108,was:180,cat:"Footwear",end:"Online sale · while stocks last"},
  {r:"Nike",n:"Nike Air Force 1 Older Kids' Shoes",now:90,was:150,cat:"Footwear",end:"Online sale · while stocks last"},
@@ -1018,6 +1019,7 @@ const DEALS = [
  {r:"BIG W",n:"Quilton 3-Ply Toilet Tissue 48 rolls",now:23,cat:"Household",end:"Long-running price"},
  {r:"BIG W",n:"Final Fantasy Resonance (PS5)",now:69,cat:"Gaming",end:"Free pick up in store"},
  {r:"BIG W",n:"Cadbury Favourites 489g (Monopoly Edition)",now:12,cat:"Snacks",end:"Stores & online",note:"Same price at Coles"},
+ {r:"BIG W",n:"Contempo Textured Steel Kettle 1.7L",now:12,cat:"Home",end:"While stocks last",note:"Contempo 4-slice toaster $19, milk frother $19"},
  // ---- JB Hi-Fi
  {r:"JB Hi-Fi",n:"Blaupunkt 55\" 4K UHD Smart TV",now:399,cat:"Electronics",end:"While stocks last"},
  {r:"JB Hi-Fi",n:"TCL 98\" P7K 4K QLED Google TV",now:2488,cat:"Electronics",end:"Delivered, select areas"},
@@ -1035,6 +1037,7 @@ const DEALS = [
  {r:"JB Hi-Fi",n:"Dreame L50s Pro Ultra Robot Vacuum",now:999,cat:"Home",end:"Free click & collect or in-store"},
  {r:"JB Hi-Fi",n:"Lenovo Legion Tab 8.8\" 12GB/256GB",now:499,cat:"Electronics",end:"Free click & collect or in-store"},
  {r:"JB Hi-Fi",n:"Google Pixel 11 Pro + Bonus Nintendo Switch 2",now:1849,cat:"Electronics",end:"Free click & collect or in-store",note:"Switch 2 console free with the phone · Pixel 11 Pro XL $2,099"},
+ {r:"JB Hi-Fi",n:"Roborock Saros 10R Robot Vacuum",now:1099,cat:"Home",end:"Free click & collect"},
  // ---- Uniqlo
  {r:"Uniqlo",n:"Men's PUFFTECH Parka",now:59.9,was:99.9,cat:"Clothing",end:"While stocks last",note:"Free click & collect or $75+ delivery"},
  // ---- Typo (Cotton On Group)
@@ -1142,11 +1145,7 @@ const DEALS = [
  {r:"Harvey Norman",n:"Roborock Qrevo Edge 2 Flow Robot Vacuum & Mop",now:1548,cat:"Home",end:"Free click & collect"},
  {r:"Harvey Norman",n:"HMD Skyline 12GB/256GB",now:399,cat:"Electronics",end:"Free click & collect or in-store"},
  {r:"Harvey Norman",n:"Samsung Galaxy Watch Ultra (2025) LTE 47mm",now:648,was:1299,cat:"Electronics",end:"Free click & collect or in-store",note:"$49 less than Officeworks"},
- // ---- Amazon (amazon.com.au, prices as posted 21–29 Oct)
- {r:"Amazon",n:"OXO Good Grips Hand-Held Mandoline Slicer",now:18.95,was:39.95,cat:"Home",end:"Online · price can change any time"},
- {r:"Amazon",n:"Brut Roll-on Deodorant 50ml 3 pack",now:6.75,was:11.07,cat:"Health & beauty",end:"Online · price can change any time"},
- {r:"Amazon",n:"Palmolive Naturals Hand Wash Refill 3 × 1L",now:9.6,cat:"Household",end:"Online · price can change any time",note:"$8.64 with Subscribe & Save"},
- {r:"Amazon",n:"Micronised Creatine Monohydrate 1kg",now:25.9,was:59,cat:"Health & beauty",end:"Online · price can change any time",note:"Sold by BlackBelt Protein"},
+ // ---- Amazon (amazon.com.au, prices as posted 22–30 Oct)
  {r:"Amazon",n:"Google Home Speaker",now:158,was:199,cat:"Electronics",end:"Online · price can change any time",note:"The Good Guys has it for $148 with Price Check"},
  {r:"Amazon",n:"Audio-Technica ATH-R50X Open-Back Headphones",now:268.91,was:399,cat:"Electronics",end:"Online · price can change any time",note:"Ships from Amazon US"},
  {r:"Amazon",n:"Tenda ME3 Pro Wi-Fi 7 Mesh Router 2-pack",now:169.99,was:249.99,cat:"Electronics",end:"Online · price can change any time",note:"Sold by Tenda-AU"},
@@ -1163,6 +1162,10 @@ const DEALS = [
  {r:"Amazon",n:"Singleton of Dufftown 15 Year Old Single Malt Scotch",now:84.99,was:127.99,cat:"Liquor",end:"Online · price can change any time",note:"Delivered for Prime members"},
  {r:"Amazon",n:"Fisher-Price Little People My Mario Adventure Playset",now:40.36,was:99.99,cat:"Kids & toys",end:"Online · price can change any time"},
  {r:"Amazon",n:"Plug-in Sensor Night Lights 4 pack",now:9.99,cat:"Home",end:"Online · price can change any time",note:"Sold by YH-AU Store"},
+ {r:"Amazon",n:"Tefal Emotion+ Stainless Steel Frypan 28cm",now:44,cat:"Home",end:"Online · price can change any time"},
+ {r:"Amazon",n:"Scanpan Impact Stainless Steel Frypan 28cm",now:49.46,cat:"Home",end:"Online · price can change any time"},
+ {r:"Amazon",n:"Monster Energy Zero Ultra 24 × 500mL",now:52.5,cat:"Drinks",end:"Online · price can change any time",note:"$49.87 with Subscribe & Save · $2.19 a can, same as Woolworths' ½-price 4-pack"},
+ {r:"Amazon",n:"PlayStation 5 DualSense Wireless Controller (all colours)",now:99,was:134.95,cat:"Gaming",end:"Online · price can change any time",note:"Delivered"},
  {r:"Amazon",n:"SteelSeries Arctis Nova 3P Wireless Gaming Headset",now:105.83,was:229,cat:"Gaming",end:"Online · price can change any time",note:"Delivered · ships from Amazon Germany"},
  // ---- Kogan
  {r:"Kogan",n:"Kogan TravelBoost 20000mAh 20W Power Bank",now:29.99,cat:"Electronics",end:"Online · price can change any time",note:"Kogan First price, delivered"},
@@ -1206,6 +1209,7 @@ const DEALS = [
  {r:"Officeworks",n:"SanDisk Ultra 1TB microSDXC Card",now:200,cat:"Electronics",end:"Click & collect or limited stores"},
  {r:"Officeworks",n:"Apple iPhone 17 Pro 256GB",now:1689,cat:"Electronics",end:"Free delivery metro, OnePass or click & collect"},
  {r:"Officeworks",n:"Star Fox (Switch 2)",now:69,cat:"Gaming",end:"Free delivery metro, OnePass or click & collect"},
+ {r:"Officeworks",n:"SanDisk Extreme Portable SSD 1TB (Sky Blue)",now:178,cat:"Electronics",end:"Click & collect or limited stores"},
  {r:"Officeworks",n:"Apple HomeView",now:447,cat:"Electronics",end:"Pre-order · free delivery metro, OnePass or click & collect"},
  // ---- The Reject Shop (everyday prices)
  {r:"The Reject Shop",n:"Quilton 3 Ply Toilet Paper 36 pack",now:19,cat:"Household",end:"Everyday price · stores & online",note:"53c a roll"},
@@ -1424,7 +1428,7 @@ const PROMOS = [
    ["$20","Off a $100 spend on clothing, homewares & other softgoods","Click Frenzy code, claim at clickfrenzy.com.au · until Fri 30 Oct"]]},
  {r:"BIG W",where:"Online + stores",items:[
    ["$10","Off a $75+ online order with Inner Circle sign-up",""],
-   ["New","Catalogue starts Thu 29 Oct",""]]},
+   ["$10","Off a $99+ spend in the BIG W app","Exclusions apply"]]},
  {r:"JB Hi-Fi",where:"Rundle Mall, Marion, Tea Tree Plaza & more",items:[
    ["$500","Off $2,000+ on selected TV & home audio brands","Free click & collect or in-store"],
    ["Buy 2 get 1","Free on selected DVDs, Blu-rays & 4K movies and TV shows","","none"],
@@ -1480,7 +1484,6 @@ const PROMOS = [
 
 const CAL = [
  ["Now – Fri 30 Oct","Click Frenzy Main Event (ends midnight Sydney time, 11:30pm Adelaide)"],
- ["Thu 29 Oct","New BIG W catalogue"],
  ["Fri 30 Oct","Gathered Market in Rundle Mall, 9am–9pm"],
  ["Sat 31 Oct","Halloween · ALDI electrical sale & family fashion · Westfield $1K spree closes"],
  ["Sun 1 Nov","Last day of Adore Frenzy, Strand Frenzy and the OPSM & Sunglass Hut offers"],
@@ -1505,7 +1508,7 @@ const PICKS = [
 ];
 
 const PICS = [
- [/pixel 11|galaxy s25/i,"📱"],[/boxers/i,"🩲"],[/pedestal fan/i,"🌀"],[/cleaning tool/i,"🧽"],[/single malt|scotch/i,"🥃"],[/night lights?\b/i,"💡"],
+ [/dualsense/i,"🎮"],[/chest freezer/i,"🧊"],[/portable ssd/i,"💾"],[/pixel 11|galaxy s25/i,"📱"],[/boxers/i,"🩲"],[/pedestal fan/i,"🌀"],[/cleaning tool/i,"🧽"],[/single malt|scotch/i,"🥃"],[/night lights?\b/i,"💡"],
  [/fish oil/i,"💊"],[/deviate nitro/i,"👟"],[/camera crossbody/i,"👜"],[/rc car/i,"🏎️"],[/golden books/i,"📚"],[/dump truck/i,"🚚"],[/pet advent/i,"🎁"],[/poo bags/i,"🐕"],[/schmackos|dentastix|dog treat/i,"🐶"],
  [/pork|porterhouse/i,"🥩"],[/beef burger/i,"🍔"],[/upright freezer/i,"🧊"],[/cordless vacuum/i,"🧹"],[/induction cooking/i,"🍳"],[/nappy/i,"👶"],[/linen blend pants/i,"👖"],
  [/aioli|mayonnaise/i,"🥫"],[/crumpet/i,"🥞"],[/monster energy/i,"⚡"],[/magnum/i,"🍦"],[/häagen/i,"🍦"],[/lindt|lindor|quality street|toblerone/i,"🍫"],[/pringles/i,"🍟"],

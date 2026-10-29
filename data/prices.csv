@@ -524,6 +524,11 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-28,amazon--nintendo-switch-2-console,Amazon,Online,Nintendo Switch 2 Console,Gaming,728,,,Officeworks Price Beat makes it $691.60
 2026-10-28,amazon--apple-macbook-air-13-m5-16gb-512gb,Amazon,Online,"Apple MacBook Air 13"" M5 16GB/512GB",Electronics,1747,,,
 2026-10-28,amazon--sunrise-alarm-clock-white-noise-machine,Amazon,Online,Sunrise Alarm Clock & White Noise Machine,Home,41.99,69.99,40,
+2026-10-28,costco--sony-wh-1000xm5-noise-cancelling-headphones,Costco,Groceries,Sony WH-1000XM5 Noise Cancelling Headphones,Electronics,299.99,,,
+2026-10-28,amazon--oxo-good-grips-hand-held-mandoline-slicer,Amazon,Online,OXO Good Grips Hand-Held Mandoline Slicer,Home,18.95,39.95,53,
+2026-10-28,amazon--brut-roll-on-deodorant-50ml-3-pack,Amazon,Online,Brut Roll-on Deodorant 50ml 3 pack,Health & beauty,6.75,11.07,39,
+2026-10-28,amazon--palmolive-naturals-hand-wash-refill-3-1l,Amazon,Online,Palmolive Naturals Hand Wash Refill 3 × 1L,Household,9.6,,,$8.64 with Subscribe & Save
+2026-10-28,amazon--micronised-creatine-monohydrate-1kg,Amazon,Online,Micronised Creatine Monohydrate 1kg,Health & beauty,25.9,59,56,Sold by BlackBelt Protein
 2026-10-28,coles--waterwipes-sensitive-baby-wipes-180-pack,Coles,Groceries,WaterWipes Sensitive Baby Wipes 180 pack,Baby,10.75,21.5,50,
 2026-10-28,coles--finish-ultimate-dishwashing-tablets-46-pack,Coles,Groceries,Finish Ultimate Dishwashing Tablets 46 pack,Household,24.5,49,50,
 2026-10-28,coles--omo-ultimate-laundry-liquid-2l-or-capsules-28-pack,Coles,Groceries,OMO Ultimate Laundry Liquid 2L or Capsules 28 pack,Household,18,36,50,
@@ -631,7 +636,6 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-28,aldi--ferrex-20v-cordless-mower-kit-2-batteries,ALDI,Groceries,Ferrex 20V Cordless Mower Kit (2 batteries),Tools & garden,229,,,
 2026-10-28,aldi--cordless-robotic-pool-cleaner,ALDI,Groceries,Cordless Robotic Pool Cleaner,Tools & garden,499,,,
 2026-10-28,aldi--little-town-outdoor-mud-kitchen,ALDI,Groceries,Little Town Outdoor Mud Kitchen,Kids & toys,49.99,,,
-2026-10-28,costco--sony-wh-1000xm5-noise-cancelling-headphones,Costco,Groceries,Sony WH-1000XM5 Noise Cancelling Headphones,Electronics,299.99,,,
 2026-10-28,costco--lego-scuderia-ferrari-hp-helmet-leclerc-or-hamilton,Costco,Groceries,LEGO Scuderia Ferrari HP Helmet (Leclerc or Hamilton),Kids & toys,69.99,,,
 2026-10-28,costco--adidas-originals-project-two-strap-watch,Costco,Groceries,adidas Originals Project Two Strap Watch,Clothing,49.97,,,
 2026-10-28,costco--apple-macbook-air-15-m5-24gb-1tb,Costco,Groceries,"Apple MacBook Air 15"" M5 24GB/1TB",Electronics,2599.99,,,Membership required
@@ -640,6 +644,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-28,costco--thermoflask-insulated-bottle-950ml-2-pack,Costco,Groceries,ThermoFlask Insulated Bottle 950mL 2 pack,Home,27,,,$37.99 delivered
 2026-10-28,costco--adidas-men-s-boxers-3-pack,Costco,Groceries,adidas Men's Boxers 3 pack,Clothing,19.99,,,Membership required
 2026-10-28,costco--weiwu-dc-electric-pedestal-fan,Costco,Groceries,Weiwu DC Electric Pedestal Fan,Home,59.99,,,Membership required
+2026-10-28,costco--hisense-145l-hybrid-chest-freezer-hrcf146,Costco,Groceries,Hisense 145L Hybrid Chest Freezer HRCF146,Home,279.99,,,Membership required
+2026-10-28,costco--apple-iphone-17-pro-max-256gb,Costco,Groceries,Apple iPhone 17 Pro Max 256GB,Electronics,1799.99,,,Membership required · $79 less than JB Hi-Fi & Officeworks
 2026-10-28,nike--nike-sb-dunk-low-pro-skate-shoes,Nike,Shoes & sportswear,Nike SB Dunk Low Pro Skate Shoes,Footwear,108,180,40,
 2026-10-28,nike--nike-air-force-1-older-kids-shoes,Nike,Shoes & sportswear,Nike Air Force 1 Older Kids' Shoes,Footwear,90,150,40,
 2026-10-28,nike--air-jordan-4-toro-men-s,Nike,Shoes & sportswear,Air Jordan 4 'Toro' Men's,Footwear,174,290,40,Further markdown
@@ -685,6 +691,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-28,big-w--quilton-3-ply-toilet-tissue-48-rolls,BIG W,Department stores,Quilton 3-Ply Toilet Tissue 48 rolls,Household,23,,,
 2026-10-28,big-w--final-fantasy-resonance-ps5,BIG W,Department stores,Final Fantasy Resonance (PS5),Gaming,69,,,
 2026-10-28,big-w--cadbury-favourites-489g-monopoly-edition,BIG W,Department stores,Cadbury Favourites 489g (Monopoly Edition),Snacks,12,,,Same price at Coles
+2026-10-28,big-w--contempo-textured-steel-kettle-1-7l,BIG W,Department stores,Contempo Textured Steel Kettle 1.7L,Home,12,,,"Contempo 4-slice toaster $19, milk frother $19"
 2026-10-28,jb-hi-fi--blaupunkt-55-4k-uhd-smart-tv,JB Hi-Fi,"Home, hardware & tech","Blaupunkt 55"" 4K UHD Smart TV",Electronics,399,,,
 2026-10-28,jb-hi-fi--tcl-98-p7k-4k-qled-google-tv,JB Hi-Fi,"Home, hardware & tech","TCL 98"" P7K 4K QLED Google TV",Electronics,2488,,,
 2026-10-28,jb-hi-fi--honor-600-5g-256gb,JB Hi-Fi,"Home, hardware & tech",Honor 600 5G 256GB,Electronics,699,999,30,
@@ -701,6 +708,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-28,jb-hi-fi--dreame-l50s-pro-ultra-robot-vacuum,JB Hi-Fi,"Home, hardware & tech",Dreame L50s Pro Ultra Robot Vacuum,Home,999,,,
 2026-10-28,jb-hi-fi--lenovo-legion-tab-8-8-12gb-256gb,JB Hi-Fi,"Home, hardware & tech","Lenovo Legion Tab 8.8"" 12GB/256GB",Electronics,499,,,
 2026-10-28,jb-hi-fi--google-pixel-11-pro-bonus-nintendo-switch-2,JB Hi-Fi,"Home, hardware & tech",Google Pixel 11 Pro + Bonus Nintendo Switch 2,Electronics,1849,,,"Switch 2 console free with the phone · Pixel 11 Pro XL $2,099"
+2026-10-28,jb-hi-fi--roborock-saros-10r-robot-vacuum,JB Hi-Fi,"Home, hardware & tech",Roborock Saros 10R Robot Vacuum,Home,1099,,,
 2026-10-28,uniqlo--men-s-pufftech-parka,Uniqlo,Clothes & fashion,Men's PUFFTECH Parka,Clothing,59.9,99.9,40,Free click & collect or $75+ delivery
 2026-10-28,cotton-on-typo--typo-metro-tote-river-gum,Cotton On / Typo,Clothes & fashion,Typo Metro Tote (River Gum),Home,25,59.99,58,
 2026-10-28,cotton-on-typo--typo-cloud-lamp,Cotton On / Typo,Clothes & fashion,Typo Cloud Lamp,Home,30,69.99,57,
@@ -795,10 +803,6 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-28,harvey-norman--roborock-qrevo-edge-2-flow-robot-vacuum-mop,Harvey Norman,"Home, hardware & tech",Roborock Qrevo Edge 2 Flow Robot Vacuum & Mop,Home,1548,,,
 2026-10-28,harvey-norman--hmd-skyline-12gb-256gb,Harvey Norman,"Home, hardware & tech",HMD Skyline 12GB/256GB,Electronics,399,,,
 2026-10-28,harvey-norman--samsung-galaxy-watch-ultra-2025-lte-47mm,Harvey Norman,"Home, hardware & tech",Samsung Galaxy Watch Ultra (2025) LTE 47mm,Electronics,648,1299,50,$49 less than Officeworks
-2026-10-28,amazon--oxo-good-grips-hand-held-mandoline-slicer,Amazon,Online,OXO Good Grips Hand-Held Mandoline Slicer,Home,18.95,39.95,53,
-2026-10-28,amazon--brut-roll-on-deodorant-50ml-3-pack,Amazon,Online,Brut Roll-on Deodorant 50ml 3 pack,Health & beauty,6.75,11.07,39,
-2026-10-28,amazon--palmolive-naturals-hand-wash-refill-3-1l,Amazon,Online,Palmolive Naturals Hand Wash Refill 3 × 1L,Household,9.6,,,$8.64 with Subscribe & Save
-2026-10-28,amazon--micronised-creatine-monohydrate-1kg,Amazon,Online,Micronised Creatine Monohydrate 1kg,Health & beauty,25.9,59,56,Sold by BlackBelt Protein
 2026-10-28,amazon--google-home-speaker,Amazon,Online,Google Home Speaker,Electronics,158,199,21,The Good Guys has it for $148 with Price Check
 2026-10-28,amazon--audio-technica-ath-r50x-open-back-headphones,Amazon,Online,Audio-Technica ATH-R50X Open-Back Headphones,Electronics,268.91,399,33,Ships from Amazon US
 2026-10-28,amazon--tenda-me3-pro-wi-fi-7-mesh-router-2-pack,Amazon,Online,Tenda ME3 Pro Wi-Fi 7 Mesh Router 2-pack,Electronics,169.99,249.99,32,Sold by Tenda-AU
@@ -815,6 +819,10 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-28,amazon--singleton-of-dufftown-15-year-old-single-malt-scotch,Amazon,Online,Singleton of Dufftown 15 Year Old Single Malt Scotch,Liquor,84.99,127.99,34,Delivered for Prime members
 2026-10-28,amazon--fisher-price-little-people-my-mario-adventure-playset,Amazon,Online,Fisher-Price Little People My Mario Adventure Playset,Kids & toys,40.36,99.99,60,
 2026-10-28,amazon--plug-in-sensor-night-lights-4-pack,Amazon,Online,Plug-in Sensor Night Lights 4 pack,Home,9.99,,,Sold by YH-AU Store
+2026-10-28,amazon--tefal-emotion-stainless-steel-frypan-28cm,Amazon,Online,Tefal Emotion+ Stainless Steel Frypan 28cm,Home,44,,,
+2026-10-28,amazon--scanpan-impact-stainless-steel-frypan-28cm,Amazon,Online,Scanpan Impact Stainless Steel Frypan 28cm,Home,49.46,,,
+2026-10-28,amazon--monster-energy-zero-ultra-24-500ml,Amazon,Online,Monster Energy Zero Ultra 24 × 500mL,Drinks,52.5,,,"$49.87 with Subscribe & Save · $2.19 a can, same as Woolworths' ½-price 4-pack"
+2026-10-28,amazon--playstation-5-dualsense-wireless-controller-all-colours,Amazon,Online,PlayStation 5 DualSense Wireless Controller (all colours),Gaming,99,134.95,27,Delivered
 2026-10-28,amazon--steelseries-arctis-nova-3p-wireless-gaming-headset,Amazon,Online,SteelSeries Arctis Nova 3P Wireless Gaming Headset,Gaming,105.83,229,54,Delivered · ships from Amazon Germany
 2026-10-28,kogan--kogan-travelboost-20000mah-20w-power-bank,Kogan,Online,Kogan TravelBoost 20000mAh 20W Power Bank,Electronics,29.99,,,"Kogan First price, delivered"
 2026-10-28,kogan--samsung-galaxy-s25-ultra-256gb,Kogan,Online,Samsung Galaxy S25 Ultra 256GB,Electronics,1399,,,Free delivery with Kogan First
@@ -856,6 +864,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-28,officeworks--sandisk-ultra-1tb-microsdxc-card,Officeworks,"Home, hardware & tech",SanDisk Ultra 1TB microSDXC Card,Electronics,200,,,
 2026-10-28,officeworks--apple-iphone-17-pro-256gb,Officeworks,"Home, hardware & tech",Apple iPhone 17 Pro 256GB,Electronics,1689,,,
 2026-10-28,officeworks--star-fox-switch-2,Officeworks,"Home, hardware & tech",Star Fox (Switch 2),Gaming,69,,,
+2026-10-28,officeworks--sandisk-extreme-portable-ssd-1tb-sky-blue,Officeworks,"Home, hardware & tech",SanDisk Extreme Portable SSD 1TB (Sky Blue),Electronics,178,,,
 2026-10-28,officeworks--apple-homeview,Officeworks,"Home, hardware & tech",Apple HomeView,Electronics,447,,,
 2026-10-28,the-reject-shop--quilton-3-ply-toilet-paper-36-pack,The Reject Shop,Department stores,Quilton 3 Ply Toilet Paper 36 pack,Household,19,,,53c a roll
 2026-10-28,the-reject-shop--glen-20-disinfectant-spray-300g,The Reject Shop,Department stores,Glen 20 Disinfectant Spray 300g,Household,5,,,Woolworths has the 375g can at ½ price $6.50 this week
