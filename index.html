@@ -630,6 +630,16 @@ details.so-group{margin:0 0 18px}
 .pastebox{margin:0 0 16px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:4px 16px}
 .pastebox summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700;font-size:15px}
 .pastebox[open]{padding-bottom:16px}
+
+/* trending now */
+.trs{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px}
+.tr{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:var(--r-lg);padding:14px 16px 16px;box-shadow:var(--shadow-1);min-width:0}
+.tr h3{margin:0;font:700 17px/1.3 var(--display)}
+.tr-p{margin:0;font-size:14px;color:var(--ink-2)}
+.tr-why{margin:2px 0 0;font-size:14px;line-height:1.5;color:var(--muted)}
+.tr .wo-a{margin-top:auto;padding-top:8px}
+.tr .btn:disabled{opacity:.7;cursor:default}
+.tr-hit{margin:6px 0 0;font-size:13px;font-weight:700;color:var(--good)}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
@@ -673,6 +683,12 @@ details.so-group{margin:0 0 18px}
       <ul class="bigsales" id="bigSales"></ul>
       <div class="more-row"><button class="btn" type="button" id="bigMore" hidden></button></div>
     </div>
+  </section>
+
+  <section id="trending" aria-labelledby="tr-h">
+    <div class="sec-head"><h2 id="tr-h">Trending now</h2><p>New and much-talked-about things in the shops · tap "Tell me about deals" to get a dot on the List tab when one goes on special</p></div>
+    <div class="wo-chips" id="trChips" role="group" aria-label="Type of item"></div>
+    <ol class="trs" id="trGrid"></ol>
   </section>
 
   <section id="standouts" aria-labelledby="st-h">
@@ -1603,6 +1619,21 @@ const STAPLES = [
  {n:"Dishwashing liquid",k:/\b(dishwashing|dish washing) liquid\b/i,x:/tablet|pod|powder|rinse/i,u:"L",p:[["Coles",1.40,"1L"],["Woolworths",1.40,"1L"],["ALDI",1.40,"1L"]]},
 ];
 
+// ---- trending now: new, viral or much-talked-about items worth knowing about (t = tag, s = date spotted, w = word to watch)
+const TR_TAGS = {lights:["Christmas lights & decor","#B91C1C"], viral:["Selling out","#C2410C"], gift:["Gift idea","#6D28D9"], trend:["Trend","#0F766E"]};
+const TRENDING = [
+ {n:"ALDI '90s nostalgia toy drop",t:"viral",r:"ALDI",p:"$3.99–$69.99",why:"Troll Dolls ($9.99), Mr & Mrs Potato Head ($12.99), Strawberry Shortcake dolls ($19.99), Goosebumps and Baby-Sitters Club books ($3.99) and Mario Kart remote-control cars ($69.99). TikTok haul videos are clearing shelves, so go early if you want one.",s:"2026-10-30",u:"https://www.aldi.com.au/special-buys",w:"Troll"},
+ {n:"Light-up ceramic Christmas village",t:"lights",r:"Kmart",p:"$8–$12",why:"Glowing ceramic tree ($10), bookstore and bakery ($12 each) and a 2-pack of houses ($8). One of the most talked-about pieces in Kmart's 2026 Christmas range.",s:"2026-09-28",u:"https://www.kmart.com.au/search/?searchTerm=light%20up%20ceramic",w:"ceramic"},
+ {n:"Velvet bow string lights",t:"lights",r:"Kmart",p:"$6",why:"Battery-operated 10 LED string with little velvet bows, part of the big bow theme in this year's decorations. No power point needed.",s:"2026-10-20",u:"https://www.kmart.com.au/search/?searchTerm=velvet%20bow%20string%20lights",w:"velvet bow"},
+ {n:"Light and sound nutcracker snow globe",t:"lights",r:"Kmart",p:"$24",why:"Light-up snow globe with swirling glitter and music. Reviewers pick it as one of the range's best buys.",s:"2026-10-19",u:"https://www.kmart.com.au/search/?searchTerm=nutcracker%20snow%20globe",w:"snow globe"},
+ {n:"Pink & fig Christmas colours",t:"trend",r:"Kmart",p:"from $8",why:"Pink and deep fig baubles ($12 for 9) and decorations ($8 for 10) are a standout colour theme this year, alongside candy tinsel baubles. Reviewers suggest skipping the $89.95 pink flocked tree.",s:"2026-10-19",u:"https://www.kmart.com.au/search/?searchTerm=pink%20fig%20baubles",w:"bauble"},
+ {n:"Snowy prelit Christmas tree 2.13m",t:"lights",r:"Kmart",p:"$139",why:"7ft snow-tipped tree with lights built in. Prelit trees save hours of untangling lights.",s:"2026-10-20",u:"https://www.kmart.com.au/search/?searchTerm=snowy%20prelit%20christmas%20tree",w:"prelit"},
+ {n:"Kids' mini digital camera",t:"gift",r:"Kmart",p:"$29",why:"Pocket camera for kids, on this year's hottest-toys lists. A cheap alternative to giving a child a phone.",s:"2026-10-25",u:"https://www.kmart.com.au/search/?searchTerm=mini%20digital%20camera",w:"camera"},
+ {n:"Yoto Player (4th gen)",t:"gift",r:"Yoto, JB Hi-Fi & others",p:"from $229",why:"Screen-free audio player for kids that plays stories and music from cards. Near the top of Christmas 2026 toy lists; watch for Black Friday prices.",s:"2026-10-25",u:"https://www.google.com/search?q=Yoto+Player+4th+gen+price+Australia",w:"Yoto"},
+ {n:"Little Live Pets – My Baby Monkey",t:"gift",r:"Amazon & toy stores",p:"from $59.99",why:"Interactive monkey that reacts to cuddles and feeding, a big name on 2026 wish lists.",s:"2026-10-25",u:"https://www.amazon.com.au/s?k=Little+Live+Pets+My+Baby+Monkey",w:"Little Live Pets"},
+ {n:"LEGO Wicked: Welcome to Emerald City (75684)",t:"gift",r:"LEGO & toy stores",p:"from $169.99",why:"Riding on the Wicked films. Expect LEGO discounts at Big W, Target and Amazon around Black Friday.",s:"2026-10-25",u:"https://www.google.com/search?q=LEGO+75684+price+Australia",w:"LEGO"},
+];
+
 // ---- What's on: Adelaide events for the coming weeks (c = category key, t = time, w = where, f = free)
 const WO_CATS = {motor:["Motorsport","#C2410C"], cricket:["Cricket","#15803D"], football:["Football","#1D4ED8"], basket:["Basketball","#B45309"], racing:["Horse racing","#7C3AED"], fest:["Festivals","#BE185D"], music:["Concerts & shows","#6D28D9"], xmas:["Christmas","#B91C1C"], market:["Markets & fairs","#0F766E"]};
 const WHATSON = [
@@ -1941,7 +1972,7 @@ function clearAll(){
   renderSelects(); render();
 }
 // ---- tabs: each section of the bar is its own screen
-const TABS = {stores:["stores"], deals:["deals"], best:["best","standouts"], promos:["promos","next"], next:["promos","next"], whatson:["whatson","places"], places:["whatson","places"], saved:["saved"]};
+const TABS = {stores:["stores"], deals:["deals"], best:["best","trending","standouts"], promos:["promos","next"], next:["promos","next"], whatson:["whatson","places"], places:["whatson","places"], saved:["saved"]};
 function showTab(t, scroll = true){
   if (!TABS[t]) t = "stores";
   state.tab = t; persist();
@@ -2605,6 +2636,39 @@ if (!IN_APP_EARLY && /[?&](list|regs)=/.test(location.search) && /Android|iPhone
   $("#appHint").innerHTML = `<div class="shared">${ico("phone")}<span>Using the Deal Sheet app? The app keeps its own list. Copy this link, open the app, go to List and paste it under "Got a shared list?".</span><span class="acts"><button class="btn" type="button" id="copyForApp">Copy link</button></span></div>`;
   $("#copyForApp").onclick = async () => { try { await navigator.clipboard.writeText(location.href); toast("Link copied: now open the app"); } catch(e){ toast("Couldn't copy. Long-press the address bar to copy it"); } };
 }
+// ---- trending now (Best tab)
+let trTag = "All";
+function addWatch(w){
+  if (!WATCH.some(x => x.toLowerCase() === w.toLowerCase())){ WATCH.push(w); LS.set("ads-watch", WATCH); watchHits(w).forEach(d => SEEN.add(d.id)); LS.set("ads-seen", [...SEEN]); }
+  renderSaved(); renderTrending();
+  const n = watchHits(w).length; toast(n ? `${plural(n, "deal")} match "${w}" now. You'll see new ones on the List tab` : `Watching "${w}". Matching deals will show on the List tab`);
+}
+function renderTrending(){
+  const box = $("#trGrid"); if (!box) return;
+  const live = TRENDING.filter(x => (TODAY - toDate(x.s)) / 864e5 <= 45);
+  $("#trending").hidden = !live.length;
+  const n = {}; live.forEach(x => n[x.t] = (n[x.t] || 0) + 1);
+  if (trTag !== "All" && !n[trTag]) trTag = "All";
+  $("#trChips").innerHTML = [["All", "Everything", live.length, "var(--ink)"], ...Object.keys(TR_TAGS).filter(k => n[k]).map(k => [k, TR_TAGS[k][0], n[k], TR_TAGS[k][1]])]
+    .map(([k, l, c, col]) => `<button type="button" class="wo-chip" data-trt="${k}" style="--c:${col}" aria-pressed="${k === trTag}">${k === "All" ? "" : `<span class="dot"></span>`}${esc(l)}<span class="n">${c}</span></button>`).join("");
+  const list = live.filter(x => trTag === "All" || x.t === trTag).sort((a, b) => b.s.localeCompare(a.s));
+  box.innerHTML = list.map(x => {
+    const [tl, tc] = TR_TAGS[x.t] || ["Trending", "#566176"];
+    const hits = x.w ? watchHits(x.w).length : 0, watching = x.w && WATCH.some(w => w.toLowerCase() === x.w.toLowerCase());
+    const ago = Math.round((TODAY - toDate(x.s)) / 864e5);
+    return `<li class="tr" style="--c:${tc}">
+      <p class="wo-k"><span class="dot"></span>${esc(tl)}${ago <= 7 ? `<i class="wo-now">New</i>` : ""}</p>
+      <h3>${esc(x.n)}</h3>
+      <p class="tr-p"><b>${esc(x.p)}</b> · ${esc(x.r)}</p>
+      <p class="tr-why">${esc(x.why)}</p>
+      <div class="wo-a"><a class="btn sm" href="${esc(x.u)}" target="_blank" rel="noopener">${ico("external")}Have a look</a>${x.w ? `<button class="btn sm" type="button" data-trw="${esc(x.w)}" ${watching ? "disabled" : ""}>${watching ? ico("check") + "Watching" : ico("star") + "Tell me about deals"}</button>` : ""}</div>
+      ${hits ? `<p class="tr-hit">${plural(hits, "deal")} on the sheet now match "${esc(x.w)}"</p>` : ""}
+    </li>`; }).join("");
+}
+document.addEventListener("click", e => {
+  const c = e.target.closest("[data-trt]"); if (c){ trTag = c.dataset.trt; renderTrending(); return; }
+  const w = e.target.closest("[data-trw]"); if (w && !w.disabled){ addWatch(w.dataset.trw); }
+});
 // ---- barcode scanner: identify a product (Open Food Facts) and check if it's on special this week
 const ZXING = "https://cdn.jsdelivr.net/npm/@zxing/browser@0.1.5/+esm";
 const scanDlg = $("#scanDlg");
@@ -2787,6 +2851,7 @@ document.querySelector(".jump").addEventListener("click", e => {
 renderSaved();
 renderRegs();
 renderWhatsOn();
+renderTrending();
 showTab(state.tab, false);
 sharedIn();
 regsIn();
