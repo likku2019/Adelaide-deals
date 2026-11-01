@@ -1,8 +1,8 @@
 {
  "ALDI": {
-  "checked": "2026-10-28",
-  "changed": "2026-10-28",
-  "note": "Wed 28 Oct and Sat 31 Oct Special Buys; 21 Oct items removed"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Sat 31 Oct items now in store; 4 highlights added"
  },
  "Amart": {
   "checked": "2026-10-28",
@@ -10,34 +10,34 @@
   "note": "Hartwell prices up $100; Zavira sofa added"
  },
  "Amazon": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-30",
-  "note": "DualSense $99, Monster Zero Ultra 24pk, Tefal & Scanpan frypans added; 4 oldest removed"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "HAUL40 and Mastercard offers; iPhone 17 Pro Max $1799 and 3 new deals; 5 old removed"
  },
  "BIG W": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-30",
-  "note": "Contempo kettle $12; $10 off $99 in app; catalogue note removed"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "$10 app code ended; $15 off $199; Pokémon GO Plus $69"
  },
  "Best&Less": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-22",
-  "note": "No new OzBargain deals; left unchanged"
+  "note": "No change"
  },
  "Bunnings": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-28",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Fiskars, Oklahoma Joe's, DeWALT, Gasmate added; 3 ended; Ryobi bonus"
  },
  "Burnside Village": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "Georg Jensen gift ended 25 Oct"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Seed Heritage, Georg Jensen, Sunglass Hut added"
  },
  "Chemist Warehouse": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-29",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "5 protein/razor deals expired; Olay eye cream added; delivery offer ended"
  },
  "Coles": {
   "checked": "2026-10-28",
@@ -50,19 +50,19 @@
   "note": "No change"
  },
  "Costco": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-30",
-  "note": "Sony XM5 ended 29 Oct; Hisense chest freezer, iPhone 17 Pro Max $1799.99 added"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "2 MacBooks, chest freezer gone; Hisense TV, vodka, Telstra added; card bonus ended 1 Nov"
  },
  "Cotton On / Typo": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-28",
   "note": "No change"
  },
  "Guess": {
-  "checked": "2026-10-28",
+  "checked": "2026-11-02",
   "changed": "2026-10-28",
-  "note": "Bag sale refreshed: 5 old styles gone, 5 new"
+  "note": "No change"
  },
  "H&M": {
   "checked": "2026-10-27",
@@ -75,19 +75,19 @@
   "note": "No sale found"
  },
  "Harbour Town": {
-  "checked": "2026-10-28",
-  "changed": "2026-10-28",
-  "note": "Sunglass Hut 20% to 1 Nov"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Nike +50% footwear, Calvin Klein, Under Armour, Tommy Hilfiger, Kate Spade added; Sunglass Hut changed"
  },
  "Harris Scarfe": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-28",
   "note": "No change"
  },
  "Harvey Norman": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-28",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "4 expired; Pixel 11 Pro XL bonus Switch 2 added"
  },
  "IKEA": {
   "checked": "2026-10-28",
@@ -95,14 +95,14 @@
   "note": "No change"
  },
  "JB Hi-Fi": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-30",
-  "note": "Roborock Saros 10R $1099 added"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "4 deals and 2 offers ended; Philips Evnia, Nothing Phone added"
  },
  "Kmart": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-29",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "2 old deals expired; glass containers, cloth set added; Switch 2 bundle from 26 Nov"
  },
  "Lovisa": {
   "checked": "2026-10-28",
@@ -110,7 +110,7 @@
   "note": "Sale refresh: 7 gone, 7 new"
  },
  "MECCA": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-21",
   "note": "No change"
  },
@@ -120,29 +120,29 @@
   "note": ""
  },
  "Myer": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-21",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "De'Longhi jug ended 1 Nov"
  },
  "New Balance": {
-  "checked": "2026-10-29",
+  "checked": "2026-11-02",
   "changed": "2026-10-21",
-  "note": "Website blocked reading; left unchanged"
- },
- "Nike": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-28",
   "note": "No change"
  },
+ "Nike": {
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Harbour Town extra 50% footwear to Tue 3 Nov"
+ },
  "OTR": {
-  "checked": "2026-10-28",
+  "checked": "2026-11-02",
   "changed": "2026-10-21",
   "note": "No change"
  },
  "Officeworks": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-30",
-  "note": "SanDisk 1TB Extreme Portable SSD $178 added"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "SSD and iPhone cases ended; PowerPlay 2 and gift card 10% off added"
  },
  "Onitsuka Tiger": {
   "checked": "2026-10-22",
@@ -150,27 +150,27 @@
   "note": ""
  },
  "Priceline": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-22",
   "note": "No change"
  },
  "Puma": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-28",
   "note": "No change"
  },
  "Reebok": {
-  "checked": "2026-10-29",
+  "checked": "2026-11-02",
   "changed": "2026-10-28",
-  "note": "Final Sale up to 70%; new kicks"
+  "note": "No change"
  },
  "Rundle Mall": {
-  "checked": "2026-10-28",
-  "changed": "2026-10-28",
-  "note": "Strand, OPSM, Sunglass Hut, Gazman offers; DJ beds & Shiels gone"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "OPSM to 16 Nov; Sunglass Hut $50 off; Strand and Gathered Market gone"
  },
  "Sephora": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-21",
   "note": "No change"
  },
@@ -180,37 +180,37 @@
   "note": ""
  },
  "Skechers": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-28",
   "note": "No change"
  },
  "Strandbags": {
-  "checked": "2026-10-29",
-  "changed": "2026-10-28",
-  "note": "Strand Frenzy ≤40% in-store to 1 Nov; was-prices now from the store's compare-at; 3 bags added, suitcase gone"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Strand Frenzy ended 1 Nov"
  },
  "Target": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-28",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Click Frenzy code and Pokémon GO Plus ended; Xbox Series X added"
  },
  "TerryWhite Chemmart": {
-  "checked": "2026-10-28",
+  "checked": "2026-11-02",
   "changed": "2026-10-22",
   "note": "No new deals"
  },
  "The Good Guys": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-28",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Haier washer and Click Frenzy offer ended"
  },
  "The Reject Shop": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-28",
-  "note": "No change"
+  "note": "Website showed no prices today; left unchanged"
  },
  "Uniqlo": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-21",
   "note": "No change"
  },
@@ -220,14 +220,14 @@
   "note": ""
  },
  "Westfield Marion": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "Swarovski 3-for-2 ended 25 Oct"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Win offer and Adore Frenzy ended; Clarks, Connor added"
  },
  "Westfield Tea Tree Plaza": {
-  "checked": "2026-10-26",
-  "changed": "2026-10-26",
-  "note": "Swarovski 3-for-2 ended 25 Oct"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Win offer ended 31 Oct"
  },
  "Woolworths": {
   "checked": "2026-10-28",
@@ -240,48 +240,48 @@
   "note": ""
  },
  "adidas": {
-  "checked": "2026-10-28",
+  "checked": "2026-11-02",
   "changed": "2026-10-28",
-  "note": "Outlet refresh; 3 styles gone, 3 added"
+  "note": "No change"
  },
  "Kogan": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-29",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Power bank ended; 900GB SIM, APPLOVE added"
  },
  "eBay": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-28",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Codes HPOCT26, SONY10AUDIO ended; 2 deals ended; 3 added; NEW25"
  },
  "THE ICONIC": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-26",
   "note": "No change"
  },
  "Appliances Online": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-28",
   "note": "No change"
  },
  "Adore Beauty": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-26",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Adore Frenzy ended 1 Nov; code SAVE"
  },
  "Golden Star Spices Supermarket": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-28",
-  "note": "No new specials post; latest 24 Oct"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Horn bananas and banana flower flyer past 10 days; latest post 23 Oct"
  },
  "Indian PLAZA": {
-  "checked": "2026-10-30",
+  "checked": "2026-11-02",
   "changed": "2026-10-29",
-  "note": "Latest post a video (29 Oct); flyers unchanged"
+  "note": "Latest post a video (29 Oct); flyer photos not readable; left unchanged"
  },
  "Ekam Indian Groceries": {
-  "checked": "2026-10-30",
-  "changed": "2026-10-28",
-  "note": "No change"
+  "checked": "2026-11-02",
+  "changed": "2026-11-02",
+  "note": "Diwali outdoor table sets $150 (Facebook); specials unchanged"
  }
 }
