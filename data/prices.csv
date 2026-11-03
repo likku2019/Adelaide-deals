@@ -977,3 +977,410 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-10-28,lovisa--gold-textured-brown-resin-bangles-4-pack,Lovisa,Bags & accessories,Gold Textured & Brown Resin Bangles 4 pack,Jewellery,5,32.99,85,
 2026-10-28,lovisa--gold-neutral-acrylic-large-bangles-3-pack,Lovisa,Bags & accessories,Gold & Neutral Acrylic Large Bangles 3 pack,Jewellery,5,34.99,86,
 2026-10-28,lovisa--waterproof-gold-plated-large-bubble-letter-necklace,Lovisa,Bags & accessories,Waterproof Gold Plated Large Bubble Letter Necklace,Jewellery,5,29.99,83,Letters A and M seen on sale
+2026-11-04,coles--golden-crumpet-rounds-6-pack-300g,Coles,Groceries,Golden Crumpet Rounds 6 Pack 300g,Pantry,2.5,5,50,
+2026-11-04,coles--biozet-attack-laundry-liquid-2l-or-powder-2kg,Coles,Groceries,Biozet Attack Laundry Liquid 2L or Powder 2kg,Household,12,24,50,
+2026-11-04,coles--comfort-fabric-conditioner-900ml,Coles,Groceries,Comfort Fabric Conditioner 900mL,Household,6,12,50,
+2026-11-04,coles--finish-ultimate-dishwashing-tablets-56-pack,Coles,Groceries,Finish Ultimate Dishwashing Tablets 56 pack,Household,29,58,50,
+2026-11-04,coles--fluffy-concentrated-fabric-conditioner-900ml-1l,Coles,Groceries,Fluffy Concentrated Fabric Conditioner 900mL–1L,Household,4.75,9.5,50,
+2026-11-04,coles--morning-fresh-easy-squeeze-dishwashing-liquid-550-600ml,Coles,Groceries,Morning Fresh Easy Squeeze Dishwashing Liquid 550–600mL,Household,5,10,50,
+2026-11-04,coles--omo-laundry-liquid-2l-or-capsules-28-pack,Coles,Groceries,OMO Laundry Liquid 2L or Capsules 28 pack,Household,15,30,50,
+2026-11-04,coles--radiant-laundry-liquid-2l-or-capsules-28-pack,Coles,Groceries,Radiant Laundry Liquid 2L or Capsules 28 pack,Household,11,22,50,
+2026-11-04,coles--primo-rindless-short-cut-bacon-750g,Coles,Groceries,Primo Rindless Short Cut Bacon 750g,Meat & seafood,8.4,16.8,50,
+2026-11-04,coles--coca-cola-fanta-or-sprite-1-25l,Coles,Groceries,"Coca-Cola, Fanta or Sprite 1.25L",Drinks,2,4.5,56,
+2026-11-04,coles--nescafe-blend-43-140-150g-or-gold-instant-coffee-100g,Coles,Groceries,Nescafé Blend 43 140–150g or Gold Instant Coffee 100g,Drinks,7.25,14.5,50,
+2026-11-04,coles--nescafe-coffee-sachets-8-10-pack,Coles,Groceries,Nescafé Coffee Sachets 8–10 pack,Drinks,4,8,50,
+2026-11-04,coles--twinings-tea-bags-80-100-pack-or-sparkling-tea-4-pack,Coles,Groceries,Twinings Tea Bags 80–100 pack or Sparkling Tea 4 pack,Drinks,6.75,13.5,50,
+2026-11-04,coles--pepsi-or-solo-zero-sugar-18-375ml,Coles,Groceries,Pepsi or Solo Zero Sugar 18 × 375mL,Drinks,17.5,35,50,
+2026-11-04,coles--sunrice-classic-indian-basmati-rice-5kg,Coles,Groceries,SunRice Classic Indian Basmati Rice 5kg,Pantry,17.5,35,50,$3.50 a kg · Alishaan basmati 5kg is $16 at Woolworths
+2026-11-04,coles--the-spice-tailor-indian-meal-kit-225-500g,Coles,Groceries,The Spice Tailor Indian Meal Kit 225–500g,Pantry,3.35,6.7,50,Rare: last at half price 33 weeks ago
+2026-11-04,coles--sharwood-s-simmer-sauce-420g,Coles,Groceries,Sharwood's Simmer Sauce 420g,Pantry,2.5,5,50,
+2026-11-04,coles--campbell-s-real-stock-1l,Coles,Groceries,Campbell's Real Stock 1L,Pantry,2.25,4.5,50,
+2026-11-04,coles--john-west-tuna-95g,Coles,Groceries,John West Tuna 95g,Pantry,1.45,2.9,50,
+2026-11-04,coles--maggi-instant-noodle-cup-58-65g,Coles,Groceries,Maggi Instant Noodle Cup 58–65g,Pantry,1.25,2.5,50,
+2026-11-04,coles--sanitarium-up-go-liquid-breakfast-3-250ml,Coles,Groceries,Sanitarium Up&Go Liquid Breakfast 3 × 250mL,Drinks,3.5,7,50,
+2026-11-04,coles--haldiram-s-cocktail-samosa-20-pieces-500g,Coles,Groceries,Haldiram's Cocktail Samosa 20 pieces 500g,Frozen,6,12,50,
+2026-11-04,coles--sabrini-punjabi-samosas-25-pieces-1-125kg,Coles,Groceries,Sabrini Punjabi Samosas 25 pieces 1.125kg,Frozen,8,16,50,
+2026-11-04,coles--hong-kong-dim-sim-kitchen-pork-chive-dumplings-or-bbq-pork-buns-300g,Coles,Groceries,Hong Kong Dim Sim Kitchen Pork & Chive Dumplings or BBQ Pork Buns 300g,Frozen,4.25,8.5,50,
+2026-11-04,coles--streets-paddle-pop-sticks-8-pack-544ml,Coles,Groceries,Streets Paddle Pop Sticks 8 pack 544mL,Frozen,5,10,50,Rare: last at half price 31 weeks ago
+2026-11-04,coles--kb-s-salt-pepper-squid-360g,Coles,Groceries,KB's Salt & Pepper Squid 360g,Meat & seafood,6,12,50,
+2026-11-04,coles--cadbury-dairy-milk-block-chocolate-160-190g,Coles,Groceries,Cadbury Dairy Milk Block Chocolate 160–190g,Snacks,4,8,50,
+2026-11-04,coles--cadbury-favourites-470g,Coles,Groceries,Cadbury Favourites 470g,Snacks,12,24,50,Same price at Woolworths
+2026-11-04,coles--cadbury-roses-tin-485g,Coles,Groceries,Cadbury Roses Tin 485g,Snacks,15,30,50,
+2026-11-04,coles--cadbury-dairy-milk-advent-calendar-90g,Coles,Groceries,Cadbury Dairy Milk Advent Calendar 90g,Snacks,5,10,50,ALDI has it for $4.99
+2026-11-04,coles--toblerone-340g,Coles,Groceries,Toblerone 340g,Snacks,10,20,50,
+2026-11-04,coles--doritos-smith-s-crinkle-cut-or-red-rock-deli-290-380g,Coles,Groceries,"Doritos, Smith's Crinkle Cut or Red Rock Deli 290–380g",Snacks,4.25,8.5,50,
+2026-11-04,coles--nivea-sun-protect-moisture-spf50-400ml,Coles,Groceries,Nivea Sun Protect & Moisture SPF50+ 400mL,Health & beauty,14,28,50,
+2026-11-04,coles--head-shoulders-shampoo-or-conditioner-660ml,Coles,Groceries,Head & Shoulders Shampoo or Conditioner 660mL,Health & beauty,11.5,23,50,
+2026-11-04,coles--palmolive-liquid-hand-wash-refill-1l,Coles,Groceries,Palmolive Liquid Hand Wash Refill 1L,Health & beauty,3.75,7.5,50,
+2026-11-04,coles--libra-ultra-thin-pads-regular-14-pack-or-super-12-pack,Coles,Groceries,Libra Ultra Thin Pads Regular 14 pack or Super 12 pack,Health & beauty,3,6,50,
+2026-11-04,coles--sukin-body-wash-1l,Coles,Groceries,Sukin Body Wash 1L,Health & beauty,9.5,19,50,
+2026-11-04,coles--gillette-fusion-5-razor-blade-refills-8-pack,Coles,Groceries,Gillette Fusion 5 Razor Blade Refills 8 pack,Health & beauty,28.75,57.5,50,
+2026-11-04,coles--blackmores-odourless-fish-oil-200-capsules,Coles,Groceries,Blackmores Odourless Fish Oil 200 capsules,Health & beauty,20,40,50,Or Executive B Stress Formula 125 tablets
+2026-11-04,coles--duracell-optimum-batteries-aa-or-aaa-10-pack,Coles,Groceries,Duracell Optimum Batteries AA or AAA 10 pack,Household,11.25,22.5,50,
+2026-11-04,coles--coles-mobile-25-prepaid-sim,Coles,Groceries,Coles Mobile $25 Prepaid SIM,Phone & SIM,10,25,60,
+2026-11-04,coles--amaysim-35-starter-pack,Coles,Groceries,amaysim $35 Starter Pack,Phone & SIM,12,35,66,
+2026-11-04,woolworths--tip-top-english-muffins-6-pack,Woolworths,Groceries,Tip Top English Muffins 6 pack,Pantry,3.4,6.8,50,
+2026-11-04,woolworths--mission-mini-wraps-8-pack-384g,Woolworths,Groceries,Mission Mini Wraps 8 pack 384g,Pantry,3,5.6,46,
+2026-11-04,woolworths--dairy-farmers-thick-creamy-yoghurt-140-150g,Woolworths,Groceries,Dairy Farmers Thick & Creamy Yoghurt 140–150g,Pantry,1.65,3.3,50,
+2026-11-04,woolworths--alishaan-super-basmati-rice-5kg,Woolworths,Groceries,Alishaan Super Basmati Rice 5kg,Pantry,16,32,50,$3.20 a kg · SunRice basmati 5kg is $17.50 at Coles
+2026-11-04,woolworths--sunrice-white-medium-grain-rice-10kg,Woolworths,Groceries,SunRice White Medium Grain Rice 10kg,Pantry,21,42,50,$2.10 a kg
+2026-11-04,woolworths--farmers-harvest-oil-4l,Woolworths,Groceries,Farmers Harvest Oil 4L,Pantry,17,34,50,$4.25 a litre
+2026-11-04,woolworths--kellogg-s-nutri-grain-290g-coco-pops-320g-or-sultana-bran-420g,Woolworths,Groceries,"Kellogg's Nutri-Grain 290g, Coco Pops 320g or Sultana Bran 420g",Pantry,3.5,7,50,
+2026-11-04,woolworths--fantastic-noodle-bowl-85g,Woolworths,Groceries,Fantastic Noodle Bowl 85g,Pantry,1.25,2.5,50,
+2026-11-04,woolworths--four-n-twenty-angus-pies-700g-4-pack,Woolworths,Groceries,Four'N Twenty Angus Pies 700g 4 pack,Frozen,6.75,13.5,50,Rare: last at half price 26 weeks ago
+2026-11-04,woolworths--golden-wok-dumplings-250g,Woolworths,Groceries,Golden Wok Dumplings 250g,Frozen,4.5,9,50,
+2026-11-04,woolworths--streets-cornetto-440-460ml-4-pack,Woolworths,Groceries,Streets Cornetto 440–460mL 4 pack,Frozen,4.5,9,50,
+2026-11-04,woolworths--streets-golden-gaytime-400ml-4-pack,Woolworths,Groceries,Streets Golden Gaytime 400mL 4 pack,Frozen,5.5,11,50,
+2026-11-04,woolworths--ha-agen-dazs-ice-cream-pints-457ml,Woolworths,Groceries,Häagen-Dazs Ice Cream Pints 457mL,Frozen,7,14,50,
+2026-11-04,woolworths--zooper-dooper-ice-blocks-24-70ml,Woolworths,Groceries,Zooper Dooper Ice Blocks 24 × 70mL,Frozen,4,8,50,
+2026-11-04,woolworths--chicken-garlic-kyiv-deli,Woolworths,Groceries,Chicken Garlic Kyiv (deli),Meat & seafood,1.5,3,50,
+2026-11-04,woolworths--just-caught-snacking-seafood-600g-1kg,Woolworths,Groceries,Just Caught Snacking Seafood 600g–1kg,Meat & seafood,14,28,50,
+2026-11-04,woolworths--finish-ultimate-plus-dishwasher-tablets-lemon-70-pack,Woolworths,Groceries,Finish Ultimate Plus Dishwasher Tablets Lemon 70 pack,Household,34,68,50,49c a tablet
+2026-11-04,woolworths--finish-ultimate-plus-material-care-dishwasher-tablets-80-pack,Woolworths,Groceries,Finish Ultimate Plus Material Care Dishwasher Tablets 80 pack,Household,38,84,55,48c a tablet
+2026-11-04,woolworths--cold-power-laundry-liquid-2l-or-powder-2kg,Woolworths,Groceries,Cold Power Laundry Liquid 2L or Powder 2kg,Household,13,26,50,
+2026-11-04,woolworths--omo-ultimate-laundry-liquid-2l-powder-2kg-or-capsules-28-pack,Woolworths,Groceries,"OMO Ultimate Laundry Liquid 2L, Powder 2kg or Capsules 28 pack",Household,18,36,50,
+2026-11-04,woolworths--pine-o-cleen-platinum-laundry-sanitiser-2l,Woolworths,Groceries,Pine O Cleen Platinum Laundry Sanitiser 2L,Household,12.5,28,55,
+2026-11-04,woolworths--dettol-disinfectant-wipes-100-pack,Woolworths,Groceries,Dettol Disinfectant Wipes 100 pack,Household,5.85,13,55,
+2026-11-04,woolworths--glen-20-disinfectant-spray-300g,Woolworths,Groceries,Glen 20 Disinfectant Spray 300g,Household,5,11,55,Same price every day at The Reject Shop
+2026-11-04,woolworths--vanish-gold-stain-remover-powder-2kg,Woolworths,Groceries,Vanish Gold Stain Remover Powder 2kg,Household,17,36,53,
+2026-11-04,woolworths--pine-o-cleen-disinfectant-liquid-1-25l,Woolworths,Groceries,Pine O Cleen Disinfectant Liquid 1.25L,Household,4.5,9.6,53,
+2026-11-04,woolworths--energizer-max-plus-batteries-aa-or-aaa-10-pack,Woolworths,Groceries,Energizer Max Plus Batteries AA or AAA 10 pack,Household,11.25,22.5,50,
+2026-11-04,woolworths--brunnings-all-seasons-potting-mix-25l,Woolworths,Groceries,Brunnings All Seasons Potting Mix 25L,Tools & garden,5,10,50,
+2026-11-04,woolworths--de-cor-tellfresh-oblong-containers-500ml-3-pack,Woolworths,Groceries,Décor Tellfresh Oblong Containers 500mL 3 pack,Home,5.65,11.3,50,
+2026-11-04,woolworths--pepsi-solo-or-schweppes-10-375ml,Woolworths,Groceries,"Pepsi, Solo or Schweppes 10 × 375mL",Drinks,10,20,50,
+2026-11-04,woolworths--coca-cola-or-sprite-12-300ml,Woolworths,Groceries,Coca-Cola or Sprite 12 × 300mL,Drinks,12,24,50,
+2026-11-04,woolworths--moccona-coffee-sachets-8-10-pack,Woolworths,Groceries,Moccona Coffee Sachets 8–10 pack,Drinks,3.95,7.9,50,
+2026-11-04,woolworths--golden-circle-fruit-drink-1l,Woolworths,Groceries,Golden Circle Fruit Drink 1L,Drinks,1.5,3.1,52,
+2026-11-04,woolworths--cadbury-favourites-470g,Woolworths,Groceries,Cadbury Favourites 470g,Snacks,12,24,50,Same price at Coles
+2026-11-04,woolworths--lindt-lindor-cornet-268-272g,Woolworths,Groceries,Lindt Lindor Cornet 268–272g,Snacks,15,30,50,
+2026-11-04,woolworths--oreo-cookies-136-140g,Woolworths,Groceries,Oreo Cookies 136–140g,Snacks,1.6,3.2,50,
+2026-11-04,woolworths--pringles-potato-chips-134g,Woolworths,Groceries,Pringles Potato Chips 134g,Snacks,2.75,5.5,50,
+2026-11-04,woolworths--arnott-s-shapes-crackers-160-190g,Woolworths,Groceries,Arnott's Shapes Crackers 160–190g,Snacks,2,4,50,
+2026-11-04,woolworths--johnson-s-body-wash-1l,Woolworths,Groceries,Johnson's Body Wash 1L,Baby,6.5,13,50,
+2026-11-04,woolworths--colgate-advanced-whitening-or-max-fresh-toothpaste-120-200g,Woolworths,Groceries,Colgate Advanced Whitening or Max Fresh Toothpaste 120–200g,Health & beauty,5.5,11,50,
+2026-11-04,woolworths--colgate-plax-mouthwash-500ml,Woolworths,Groceries,Colgate Plax Mouthwash 500mL,Health & beauty,3.5,7,50,
+2026-11-04,woolworths--pantene-pro-v-shampoo-or-conditioner-290-375ml,Woolworths,Groceries,Pantene Pro-V Shampoo or Conditioner 290–375mL,Health & beauty,5,10,50,
+2026-11-04,woolworths--dove-advanced-care-antiperspirant-aerosol-250ml,Woolworths,Groceries,Dove Advanced Care Antiperspirant Aerosol 250mL,Health & beauty,6,12,50,
+2026-11-04,woolworths--ostelin-vitamin-d3-1000iu-250-capsules,Woolworths,Groceries,Ostelin Vitamin D3 1000IU 250 capsules,Health & beauty,24.75,49.5,50,
+2026-11-04,woolworths--swisse-ultiboost-magnesium-glycinate-120-tablets,Woolworths,Groceries,Swisse Ultiboost Magnesium Glycinate 120 tablets,Health & beauty,24.75,49.5,50,
+2026-11-04,woolworths--dine-wet-cat-food-tray-85g,Woolworths,Groceries,Dine Wet Cat Food Tray 85g,Pet,0.8,1.6,50,
+2026-11-04,woolworths--vodafone-35-starter-pack,Woolworths,Groceries,Vodafone $35 Starter Pack,Phone & SIM,12,35,66,
+2026-11-04,woolworths--boost-39-starter-pack,Woolworths,Groceries,Boost $39 Starter Pack,Phone & SIM,15,39,62,
+2026-11-04,aldi--cadbury-dairy-milk-advent-calendar-90g,ALDI,Groceries,Cadbury Dairy Milk Advent Calendar 90g,Snacks,4.99,,,1c under Coles' half price
+2026-11-04,aldi--kinder-advent-calendar-113g,ALDI,Groceries,Kinder Advent Calendar 113g,Snacks,9.99,,,
+2026-11-04,aldi--bluey-advent-calendar,ALDI,Groceries,Bluey Advent Calendar,Kids & toys,24.99,,,
+2026-11-04,aldi--pertzborn-gingerbread-house-diy-kit-500g,ALDI,Groceries,Pertzborn Gingerbread House DIY Kit 500g,Snacks,12.99,,,
+2026-11-04,aldi--festive-selection-christmas-mix-tub-600g,ALDI,Groceries,Festive Selection Christmas Mix Tub 600g,Snacks,6.99,,,
+2026-11-04,aldi--candy-canes-peppermint-or-strawberry-225g,ALDI,Groceries,Candy Canes Peppermint or Strawberry 225g,Snacks,1.99,,,
+2026-11-04,aldi--ingham-s-sweet-chilli-chicken-tenders-440g,ALDI,Groceries,Ingham's Sweet Chilli Chicken Tenders 440g,Meat & seafood,6.99,,,
+2026-11-04,aldi--the-fishmonger-salmon-gravalax-250g,ALDI,Groceries,The Fishmonger Salmon Gravalax 250g,Meat & seafood,10.99,,,
+2026-11-04,aldi--kr-castlemaine-thai-style-marinated-pork-loin-per-kg,ALDI,Groceries,KR Castlemaine Thai Style Marinated Pork Loin (per kg),Meat & seafood,13.59,,,Packs are about 800g
+2026-11-04,aldi--gordon-s-gin-700ml,ALDI,Groceries,Gordon's Gin 700mL,Liquor,44.99,,,
+2026-11-04,aldi--guinness-draught-beer-6-470ml,ALDI,Groceries,Guinness Draught Beer 6 × 470mL,Liquor,24.99,,,
+2026-11-04,aldi--prelit-christmas-tree-6ft,ALDI,Groceries,Prelit Christmas Tree 6ft,Home,89.99,,,
+2026-11-04,aldi--prelit-christmas-tree-7ft,ALDI,Groceries,Prelit Christmas Tree 7ft,Home,149,,,
+2026-11-04,aldi--solar-led-fairy-lights-250-pack,ALDI,Groceries,Solar LED Fairy Lights 250 pack,Home,8.99,,,
+2026-11-04,aldi--solar-or-low-voltage-fairy-lights-500-pack,ALDI,Groceries,Solar or Low Voltage Fairy Lights 500 pack,Home,17.99,,,
+2026-11-04,aldi--led-solar-path-lights-4-pack,ALDI,Groceries,LED Solar Path Lights 4 pack,Home,14.99,,,
+2026-11-04,aldi--led-solar-spiral-ropelight-tree,ALDI,Groceries,LED Solar Spiral Ropelight Tree,Home,29.99,,,
+2026-11-04,aldi--tinsel-deluxe-5m,ALDI,Groceries,Tinsel Deluxe 5m,Home,3.99,,,
+2026-11-04,aldi--large-christmas-train-set,ALDI,Groceries,Large Christmas Train Set,Kids & toys,79.99,,,
+2026-11-04,aldi--stirling-168l-upright-freezer,ALDI,Groceries,Stirling 168L Upright Freezer,Home,299,,,
+2026-11-04,aldi--stirling-12-place-stainless-steel-dishwasher,ALDI,Groceries,Stirling 12 Place Stainless Steel Dishwasher,Home,299,,,
+2026-11-04,aldi--ambiano-6-5l-air-fryer,ALDI,Groceries,Ambiano 6.5L Air Fryer,Home,59.99,,,
+2026-11-04,aldi--ambiano-2-in-1-cordless-vacuum-cleaner,ALDI,Groceries,Ambiano 2-in-1 Cordless Vacuum Cleaner,Home,69.99,,,
+2026-11-04,aldi--ambiano-slushie-machine,ALDI,Groceries,Ambiano Slushie Machine,Home,149,,,
+2026-11-04,aldi--ambiano-induction-cooking-plate,ALDI,Groceries,Ambiano Induction Cooking Plate,Home,44.99,,,
+2026-11-04,aldi--serra-linen-blend-pants,ALDI,Groceries,Serra Linen Blend Pants,Clothing,18.99,,,
+2026-11-04,aldi--lily-dan-children-s-socks-5-pack,ALDI,Groceries,Lily & Dan Children's Socks 5 pack,Clothing,4.99,,,
+2026-11-04,aldi--ambiano-compact-ice-cube-maker,ALDI,Groceries,Ambiano Compact Ice Cube Maker,Home,69.99,,,
+2026-11-04,aldi--ambiano-2-in-1-mini-contact-grill,ALDI,Groceries,Ambiano 2 in 1 Mini Contact Grill,Home,24.99,,,
+2026-11-04,aldi--serra-suede-mules,ALDI,Groceries,Serra Suede Mules,Footwear,19.99,,,
+2026-11-04,aldi--lily-dan-children-s-leather-sandals,ALDI,Groceries,Lily & Dan Children's Leather Sandals,Footwear,14.99,,,
+2026-11-04,costco--lego-scuderia-ferrari-hp-helmet-leclerc-or-hamilton,Costco,Groceries,LEGO Scuderia Ferrari HP Helmet (Leclerc or Hamilton),Kids & toys,69.99,,,
+2026-11-04,costco--adidas-originals-project-two-strap-watch,Costco,Groceries,adidas Originals Project Two Strap Watch,Clothing,49.97,,,
+2026-11-04,costco--logitech-mx-keys-s-mx-master-3s-bundle,Costco,Groceries,Logitech MX Keys S + MX Master 3S Bundle,Electronics,199.99,,,
+2026-11-04,costco--thermoflask-insulated-bottle-950ml-2-pack,Costco,Groceries,ThermoFlask Insulated Bottle 950mL 2 pack,Home,27,,,$37.99 delivered
+2026-11-04,costco--kirkland-signature-men-s-jeans,Costco,Groceries,Kirkland Signature Men's Jeans,Clothing,19.97,39.99,50,Membership required
+2026-11-04,costco--stormpack-men-s-poly-polo,Costco,Groceries,Stormpack Men's Poly Polo,Clothing,9.97,,,Membership required · golf shorts also $9.97
+2026-11-04,costco--adidas-men-s-boxers-3-pack,Costco,Groceries,adidas Men's Boxers 3 pack,Clothing,19.99,,,Membership required
+2026-11-04,costco--weiwu-dc-electric-pedestal-fan,Costco,Groceries,Weiwu DC Electric Pedestal Fan,Home,59.99,,,Membership required
+2026-11-04,costco--apple-iphone-17-pro-max-256gb,Costco,Groceries,Apple iPhone 17 Pro Max 256GB,Electronics,1799.99,,,Membership required · $79 less than JB Hi-Fi & Officeworks
+2026-11-04,costco--hisense-55-q6sau-qled-4k-smart-tv,Costco,Groceries,"Hisense 55"" Q6SAU QLED 4K Smart TV",Electronics,549.99,,,Membership required
+2026-11-04,costco--fellow-small-batch-vodka-700ml,Costco,Groceries,Fellow Small Batch Vodka 700ml,Liquor,29.99,,,Membership required
+2026-11-04,costco--telstra-395-pre-paid-mobile-plan-40-costco-gift-card,Costco,Groceries,Telstra $395 Pre-Paid Mobile Plan + $40 Costco Gift Card,Phone & SIM,299.99,,,Membership required
+2026-11-04,nike--nike-sb-dunk-low-pro-skate-shoes,Nike,Shoes & sportswear,Nike SB Dunk Low Pro Skate Shoes,Footwear,108,180,40,
+2026-11-04,nike--nike-air-force-1-older-kids-shoes,Nike,Shoes & sportswear,Nike Air Force 1 Older Kids' Shoes,Footwear,90,150,40,
+2026-11-04,nike--air-jordan-4-toro-men-s,Nike,Shoes & sportswear,Air Jordan 4 'Toro' Men's,Footwear,174,290,40,Further markdown
+2026-11-04,nike--nike-free-metcon-7-women-s,Nike,Shoes & sportswear,Nike Free Metcon 7 Women's,Footwear,133,190,30,
+2026-11-04,nike--nike-pegasus-42-women-s-road-running-shoes,Nike,Shoes & sportswear,Nike Pegasus 42 Women's Road Running Shoes,Footwear,154,220,30,
+2026-11-04,nike--nike-vomero-18-men-s-road-running-shoes,Nike,Shoes & sportswear,Nike Vomero 18 Men's Road Running Shoes,Footwear,154,220,30,
+2026-11-04,nike--nike-revolution-8-women-s-running-shoes,Nike,Shoes & sportswear,Nike Revolution 8 Women's Running Shoes,Footwear,70,100,30,
+2026-11-04,nike--nike-air-force-1-07-men-s-shoes,Nike,Shoes & sportswear,Nike Air Force 1 '07 Men's Shoes,Footwear,126,180,30,
+2026-11-04,nike--nike-pro-women-s-2-in-1-shorts,Nike,Shoes & sportswear,Nike Pro Women's 2-in-1 Shorts,Clothing,36,60,40,
+2026-11-04,adidas--handball-spezial-women-s-red,adidas,Shoes & sportswear,Handball Spezial Women's (red),Footwear,85,170,50,
+2026-11-04,adidas--samba-og-women-s-silver,adidas,Shoes & sportswear,Samba OG Women's (silver),Footwear,117,180,35,
+2026-11-04,adidas--samba-og-shoes-black,adidas,Shoes & sportswear,Samba OG Shoes (black),Footwear,140,200,30,
+2026-11-04,adidas--sl-72-og-shoes-women-s,adidas,Shoes & sportswear,SL 72 OG Shoes Women's,Footwear,105,150,30,
+2026-11-04,adidas--copa-mundial-firm-ground-boots,adidas,Shoes & sportswear,Copa Mundial Firm Ground Boots,Footwear,196,280,30,
+2026-11-04,adidas--galaxy-7-women-s-running-shoes,adidas,Shoes & sportswear,Galaxy 7 Women's Running Shoes,Footwear,70,100,30,
+2026-11-04,adidas--runfalcon-5-men-s-running-shoes,adidas,Shoes & sportswear,Runfalcon 5 Men's Running Shoes,Footwear,80,100,20,
+2026-11-04,adidas--ultimashow-shoes-men-s,adidas,Shoes & sportswear,Ultimashow Shoes Men's,Footwear,56,80,30,
+2026-11-04,adidas--adilette-comfort-slides,adidas,Shoes & sportswear,Adilette Comfort Slides,Footwear,40,50,20,
+2026-11-04,myer--dyson-wash-g1-2-in-1-hard-floor-cleaner,Myer,Department stores,Dyson Wash G1 2-in-1 Hard Floor Cleaner,Home,399,999,60,
+2026-11-04,kmart--women-s-backstrap-clogs,Kmart,Department stores,Women's Backstrap Clogs,Footwear,3,15,80,
+2026-11-04,kmart--greenlife-6-piece-ceramic-coated-bakeware-set,Kmart,Department stores,GreenLife 6-Piece Ceramic-Coated Bakeware Set,Home,49,79,38,
+2026-11-04,kmart--collapsible-pop-up-clothes-airer,Kmart,Department stores,Collapsible Pop Up Clothes Airer,Home,15,39,62,Also at Target
+2026-11-04,kmart--carbon-fibre-badminton-racket-case,Kmart,Department stores,Carbon Fibre Badminton Racket + Case,Sport,29,,,
+2026-11-04,kmart--anko-shave-trim-set-ad-320r,Kmart,Department stores,anko Shave & Trim Set AD-320R,Health & beauty,29,,,
+2026-11-04,kmart--dad-cap,Kmart,Department stores,Dad Cap,Clothing,3,,,
+2026-11-04,kmart--set-of-3-cleaning-brushes,Kmart,Department stores,Set of 3 Cleaning Brushes,Household,1,1.5,33,
+2026-11-04,kmart--4-piece-cleaning-tool-set,Kmart,Department stores,4-Piece Cleaning Tool Set,Household,2,,,
+2026-11-04,kmart--glass-fridge-storage-containers-with-pump-2-pack,Kmart,Department stores,Glass Fridge Storage Containers with Pump 2 pack,Home,5,,,
+2026-11-04,kmart--fruit-cloth-set-12-piece,Kmart,Department stores,Fruit Cloth Set 12 piece,Household,3,,,
+2026-11-04,target--mario-kart-world-switch-2,Target,Department stores,Mario Kart World (Switch 2),Gaming,95,,,$85 with Target's $10 newsletter voucher
+2026-11-04,target--jinxo-board-game,Target,Department stores,JinxO Board Game,Kids & toys,39,,,
+2026-11-04,target--nintendo-talking-flower,Target,Department stores,Nintendo Talking Flower,Gaming,29,,,
+2026-11-04,target--faber-castell-connector-pens-48-pack-colouring-book,Target,Department stores,Faber-Castell Connector Pens 48 pack + Colouring Book,Kids & toys,10,14,29,Free click & collect or OnePass delivery
+2026-11-04,target--sandisk-256gb-microsd-express-card-for-switch-2,Target,Department stores,SanDisk 256GB microSD Express Card for Switch 2,Gaming,59,,,$49 with the $10 newsletter voucher
+2026-11-04,target--xbox-series-x-console-1tb-ssd-disc,Target,Department stores,Xbox Series X Console 1TB SSD Disc,Gaming,949,,,
+2026-11-04,big-w--cadbury-variety-jumbo-chocolate-box-1-56kg-110-pieces,BIG W,Department stores,Cadbury Variety Jumbo Chocolate Box 1.56kg (110 pieces),Snacks,29,58,50,
+2026-11-04,big-w--shark-powerpro-cordless-stick-vacuum-iz370h,BIG W,Department stores,Shark PowerPro Cordless Stick Vacuum IZ370H,Home,274,,,
+2026-11-04,big-w--moki-exo-bluetooth-headphones,BIG W,Department stores,Moki Exo Bluetooth Headphones,Electronics,17,49,65,
+2026-11-04,big-w--lego-77078-fortnite-mecha-team-leader,BIG W,Department stores,LEGO 77078 Fortnite Mecha Team Leader,Kids & toys,161,269,40,
+2026-11-04,big-w--skip-hop-silver-lining-cloud-activity-gym,BIG W,Department stores,Skip Hop Silver Lining Cloud Activity Gym,Baby,149,199,25,
+2026-11-04,big-w--kids-picture-books-various,BIG W,Department stores,Kids' Picture Books (various),Kids & toys,1.75,,,Selected titles
+2026-11-04,big-w--quilton-3-ply-toilet-tissue-48-rolls,BIG W,Department stores,Quilton 3-Ply Toilet Tissue 48 rolls,Household,23,,,
+2026-11-04,big-w--final-fantasy-resonance-ps5,BIG W,Department stores,Final Fantasy Resonance (PS5),Gaming,69,,,
+2026-11-04,big-w--cadbury-favourites-489g-monopoly-edition,BIG W,Department stores,Cadbury Favourites 489g (Monopoly Edition),Snacks,12,,,Same price at Coles
+2026-11-04,big-w--contempo-textured-steel-kettle-1-7l,BIG W,Department stores,Contempo Textured Steel Kettle 1.7L,Home,12,,,"Contempo 4-slice toaster $19, milk frother $19"
+2026-11-04,big-w--poke-mon-go-plus,BIG W,Department stores,Pokémon GO Plus +,Gaming,69,,,
+2026-11-04,jb-hi-fi--blaupunkt-55-4k-uhd-smart-tv,JB Hi-Fi,"Home, hardware & tech","Blaupunkt 55"" 4K UHD Smart TV",Electronics,399,,,
+2026-11-04,jb-hi-fi--tcl-98-p7k-4k-qled-google-tv,JB Hi-Fi,"Home, hardware & tech","TCL 98"" P7K 4K QLED Google TV",Electronics,2488,,,
+2026-11-04,jb-hi-fi--jbl-live-beam-3-true-wireless-earbuds,JB Hi-Fi,"Home, hardware & tech",JBL Live Beam 3 True Wireless Earbuds,Electronics,99,,,
+2026-11-04,jb-hi-fi--jbl-tune-520bt-on-ear-headphones,JB Hi-Fi,"Home, hardware & tech",JBL Tune 520BT On-Ear Headphones,Electronics,39.95,,,
+2026-11-04,jb-hi-fi--winix-compact-360-5-stage-air-purifier,JB Hi-Fi,"Home, hardware & tech",Winix Compact 360 5-Stage Air Purifier,Home,199,,,
+2026-11-04,jb-hi-fi--helldivers-2-ps5,JB Hi-Fi,"Home, hardware & tech",Helldivers 2 (PS5),Gaming,24,,,
+2026-11-04,jb-hi-fi--battlefield-6-ps5-xbox-series-x,JB Hi-Fi,"Home, hardware & tech",Battlefield 6 (PS5 / Xbox Series X),Gaming,39,,,
+2026-11-04,jb-hi-fi--edifier-m90-powered-bluetooth-speakers,JB Hi-Fi,"Home, hardware & tech",Edifier M90 Powered Bluetooth Speakers,Electronics,343.2,,,
+2026-11-04,jb-hi-fi--apple-macbook-air-13-m5-24gb-1tb,JB Hi-Fi,"Home, hardware & tech","Apple MacBook Air 13"" M5 24GB/1TB",Electronics,2499,,,Free click & collect
+2026-11-04,jb-hi-fi--apple-iphone-17-pro-max-256gb,JB Hi-Fi,"Home, hardware & tech",Apple iPhone 17 Pro Max 256GB,Electronics,1879,,,Same price at Officeworks
+2026-11-04,jb-hi-fi--lenovo-legion-tab-8-8-12gb-256gb,JB Hi-Fi,"Home, hardware & tech","Lenovo Legion Tab 8.8"" 12GB/256GB",Electronics,499,,,
+2026-11-04,jb-hi-fi--google-pixel-11-pro-bonus-nintendo-switch-2,JB Hi-Fi,"Home, hardware & tech",Google Pixel 11 Pro + Bonus Nintendo Switch 2,Electronics,1849,,,"Switch 2 console free with the phone · Pixel 11 Pro XL $2,099"
+2026-11-04,jb-hi-fi--philips-evnia-34-wqhd-180hz-gaming-monitor,JB Hi-Fi,"Home, hardware & tech","Philips Evnia 34"" WQHD 180Hz Gaming Monitor",Electronics,275,,,
+2026-11-04,jb-hi-fi--nothing-phone-4a,JB Hi-Fi,"Home, hardware & tech",Nothing Phone (4a),Electronics,529,,,"From $529 · (4a) Pro $799, Phone (3) from $999"
+2026-11-04,uniqlo--men-s-pufftech-parka,Uniqlo,Clothes & fashion,Men's PUFFTECH Parka,Clothing,59.9,99.9,40,Free click & collect or $75+ delivery
+2026-11-04,cotton-on-typo--typo-metro-tote-river-gum,Cotton On / Typo,Clothes & fashion,Typo Metro Tote (River Gum),Home,25,59.99,58,
+2026-11-04,cotton-on-typo--typo-cloud-lamp,Cotton On / Typo,Clothes & fashion,Typo Cloud Lamp,Home,30,69.99,57,
+2026-11-04,cotton-on-typo--typo-box-of-socks-stripes,Cotton On / Typo,Clothes & fashion,Typo Box of Socks (stripes),Clothing,20,39.99,50,
+2026-11-04,cotton-on-typo--typo-pro-14-laptop-case,Cotton On / Typo,Clothes & fashion,"Typo Pro 14"" Laptop Case",Home,20,39.99,50,
+2026-11-04,cotton-on-typo--typo-daily-mug,Cotton On / Typo,Clothes & fashion,Typo Daily Mug,Home,3,9.99,70,
+2026-11-04,bunnings--char-griller-akorn-jr-kamado-grill-smoker,Bunnings,"Home, hardware & tech",Char-Griller Akorn Jr Kamado Grill & Smoker,Tools & garden,148,248,40,
+2026-11-04,bunnings--charbroil-outdoor-air-fryer,Bunnings,"Home, hardware & tech",Charbroil Outdoor Air Fryer,Tools & garden,99,195,49,
+2026-11-04,bunnings--dewalt-18v-xr-brushless-line-trimmer-5-0ah-kit,Bunnings,"Home, hardware & tech",DeWALT 18V XR Brushless Line Trimmer 5.0Ah Kit,Tools & garden,249,299,17,
+2026-11-04,bunnings--ozito-pxc-36v-brushless-410mm-lawn-mower-kit,Bunnings,"Home, hardware & tech",Ozito PXC 36V Brushless 410mm Lawn Mower Kit,Tools & garden,229,,,
+2026-11-04,bunnings--ozito-pxc-18v-4-0ah-battery-charger-pack,Bunnings,"Home, hardware & tech",Ozito PXC 18V 4.0Ah Battery & Charger Pack,Tools & garden,39.98,,,
+2026-11-04,bunnings--voltx-2400w-2240wh-lifepo4-power-station,Bunnings,"Home, hardware & tech",VoltX 2400W 2240Wh LiFePO4 Power Station,Electronics,1199.2,,,Sold via Bunnings Marketplace
+2026-11-04,bunnings--eero-6-mesh-wi-fi-6-router-3-pack,Bunnings,"Home, hardware & tech",eero 6 Mesh Wi-Fi 6 Router 3-pack,Electronics,199,,,
+2026-11-04,bunnings--selleys-bbq-tough-wipes-30-pack,Bunnings,"Home, hardware & tech",Selleys BBQ Tough Wipes 30 pack,Household,5.89,10.49,44,
+2026-11-04,bunnings--ryobi-36v-line-trimmer-blower-4ah-kit,Bunnings,"Home, hardware & tech",Ryobi 36V Line Trimmer & Blower 4Ah Kit,Tools & garden,399,,,
+2026-11-04,bunnings--pinnacle-4-tier-heavy-duty-shelving-unit-1830mm,Bunnings,"Home, hardware & tech",Pinnacle 4 Tier Heavy Duty Shelving Unit 1830mm,Tools & garden,199,,,
+2026-11-04,bunnings--hy-clor-pool-stabiliser-2kg,Bunnings,"Home, hardware & tech",Hy-Clor Pool Stabiliser 2kg,Tools & garden,9.94,,,
+2026-11-04,bunnings--amazon-fire-tv-stick-4k-select,Bunnings,"Home, hardware & tech",Amazon Fire TV Stick 4K Select,Electronics,39,,,
+2026-11-04,bunnings--ozito-pxc-4-0ah-compact-battery-3-pack,Bunnings,"Home, hardware & tech",Ozito PXC 4.0Ah Compact Battery 3 pack,Tools & garden,129,,,
+2026-11-04,bunnings--fiskars-plant-care-shears-or-pruner-with-holder,Bunnings,"Home, hardware & tech",Fiskars Plant Care Shears or Pruner with Holder,Tools & garden,19.95,39.95,50,
+2026-11-04,bunnings--oklahoma-joe-s-firecraft-barrel-grill,Bunnings,"Home, hardware & tech",Oklahoma Joe's Firecraft Barrel Grill,Tools & garden,299,499,40,
+2026-11-04,bunnings--dewalt-18v-5-0ah-xr-550mm-hedge-trimmer-kit,Bunnings,"Home, hardware & tech",DeWALT 18V 5.0Ah XR 550mm Hedge Trimmer Kit,Tools & garden,211.2,,,
+2026-11-04,bunnings--gasmate-bbq-hood-handle-led-light,Bunnings,"Home, hardware & tech",Gasmate BBQ Hood Handle LED Light,Tools & garden,5,,,
+2026-11-04,chemist-warehouse--neilmed-sinus-rinse-120-sachets,Chemist Warehouse,Beauty & pharmacy,NeilMed Sinus Rinse 120 sachets,Health & beauty,15.99,,,
+2026-11-04,chemist-warehouse--earth-choice-dishwashing-powder-1kg,Chemist Warehouse,Beauty & pharmacy,Earth Choice Dishwashing Powder 1kg,Household,6.49,,,42 tablets $12.39
+2026-11-04,chemist-warehouse--bambi-mini-co-baby-singlet-suits-onesies,Chemist Warehouse,Beauty & pharmacy,Bambi Mini Co. Baby Singlet Suits & Onesies,Baby,4.99,,,
+2026-11-04,chemist-warehouse--hamilton-everyday-face-sunscreen-200ml,Chemist Warehouse,Beauty & pharmacy,Hamilton Everyday Face Sunscreen 200ml,Health & beauty,15.99,,,Advertised as ½ price · 75g $8.49
+2026-11-04,chemist-warehouse--olay-eyes-pro-retinol-eye-treatment-15ml,Chemist Warehouse,Beauty & pharmacy,Olay Eyes Pro-Retinol Eye Treatment 15ml,Health & beauty,18,59.99,70,
+2026-11-04,harris-scarfe--my-genie-iq500-laser-smart-robotic-vacuum,Harris Scarfe,Department stores,My Genie IQ500 Laser Smart Robotic Vacuum,Home,249,1799.99,86,HS Friends price (free to join)
+2026-11-04,harris-scarfe--smith-nobel-deluxe-digital-slushie-maker,Harris Scarfe,Department stores,Smith + Nobel Deluxe Digital Slushie Maker,Home,179.99,499.99,64,HS Friends price
+2026-11-04,harris-scarfe--shark-cordless-pro-stick-vacuum-ir300,Harris Scarfe,Department stores,Shark Cordless Pro Stick Vacuum IR300,Home,289.99,749.99,61,
+2026-11-04,harris-scarfe--tefal-enhance-6-piece-induction-cookware-set,Harris Scarfe,Department stores,Tefal Enhance 6-Piece Induction Cookware Set,Home,199.99,399.99,50,HS Friends price
+2026-11-04,harris-scarfe--smith-nobel-10l-xl-stainless-air-fryer,Harris Scarfe,Department stores,Smith + Nobel 10L XL Stainless Air Fryer,Home,99.99,249.99,60,HS Friends price
+2026-11-04,harris-scarfe--nordic-portable-ice-maker,Harris Scarfe,Department stores,Nordic Portable Ice Maker,Home,99.99,199.99,50,HS Friends price
+2026-11-04,harris-scarfe--smith-nobel-digital-4-5l-air-fryer,Harris Scarfe,Department stores,Smith + Nobel Digital 4.5L Air Fryer,Home,39,139.99,72,HS Friends price
+2026-11-04,harris-scarfe--dunlopillo-latex-classic-profile-pillow,Harris Scarfe,Department stores,Dunlopillo Latex Classic Profile Pillow,Home,77,179.99,57,HS Friends price
+2026-11-04,strandbags--laura-jones-scarf-tote-bag,Strandbags,Bags & accessories,Laura Jones Scarf Tote Bag,Bags,39.99,79.99,50,
+2026-11-04,strandbags--laura-jones-embossed-large-clutch-wallet,Strandbags,Bags & accessories,Laura Jones Embossed Large Clutch Wallet,Bags,24.99,34.99,29,Further markdown
+2026-11-04,strandbags--cabrelli-3-compartment-tote-bag,Strandbags,Bags & accessories,Cabrelli 3 Compartment Tote Bag,Bags,29.99,59.99,50,
+2026-11-04,strandbags--guess-matilda-shoulder-bag,Strandbags,Bags & accessories,Guess Matilda Shoulder Bag,Bags,89,149,40,
+2026-11-04,strandbags--antler-urban-light-large-backpack,Strandbags,Bags & accessories,Antler Urban Light Large Backpack,Bags,79,89.4,12,Further markdown
+2026-11-04,strandbags--samsonite-lite-geo-15-6-backpack,Strandbags,Bags & accessories,"Samsonite Lite-Geo 15.6"" Backpack",Bags,99,111,11,
+2026-11-04,strandbags--evity-noosa-travel-tote-bag,Strandbags,Bags & accessories,Evity Noosa Travel Tote Bag,Bags,71.2,89,20,
+2026-11-04,strandbags--colorado-rumi-large-crossbody-bag,Strandbags,Bags & accessories,Colorado Rumi Large Crossbody Bag,Bags,109,199,45,
+2026-11-04,strandbags--cabrelli-crossbody-bag,Strandbags,Bags & accessories,Cabrelli Crossbody Bag,Bags,19,39.99,52,
+2026-11-04,strandbags--antler-icon-collection-tote-backpack,Strandbags,Bags & accessories,Antler Icon Collection Tote Backpack,Bags,117,195,40,
+2026-11-04,guess--guess-levia-mini-satchel-bag-black,Guess,Bags & accessories,Guess Levia Mini Satchel Bag (black),Bags,72,179,60,
+2026-11-04,guess--guess-breana-crossbody-bag-black,Guess,Bags & accessories,Guess Breana Crossbody Bag (black),Bags,83,139,40,
+2026-11-04,guess--guess-francy-camera-crossbody-bag-black,Guess,Bags & accessories,Guess Francy Camera Crossbody Bag (black),Bags,100,199,50,
+2026-11-04,guess--guess-logo-tuana-backpack-black,Guess,Bags & accessories,Guess Logo Tuana Backpack (black),Bags,120,239,50,
+2026-11-04,guess--guess-lovide-small-wallet-stone,Guess,Bags & accessories,Guess Lovide Small Wallet (stone),Bags,36,89,60,
+2026-11-04,new-balance--new-balance-abzorb-2000-unisex,New Balance,Shoes & sportswear,New Balance ABZORB 2000 (unisex),Footwear,100,200,50,
+2026-11-04,new-balance--new-balance-ellipse-breathe-men-s,New Balance,Shoes & sportswear,New Balance Ellipse Breathe Men's,Footwear,120,240,50,
+2026-11-04,new-balance--new-balance-fresh-foam-x-880v15-men-s,New Balance,Shoes & sportswear,New Balance Fresh Foam X 880v15 Men's,Footwear,161,230,30,
+2026-11-04,new-balance--new-balance-fresh-foam-x-880v15-women-s,New Balance,Shoes & sportswear,New Balance Fresh Foam X 880v15 Women's,Footwear,161,230,30,
+2026-11-04,new-balance--new-balance-204l-unisex,New Balance,Shoes & sportswear,New Balance 204L (unisex),Footwear,114,190,40,
+2026-11-04,reebok--reebok-classic-az-women-s,Reebok,Shoes & sportswear,Reebok Classic AZ Women's,Footwear,99,140,29,Final Sale price
+2026-11-04,reebok--reebok-classic-leather-shoes,Reebok,Shoes & sportswear,Reebok Classic Leather Shoes,Footwear,48,160,70,
+2026-11-04,reebok--reebok-r400-shoes,Reebok,Shoes & sportswear,Reebok R400 Shoes,Footwear,48,160,70,
+2026-11-04,reebok--reebok-classic-nylon-women-s-shoes,Reebok,Shoes & sportswear,Reebok Classic Nylon Women's Shoes,Footwear,42,140,70,
+2026-11-04,reebok--reebok-princess-women-s-shoes,Reebok,Shoes & sportswear,Reebok Princess Women's Shoes,Footwear,20.7,69,70,
+2026-11-04,reebok--reebok-flip-charge-training-shoes-men-s-women-s,Reebok,Shoes & sportswear,Reebok Flip Charge Training Shoes (men's & women's),Footwear,69,100,31,$69 Kicks offer
+2026-11-04,reebok--reebok-split-flex-men-s-training-shoes,Reebok,Shoes & sportswear,Reebok Split Flex Men's Training Shoes,Footwear,69,140,51,$69 Kicks offer
+2026-11-04,reebok--reebok-floatzig-2-running-shoes-men-s-women-s,Reebok,Shoes & sportswear,Reebok Floatzig 2 Running Shoes (men's & women's),Footwear,129,220,41,$129 Floats offer
+2026-11-04,reebok--reebok-floatzig-double-running-shoes,Reebok,Shoes & sportswear,Reebok Floatzig Double Running Shoes,Footwear,129,240,46,$129 Floats offer
+2026-11-04,puma--puma-speedcat-og-sneakers,Puma,Shoes & sportswear,Puma Speedcat OG Sneakers,Footwear,126,180,30,
+2026-11-04,puma--puma-speedcat-venus-women-s-sneakers,Puma,Shoes & sportswear,Puma Speedcat Venus Women's Sneakers,Footwear,90,180,50,
+2026-11-04,puma--puma-milenio-tech-2000-sneakers,Puma,Shoes & sportswear,Puma Milenio Tech 2000 Sneakers,Footwear,75,150,50,
+2026-11-04,puma--puma-deviate-nitro-4-men-s-running-shoes,Puma,Shoes & sportswear,Puma Deviate NITRO 4 Men's Running Shoes,Footwear,182,260,30,
+2026-11-04,puma--puma-soft-enzo-5-kids-shoes,Puma,Shoes & sportswear,Puma Soft Enzo 5 Kids' Shoes,Footwear,40,80,50,
+2026-11-04,skechers--skechers-slip-ins-ultra-flex-3-0-pure-color-women-s,Skechers,Shoes & sportswear,Skechers Slip-ins Ultra Flex 3.0 – Pure Color (women's),Footwear,39.99,159.99,75,
+2026-11-04,skechers--skechers-slip-ins-go-walk-flex-illuminate-women-s,Skechers,Shoes & sportswear,Skechers Slip-ins GO Walk Flex – Illuminate (women's),Footwear,59.99,129.99,54,
+2026-11-04,skechers--skechers-slip-ins-work-max-cushioning-elite-eltra-women-s,Skechers,Shoes & sportswear,Skechers Slip-ins Work Max Cushioning Elite – Eltra (women's),Footwear,99.99,169.99,41,
+2026-11-04,skechers--skechers-go-walk-flex-sandal-holly-women-s,Skechers,Shoes & sportswear,Skechers GO Walk Flex Sandal – Holly (women's),Footwear,59.99,99.99,40,
+2026-11-04,skechers--skechers-slip-ins-go-walk-flex-sandal-enticing-women-s,Skechers,Shoes & sportswear,Skechers Slip-ins GO Walk Flex Sandal – Enticing (women's),Footwear,54.99,129.99,58,
+2026-11-04,skechers--skechers-slip-ins-go-walk-arch-fit-2-0-sandal-sasha,Skechers,Shoes & sportswear,Skechers Slip-ins GO Walk Arch Fit 2.0 Sandal – Sasha,Footwear,84.99,139.99,39,
+2026-11-04,otr--moe-s-bbq-bacon-hot-dog,OTR,Food & fuel,Moe's BBQ Bacon Hot Dog,Food & coffee,5,,,
+2026-11-04,otr--krispy-kreme-assorted-doughnuts-4-pack,OTR,Food & fuel,Krispy Kreme Assorted Doughnuts 4 pack,Food & coffee,10,,,
+2026-11-04,otr--eat-slice-with-any-c-coffee,OTR,Food & fuel,EAT Slice with any C Coffee,Food & coffee,2.5,,,
+2026-11-04,harvey-norman--eufy-30m-permanent-outdoor-lights-e22,Harvey Norman,"Home, hardware & tech",eufy 30m Permanent Outdoor Lights E22,Home,198,399,50,
+2026-11-04,harvey-norman--dyson-v9-submarine-wet-dry-vacuum,Harvey Norman,"Home, hardware & tech",Dyson V9 Submarine Wet & Dry Vacuum,Home,444,,,
+2026-11-04,harvey-norman--lg-16kg-top-loading-washing-machine-wtx10-16g,Harvey Norman,"Home, hardware & tech",LG 16kg Top Loading Washing Machine WTX10-16G,Home,1392,,,Plus a $70 bonus gift card
+2026-11-04,harvey-norman--acer-nitro-v-15-gaming-laptop-rtx-5050-16gb-1tb,Harvey Norman,"Home, hardware & tech","Acer Nitro V 15 Gaming Laptop (RTX 5050, 16GB, 1TB)",Electronics,1398,,,
+2026-11-04,harvey-norman--belkin-secure-holder-with-clip-for-airtag,Harvey Norman,"Home, hardware & tech",Belkin Secure Holder with Clip for AirTag,Electronics,5,,,
+2026-11-04,harvey-norman--dreame-t3-professional-barber-trimmer,Harvey Norman,"Home, hardware & tech",Dreame T3 Professional Barber Trimmer,Health & beauty,197,,,
+2026-11-04,harvey-norman--tineco-one-cruiser-carpet-cleaner,Harvey Norman,"Home, hardware & tech",Tineco One Cruiser Carpet Cleaner,Home,498,,,
+2026-11-04,harvey-norman--samsung-galaxy-watch-ultra-2025-lte-47mm,Harvey Norman,"Home, hardware & tech",Samsung Galaxy Watch Ultra (2025) LTE 47mm,Electronics,648,1299,50,$49 less than Officeworks
+2026-11-04,harvey-norman--google-pixel-11-pro-xl-256gb-bonus-nintendo-switch-2,Harvey Norman,"Home, hardware & tech",Google Pixel 11 Pro XL 256GB + Bonus Nintendo Switch 2,Electronics,2099,,,Switch 2 plus Zelda or Mario Kart World free with the phone · delivery extra
+2026-11-04,harvey-norman--bambu-lab-p2s-combo-3d-printer,Harvey Norman,"Home, hardware & tech",Bambu Lab P2S Combo 3D Printer,Electronics,999,,,
+2026-11-04,amazon--breville-barista-express-coffee-machine-bes870-charcoal,Amazon,Online,Breville Barista Express Coffee Machine BES870 (Charcoal),Home,585,999,41,Delivered · not sent to NT
+2026-11-04,amazon--gillette-mach3-replacement-cartridges-8-pack,Amazon,Online,Gillette Mach3+ Replacement Cartridges 8 pack,Health & beauty,16,36,56,
+2026-11-04,amazon--belkin-braided-usb-c-cable-2m-240w-2-pack,Amazon,Online,Belkin Braided USB-C Cable 2m 240W 2-pack,Electronics,17.5,,,
+2026-11-04,amazon--anker-621-maggo-magnetic-power-bank-5-000mah,Amazon,Online,"Anker 621 MagGo Magnetic Power Bank 5,000mAh",Electronics,33.18,69.99,53,Sold by Anker
+2026-11-04,amazon--ugreen-130w-laptop-power-bank-20-000mah,Amazon,Online,"UGREEN 130W Laptop Power Bank 20,000mAh",Electronics,79.98,119,33,Delivered · sold by UGREEN
+2026-11-04,amazon--apple-macbook-air-15-m5-16gb-512gb,Amazon,Online,"Apple MacBook Air 15"" M5 16GB/512GB",Electronics,2047,2499,18,
+2026-11-04,amazon--apple-macbook-air-13-m5-16gb-1tb-sky-blue,Amazon,Online,"Apple MacBook Air 13"" M5 16GB/1TB (Sky Blue)",Electronics,2049,2549,20,
+2026-11-04,amazon--sensodyne-daily-care-whitening-toothpaste-100g,Amazon,Online,Sensodyne Daily Care Whitening Toothpaste 100g,Health & beauty,5.25,10.5,50,
+2026-11-04,amazon--playstation-5-dualsense-wireless-controller-all-colours,Amazon,Online,PlayStation 5 DualSense Wireless Controller (all colours),Gaming,99,134.95,27,Delivered
+2026-11-04,amazon--steelseries-arctis-nova-3p-wireless-gaming-headset,Amazon,Online,SteelSeries Arctis Nova 3P Wireless Gaming Headset,Gaming,105.83,229,54,Delivered · ships from Amazon Germany
+2026-11-04,amazon--apple-iphone-17-pro-max-256gb-cosmic-orange,Amazon,Online,Apple iPhone 17 Pro Max 256GB (Cosmic Orange),Electronics,1799,2199,18,"Costco members pay $1,799.99"
+2026-11-04,amazon--anker-nano-30w-usb-c-gan-charger,Amazon,Online,Anker Nano 30W USB-C GaN Charger,Electronics,19.98,,,Prime price
+2026-11-04,amazon--tenda-me3-pro-wi-fi-7-mesh-router-2-pack,Amazon,Online,Tenda ME3 Pro Wi-Fi 7 Mesh Router 2-pack,Electronics,169.99,249.99,32,Sold by Tenda-AU on Amazon
+2026-11-04,amazon--tefal-premium-hard-anodised-induction-wok-32cm-with-lid,Amazon,Online,Tefal Premium Hard Anodised Induction Wok 32cm with Lid,Home,95,,,
+2026-11-04,amazon--calvin-klein-one-eau-de-toilette-300ml,Amazon,Online,Calvin Klein One Eau de Toilette 300ml,Health & beauty,34.39,,,Not delivered to TAS or NT
+2026-11-04,amazon--hugo-boss-bottled-night-eau-de-toilette,Amazon,Online,Hugo Boss Bottled Night Eau de Toilette,Health & beauty,47.69,,,Not delivered to TAS or NT
+2026-11-04,amazon--philips-evnia-34-wqhd-180hz-gaming-monitor,Amazon,Online,"Philips Evnia 34"" WQHD 180Hz Gaming Monitor",Electronics,275,,,"Same price at JB Hi-Fi, where it is on back order"
+2026-11-04,amazon--ottocast-mini-2-in-1-wireless-carplay-android-auto-adapter,Amazon,Online,Ottocast Mini 2-in-1 Wireless CarPlay & Android Auto Adapter,Electronics,39.27,,,Sold by Ottocast on Amazon
+2026-11-04,amazon--skittles-cloudz-sours-120g,Amazon,Online,Skittles Cloudz Sours 120g,Snacks,3,,,Also Skittles Fruits 200g $3
+2026-11-04,amazon--sandisk-max-endurance-128gb-microsdxc-card,Amazon,Online,SanDisk Max Endurance 128GB microSDXC Card,Electronics,96,134.5,29,Sold by IT_Factory on Amazon
+2026-11-04,kogan--samsung-galaxy-s25-ultra-256gb,Kogan,Online,Samsung Galaxy S25 Ultra 256GB,Electronics,1399,,,Free delivery with Kogan First
+2026-11-04,kogan--kogan-mobile-365-day-prepaid-sim-300gb,Kogan,Online,Kogan Mobile 365-day Prepaid SIM 300GB,Phone & SIM,159,,,Also 900GB for $199
+2026-11-04,kogan--kogan-mobile-365-day-prepaid-sim-900gb,Kogan,Online,Kogan Mobile 365-day Prepaid SIM 900GB,Phone & SIM,199,,,
+2026-11-04,ebay--dyson-supersonic-travel-hair-dryer,eBay,Online,Dyson Supersonic Travel Hair Dryer,Health & beauty,389,,,Sold by Dyson's eBay store · $369 for some eBay Plus members
+2026-11-04,ebay--just-wines-red-white-mixed-wine-12-bottles,eBay,Online,Just Wines Red & White Mixed Wine 12 bottles,Liquor,89,235.94,62,Sold by Just Wines · plus delivery
+2026-11-04,ebay--maxell-aa-alkaline-batteries-144-pack,eBay,Online,Maxell AA Alkaline Batteries 144 pack,Household,29.45,,,Delivered · sold by Tapesplus
+2026-11-04,ebay--devanti-k7-cordless-stick-vacuum-sandwich-panini-press,eBay,Online,Devanti K7 Cordless Stick Vacuum + Sandwich Panini Press,Home,112.85,,,Sold by Ozplaza.living · free delivery to most areas
+2026-11-04,ebay--razer-basilisk-v4-hyperspeed-wireless-gaming-mouse,eBay,Online,Razer Basilisk V4 HyperSpeed Wireless Gaming Mouse,Gaming,152.15,,,Sold by Razer · $148.57 for eBay Plus
+2026-11-04,indian-plaza--fresh-coriander-3-bunches,Indian PLAZA,Indian grocers,Fresh Coriander 3 bunches,Pantry,3,,,From the store's Facebook specials
+2026-11-04,indian-plaza--kp-mangoes-per-tray,Indian PLAZA,Indian grocers,KP Mangoes (per tray),Pantry,45,,,From the store's Facebook specials
+2026-11-04,indian-plaza--fresh-tomatoes-1kg-bag,Indian PLAZA,Indian grocers,Fresh Tomatoes 1kg Bag,Pantry,3.99,,,From the store's Facebook specials
+2026-11-04,ekam-indian-groceries--sher-chakki-atta-fresh-atta-flour-10kg,Ekam Indian Groceries,Indian grocers,Sher Chakki Atta Fresh Atta Flour 10kg,Pantry,7.95,9.95,20,
+2026-11-04,ekam-indian-groceries--pattu-chick-peas-tyson-1kg,Ekam Indian Groceries,Indian grocers,Pattu Chick Peas Tyson 1kg,Pantry,0.99,1.95,49,
+2026-11-04,ekam-indian-groceries--pattu-chana-dhall-1kg,Ekam Indian Groceries,Indian grocers,Pattu Chana Dhall 1kg,Pantry,1.49,2.45,39,
+2026-11-04,ekam-indian-groceries--pattu-red-kidney-beans-dark-1kg,Ekam Indian Groceries,Indian grocers,Pattu Red Kidney Beans Dark 1kg,Pantry,2.95,4.95,40,
+2026-11-04,ekam-indian-groceries--indya-vermicelli-800g,Ekam Indian Groceries,Indian grocers,Indya Vermicelli 800g,Pantry,2.48,4.95,50,
+2026-11-04,ekam-indian-groceries--ashoka-ginger-paste-1kg,Ekam Indian Groceries,Indian grocers,Ashoka Ginger Paste 1kg,Pantry,2.97,5.95,50,
+2026-11-04,ekam-indian-groceries--pattu-toor-dal-1kg,Ekam Indian Groceries,Indian grocers,Pattu Toor Dal 1kg,Pantry,3.95,,,
+2026-11-04,ekam-indian-groceries--shudh-desi-chickpeas-tyson-1kg,Ekam Indian Groceries,Indian grocers,Shudh Desi Chickpeas Tyson 1kg,Pantry,1.95,,,
+2026-11-04,ekam-indian-groceries--deep-ragi-flour-907g,Ekam Indian Groceries,Indian grocers,Deep Ragi Flour 907g,Pantry,1.49,,,
+2026-11-04,ekam-indian-groceries--aahar-kesar-mango-pulp-850g,Ekam Indian Groceries,Indian grocers,Aahar Kesar Mango Pulp 850g,Pantry,1.99,,,
+2026-11-04,ekam-indian-groceries--np-pitted-dates-800g,Ekam Indian Groceries,Indian grocers,NP Pitted Dates 800g,Snacks,2.95,,,
+2026-11-04,officeworks--lenovo-chromebook-plus-14-oled-touch-16gb-256gb,Officeworks,"Home, hardware & tech","Lenovo Chromebook Plus 14"" OLED Touch (16GB/256GB)",Electronics,697,,,
+2026-11-04,officeworks--samsung-galaxy-watch-ultra-2025-lte-47mm,Officeworks,"Home, hardware & tech",Samsung Galaxy Watch Ultra (2025) LTE 47mm,Electronics,697,,,Harvey Norman has it for $648
+2026-11-04,officeworks--edifier-neobuds-pro-3-noise-cancelling-earphones,Officeworks,"Home, hardware & tech",Edifier Neobuds Pro 3 Noise Cancelling Earphones,Electronics,95,,,
+2026-11-04,officeworks--samsung-pro-ultimate-512gb-microsdxc-card,Officeworks,"Home, hardware & tech",Samsung PRO Ultimate 512GB microSDXC Card,Electronics,150,,,
+2026-11-04,officeworks--samsung-256gb-usb-c-flash-drive,Officeworks,"Home, hardware & tech",Samsung 256GB USB-C Flash Drive,Electronics,50,,,
+2026-11-04,officeworks--sandisk-extreme-64gb-sdxc-card,Officeworks,"Home, hardware & tech",SanDisk Extreme 64GB SDXC Card,Electronics,20,,,
+2026-11-04,officeworks--belkin-boostcharge-30w-usb-c-car-charger,Officeworks,"Home, hardware & tech",Belkin BoostCharge 30W USB-C Car Charger,Electronics,14,,,
+2026-11-04,officeworks--keji-wireless-mouse,Officeworks,"Home, hardware & tech",Keji Wireless Mouse,Electronics,1,,,Advertised as 83% off; Keji wired keyboard also $1
+2026-11-04,officeworks--gopro-hero13-black-camera,Officeworks,"Home, hardware & tech",GoPro HERO13 Black Camera,Electronics,498,,,
+2026-11-04,officeworks--microsoft-surface-laptop-13-snapdragon-x-plus-16gb-256gb,Officeworks,"Home, hardware & tech","Microsoft Surface Laptop 13"" Snapdragon X Plus 16GB/256GB",Electronics,1497,,,
+2026-11-04,officeworks--sandisk-ultra-1tb-microsdxc-card,Officeworks,"Home, hardware & tech",SanDisk Ultra 1TB microSDXC Card,Electronics,200,,,
+2026-11-04,officeworks--apple-iphone-17-pro-256gb,Officeworks,"Home, hardware & tech",Apple iPhone 17 Pro 256GB,Electronics,1689,,,
+2026-11-04,officeworks--star-fox-switch-2,Officeworks,"Home, hardware & tech",Star Fox (Switch 2),Gaming,69,,,
+2026-11-04,officeworks--apple-homeview,Officeworks,"Home, hardware & tech",Apple HomeView,Electronics,447,,,
+2026-11-04,officeworks--logitech-g-powerplay-2-wireless-charging-system,Officeworks,"Home, hardware & tech",Logitech G PowerPlay 2 Wireless Charging System,Electronics,98,,,
+2026-11-04,the-reject-shop--quilton-3-ply-toilet-paper-36-pack,The Reject Shop,Department stores,Quilton 3 Ply Toilet Paper 36 pack,Household,19,,,53c a roll
+2026-11-04,the-reject-shop--glen-20-disinfectant-spray-300g,The Reject Shop,Department stores,Glen 20 Disinfectant Spray 300g,Household,5,,,Woolworths has the same can at this price this week
+2026-11-04,the-reject-shop--ozkleen-multi-purpose-power-lemon-500ml,The Reject Shop,Department stores,OzKleen Multi-Purpose Power Lemon 500mL,Household,3.5,,,
+2026-11-04,the-reject-shop--ozkleen-power-disinfectant-750ml,The Reject Shop,Department stores,OzKleen Power Disinfectant 750mL,Household,3.5,,,
+2026-11-04,the-reject-shop--xtra-kleen-vinegar-cleaner-spray-500ml,The Reject Shop,Department stores,Xtra Kleen Vinegar Cleaner Spray 500mL,Household,2,,,
+2026-11-04,the-reject-shop--duck-activefoam-toilet-cage-2-pack,The Reject Shop,Department stores,Duck Activefoam Toilet Cage 2 pack,Household,5.5,,,
+2026-11-04,the-reject-shop--domestos-cage-power-5-lavender-2-pack,The Reject Shop,Department stores,Domestos Cage Power 5 Lavender 2 pack,Household,5.5,,,
+2026-11-04,best-less--women-s-puffer-jacket,Best&Less,Clothes & fashion,Women's Puffer Jacket,Clothing,6.99,35,80,
+2026-11-04,best-less--fluffy-sherpa-fleece-with-1-4-zip,Best&Less,Clothes & fashion,Fluffy Sherpa Fleece with 1/4 Zip,Clothing,6.99,30,77,
+2026-11-04,best-less--women-s-printed-zip-hoodie,Best&Less,Clothes & fashion,Women's Printed Zip Hoodie,Clothing,9.99,28,64,
+2026-11-04,best-less--women-s-button-down-jersey-pyjama-set,Best&Less,Clothes & fashion,Women's Button Down Jersey Pyjama Set,Clothing,10.49,32,67,
+2026-11-04,best-less--women-s-premium-long-sleeve-shirt-nightie,Best&Less,Clothes & fashion,Women's Premium Long Sleeve Shirt Nightie,Clothing,9.99,25,60,
+2026-11-04,best-less--men-s-flannel-pj-set,Best&Less,Clothes & fashion,Men's Flannel PJ Set,Clothing,11.99,22,45,
+2026-11-04,best-less--boys-2-7-premium-pyjamas,Best&Less,Clothes & fashion,Boys 2–7 Premium Pyjamas,Clothing,9.99,18,44,
+2026-11-04,best-less--girls-2-7-tailored-premium-pyjamas,Best&Less,Clothes & fashion,Girls 2–7 Tailored Premium Pyjamas,Clothing,11.99,22,45,
+2026-11-04,best-less--girls-short-sleeve-print-t-shirt,Best&Less,Clothes & fashion,Girls Short Sleeve Print T-Shirt,Clothing,2.99,7,57,
+2026-11-04,best-less--toddler-girls-plain-leggings,Best&Less,Clothes & fashion,Toddler Girls Plain Leggings,Clothing,1.99,4.5,56,
+2026-11-04,best-less--baby-printed-leggings,Best&Less,Clothes & fashion,Baby Printed Leggings,Baby,2.99,6,50,
+2026-11-04,best-less--women-s-fleece-sleep-top,Best&Less,Clothes & fashion,Women's Fleece Sleep Top,Clothing,4.89,18,73,
+2026-11-04,best-less--boys-8-16-flannelette-pyjamas,Best&Less,Clothes & fashion,Boys 8–16 Flannelette Pyjamas,Clothing,4.89,14,65,
+2026-11-04,the-good-guys--hisense-8l-air-fryer-hafa08bow,The Good Guys,"Home, hardware & tech",Hisense 8L Air Fryer HAFA08BOW,Home,149,,,
+2026-11-04,the-good-guys--panasonic-dab-fm-portable-radio,The Good Guys,"Home, hardware & tech",Panasonic DAB+/FM Portable Radio,Electronics,154,,,
+2026-11-04,the-good-guys--panasonic-eneloop-aa-rechargeable-batteries-4-pack,The Good Guys,"Home, hardware & tech",Panasonic Eneloop AA Rechargeable Batteries 4 pack,Electronics,19,,,
+2026-11-04,the-good-guys--philips-5000-series-kettle,The Good Guys,"Home, hardware & tech",Philips 5000 Series Kettle,Home,42,,,Price shown with The Good Guys' Price Check button
+2026-11-04,the-good-guys--google-home-speaker,The Good Guys,"Home, hardware & tech",Google Home Speaker,Electronics,148,,,Price shown with The Good Guys' Price Check button
+2026-11-04,the-good-guys--wahl-lithium-pro-plus-cordless-clipper,The Good Guys,"Home, hardware & tech",Wahl Lithium Pro Plus Cordless Clipper,Health & beauty,85,,,Price shown with The Good Guys' Price Check button
+2026-11-04,the-good-guys--apple-ipad-pro-11-m4-wi-fi-1tb,The Good Guys,"Home, hardware & tech","Apple iPad Pro 11"" M4 Wi-Fi 1TB",Electronics,2314,,,
+2026-11-04,ikea--medga-ng-fridge-freezer-219-83l,IKEA,"Home, hardware & tech",MEDGÅNG Fridge/Freezer 219/83L,Home,599,1099,45,IKEA Family is free to join
+2026-11-04,ikea--mattradition-forced-air-oven-300-stainless-steel,IKEA,"Home, hardware & tech",MATTRADITION Forced Air Oven 300 Stainless Steel,Home,399,699,43,IKEA Family is free to join
+2026-11-04,ikea--mattradition-microwave-oven-300-black,IKEA,"Home, hardware & tech",MATTRADITION Microwave Oven 300 Black,Home,399,649,39,IKEA Family is free to join
+2026-11-04,ikea--mata-lskare-forced-air-oven-300-stainless-steel,IKEA,"Home, hardware & tech",MATÄLSKARE Forced Air Oven 300 Stainless Steel,Home,399,599,33,IKEA Family is free to join
+2026-11-04,ikea--mata-lskare-microwave-oven-300-stainless-steel,IKEA,"Home, hardware & tech",MATÄLSKARE Microwave Oven 300 Stainless Steel,Home,499,599,17,IKEA Family is free to join
+2026-11-04,amart--belford-leather-3-seater-with-2-manual-recliners,Amart,"Home, hardware & tech",Belford Leather 3 Seater with 2 Manual Recliners,Furniture,1699,3499,51,
+2026-11-04,amart--geovana-queen-lift-bed,Amart,"Home, hardware & tech",Geovana Queen Lift Bed,Furniture,799,1599,50,
+2026-11-04,amart--hartwell-fabric-3-seater-sofa-with-chaise,Amart,"Home, hardware & tech",Hartwell Fabric 3 Seater Sofa with Chaise,Furniture,1699,3999,58,
+2026-11-04,amart--hayden-queen-bed,Amart,"Home, hardware & tech",Hayden Queen Bed,Furniture,899,1899,53,Club Amart price · free to join
+2026-11-04,amart--vespera-queen-bed,Amart,"Home, hardware & tech",Vespera Queen Bed,Furniture,899,1599,44,
+2026-11-04,amart--melford-fabric-2-5-seater-sofa-with-2-electric-recliners,Amart,"Home, hardware & tech",Melford Fabric 2.5 Seater Sofa with 2 Electric Recliners,Furniture,1999,2999,33,
+2026-11-04,amart--zavira-fabric-3-5-seater-sofa,Amart,"Home, hardware & tech",Zavira Fabric 3.5 Seater Sofa,Furniture,1499,2499,40,
+2026-11-04,shiels--diamond-stud-earrings-in-sterling-silver,Shiels,Bags & accessories,Diamond Stud Earrings in Sterling Silver,Jewellery,79.99,299,73,
+2026-11-04,shiels--9ct-yellow-gold-6mm-brilliant-zirconia-studs,Shiels,Bags & accessories,9ct Yellow Gold 6mm Brilliant Zirconia Studs,Jewellery,149,399,63,
+2026-11-04,shiels--1-4-carat-diamond-hoop-earrings-in-9ct-yellow-gold,Shiels,Bags & accessories,1/4 Carat Diamond Hoop Earrings in 9ct Yellow Gold,Jewellery,499,1799,72,Extra 10% off at checkout
+2026-11-04,shiels--1-2-carat-diamond-18cm-tennis-bracelet-in-sterling-silver,Shiels,Bags & accessories,1/2 Carat Diamond 18cm Tennis Bracelet in Sterling Silver,Jewellery,249,899,72,Extra 10% off at checkout
+2026-11-04,shiels--8-9mm-white-freshwater-pearl-earrings-in-sterling-silver,Shiels,Bags & accessories,8-9mm White Freshwater Pearl Earrings in Sterling Silver,Jewellery,19.99,69.99,71,Extra 10% off at checkout
+2026-11-04,shiels--9ct-yellow-gold-plain-10mm-sleeper-earrings,Shiels,Bags & accessories,9ct Yellow Gold Plain 10mm Sleeper Earrings,Jewellery,199.5,399,50,
+2026-11-04,shiels--luminesce-lab-grown-1-carat-diamond-sterling-silver-bracelet,Shiels,Bags & accessories,Luminesce Lab Grown 1 Carat Diamond Sterling Silver Bracelet,Jewellery,499.5,999,50,
+2026-11-04,shiels--harison-cruz-xm571-t-42mm-stainless-steel-watch,Shiels,Bags & accessories,Harison Cruz XM571-T 42mm Stainless Steel Watch,Jewellery,69,139,50,
+2026-11-04,prouds--seiko-men-s-chronograph-quartz-watch-ssb379p,Prouds,Bags & accessories,Seiko Men's Chronograph Quartz Watch SSB379P,Jewellery,295,450,34,
+2026-11-04,prouds--9ct-gold-3mm-ball-stud-earrings,Prouds,Bags & accessories,9ct Gold 3mm Ball Stud Earrings,Jewellery,69.95,129,46,
+2026-11-04,prouds--9ct-gold-10mm-scalloped-creole-earrings,Prouds,Bags & accessories,9ct Gold 10mm Scalloped Creole Earrings,Jewellery,89.5,179,50,
+2026-11-04,prouds--9ct-gold-45cm-diamond-cut-twist-mirror-chain,Prouds,Bags & accessories,9ct Gold 45cm Diamond-Cut Twist Mirror Chain,Jewellery,189,349,46,
+2026-11-04,prouds--silver-55cm-solid-cuban-curb-chain,Prouds,Bags & accessories,Silver 55cm Solid Cuban Curb Chain,Jewellery,199,349,43,
+2026-11-04,prouds--silver-i-love-you-heart-locket,Prouds,Bags & accessories,Silver I Love You Heart Locket,Jewellery,79,119,34,
+2026-11-04,prouds--silver-cz-stud-earrings,Prouds,Bags & accessories,Silver CZ Stud Earrings,Jewellery,29.9,49.9,40,
+2026-11-04,bath-body-works--japanese-cherry-blossom-fine-fragrance-mist,Bath & Body Works,Beauty & pharmacy,Japanese Cherry Blossom Fine Fragrance Mist,Health & beauty,15,43.95,66,Any full-size body care $15
+2026-11-04,bath-body-works--warm-vanilla-sugar-fine-fragrance-mist,Bath & Body Works,Beauty & pharmacy,Warm Vanilla Sugar Fine Fragrance Mist,Health & beauty,15,43.95,66,
+2026-11-04,bath-body-works--a-thousand-wishes-body-wash,Bath & Body Works,Beauty & pharmacy,A Thousand Wishes Body Wash,Health & beauty,15,41.95,64,
+2026-11-04,bath-body-works--champagne-toast-body-lotion,Bath & Body Works,Beauty & pharmacy,Champagne Toast Body Lotion,Health & beauty,15,41.95,64,
+2026-11-04,bath-body-works--winter-candy-apple-ultimate-hydration-body-cream,Bath & Body Works,Beauty & pharmacy,Winter Candy Apple Ultimate Hydration Body Cream,Health & beauty,15,41.95,64,
+2026-11-04,lovisa--waterproof-gold-plated-flower-pendant-necklace,Lovisa,Bags & accessories,Waterproof Gold Plated Flower Pendant Necklace,Jewellery,9,24.99,64,
+2026-11-04,lovisa--silver-disc-pearl-heart-bracelet-pack,Lovisa,Bags & accessories,Silver Disc Pearl & Heart Bracelet Pack,Jewellery,2,19.99,90,
+2026-11-04,lovisa--silver-basic-round-hoop-earrings-4-pack,Lovisa,Bags & accessories,Silver Basic Round Hoop Earrings 4 pack,Jewellery,3,24.99,88,
+2026-11-04,lovisa--silver-plated-cubic-zirconia-4-layered-huggie-earrings,Lovisa,Bags & accessories,Silver Plated Cubic Zirconia 4 Layered Huggie Earrings,Jewellery,5,32.99,85,
+2026-11-04,lovisa--silver-plated-small-pebble-pendant-necklace,Lovisa,Bags & accessories,Silver Plated Small Pebble Pendant Necklace,Jewellery,3,24.99,88,
+2026-11-04,lovisa--silver-hoop-earring-6-pack,Lovisa,Bags & accessories,Silver Hoop Earring 6 pack,Jewellery,3,19.99,85,
+2026-11-04,lovisa--gold-plated-cubic-zirconia-oval-chain-rings-3-pack,Lovisa,Bags & accessories,Gold Plated Cubic Zirconia Oval & Chain Rings 3 pack,Jewellery,7,32.99,79,
+2026-11-04,lovisa--gold-textured-brown-resin-bangles-4-pack,Lovisa,Bags & accessories,Gold Textured & Brown Resin Bangles 4 pack,Jewellery,5,32.99,85,
+2026-11-04,lovisa--gold-neutral-acrylic-large-bangles-3-pack,Lovisa,Bags & accessories,Gold & Neutral Acrylic Large Bangles 3 pack,Jewellery,5,34.99,86,
+2026-11-04,lovisa--waterproof-gold-plated-large-bubble-letter-necklace,Lovisa,Bags & accessories,Waterproof Gold Plated Large Bubble Letter Necklace,Jewellery,5,29.99,83,Letters A and M seen on sale
