@@ -642,6 +642,16 @@ details.so-group{margin:0 0 18px}
 .tr-hit{margin:6px 0 0;font-size:13px;font-weight:700;color:var(--good)}
 .mkt{margin-top:16px}
 .mkt-links{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+
+/* search further */
+.smore{display:flex;flex-direction:column;align-items:center;gap:10px}
+.sm-h{margin:0;font-weight:700;color:var(--ink);font-size:16px}
+.smore-sm .sm-h{font-weight:600;font-size:14px;color:var(--muted)}
+.sm-st{margin:0;font-size:14px;color:var(--ink-2);max-width:520px}
+.sm-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.empty .smore{margin-top:4px}
+.smore-wrap{padding:18px 16px}
+.smore button:disabled{opacity:.7;cursor:default}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
@@ -2011,11 +2021,27 @@ function renderCats(){
 }
 const priceOk = d => state.price === "All" || (state.price === "500+" ? d.now >= 500 : d.now < +state.price);
 const isActive = () => state.g !== "All" || state.r !== "All" || state.half || state.low || state.fresh || state.soon || state.cat !== "All" || state.price !== "All" || state.q.trim() !== "";
+// search: also matches singular/plural ("onions" finds "Onion")
+const qForms = q => { const f = new Set([q]); if (q.length > 3){ f.add(q.replace(/es$/, "")); f.add(q.replace(/s$/, "")); } return [...f].filter(Boolean); };
+const qHit = (d, q) => { const t = (d.n + " " + d.r + " " + d.cat).toLowerCase(); return qForms(q).some(f => t.includes(f)); };
+// when a search finds nothing (or to search further): everyday price, a watch button and one-tap links to search elsewhere
+function searchMore(qRaw, found){
+  const q = qRaw.trim(), e = encodeURIComponent(q);
+  const st = typeof STAPLES !== "undefined" ? STAPLES.find(x => x.k.test(q) && !x.x.test(q)) : null;
+  const stTxt = st ? `<p class="sm-st"><b>Everyday price:</b> ${st.p.map(x => esc(x[0])).join(", ")} at ${money(Math.min(...st.p.map(x => x[1])))} / ${st.u === "items" ? "item" : esc(st.u)}${st.p[0][2] ? ` (${esc(st.p[0][2])})` : ""}. That's the usual shelf price, not a special.</p>` : "";
+  const watching = WATCH.some(w => w.toLowerCase() === q.toLowerCase());
+  const links = [["Google", `https://www.google.com/search?q=${e}+price+Adelaide`], ["Google Shopping", `https://www.google.com/search?tbm=shop&q=${e}`], ["OzBargain", `https://www.ozbargain.com.au/search/node/${e}`], ["Coles", `https://www.coles.com.au/search/products?q=${e}`], ["Woolworths", `https://www.woolworths.com.au/shop/search/products?searchTerm=${e}`], ["Amazon", `https://www.amazon.com.au/s?k=${e}`]];
+  return `<div class="smore${found ? " smore-sm" : ""}">
+    ${found ? `<p class="sm-h">Want to compare more prices for "${esc(q)}"?</p>` : `<p class="sm-h">No major deals recorded for "${esc(q)}" right now.</p>${stTxt}`}
+    <div class="sm-links">${links.map(([l, u]) => `<a class="btn sm" href="${u}" target="_blank" rel="noopener">${ico("external")}${l}</a>`).join("")}</div>
+    ${found ? "" : `<button class="btn sm primary" type="button" data-trw="${esc(q)}" ${watching ? "disabled" : ""}>${watching ? ico("check") + "Watching" : ico("star") + `Tell me when "${esc(q)}" goes on special`}</button>`}
+  </div>`;
+}
 function render(){
   const q = state.q.trim().toLowerCase();
   const list = DEALS.filter(d =>
     (state.g === "All" || GROUP_OF[d.r] === state.g) && (state.r === "All" || d.r === state.r) && (state.cat === "All" || d.cat === state.cat) &&
-    (!state.half || d.p >= 50) && (!state.low || (d.I && d.I.v === "low")) && priceOk(d) && (!state.fresh || d.isNew) && (!state.soon || (d.left != null && d.left <= 2)) && (!q || (d.n + " " + d.r + " " + d.cat).toLowerCase().includes(q)));
+    (!state.half || d.p >= 50) && (!state.low || (d.I && d.I.v === "low")) && priceOk(d) && (!state.fresh || d.isNew) && (!state.soon || (d.left != null && d.left <= 2)) && (!q || qHit(d, q)));
   const by = {
     save:(a,b) => b.p - a.p || b.save - a.save,
     dollars:(a,b) => b.save - a.save,
@@ -2027,7 +2053,10 @@ function render(){
   const promoOnly = state.r !== "All" && !DEALS.some(d => d.r === state.r);
   $("#grid").innerHTML = list.length ? list.map(card).join("")
     : promoOnly ? `<div class="empty"><p>${esc(state.r)} has no individual deals listed this week. Its store-wide offers are shown above.</p></div>`
+    : q && !DEALS.some(d => qHit(d, q)) ? `<div class="empty">${searchMore(state.q, false)}</div>`
+    : q ? `<div class="empty"><p>${plural(DEALS.filter(d => qHit(d, q)).length, "deal")} for "${esc(state.q.trim())}" are hidden by your other filters.</p><button class="btn" type="button" data-qonly>Show them</button>${searchMore(state.q, true)}</div>`
     : `<div class="empty"><p>No deals match these filters.</p><button class="btn" type="button" data-clear>Clear filters</button></div>`;
+  if (list.length && q.length >= 2) $("#grid").insertAdjacentHTML("beforeend", `<div class="empty smore-wrap">${searchMore(state.q, true)}</div>`);
   renderStoreOffers();
   $("#count").textContent = list.length === DEALS.length ? `${DEALS.length} deals` : `${list.length} of ${DEALS.length} deals`;
   const active = isActive();
@@ -2708,7 +2737,7 @@ if (!IN_APP_EARLY && /[?&](list|regs)=/.test(location.search) && /Android|iPhone
 let trTag = "All";
 function addWatch(w){
   if (!WATCH.some(x => x.toLowerCase() === w.toLowerCase())){ WATCH.push(w); LS.set("ads-watch", WATCH); watchHits(w).forEach(d => SEEN.add(d.id)); LS.set("ads-seen", [...SEEN]); }
-  renderSaved(); renderTrending();
+  renderSaved(); renderTrending(); render();
   const n = watchHits(w).length; toast(n ? `${plural(n, "deal")} match "${w}" now. You'll see new ones on the List tab` : `Watching "${w}". Matching deals will show on the List tab`);
 }
 function renderTrending(){
@@ -2936,7 +2965,7 @@ $("#price").addEventListener("change", e => { state.price = e.target.value; rend
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("#clear").addEventListener("click", () => { clearAll(); $("#deals").scrollIntoView({block:"start"}); });
-$("#grid").addEventListener("click", e => { const b = e.target.closest(".nm"); if (b) return openDeal(+b.dataset.i); if (e.target.closest("[data-clear]")) clearAll(); });
+$("#grid").addEventListener("click", e => { const b = e.target.closest(".nm"); if (b) return openDeal(+b.dataset.i); if (e.target.closest("[data-clear]")) clearAll(); if (e.target.closest("[data-qonly]")){ const q = state.q; clearAll(); state.q = q; $("#q").value = q; render(); } });
 $("#stand").addEventListener("click", e => { const b = e.target.closest("button.pick"); if (b) openDeal(+b.dataset.i); });
 render();
 const fromHash = () => { const m = location.hash.match(/^#deal=(.+)$/); if (m){ const d = DEALS.find(x => x.id === decodeURIComponent(m[1])); if (d) openDeal(d.i, false); } };
