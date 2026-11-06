@@ -879,7 +879,7 @@ details.so-group{margin:0 0 18px}
 
 <script>
 // ---- this week (the Wednesday-to-Tuesday catalogue week)
-const WEEK = {start:"2026-11-04", end:"2026-11-10", label:"Wed 4 – Tue 10 Nov 2026", ends:"Tue 10 Nov", updated:"Thu 5 Nov 2026"};
+const WEEK = {start:"2026-11-04", end:"2026-11-10", label:"Wed 4 – Tue 10 Nov 2026", ends:"Tue 10 Nov", updated:"Fri 6 Nov 2026"};
 
 const RETAILERS = {
   "Coles":{c:"var(--coles)"}, "Woolworths":{c:"var(--woolies)"}, "ALDI":{c:"var(--aldi)"},
@@ -1021,10 +1021,7 @@ const DEALS = [
  // ---- Costco
  {r:"Costco",n:"LEGO Scuderia Ferrari HP Helmet (Leclerc or Hamilton)",now:69.99,cat:"Kids & toys",end:"Ends 23 Nov · in-store"},
  {r:"Costco",n:"adidas Originals Project Two Strap Watch",now:49.97,cat:"Clothing",end:"While stocks last · delivered"},
- {r:"Costco",n:"Logitech MX Keys S + MX Master 3S Bundle",now:199.99,cat:"Electronics",end:"While stocks last · delivered"},
  {r:"Costco",n:"ThermoFlask Insulated Bottle 950mL 2 pack",now:27,cat:"Home",end:"In-store · while stocks last",note:"$37.99 delivered"},
- {r:"Costco",n:"Kirkland Signature Men's Jeans",now:19.97,was:39.99,cat:"Clothing",end:"While stocks last",note:"Membership required"},
- {r:"Costco",n:"Stormpack Men's Poly Polo",now:9.97,cat:"Clothing",end:"While stocks last",note:"Membership required · golf shorts also $9.97"},
  {r:"Costco",n:"adidas Men's Boxers 3 pack",now:19.99,cat:"Clothing",end:"While stocks last · delivered",note:"Membership required"},
  {r:"Costco",n:"Weiwu DC Electric Pedestal Fan",now:59.99,cat:"Home",end:"While stocks last · delivered",note:"Membership required"},
  {r:"Costco",n:"Apple iPhone 17 Pro Max 256GB",now:1799.99,cat:"Electronics",end:"While stocks last · delivered",note:"Membership required · $79 less than JB Hi-Fi & Officeworks"},
@@ -1053,6 +1050,8 @@ const DEALS = [
  {r:"adidas",n:"Adilette Comfort Slides",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/48134fdf23014575a617ad6e00cbe74a_9366/Adilette_Comfort_Slides_Blue_GZ5892_00_plp_standard.jpg",now:40,was:50,cat:"Footwear",end:"Outlet · while stocks last"},
  // ---- Myer
  {r:"Myer",n:"Dyson Wash G1 2-in-1 Hard Floor Cleaner",now:399,was:999,cat:"Home",end:"While stocks last"},
+ {r:"Myer",n:"Sheridan Bayley Bloom King Quilt Cover Set",now:79,cat:"Home",end:"While stocks last",note:"Free delivery on $99+ orders or click & collect"},
+ {r:"Myer",n:"The Cooks Collective Acacia End Grain Cutting Board 50 × 35cm",now:74.97,cat:"Home",end:"While stocks last",note:"About half price · free click & collect or in-store"},
  // ---- Kmart
  {r:"Kmart",n:"Women's Backstrap Clogs",now:3,was:15,cat:"Footwear",end:"While stocks last"},
  {r:"Kmart",n:"GreenLife 6-Piece Ceramic-Coated Bakeware Set",now:49,was:79,cat:"Home",end:"While stocks last"},
@@ -1070,10 +1069,8 @@ const DEALS = [
  {r:"Target",n:"Nintendo Talking Flower",now:29,cat:"Gaming",end:"While stocks last"},
  {r:"Target",n:"Faber-Castell Connector Pens 48 pack + Colouring Book",now:10,was:14,cat:"Kids & toys",end:"While stocks last",note:"Free click & collect or OnePass delivery"},
  {r:"Target",n:"SanDisk 256GB microSD Express Card for Switch 2",now:59,cat:"Gaming",end:"Free click & collect",note:"$49 with the $10 newsletter voucher"},
- {r:"Target",n:"Xbox Series X Console 1TB SSD Disc",now:949,cat:"Gaming",end:"Delivered, click & collect or in-store"},
  // ---- BIG W
  {r:"BIG W",n:"Cadbury Variety Jumbo Chocolate Box 1.56kg (110 pieces)",now:29,was:58,cat:"Snacks",end:"While stocks last"},
- {r:"BIG W",n:"Moki Exo Bluetooth Headphones",now:17,was:49,cat:"Electronics",end:"While stocks last"},
  {r:"BIG W",n:"LEGO 77078 Fortnite Mecha Team Leader",now:161,was:269,cat:"Kids & toys",end:"Selected locations"},
  {r:"BIG W",n:"Skip Hop Silver Lining Cloud Activity Gym",now:149,was:199,cat:"Baby",end:"While stocks last"},
  {r:"BIG W",n:"Kids' Picture Books (various)",now:1.75,cat:"Kids & toys",end:"While stocks last",note:"Selected titles"},
@@ -1088,16 +1085,15 @@ const DEALS = [
  {r:"JB Hi-Fi",n:"TCL 98\" P7K 4K QLED Google TV",now:2488,cat:"Electronics",end:"Delivered, select areas"},
  {r:"JB Hi-Fi",n:"JBL Live Beam 3 True Wireless Earbuds",now:99,cat:"Electronics",end:"While stocks last"},
  {r:"JB Hi-Fi",n:"JBL Tune 520BT On-Ear Headphones",now:39.95,cat:"Electronics",end:"While stocks last"},
- {r:"JB Hi-Fi",n:"Winix Compact 360 5-Stage Air Purifier",now:199,cat:"Home",end:"While stocks last"},
  {r:"JB Hi-Fi",n:"Helldivers 2 (PS5)",now:24,cat:"Gaming",end:"While stocks last"},
  {r:"JB Hi-Fi",n:"Battlefield 6 (PS5 / Xbox Series X)",now:39,cat:"Gaming",end:"While stocks last"},
- {r:"JB Hi-Fi",n:"Edifier M90 Powered Bluetooth Speakers",now:343.2,cat:"Electronics",end:"Delivery only"},
- {r:"JB Hi-Fi",n:"Apple MacBook Air 13\" M5 24GB/1TB",now:2499,cat:"Electronics",end:"While stocks last",note:"Free click & collect"},
  {r:"JB Hi-Fi",n:"Apple iPhone 17 Pro Max 256GB",now:1879,cat:"Electronics",end:"While stocks last",note:"Same price at Officeworks"},
  {r:"JB Hi-Fi",n:"Lenovo Legion Tab 8.8\" 12GB/256GB",now:499,cat:"Electronics",end:"Free click & collect or in-store"},
  {r:"JB Hi-Fi",n:"Google Pixel 11 Pro + Bonus Nintendo Switch 2",now:1849,cat:"Electronics",end:"Free click & collect or in-store",note:"Switch 2 console free with the phone · Pixel 11 Pro XL $2,099"},
  {r:"JB Hi-Fi",n:"Philips Evnia 34\" WQHD 180Hz Gaming Monitor",now:275,cat:"Electronics",end:"Back order · delivery only"},
  {r:"JB Hi-Fi",n:"Nothing Phone (4a)",now:529,cat:"Electronics",end:"Free click & collect or in-store",note:"From $529 · (4a) Pro $799, Phone (3) from $999"},
+ {r:"JB Hi-Fi",n:"Amazon Echo Dot Max 2 pack",now:229,was:458,cat:"Electronics",end:"Free click & collect or in-store",note:"$114.50 each, down from $229 · discount applies in the cart with 2 added"},
+ {r:"JB Hi-Fi",n:"MOVA S70 Pro Roller Robot Vacuum & Mop",now:986,cat:"Home",end:"Free click & collect or in-store",note:"Previous low was $1,097 a few weeks ago"},
  // ---- Uniqlo
  {r:"Uniqlo",n:"Men's PUFFTECH Parka",now:59.9,was:99.9,cat:"Clothing",end:"While stocks last",note:"Free click & collect or $75+ delivery"},
  // ---- Typo (Cotton On Group)
@@ -1107,14 +1103,12 @@ const DEALS = [
  {r:"Cotton On / Typo",n:"Typo Pro 14\" Laptop Case",now:20,was:39.99,cat:"Home",end:"Typo sale"},
  {r:"Cotton On / Typo",n:"Typo Daily Mug",now:3,was:9.99,cat:"Home",end:"Typo sale"},
  // ---- Bunnings
- {r:"Bunnings",n:"Char-Griller Akorn Jr Kamado Grill & Smoker",now:148,was:248,cat:"Tools & garden"},
  {r:"Bunnings",n:"Charbroil Outdoor Air Fryer",now:99,was:195,cat:"Tools & garden"},
  {r:"Bunnings",n:"DeWALT 18V XR Brushless Line Trimmer 5.0Ah Kit",now:249,was:299,cat:"Tools & garden"},
  {r:"Bunnings",n:"Ozito PXC 36V Brushless 410mm Lawn Mower Kit",now:229,cat:"Tools & garden"},
  {r:"Bunnings",n:"Ozito PXC 18V 4.0Ah Battery & Charger Pack",now:39.98,cat:"Tools & garden"},
  {r:"Bunnings",n:"VoltX 2400W 2240Wh LiFePO4 Power Station",now:1199.2,cat:"Electronics",note:"Sold via Bunnings Marketplace"},
  {r:"Bunnings",n:"eero 6 Mesh Wi-Fi 6 Router 3-pack",now:199,cat:"Electronics"},
- {r:"Bunnings",n:"Selleys BBQ Tough Wipes 30 pack",now:5.89,was:10.49,cat:"Household"},
  {r:"Bunnings",n:"Ryobi 36V Line Trimmer & Blower 4Ah Kit",now:399,cat:"Tools & garden",end:"In-store & online"},
  {r:"Bunnings",n:"Pinnacle 4 Tier Heavy Duty Shelving Unit 1830mm",now:199,cat:"Tools & garden",end:"In-store & online"},
  {r:"Bunnings",n:"Hy-Clor Pool Stabiliser 2kg",now:9.94,cat:"Tools & garden",end:"In-store, click & collect or OnePass"},
@@ -1122,11 +1116,12 @@ const DEALS = [
  {r:"Bunnings",n:"Fiskars Plant Care Shears or Pruner with Holder",now:19.95,was:39.95,cat:"Tools & garden",end:"In-store, click & collect or OnePass"},
  {r:"Bunnings",n:"Oklahoma Joe's Firecraft Barrel Grill",now:299,was:499,cat:"Tools & garden",end:"In-store or click & collect"},
  {r:"Bunnings",n:"Gasmate BBQ Hood Handle LED Light",now:5,cat:"Tools & garden",end:"In-store, click & collect or OnePass"},
+ {r:"Bunnings",n:"Ryobi 36V HP Brushless 46cm Lawn Mower 4Ah Kit",now:428,cat:"Tools & garden",end:"Delivered or click & collect",note:"Includes a $100 Bunnings gift card by redemption"},
+ {r:"Bunnings",n:"Ryobi 18V ONE+ HP Whisper 38cm Line Trimmer Kit",now:268,was:299,cat:"Tools & garden",end:"In-store & online",note:"New model · $299 is Ryobi's list price"},
+ {r:"Bunnings",n:"Starlink Standard Satellite Internet Kit",now:347,was:549,cat:"Electronics",end:"Ends 30 Nov",note:"Also 30% off plans in selected locations, from $52.50 a month"},
  // ---- Chemist Warehouse
  {r:"Chemist Warehouse",n:"NeilMed Sinus Rinse 120 sachets",now:15.99,cat:"Health & beauty"},
  {r:"Chemist Warehouse",n:"Earth Choice Dishwashing Powder 1kg",now:6.49,cat:"Household",note:"42 tablets $12.39"},
- {r:"Chemist Warehouse",n:"Bambi Mini Co. Baby Singlet Suits & Onesies",now:4.99,cat:"Baby"},
- {r:"Chemist Warehouse",n:"Hamilton Everyday Face Sunscreen 200ml",now:15.99,cat:"Health & beauty",end:"In-store or click & collect",note:"Advertised as ½ price · 75g $8.49"},
  {r:"Chemist Warehouse",n:"Olay Eyes Pro-Retinol Eye Treatment 15ml",now:18,was:59.99,cat:"Health & beauty",end:"In-store or click & collect"},
  {r:"Chemist Warehouse",n:"Nature's Own Magnesium Glycinate 1150mg 300 tablets",now:29.99,cat:"Health & beauty",end:"In-store or click & collect"},
  // ---- Harris Scarfe (HS Friends prices)
@@ -1200,19 +1195,16 @@ const DEALS = [
  {r:"Harvey Norman",n:"Google Pixel 11 Pro XL 256GB + Bonus Nintendo Switch 2",now:2099,cat:"Electronics",end:"While the offer runs",note:"Switch 2 plus Zelda or Mario Kart World free with the phone · delivery extra"},
  {r:"Harvey Norman",n:"Bambu Lab P2S Combo 3D Printer",now:999,cat:"Electronics",end:"Free click & collect or in-store"},
  {r:"Harvey Norman",n:"Dreame SwiftBlade Electric Shaver",now:128,cat:"Health & beauty",end:"While stocks last"},
+ {r:"Harvey Norman",n:"Dreame X3 Station Cordless Vacuum",now:547,cat:"Home",end:"Free click & collect",note:"Includes a 10% bonus gift card · Z50 Station $798"},
  // ---- Amazon (amazon.com.au, prices as posted 22–30 Oct)
  {r:"Amazon",n:"Breville Barista Express Coffee Machine BES870 (Charcoal)",now:585,was:999,cat:"Home",end:"Online · price can change any time",note:"Delivered · not sent to NT"},
  {r:"Amazon",n:"Gillette Mach3+ Replacement Cartridges 8 pack",now:16,was:36,cat:"Health & beauty",end:"Online · price can change any time"},
  {r:"Amazon",n:"Anker 621 MagGo Magnetic Power Bank 5,000mAh",now:33.18,was:69.99,cat:"Electronics",end:"Online · price can change any time",note:"Sold by Anker"},
  {r:"Amazon",n:"UGREEN 130W Laptop Power Bank 20,000mAh",now:79.98,was:119,cat:"Electronics",end:"Online · price can change any time",note:"Delivered · sold by UGREEN"},
- {r:"Amazon",n:"Apple MacBook Air 15\" M5 16GB/512GB",now:2047,was:2499,cat:"Electronics",end:"Online · price can change any time"},
- {r:"Amazon",n:"Apple MacBook Air 13\" M5 16GB/1TB (Sky Blue)",now:2049,was:2549,cat:"Electronics",end:"Online · price can change any time"},
  {r:"Amazon",n:"PlayStation 5 DualSense Wireless Controller (all colours)",now:99,was:134.95,cat:"Gaming",end:"Online · price can change any time",note:"Delivered"},
  {r:"Amazon",n:"Apple iPhone 17 Pro Max 256GB (Cosmic Orange)",now:1799,was:2199,cat:"Electronics",end:"Online · price can change any time",note:"Costco members pay $1,799.99"},
  {r:"Amazon",n:"Anker Nano 30W USB-C GaN Charger",now:19.98,cat:"Electronics",end:"Online · price can change any time",note:"Prime price"},
- {r:"Amazon",n:"Tenda ME3 Pro Wi-Fi 7 Mesh Router 2-pack",now:169.99,was:249.99,cat:"Electronics",end:"Online · price can change any time",note:"Sold by Tenda-AU on Amazon"},
  {r:"Amazon",n:"Tefal Premium Hard Anodised Induction Wok 32cm with Lid",now:95,cat:"Home",end:"Online · price can change any time"},
- {r:"Amazon",n:"Calvin Klein One Eau de Toilette 300ml",now:34.39,cat:"Health & beauty",end:"Online · price can change any time",note:"Not delivered to TAS or NT"},
  {r:"Amazon",n:"Skittles Cloudz Sours 120g",now:3,cat:"Snacks",end:"Online · price can change any time",note:"Also Skittles Fruits 200g $3"},
  {r:"Amazon",n:"SanDisk Max Endurance 128GB microSDXC Card",now:96,was:134.5,cat:"Electronics",end:"Online · price can change any time",note:"Sold by IT_Factory on Amazon"},
  {r:"Amazon",n:"Breville Barista Touch Espresso Machine BES880BST",now:998,cat:"Home",end:"Online · price can change any time",note:"Delivered · $1 under Harvey Norman"},
@@ -1221,15 +1213,20 @@ const DEALS = [
  {r:"Amazon",n:"Bedsure Sherpa Fleece Throw Blanket",now:19.99,cat:"Home",end:"Online · price can change any time",note:"Price after 50% off at checkout · sold by Bedsure on Amazon"},
  {r:"Amazon",n:"Dove Advanced Care 72h Antiperspirant Deodorant 50ml",now:2.99,cat:"Health & beauty",end:"Online · price can change any time"},
  {r:"Amazon",n:"Oral-B Essential Dental Floss 50m 2 pack",now:3.5,cat:"Health & beauty",end:"Online · price can change any time",note:"$3.15 with Subscribe & Save"},
+ {r:"Amazon",n:"Ecovacs Deebot T30s Pro Robot Vacuum & Mop",now:549,cat:"Home",end:"Online · price can change any time",note:"Delivered · sold by ECOVACS on Amazon · list price $1,999"},
+ {r:"Amazon",n:"Versace Pour Homme Men's Fragrance 100ml",now:69.99,cat:"Health & beauty",end:"Online · price can change any time",note:"Not delivered to TAS or NT"},
+ {r:"Amazon",n:"Peer Sorensen Acacia Wood Cutting Board 30 × 25cm",now:26.95,cat:"Home",end:"Online · price can change any time"},
  // ---- Kogan
  {r:"Kogan",n:"Samsung Galaxy S25 Ultra 256GB",now:1399,cat:"Electronics",end:"Online · price can change any time",note:"Free delivery with Kogan First"},
  {r:"Kogan",n:"Kogan Mobile 365-day Prepaid SIM 300GB",now:159,cat:"Phone & SIM",end:"Buy by 10 Nov",note:"Also 900GB for $199"},
  {r:"Kogan",n:"Kogan Mobile 365-day Prepaid SIM 900GB",now:199,cat:"Phone & SIM",end:"Buy by 10 Nov"},
+ {r:"Kogan",n:"Kogan 24\" Full HD 300Hz Gaming Monitor",now:159,cat:"Electronics",end:"Online · price can change any time",note:"Kogan First price · delivered"},
  {r:"eBay",n:"Dyson Supersonic Travel Hair Dryer",now:389,cat:"Health & beauty",end:"Online · price can change any time",note:"Sold by Dyson's eBay store · $369 for some eBay Plus members"},
  {r:"eBay",n:"Just Wines Red & White Mixed Wine 12 bottles",now:89,was:235.94,cat:"Liquor",end:"Online · price can change any time",note:"Sold by Just Wines · plus delivery"},
- {r:"eBay",n:"Maxell AA Alkaline Batteries 144 pack",now:29.45,cat:"Household",end:"Online · price can change any time",note:"Delivered · sold by Tapesplus"},
+ {r:"eBay",n:"Maxell AA Alkaline Batteries 144 pack",now:28.45,cat:"Household",end:"Online · price can change any time",note:"Delivered · sold by Tapesplus"},
  {r:"eBay",n:"Devanti K7 Cordless Stick Vacuum + Sandwich Panini Press",now:112.85,cat:"Home",end:"Code PLOCT · ends 12 Nov",note:"Sold by Ozplaza.living · free delivery to most areas"},
  {r:"eBay",n:"Razer Basilisk V4 HyperSpeed Wireless Gaming Mouse",now:152.15,cat:"Gaming",end:"Online · price can change any time",note:"Sold by Razer · $148.57 for eBay Plus"},
+ {r:"eBay",n:"Kogan GentleCare Steam Generator Iron",now:50,cat:"Home",end:"Online · price can change any time",note:"Delivered · sold by Kogan"},
  {r:"Indian PLAZA",n:"Fresh Coriander 3 bunches",now:3,cat:"Pantry",end:"Recent Facebook flyer · while stocks last",note:"From the store's Facebook specials"},
  {r:"Indian PLAZA",n:"KP Mangoes (per tray)",now:45,cat:"Pantry",end:"Recent Facebook flyer · while stocks last",note:"From the store's Facebook specials"},
  {r:"Indian PLAZA",n:"Fresh Tomatoes 1kg Bag",now:3.99,cat:"Pantry",end:"Recent Facebook flyer · while stocks last",note:"From the store's Facebook specials"},
@@ -1414,9 +1411,10 @@ const PROMOS = [
    ["5%","Price match promise on new fixed-price items","Capped at $150; claim within 48 hours with a lower price from an approved retailer"],
    ["$5","Off a $50 order every month for eBay Plus members","Annual membership; 30-day free trial available"],
    ["15%","Off eligible items, 17% with eBay Plus","Code PGIFT15 (PGIFT17 for Plus) · until 12 Nov","sel"],
+   ["20%","Off eligible items for eBay Plus members","Code SUMDEAL · until 18 Nov","sel"],
    ["25%","Off eligible items, up to $25 off","Code NEW25 · until 31 Dec · up to 5 uses","sel"]]},
  {r:"Golden Star Spices Supermarket",where:"Clovelly Park (1156 South Rd) · Facebook page",items:[
-   ["None","No current specials posted","Latest Facebook post: 23 Oct"]]},
+   ["Fresh","Fresh vegetables post on Facebook","Posted 5 Nov · see the Facebook page for details","none"]]},
  {r:"Indian PLAZA",where:"Enfield, Firle, Torrensville & Plympton · Facebook page",items:[
    ["Weekly","Fresh produce specials posted on Facebook","Coriander 3 for $3, KP mangoes $45 a tray, tomatoes $3.99/kg"],
    ["$100","Monthly shopping voucher draw for mailing-list members","Sign up at indianplaza.com.au · stores also at Firle, Torrensville & Plympton (Indian Traders)"]]},
@@ -1445,7 +1443,7 @@ const PROMOS = [
  {r:"Amazon",where:"amazon.com.au · delivered to Adelaide",items:[
    ["20%","Off everyday essentials for Prime members","Applied at checkout · $20 cap · until 18 Nov · selected accounts, check your email","sel"],
    ["40%","Off Amazon Haul items, $20 minimum spend","Code HAUL40 · until 13 Nov","sel"],
-   ["$10","Off $200 spend on eligible items with Mastercard","One transaction"],
+   ["$10","Off $200 spend on eligible items with Mastercard","Code MCAMZ10 · one transaction · until 30 Nov"],
    ["$20","Promo credit with $200 of Apple eGift cards",""],
    ["Free","Delivery for Prime members, or on $59+ orders",""],
    ["18 Nov","Black Friday early deals expected to start","Based on past years"]]},
@@ -1522,7 +1520,7 @@ const PROMOS = [
    ["$15","Off a $199+ online spend","Code EARLY15 · until 8 Nov · 1 use per account · BIG W Marketplace · exclusions apply"]]},
  {r:"JB Hi-Fi",where:"Rundle Mall, Marion, Tea Tree Plaza & more",items:[
    ["Bonus","Free Nintendo Switch 2 with a Google Pixel 11 Pro or 11 Pro XL","Free click & collect or in-store","none"],
-   ["Buy 2 get 1","Free on selected DVDs, Blu-rays & 4K movies and TV shows","","none"],
+   ["Buy 2 get 1","Free on selected DVDs, Blu-rays, 4K movies and TV shows, and music CDs","","none"],
    ["2 for $30","Selected Blu-rays","Also 2 for $20 DVD/Blu-ray, 2 for $50 4K"],
    ["$10","Voucher for joining JB Perks",""]]},
  {r:"H&M",where:"Rundle Mall, Marion, Tea Tree Plaza · hm.com/au",items:[
@@ -1550,6 +1548,7 @@ const PROMOS = [
    ["30–70%","Nike Factory Store, Harbour Town Adelaide","Outlet pricing everyday · late night Thu to 9pm"],
    ["Free","Member shipping on orders $80+ and 30-day returns",""]]},
  {r:"adidas",where:"adidas.com.au · in-store",items:[
+   ["+40%","Extra 40% off outlet items","On top of reduced prices · taken off automatically at checkout · online · posted 6 Nov, end date not given"],
    ["≤50%","Outlet sale on shoes and clothing","Most styles 15–30% off; Handball Spezial $85"],
    ["Spend & Save","Tiered discount at checkout","Online and in-store, T&Cs apply"],
    ["Free","Shipping with adiClub membership, no minimum",""]]},
@@ -1573,7 +1572,6 @@ const PROMOS = [
 ];
 
 const CAL = [
- ["Thu 5 Nov","IKEA Black Friday Sale starts: 10% off almost everything until 30 Nov"],
  ["Sat 7 Nov","ALDI Christmas trees, decorations & lights"],
  ["Sun 8 Nov","Diwali · Ekam and other Indian grocers have Diwali sweets & pooja items in now"],
  ["Wed 11 Nov","Singles Day · ALDI Christmas, gardening & toys"],
@@ -1595,6 +1593,11 @@ const PICKS = [
 ];
 
 const PICS = [
+ [/quilt cover/i,"🛏️"],
+ [/cutting board/i,"🔪"],
+ [/echo dot/i,"🔊"],
+ [/starlink/i,"📡"],
+ [/steam generator iron/i,"👕"],
  [/barista touch/i,"☕"],[/throw blanket/i,"🛏️"],[/men's fragrance/i,"🧴"],[/hutch desk/i,"🪑"],[/sofa-bed/i,"🛋️"],[/bookcase/i,"📚"],[/drawer unit/i,"🗄️"],[/dining table/i,"🍽️"],[/nanoflex|nano gym/i,"👟"],[/vanish napisan/i,"🧺"],
  [/biozet|vanish gold/i,"🧺"],[/noodle bowl/i,"🍜"],[/golden wok|pork & chive/i,"🥟"],[/john west tuna|just caught snacking/i,"🐟"],[/up&go|yoghurt 140/i,"🥛"],[/libra ultra/i,"🌸"],[/farmers harvest oil/i,"🫒"],[/fruit drink/i,"🧃"],[/antiperspirant aerosol/i,"🧴"],[/christmas mix tub/i,"🍬"],[/mach3/i,"🪒"],[/lift bed/i,"🛏️"],
  [/advent calendar/i,"📅"],[/christmas tree|ropelight tree/i,"🎄"],[/fairy lights|path lights/i,"💡"],[/tinsel/i,"🎄"],[/train set/i,"🚂"],[/candy canes/i,"🍬"],[/gingerbread/i,"🍪"],[/gin 700|guinness/i,"🍺"],[/gravalax/i,"🐟"],[/pork loin/i,"🥩"],[/angus pies/i,"🥧"],[/spice tailor|simmer sauce/i,"🍛"],[/samosa/i,"🥟"],[/paddle pop|gaytime|cornetto|zooper/i,"🍦"],[/barista express/i,"☕"],[/potting mix/i,"🌱"],[/\bjeans\b/i,"👖"],[/\bpolo\b/i,"👕"],[/usb-c cable/i,"🔌"],[/muffin|wraps/i,"🥯"],[/kyiv/i,"🍗"],
