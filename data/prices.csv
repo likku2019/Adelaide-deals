@@ -1020,6 +1020,11 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-04,amazon--tefal-premium-hard-anodised-induction-wok-32cm-with-lid,Amazon,Online,Tefal Premium Hard Anodised Induction Wok 32cm with Lid,Home,95,,,
 2026-11-04,officeworks--edifier-neobuds-pro-3-noise-cancelling-earphones,Officeworks,"Home, hardware & tech",Edifier Neobuds Pro 3 Noise Cancelling Earphones,Electronics,95,,,
 2026-11-04,the-good-guys--hisense-8l-air-fryer-hafa08bow,The Good Guys,"Home, hardware & tech",Hisense 8L Air Fryer HAFA08BOW,Home,149,,,
+2026-11-04,myer--sheridan-bayley-bloom-king-quilt-cover-set,Myer,Department stores,Sheridan Bayley Bloom King Quilt Cover Set,Home,79,,,Free delivery on $99+ orders or click & collect
+2026-11-04,myer--shokz-opendots-2-open-ear-earbuds,Myer,Department stores,Shokz OpenDots 2 Open-Ear Earbuds,Electronics,288.15,,,Delivered
+2026-11-04,jb-hi-fi--google-pixel-11-pro-bonus-nintendo-switch-2,JB Hi-Fi,"Home, hardware & tech",Google Pixel 11 Pro + Bonus Nintendo Switch 2,Electronics,1849,,,"Switch 2 console free with the phone · Pixel 11 Pro XL $2,099"
+2026-11-04,amazon--skittles-cloudz-sours-120g,Amazon,Online,Skittles Cloudz Sours 120g,Snacks,3,,,Also Skittles Fruits 200g $3
+2026-11-04,amazon--sandisk-max-endurance-128gb-microsdxc-card,Amazon,Online,SanDisk Max Endurance 128GB microSDXC Card,Electronics,96,134.5,29,Sold by IT_Factory on Amazon
 2026-11-04,coles--golden-crumpet-rounds-6-pack-300g,Coles,Groceries,Golden Crumpet Rounds 6 Pack 300g,Pantry,2.5,5,50,
 2026-11-04,coles--biozet-attack-laundry-liquid-2l-or-powder-2kg,Coles,Groceries,Biozet Attack Laundry Liquid 2L or Powder 2kg,Household,12,24,50,
 2026-11-04,coles--comfort-fabric-conditioner-900ml,Coles,Groceries,Comfort Fabric Conditioner 900mL,Household,6,12,50,
@@ -1153,6 +1158,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-04,costco--hisense-55-q6sau-qled-4k-smart-tv,Costco,Groceries,"Hisense 55"" Q6SAU QLED 4K Smart TV",Electronics,549.99,,,Membership required
 2026-11-04,costco--telstra-395-pre-paid-mobile-plan-40-costco-gift-card,Costco,Groceries,Telstra $395 Pre-Paid Mobile Plan + $40 Costco Gift Card,Phone & SIM,299.99,,,Membership required
 2026-11-04,costco--cuckoo-micom-6-cup-rice-cooker-cr-0685f,Costco,Groceries,Cuckoo Micom 6-Cup Rice Cooker CR-0685F,Home,114.99,159.98,28,$124.98 delivered · membership required
+2026-11-04,costco--roborock-qrevo-c-pro-robot-vacuum,Costco,Groceries,Roborock Qrevo C Pro Robot Vacuum,Home,599.99,,,Down from $699.99 in October · membership required
 2026-11-04,costco--dyson-supersonic-r-professional-hair-dryer,Costco,Groceries,Dyson Supersonic R Professional Hair Dryer,Health & beauty,349.99,,,Membership required
 2026-11-04,nike--nike-sb-dunk-low-pro-skate-shoes,Nike,Shoes & sportswear,Nike SB Dunk Low Pro Skate Shoes,Footwear,108,180,40,
 2026-11-04,nike--nike-air-force-1-older-kids-shoes,Nike,Shoes & sportswear,Nike Air Force 1 Older Kids' Shoes,Footwear,90,150,40,
@@ -1173,9 +1179,9 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-04,adidas--ultimashow-shoes-men-s,adidas,Shoes & sportswear,Ultimashow Shoes Men's,Footwear,56,80,30,
 2026-11-04,adidas--adilette-comfort-slides,adidas,Shoes & sportswear,Adilette Comfort Slides,Footwear,40,50,20,
 2026-11-04,myer--dyson-wash-g1-2-in-1-hard-floor-cleaner,Myer,Department stores,Dyson Wash G1 2-in-1 Hard Floor Cleaner,Home,399,999,60,
-2026-11-04,myer--sheridan-bayley-bloom-king-quilt-cover-set,Myer,Department stores,Sheridan Bayley Bloom King Quilt Cover Set,Home,79,,,Free delivery on $99+ orders or click & collect
 2026-11-04,myer--the-cooks-collective-acacia-end-grain-cutting-board-50-35cm,Myer,Department stores,The Cooks Collective Acacia End Grain Cutting Board 50 × 35cm,Home,74.97,,,About half price · free click & collect or in-store
-2026-11-04,myer--shokz-opendots-2-open-ear-earbuds,Myer,Department stores,Shokz OpenDots 2 Open-Ear Earbuds,Electronics,288.15,,,Delivered
+2026-11-04,myer--tefal-ingenio-cook-eat-induction-non-stick-15-piece-set,Myer,Department stores,Tefal Ingenio Cook Eat Induction Non-Stick 15-Piece Set,Home,199,,,Delivered or free click & collect
+2026-11-04,myer--scanpan-impact-3-piece-cookset-stainless-steel,Myer,Department stores,Scanpan Impact 3-Piece Cookset Stainless Steel,Home,229,579,60,Lowest price tracked by Click Frenzy
 2026-11-04,kmart--women-s-backstrap-clogs,Kmart,Department stores,Women's Backstrap Clogs,Footwear,3,15,80,
 2026-11-04,kmart--greenlife-6-piece-ceramic-coated-bakeware-set,Kmart,Department stores,GreenLife 6-Piece Ceramic-Coated Bakeware Set,Home,49,79,38,
 2026-11-04,kmart--collapsible-pop-up-clothes-airer,Kmart,Department stores,Collapsible Pop Up Clothes Airer,Home,15,39,62,Also at Target
@@ -1190,7 +1196,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-04,kmart--lego-hummingbird-31384,Kmart,Department stores,LEGO Hummingbird 31384,Kids & toys,15,,,
 2026-11-04,target--mario-kart-world-switch-2,Target,Department stores,Mario Kart World (Switch 2),Gaming,95,,,$85 with Target's $10 newsletter voucher
 2026-11-04,target--jinxo-board-game,Target,Department stores,JinxO Board Game,Kids & toys,39,,,
-2026-11-04,target--nintendo-talking-flower,Target,Department stores,Nintendo Talking Flower,Gaming,29,,,
+2026-11-04,target--nintendo-talking-flower,Target,Department stores,Nintendo Talking Flower,Gaming,25,,,Down from $29 last week
 2026-11-04,target--sandisk-256gb-microsd-express-card-for-switch-2,Target,Department stores,SanDisk 256GB microSD Express Card for Switch 2,Gaming,59,,,$49 with the $10 newsletter voucher
 2026-11-04,big-w--cadbury-variety-jumbo-chocolate-box-1-56kg-110-pieces,BIG W,Department stores,Cadbury Variety Jumbo Chocolate Box 1.56kg (110 pieces),Snacks,29,58,50,
 2026-11-04,big-w--lego-77078-fortnite-mecha-team-leader,BIG W,Department stores,LEGO 77078 Fortnite Mecha Team Leader,Kids & toys,161,269,40,
@@ -1202,13 +1208,15 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-04,big-w--contempo-textured-steel-kettle-1-7l,BIG W,Department stores,Contempo Textured Steel Kettle 1.7L,Home,12,,,"Contempo 4-slice toaster $19, milk frother $19"
 2026-11-04,big-w--poke-mon-go-plus,BIG W,Department stores,Pokémon GO Plus +,Gaming,69,,,
 2026-11-04,big-w--vanish-napisan-gold-multi-power-stain-remover-2kg,BIG W,Department stores,Vanish Napisan Gold Multi Power Stain Remover 2kg,Household,18,36,50,Free click & collect or in-store
+2026-11-04,big-w--lego-editions-43018-lionel-messi-celebration,BIG W,Department stores,LEGO Editions 43018 Lionel Messi Celebration,Kids & toys,60,239,75,"Free delivery to metro areas, click & collect or in-store · 1,427 pieces"
+2026-11-04,big-w--somersault-rotating-craft-tray,BIG W,Department stores,Somersault Rotating Craft Tray,Kids & toys,4,16,75,Free click & collect or in-store
+2026-11-04,big-w--star-wars-9-millennium-falcon,BIG W,Department stores,"Star Wars 9"" Millennium Falcon",Kids & toys,20,,,Mandalorian & Grogu interactive Action Buddy $22.25
 2026-11-04,jb-hi-fi--blaupunkt-55-4k-uhd-smart-tv,JB Hi-Fi,"Home, hardware & tech","Blaupunkt 55"" 4K UHD Smart TV",Electronics,399,,,
 2026-11-04,jb-hi-fi--tcl-98-p7k-4k-qled-google-tv,JB Hi-Fi,"Home, hardware & tech","TCL 98"" P7K 4K QLED Google TV",Electronics,2488,,,
 2026-11-04,jb-hi-fi--jbl-tune-520bt-on-ear-headphones,JB Hi-Fi,"Home, hardware & tech",JBL Tune 520BT On-Ear Headphones,Electronics,39.95,,,
 2026-11-04,jb-hi-fi--helldivers-2-ps5,JB Hi-Fi,"Home, hardware & tech",Helldivers 2 (PS5),Gaming,24,,,
 2026-11-04,jb-hi-fi--battlefield-6-ps5-xbox-series-x,JB Hi-Fi,"Home, hardware & tech",Battlefield 6 (PS5 / Xbox Series X),Gaming,39,,,
 2026-11-04,jb-hi-fi--lenovo-legion-tab-8-8-12gb-256gb,JB Hi-Fi,"Home, hardware & tech","Lenovo Legion Tab 8.8"" 12GB/256GB",Electronics,499,,,
-2026-11-04,jb-hi-fi--google-pixel-11-pro-bonus-nintendo-switch-2,JB Hi-Fi,"Home, hardware & tech",Google Pixel 11 Pro + Bonus Nintendo Switch 2,Electronics,1849,,,"Switch 2 console free with the phone · Pixel 11 Pro XL $2,099"
 2026-11-04,jb-hi-fi--philips-evnia-34-wqhd-180hz-gaming-monitor,JB Hi-Fi,"Home, hardware & tech","Philips Evnia 34"" WQHD 180Hz Gaming Monitor",Electronics,275,,,
 2026-11-04,jb-hi-fi--nothing-phone-4a,JB Hi-Fi,"Home, hardware & tech",Nothing Phone (4a),Electronics,529,,,"From $529 · (4a) Pro $799, Phone (3) from $999"
 2026-11-04,jb-hi-fi--amazon-echo-dot-max-2-pack,JB Hi-Fi,"Home, hardware & tech",Amazon Echo Dot Max 2 pack,Electronics,229,458,50,"$114.50 each, down from $229 · discount applies in the cart with 2 added"
@@ -1239,10 +1247,13 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-04,bunnings--ryobi-18v-one-4-piece-kit-with-4ah-2ah-batteries,Bunnings,"Home, hardware & tech",Ryobi 18V ONE+ 4-Piece Kit with 4Ah & 2Ah Batteries,Tools & garden,249,,,
 2026-11-04,bunnings--ryobi-18v-one-twin-4ah-2ah-battery-charger-kit,Bunnings,"Home, hardware & tech",Ryobi 18V ONE+ Twin 4Ah + 2Ah Battery & Charger Kit,Tools & garden,149,,,
 2026-11-04,bunnings--jumbuck-rondo-electric-mini-charcoal-spit-roaster,Bunnings,"Home, hardware & tech",Jumbuck Rondo Electric Mini Charcoal Spit Roaster,Tools & garden,45,,,
+2026-11-04,bunnings--ryobi-18v-one-random-orbital-sander-tool-only-with-20-sanding-pads,Bunnings,"Home, hardware & tech",Ryobi 18V ONE+ Random Orbital Sander (tool only) with 20 Sanding Pads,Tools & garden,64.99,,,
+2026-11-04,bunnings--click-memory-maker-mystery-box-camera,Bunnings,"Home, hardware & tech",Click Memory Maker Mystery Box Camera,Kids & toys,24.95,,,"6 designs, picked at random"
 2026-11-04,chemist-warehouse--neilmed-sinus-rinse-120-sachets,Chemist Warehouse,Beauty & pharmacy,NeilMed Sinus Rinse 120 sachets,Health & beauty,15.99,,,
 2026-11-04,chemist-warehouse--earth-choice-dishwashing-powder-1kg,Chemist Warehouse,Beauty & pharmacy,Earth Choice Dishwashing Powder 1kg,Household,6.49,,,42 tablets $12.39
 2026-11-04,chemist-warehouse--olay-eyes-pro-retinol-eye-treatment-15ml,Chemist Warehouse,Beauty & pharmacy,Olay Eyes Pro-Retinol Eye Treatment 15ml,Health & beauty,18,59.99,70,
 2026-11-04,chemist-warehouse--nature-s-own-magnesium-glycinate-1150mg-300-tablets,Chemist Warehouse,Beauty & pharmacy,Nature's Own Magnesium Glycinate 1150mg 300 tablets,Health & beauty,29.99,,,
+2026-11-04,chemist-warehouse--bvlgari-le-gemme-tygar-eau-de-parfum-60ml,Chemist Warehouse,Beauty & pharmacy,Bvlgari Le Gemme Tygar Eau de Parfum 60ml,Health & beauty,349.99,487,28,
 2026-11-04,harris-scarfe--my-genie-iq500-laser-smart-robotic-vacuum,Harris Scarfe,Department stores,My Genie IQ500 Laser Smart Robotic Vacuum,Home,249,1799.99,86,HS Friends price (free to join)
 2026-11-04,harris-scarfe--smith-nobel-deluxe-digital-slushie-maker,Harris Scarfe,Department stores,Smith + Nobel Deluxe Digital Slushie Maker,Home,179.99,499.99,64,HS Friends price
 2026-11-04,harris-scarfe--shark-cordless-pro-stick-vacuum-ir300,Harris Scarfe,Department stores,Shark Cordless Pro Stick Vacuum IR300,Home,289.99,749.99,61,
@@ -1310,8 +1321,6 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-04,amazon--gillette-mach3-replacement-cartridges-8-pack,Amazon,Online,Gillette Mach3+ Replacement Cartridges 8 pack,Health & beauty,16,36,56,
 2026-11-04,amazon--anker-621-maggo-magnetic-power-bank-5-000mah,Amazon,Online,"Anker 621 MagGo Magnetic Power Bank 5,000mAh",Electronics,33.18,69.99,53,Sold by Anker
 2026-11-04,amazon--ugreen-130w-laptop-power-bank-20-000mah,Amazon,Online,"UGREEN 130W Laptop Power Bank 20,000mAh",Electronics,79.98,119,33,Delivered · sold by UGREEN
-2026-11-04,amazon--skittles-cloudz-sours-120g,Amazon,Online,Skittles Cloudz Sours 120g,Snacks,3,,,Also Skittles Fruits 200g $3
-2026-11-04,amazon--sandisk-max-endurance-128gb-microsdxc-card,Amazon,Online,SanDisk Max Endurance 128GB microSDXC Card,Electronics,96,134.5,29,Sold by IT_Factory on Amazon
 2026-11-04,amazon--breville-barista-touch-espresso-machine-bes880bst,Amazon,Online,Breville Barista Touch Espresso Machine BES880BST,Home,998,,,Delivered · $1 under Harvey Norman
 2026-11-04,amazon--pepsi-max-sunkist-or-solo-zero-sugar-cans-24-375ml,Amazon,Online,"Pepsi Max, Sunkist or Solo Zero Sugar Cans 24 × 375mL",Drinks,22.5,,,"Price when you buy 2 cases, $45 delivered · Mountain Dew also included"
 2026-11-04,amazon--david-beckham-men-s-fragrance-100ml,Amazon,Online,David Beckham Men's Fragrance 100ml,Health & beauty,14.99,,,Delivered · not sent to TAS or NT · Versace Pour Homme 100ml $69.99
@@ -1326,6 +1335,9 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-04,amazon--the-crew-mission-deep-sea-card-game,Amazon,Online,The Crew: Mission Deep Sea Card Game,Kids & toys,19.95,24.95,20,
 2026-11-04,amazon--garnier-vitamin-c-brightening-cleanser-250ml,Amazon,Online,Garnier Vitamin C Brightening Cleanser 250ml,Health & beauty,10.49,,,$9.44 with Subscribe & Save
 2026-11-04,amazon--monster-energy-zero-sugar-24-500ml,Amazon,Online,Monster Energy Zero Sugar 24 × 500mL,Drinks,52.5,,,$49.87 with Subscribe & Save · not sent to NT
+2026-11-04,amazon--bialetti-moka-express-stovetop-coffee-maker-sakamoto-days-red,Amazon,Online,"Bialetti Moka Express Stovetop Coffee Maker (Sakamoto Days, red)",Home,44.1,84.95,48,
+2026-11-04,amazon--philips-ro-water-station-chilled-hot,Amazon,Online,Philips RO Water Station Chilled & Hot,Home,799,999,20,Delivered · sold by AquaShield Australia on Amazon
+2026-11-04,amazon--fluffy-laundry-in-wash-scent-beads-cloud-nine-2-pack,Amazon,Online,Fluffy Laundry In-Wash Scent Beads Cloud Nine 2 pack,Household,30,,,Price for 2 · $27 with Subscribe & Save
 2026-11-04,kogan--samsung-galaxy-s25-ultra-256gb,Kogan,Online,Samsung Galaxy S25 Ultra 256GB,Electronics,1399,,,Free delivery with Kogan First
 2026-11-04,kogan--kogan-mobile-365-day-prepaid-sim-300gb,Kogan,Online,Kogan Mobile 365-day Prepaid SIM 300GB,Phone & SIM,159,,,Also 900GB for $199
 2026-11-04,kogan--kogan-mobile-365-day-prepaid-sim-900gb,Kogan,Online,Kogan Mobile 365-day Prepaid SIM 900GB,Phone & SIM,199,,,
@@ -1337,6 +1349,9 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-04,ebay--razer-basilisk-v4-hyperspeed-wireless-gaming-mouse,eBay,Online,Razer Basilisk V4 HyperSpeed Wireless Gaming Mouse,Gaming,152.15,,,Sold by Razer · $148.57 for eBay Plus
 2026-11-04,ebay--kogan-gentlecare-steam-generator-iron,eBay,Online,Kogan GentleCare Steam Generator Iron,Home,50,,,Delivered · sold by Kogan
 2026-11-04,ebay--ottocast-mini-wireless-carplay-android-auto-adapter,eBay,Online,Ottocast Mini Wireless CarPlay & Android Auto Adapter,Electronics,36,,,Delivered · sold by Ottocast on eBay
+2026-11-04,ebay--dyson-v15-detect-absolute-vacuum-floor-dok,eBay,Online,Dyson V15 Detect Absolute Vacuum + Floor Dok,Home,718.2,,,Delivered · sold by Dyson on eBay
+2026-11-04,ebay--gooloo-gt160-dual-cylinder-portable-tyre-inflator,eBay,Online,GOOLOO GT160 Dual Cylinder Portable Tyre Inflator,Tools & garden,80.74,,,Delivered · $78.84 with eBay Plus · sold by gooloo-direct
+2026-11-04,appliances-online--roborock-qrevo-edge-2-robot-vacuum-mop,Appliances Online,Online,Roborock Qrevo Edge 2 Robot Vacuum & Mop,Home,939,,,"Delivered, with free removal of your old vacuum"
 2026-11-04,indian-plaza--fresh-coriander-3-bunches,Indian PLAZA,Indian grocers,Fresh Coriander 3 bunches,Pantry,3,,,From the store's Facebook specials
 2026-11-04,indian-plaza--kp-mangoes-per-tray,Indian PLAZA,Indian grocers,KP Mangoes (per tray),Pantry,45,,,From the store's Facebook specials
 2026-11-04,indian-plaza--fresh-tomatoes-1kg-bag,Indian PLAZA,Indian grocers,Fresh Tomatoes 1kg Bag,Pantry,3.99,,,From the store's Facebook specials
