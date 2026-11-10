@@ -6,13 +6,16 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowInsets;
 import android.webkit.JavascriptInterface;
 import android.webkit.PermissionRequest;
 import android.webkit.WebChromeClient;
@@ -21,7 +24,7 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 /**
  * Adelaide Deal Sheet: shows the weekly deal sheet website full screen.
@@ -43,9 +46,35 @@ public class MainActivity extends Activity {
   @Override
   protected void onCreate(Bundle state) {
     super.onCreate(state);
-    FrameLayout root = new FrameLayout(this);
+    // Newer Android versions draw apps behind the status bar and the navigation bar.
+    // Two coloured strips keep the page clear of both (and of the keyboard).
+    boolean night = (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    LinearLayout root = new LinearLayout(this);
+    root.setOrientation(LinearLayout.VERTICAL);
+    final View topStrip = new View(this);
+    topStrip.setBackgroundColor(0xFFFFD21F);
+    final View bottomStrip = new View(this);
+    bottomStrip.setBackgroundColor(night ? 0xFF172133 : 0xFFFFFFFF);
     web = new WebView(this);
-    root.addView(web, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+    root.addView(topStrip, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0));
+    root.addView(web, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f));
+    root.addView(bottomStrip, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0));
+    root.setOnApplyWindowInsetsListener((v, insets) -> {
+      int left, top, right, bottom;
+      if (Build.VERSION.SDK_INT >= 30) {
+        android.graphics.Insets bars = insets.getInsets(WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout());
+        android.graphics.Insets ime = insets.getInsets(WindowInsets.Type.ime());
+        left = bars.left; top = bars.top; right = bars.right; bottom = Math.max(bars.bottom, ime.bottom);
+      } else {
+        left = insets.getSystemWindowInsetLeft(); top = insets.getSystemWindowInsetTop();
+        right = insets.getSystemWindowInsetRight(); bottom = insets.getSystemWindowInsetBottom();
+      }
+      topStrip.getLayoutParams().height = top;
+      bottomStrip.getLayoutParams().height = bottom;
+      v.setPadding(left, 0, right, 0);
+      v.requestLayout();
+      return insets;
+    });
     setContentView(root);
 
     WebSettings s = web.getSettings();
@@ -55,7 +84,14 @@ public class MainActivity extends Activity {
     s.setLoadWithOverviewMode(true);
     s.setUseWideViewPort(true);
     s.setMediaPlaybackRequiresUserGesture(false);
-    s.setUserAgentString(s.getUserAgentString() + " DealSheetApp/1.1");
+    // the page never needs files or other apps' data on the phone
+    s.setAllowFileAccess(false);
+    s.setAllowContentAccess(false);
+    s.setGeolocationEnabled(false);
+    s.setSaveFormData(false);
+    s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+    if (Build.VERSION.SDK_INT >= 26) s.setSafeBrowsingEnabled(true);
+    s.setUserAgentString(s.getUserAgentString() + " DealSheetApp/1.2");
     s.setCacheMode(isOnline() ? WebSettings.LOAD_DEFAULT : WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
     web.addJavascriptInterface(new Bridge(), "DealSheetApp");
@@ -66,7 +102,7 @@ public class MainActivity extends Activity {
         runOnUiThread(() -> {
           boolean wantsCamera = false;
           for (String r : request.getResources()) if (PermissionRequest.RESOURCE_VIDEO_CAPTURE.equals(r)) wantsCamera = true;
-          if (!wantsCamera || request.getOrigin() == null || !HOST.equals(request.getOrigin().getHost())) { request.deny(); return; }
+          if (!wantsCamera || !isOurPage(request.getOrigin())) { request.deny(); return; }
           if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             request.grant(new String[]{PermissionRequest.RESOURCE_VIDEO_CAPTURE});
           } else {
@@ -83,7 +119,7 @@ public class MainActivity extends Activity {
         Uri u = req.getUrl();
         if ("app".equals(u.getScheme()) && "retry".equals(u.getHost())) { loadHome(); return true; }
         String path = u.getPath();
-        if (HOST.equals(u.getHost()) && (path == null || !path.endsWith(".apk"))) return false;
+        if (isOurPage(u) && (path == null || !path.endsWith(".apk"))) return false;
         openOutside(u);
         return true;
       }
@@ -104,7 +140,7 @@ public class MainActivity extends Activity {
 
     Intent i = getIntent();
     if (state != null) web.restoreState(state);
-    else if (i != null && i.getData() != null && HOST.equals(i.getData().getHost())) { web.loadUrl(i.getData().toString()); lastLoad = System.currentTimeMillis(); }
+    else if (i != null && isOurSheet(i.getData())) { web.loadUrl(i.getData().toString()); lastLoad = System.currentTimeMillis(); }
     else loadHome();
   }
 
@@ -117,7 +153,7 @@ public class MainActivity extends Activity {
   @Override
   protected void onNewIntent(Intent intent) {
     super.onNewIntent(intent);
-    if (intent != null && intent.getData() != null && HOST.equals(intent.getData().getHost())) {
+    if (intent != null && isOurSheet(intent.getData())) {
       web.loadUrl(intent.getData().toString());
       lastLoad = System.currentTimeMillis();
     }
@@ -165,7 +201,21 @@ public class MainActivity extends Activity {
     return nc != null && nc.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET);
   }
 
+  /** Only secure pages on the deal sheet's own site may load inside the app or use the camera. */
+  private static boolean isOurPage(Uri u) {
+    return u != null && "https".equalsIgnoreCase(u.getScheme()) && HOST.equalsIgnoreCase(u.getHost()) && (u.getPort() == -1 || u.getPort() == 443) && u.getUserInfo() == null;
+  }
+
+  /** Links handed to the app by other apps must point at the deal sheet itself. */
+  private static boolean isOurSheet(Uri u) {
+    if (!isOurPage(u)) return false;
+    String path = u.getPath();
+    return path != null && (path.equals("/Adelaide-deals") || path.startsWith("/Adelaide-deals/")) && !path.contains("..") && !path.endsWith(".apk");
+  }
+
   private void openOutside(Uri u) {
+    String scheme = u.getScheme() == null ? "" : u.getScheme().toLowerCase(java.util.Locale.ROOT);
+    if (!(scheme.equals("https") || scheme.equals("http") || scheme.equals("mailto") || scheme.equals("tel") || scheme.equals("sms") || scheme.equals("geo") || scheme.equals("whatsapp"))) return;
     try { startActivity(new Intent(Intent.ACTION_VIEW, u)); } catch (ActivityNotFoundException ignored) { }
   }
 
@@ -181,7 +231,7 @@ public class MainActivity extends Activity {
     }
 
     @JavascriptInterface
-    public String version() { return "1.1"; }
+    public String version() { return "1.2"; }
   }
 
   private static final String OFFLINE_PAGE =

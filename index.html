@@ -3,6 +3,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Adelaide Deal Sheet</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data: blob:; media-src 'self' blob: mediastream:; connect-src 'self' https://world.openfoodfacts.org https://world.openbeautyfacts.org https://world.openproductsfacts.org https://cdn.jsdelivr.net; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="This week's specials and half-price deals from 30+ Adelaide stores — groceries, fashion, shoes, bags, home and shopping centres. Updated every Wednesday.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Adelaide Deal Sheet">
@@ -740,6 +742,19 @@ details.so-group{margin:0 0 18px}
   .bar.open .fmore{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .box2{padding:16px}
 }
+
+/* ---------- bigger top bar ---------- */
+.topbar-in{min-height:72px}
+.logo{width:46px;height:46px;border-radius:12px;font-size:26px}
+h1.mark a{gap:12px}
+.mark-n{font-size:23px}
+.mark-w{font-size:14px;font-weight:700}
+.tbtn{width:48px;height:48px}
+.tbtn .ico{width:26px;height:26px;stroke-width:2.2}
+@media (min-width:720px){.jump a{font-size:16px}}
+.bar{top:72px}
+.app-e2e body::before{content:"";display:block;height:40px;background:var(--ticket)}
+@media (max-width:719px){.topbar-in{min-height:72px;gap:0 8px}h1.mark{flex:0 1 auto;min-width:0}.mark-n{font-size:clamp(18px,5.6vw,23px)}.top-acts{margin-right:-6px}.tbtn{width:44px;height:48px}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
@@ -2076,6 +2091,7 @@ const rankOf = d => d.I ? ({low:0, rare:1, match:2, higher:3, none:4})[d.I.v] : 
 
 // ---- pictures
 // ---- interface icons (one line-icon family; product pictures stay as illustrations)
+const href = u => /^https:\/\//i.test(String(u)) ? esc(u) : "#";
 const ico = (n, extra = "") => `<svg class="ico${extra}" aria-hidden="true"><use href="#i-${n}"/></svg>`;
 const GROUP_ICON = {"Groceries":"cart","Indian grocers":"bowl","Department stores":"building","Shoes & sportswear":"shoe","Clothes & fashion":"shirt","Bags & accessories":"bag","Beauty & pharmacy":"sparkle","Home, hardware & tech":"home","Online":"package","Food & fuel":"fuel","Shopping centres":"city"};
 const groupIcon = G => GROUP_ICON[G.k] ? ico(GROUP_ICON[G.k]) : `<span aria-hidden="true">${G.ic}</span>`;
@@ -2347,7 +2363,7 @@ function renderEvents(){
   $("#events").innerHTML = upcoming.map(ev => {
     const n = Math.round((toDate(ev.s) - today) / 86400000);
     const cd = n <= 0 ? `<span class="cd now">On now</span>` : `<span class="cd">${n === 1 ? "Tomorrow" : "In " + n + " days"}</span>`;
-    return `<li><span class="en">${esc(ev.n)}</span>${cd}<span class="ed">${esc(ev.d)}</span>${ev.x ? `<span class="ex">${esc(ev.x)}</span>` : ""}${ev.u ? `<a class="eu" href="${esc(ev.u)}" target="_blank" rel="noopener">Go to the sale${ico("external")}</a>` : ""}</li>`;
+    return `<li><span class="en">${esc(ev.n)}</span>${cd}<span class="ed">${esc(ev.d)}</span>${ev.x ? `<span class="ex">${esc(ev.x)}</span>` : ""}${ev.u ? `<a class="eu" href="${href(ev.u)}" target="_blank" rel="noopener">Go to the sale${ico("external")}</a>` : ""}</li>`;
   }).join("");
 }
 function renderStatic(){
@@ -2678,6 +2694,7 @@ $("#watchForm").addEventListener("submit", e => {
 // ---- things I buy regularly: how much you use, where it's cheapest, when to stock up
 let REGS = LS.get("ads-regs", []), HROWS = [];
 const IN_APP_EARLY = /DealSheetApp/.test(navigator.userAgent);
+if (/DealSheetApp\/1\.[01]\b/.test(navigator.userAgent) && +((navigator.userAgent.match(/Android (\d+)/) || [])[1] || 0) >= 15) document.documentElement.classList.add("app-e2e");
 const REG_PER = {week:1, fortnight:2, month:4.345};
 const REG_PER_TXT = {week:"a week", fortnight:"a fortnight", month:"a month"};
 const REG_UNIT_TXT = {kg:"kg", L:"L", items:""};
@@ -2909,7 +2926,7 @@ function renderTrending(){
       <h3>${esc(x.n)}</h3>
       <p class="tr-p"><b>${esc(x.p)}</b> · ${esc(x.r)}</p>
       <p class="tr-why">${esc(x.why)}</p>
-      <div class="wo-a"><a class="btn sm" href="${esc(x.u)}" target="_blank" rel="noopener">${ico("external")}Have a look</a>${x.w ? `<button class="btn sm" type="button" data-trw="${esc(x.w)}" ${watching ? "disabled" : ""}>${watching ? ico("check") + "Watching" : ico("star") + "Tell me about deals"}</button>` : ""}</div>
+      <div class="wo-a"><a class="btn sm" href="${href(x.u)}" target="_blank" rel="noopener">${ico("external")}Have a look</a>${x.w ? `<button class="btn sm" type="button" data-trw="${esc(x.w)}" ${watching ? "disabled" : ""}>${watching ? ico("check") + "Watching" : ico("star") + "Tell me about deals"}</button>` : ""}</div>
       ${hits ? `<p class="tr-hit">${plural(hits, "deal")} on the sheet now match "${esc(x.w)}"</p>` : ""}
     </li>`; }).join("");
 }
@@ -2956,7 +2973,7 @@ async function startCam(){
     stopCam();
     const denied = err && (err.name === "NotAllowedError" || err.name === "SecurityError");
     let appV = 0; try { appV = window.DealSheetApp && DealSheetApp.version ? parseFloat(DealSheetApp.version()) : 0; } catch(e){}
-    if (IN_APP && appV < APP_LATEST){ msg.innerHTML = `This version of the app can't use the camera yet. Update the app (takes a minute), or type the barcode number below.<br><a class="btn primary" href="${APK_URL}" target="_blank" rel="noopener" data-upd>${ico("download")}Update the app</a>`; return; }
+    if (IN_APP && appV < 1.1){ msg.innerHTML = `This version of the app can't use the camera yet. Update the app (takes a minute), or type the barcode number below.<br><a class="btn primary" href="${APK_URL}" target="_blank" rel="noopener" data-upd>${ico("download")}Update the app</a>`; return; }
     msg.textContent = denied ? "Camera access is blocked. Allow the camera for this site (or app) in your phone's settings, or type the barcode number below."
       : "The camera couldn't start. Type the barcode number below instead.";
   }
@@ -3068,7 +3085,7 @@ function woCard(e){
     <div class="wo-d" aria-hidden="true"><b>${s.getDate()}</b><span>${WO_MON.format(s)}</span></div>
     <div class="wo-b">
       <p class="wo-k"><span class="dot"></span>${esc(cn)}${e.f ? `<i class="wo-free">Free</i>` : ""}${on ? `<i class="wo-now">On now</i>` : ""}</p>
-      <h3>${e.u ? `<a href="${esc(e.u)}" target="_blank" rel="noopener">${esc(e.n)}</a>` : esc(e.n)}</h3>
+      <h3>${e.u ? `<a href="${href(e.u)}" target="_blank" rel="noopener">${esc(e.n)}</a>` : esc(e.n)}</h3>
       <p class="wo-w">${esc(woRange(e))}${e.t ? " · " + esc(e.t) : ""}${e.w ? `<br>${esc(e.w)}` : ""}</p>
       ${e.x ? `<p class="wo-x">${esc(e.x)}</p>` : ""}
       <div class="wo-a"><a class="btn sm" href="${esc(woCal(e))}" target="_blank" rel="noopener">${ico("calendar")}Add to calendar</a>${map}</div>
@@ -3137,13 +3154,14 @@ window.addEventListener("hashchange", fromHash);
 const IN_APP = /DealSheetApp/.test(navigator.userAgent);
 // ---- Android app updates: newer app versions add features (1.1 = camera for the barcode scanner)
 const APP_LATEST = 1.1;
+const APP_NOTES = {"1.1":"adds the barcode scanner", "1.2":"fits the screen properly on newer phones and tightens security"};
 // a link to another site makes even the oldest app hand the download to Chrome
 const APK_URL = "https://raw.githubusercontent.com/likku2019/Adelaide-deals/main/app/deal-sheet.apk";
 let APP_VER = 0; try { if (IN_APP && window.DealSheetApp && DealSheetApp.version) APP_VER = parseFloat(DealSheetApp.version()) || 1; } catch(e){ APP_VER = 1; }
 if (IN_APP && APP_VER < APP_LATEST){
   let later = 0; try { later = +localStorage.getItem("ads-upd-later") || 0; } catch(e){}
   $("#updBtn").href = APK_URL;
-  $("#updText").textContent = `You have version ${APP_VER.toFixed(1)}. Version ${APP_LATEST.toFixed(1)} adds the barcode scanner.`;
+  $("#updText").textContent = `You have version ${APP_VER.toFixed(1)}. Version ${APP_LATEST.toFixed(1)} ${APP_NOTES[APP_LATEST.toFixed(1)] || "has the latest fixes"}.`;
   if (Date.now() - later > 2 * 864e5) $("#appUpdate").hidden = false;
   $("#updLater").addEventListener("click", () => { $("#appUpdate").hidden = true; try { localStorage.setItem("ads-upd-later", Date.now()); } catch(e){} });
 }
