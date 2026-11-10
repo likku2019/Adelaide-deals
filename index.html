@@ -3152,8 +3152,8 @@ loadHistory().then(rows => {
 });
 window.addEventListener("hashchange", fromHash);
 const IN_APP = /DealSheetApp/.test(navigator.userAgent);
-// ---- Android app updates: newer app versions add features (1.1 = camera for the barcode scanner)
-const APP_LATEST = 1.1;
+// ---- Android app updates: newer app versions add features (1.1 = camera for the barcode scanner, 1.2 = status bar spacing and security)
+const APP_LATEST = 1.2;
 const APP_NOTES = {"1.1":"adds the barcode scanner", "1.2":"fits the screen properly on newer phones and tightens security"};
 // a link to another site makes even the oldest app hand the download to Chrome
 const APK_URL = "https://raw.githubusercontent.com/likku2019/Adelaide-deals/main/app/deal-sheet.apk";
