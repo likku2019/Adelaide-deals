@@ -75,17 +75,31 @@ h1,h2,h3,h4{margin:0;text-wrap:balance;font-family:var(--display);letter-spacing
 .skip{position:absolute;left:-999px;top:8px;display:inline-flex;align-items:center;min-height:44px;background:var(--ink);color:var(--paper);padding:0 14px;border-radius:8px;z-index:50}
 .skip:focus{left:12px}
 
-/* ---------- header: the yellow ticket ---------- */
-.top{background:var(--ticket);color:var(--ticket-ink);position:relative;padding-bottom:14px}
-.top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:12px;
-  background:linear-gradient(135deg,var(--paper) 6px,transparent 0) 0 0/12px 12px repeat-x,linear-gradient(225deg,var(--paper) 6px,transparent 0) 0 0/12px 12px repeat-x}
-.top-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,390px);gap:32px;padding-block:30px 26px;align-items:start}
-h1.mark{font-family:var(--display);font-weight:800;font-size:clamp(44px,8vw,88px);line-height:.92;letter-spacing:-.03em}
-h1.mark span{display:block}
-.week{margin:16px 0 0;font:600 18px/1.3 var(--display)}
-.facts{margin:6px 0 0;max-width:60ch;font-size:16px;color:var(--ticket-ink)}
+/* ---------- top bar (every page) + this week's details (first page only) ---------- */
+.topbar{position:sticky;top:0;z-index:30;background:var(--ticket);color:var(--ticket-ink)}
+.topbar-in{display:flex;align-items:center;gap:0 20px;min-height:60px}
+h1.mark{flex:none;font:inherit;letter-spacing:0}
+h1.mark a{display:flex;align-items:center;gap:10px;min-height:44px;color:inherit;text-decoration:none;border-radius:10px}
+h1.mark a:focus-visible,.tbtn:focus-visible,.topbar .jump a:focus-visible{outline:2.5px solid var(--ticket-ink);outline-offset:2px}
+.logo{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--ticket-ink);color:var(--ticket);font:800 21px/1 var(--display)}
+.mark-t{display:flex;flex-direction:column;gap:1px}
+.mark-n{font:800 18px/1.15 var(--display);letter-spacing:-.02em;white-space:nowrap}
+.mark-w{font:600 12.5px/1.2 var(--body);white-space:nowrap}
+.top-acts{display:flex;gap:2px;margin-left:auto;margin-right:-8px}
+.tbtn{all:unset;box-sizing:border-box;cursor:pointer;display:grid;place-items:center;width:44px;height:44px;border-radius:12px;color:var(--ticket-ink);transition:background var(--t-fast)}
+.tbtn:hover{background:rgba(20,33,61,.1)}
+.tbtn .ico{width:22px;height:22px}
+.top{background:var(--ticket);color:var(--ticket-ink)}
+body[data-tab="page"] .top{display:none}
+.top-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:32px;padding-block:20px 30px;align-items:start}
+.week{margin:0;font:800 clamp(26px,3.6vw,40px)/1.1 var(--display);letter-spacing:-.025em;text-wrap:balance}
+.hstats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.hstats div{display:flex;flex-direction:column-reverse;justify-content:flex-end;min-width:112px;padding:11px 14px 10px;border-radius:var(--r-md);background:rgba(255,255,255,.45)}
+.hstats dd{margin:0;font:800 28px/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.hstats dt{margin-top:5px;font-size:13px;font-weight:600;line-height:1.25}
+.facts{margin:14px 0 0;max-width:62ch;font-size:14.5px;line-height:1.5;color:var(--ticket-ink)}
 .facts b{font-variant-numeric:tabular-nums}
-.hdr-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hdr-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .btn-ink{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;background:var(--ticket-ink);color:var(--ticket);text-decoration:none;font-weight:700;font-size:15px;cursor:pointer;transition:background var(--t-fast),color var(--t-fast)}
 .btn-ink:hover{background:#26375E}
 .btn-ink:active{background:#0B1428}
@@ -108,7 +122,7 @@ h1.mark span{display:block}
 .events .cd.now{background:#2BB673;color:#08281A}
 
 /* ---------- filter bar ---------- */
-.bar{position:sticky;top:61px;z-index:20;margin:0 0 16px;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.bar{position:sticky;top:60px;z-index:20;margin:0 0 16px;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
 .bar-in{display:flex;flex-direction:column;gap:8px;padding-block:10px}
 .row1 .sel{flex:1 1 170px}
 .row1{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -118,7 +132,7 @@ h1.mark span{display:block}
 .search input{flex:1;min-width:0;border:0;background:transparent;font-size:16px;outline:none}
 .controls{display:flex;flex-wrap:wrap;gap:8px}
 @media (min-width:720px){.bar-in{gap:8px;padding-block:8px}.tog,.sel,.clear{min-height:44px;font-size:14.5px}.search{height:44px}.controls .sel{flex:0 1 auto}.row1 .clear{flex:none}}
-@media (max-width:1099px){.bar{position:static;backdrop-filter:none;-webkit-backdrop-filter:none;background:transparent;border-bottom:0}}
+@media (max-width:1139px){.bar{position:static;backdrop-filter:none;-webkit-backdrop-filter:none;background:transparent;border-bottom:0}}
 .tog,.sel{min-height:46px;border:1.5px solid var(--line-2);border-radius:var(--r-md);background:var(--card);font-weight:600;font-size:15px;transition:background var(--t-fast),border-color var(--t-fast),color var(--t-fast)}
 .tog:hover,.sel:hover{border-color:var(--ink-2)}
 .tog{display:inline-flex;align-items:center;gap:8px;padding:0 12px;cursor:pointer;user-select:none;white-space:nowrap}
@@ -357,14 +371,15 @@ section#next .sec-head{margin-top:40px}
 
 
 /* ---------- section nav (top on computers, bottom tab bar on phones) ---------- */
-.jump{position:sticky;top:0;z-index:25;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
-.jump-in{display:flex;gap:6px;padding-block:8px;overflow-x:auto;scrollbar-width:none}
-.jump a{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-2);transition:background var(--t-fast),color var(--t-fast)}
-.jump a:hover{background:color-mix(in srgb,var(--ink) 7%,transparent);color:var(--ink)}
+.jump{flex:1;min-width:0}
+.jump-in{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.jump a{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;color:var(--ticket-ink);transition:background var(--t-fast),color var(--t-fast)}
+.jump a:hover{background:rgba(20,33,61,.1)}
 .jump a .ji{display:grid;place-items:center;line-height:1}
 .jump a .ji .ico{width:20px;height:20px}
 .jump a .jl-short{display:none}
-.jump a[aria-current="true"]{background:var(--ink);color:var(--paper)}
+.jump a[aria-current="true"]{background:var(--ticket-ink);color:var(--ticket)}
+@media (min-width:720px) and (max-width:1139px){.topbar-in{flex-wrap:wrap}.jump{order:3;flex:1 0 100%;padding-bottom:8px}}
 main section{scroll-margin-top:64px}
 main>section[data-off]{display:none}
 main>section:first-of-type .sec-head,main>section:not([data-off]) .sec-head{margin-top:26px}
@@ -436,10 +451,12 @@ details.og>summary:focus-visible{outline:2.5px solid var(--focus);outline-offset
 .og-body .store{background:var(--paper)}
 .store.flash{outline:3px solid var(--ticket);outline-offset:3px}
 @media (max-width:719px){
-  .jump{position:fixed;top:auto;bottom:0;left:0;right:0;border-bottom:0;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .topbar{position:static}
+  .topbar-in{min-height:56px}
+  .jump{position:fixed;z-index:25;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
   .jump-in{justify-content:space-between;gap:2px;padding:4px 6px;overflow:visible}
   .jump a{flex:1 1 0;flex-direction:column;justify-content:center;gap:3px;min-height:60px;padding:0;border-radius:12px;font-size:12px;color:var(--muted)}
-  .jump a:hover{background:transparent}
+  .jump a:hover,.jump a[aria-current="true"]:hover{background:transparent}
   .jump a .jl-long{display:none}
   .jump a .jl-short{display:inline}
   .jump a .ji{padding:4px 18px;border-radius:999px;transition:background var(--t-fast)}
@@ -524,11 +541,18 @@ details.so-group{margin:0 0 18px}
   .top-in{grid-template-columns:minmax(0,1fr);gap:22px}
 }
 @media (max-width:719px){
-  .top-in{padding-block:22px 18px}
+  .top-in{padding-block:10px 20px;gap:18px}
+  .hstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:14px}
+  .hstats div{min-width:0;padding:10px 10px 9px}
+  .hstats dd{font-size:24px}
+  .hstats dt{font-size:12px}
+  .hdr-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .btn-ink{justify-content:center;padding:0 10px;font-size:14px;white-space:nowrap}
+  .events .ex{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .events{padding:14px 0 12px;border-radius:14px}
   .events h2{padding:0 16px;font-size:19px}
   .events ol{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 16px 4px;scroll-padding-inline:16px}
-  .events li{flex:0 0 74%;scroll-snap-align:start;border:1px solid color-mix(in srgb,var(--board-ink) 16%,transparent);border-radius:12px;padding:10px 12px}
+  .events li{flex:0 0 78%;align-content:start;scroll-snap-align:start;border:1px solid color-mix(in srgb,var(--board-ink) 16%,transparent);border-radius:12px;padding:10px 12px}
   .pic{aspect-ratio:16/11}
   .bar{position:static;backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper)}
   .fab.show{display:inline-flex}
@@ -652,16 +676,95 @@ details.so-group{margin:0 0 18px}
 .empty .smore{margin-top:4px}
 .smore-wrap{padding:18px 16px}
 .smore button:disabled{opacity:.7;cursor:default}
+
+/* ---------- 2026-11 refresh: layout, density and speed ---------- */
+.top-in{display:block}
+.brand{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 32px;align-items:end}
+.brand>*{grid-column:1}
+.brand .hdr-links{grid-column:2;grid-row:1/4;align-self:center;display:grid;grid-template-columns:repeat(2,auto);margin:0}
+.brand .btn-ink{justify-content:center}
+.events{margin-top:22px;padding:14px 18px 16px}
+.events h2{font-size:17px;letter-spacing:0}
+.events ol{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:10px}
+.events li{align-content:start;border:1px solid color-mix(in srgb,var(--board-ink) 16%,transparent);border-radius:var(--r-md);padding:10px 12px}
+.events .cd{grid-row:auto;align-self:start;font-size:12px;padding:4px 9px}
+.events .ed{grid-column:1/-1}
+.events .eu{min-height:36px;padding:0 12px;font-size:13px;margin-top:8px;position:relative}
+.events .eu::after{content:"";position:absolute;inset:-4px}
+@media (max-width:1139px){.events ol{display:flex;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin;padding-bottom:4px}.events li{flex:0 0 230px;scroll-snap-align:start}}
+@media (max-width:899px){.brand{display:block}.brand .hdr-links{margin-top:16px;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:719px){
+  .events{margin-top:18px;padding:12px 0 12px}
+  .events ol{display:flex;margin-top:8px}
+  .events h2{font-size:16px}
+}
+/* deal tickets: tiles without a product photo are shorter, so more deals fit on a screen */
+.pic.pic-e{aspect-ratio:auto;height:92px}
+.pic.pic-e .emo{font-size:44px}
+.sh-hero .pic.pic-e{height:auto;aspect-ratio:1}
+.deal{content-visibility:auto;contain-intrinsic-size:auto 330px}
+.add{width:40px;height:40px;box-shadow:var(--shadow-1)}
+.add::after{content:"";position:absolute;inset:-4px}
+.add svg{width:18px;height:18px}
+.sticker{max-width:calc(100% - 58px)}
+.deal h3{font-weight:600}
+.sec-head h2{font-size:clamp(24px,3vw,32px)}
+[hidden]{display:none!important}
+.tog{position:relative}
+.sticker.inl{position:static;align-self:flex-start;max-width:100%;box-shadow:none;font-size:11.5px;padding:4px 8px 4px 6px}
+.fmore{display:none}
+.togs{display:contents}
+.try{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:10px}
+.lempty p{margin:0}
+@media (max-width:719px){
+  .sec-head{margin-bottom:12px}
+  .pic.pic-e{height:76px}
+  .pic.pic-e .emo{font-size:38px}
+  .bar-in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding-block:0 4px}
+  .row1,.controls{display:contents}
+  .bar .sel,.bar .tog,.bar .clear{min-width:0;width:100%;box-sizing:border-box;text-overflow:ellipsis}
+  .search{grid-column:1/-1;order:1;flex:none}
+  .togs{grid-column:1/-1;order:2;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px}
+  .togs::-webkit-scrollbar{display:none}
+  .togs .tog{flex:none;width:auto;min-height:44px;border-radius:999px;padding:0 14px 0 10px;font-size:14px}
+  #storeSel{order:3}
+  #sort{order:4}
+  .fmore{order:5;display:inline-flex;justify-content:center}
+  .fmore .ico{width:18px;height:18px}
+  .bar .clear{order:6}
+  .bar .clear:disabled{display:none}
+  .bar:has(.clear:disabled) .fmore{grid-column:1/-1}
+  .fx{order:7;display:none}
+  .bar.open .fx{display:block}
+  .bar.open #price{grid-column:1/-1}
+  .bar.open .fmore{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .box2{padding:16px}
+}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
 <a class="skip" href="#deals">Skip to the deals</a>
 <div class="updbar" id="appUpdate" hidden><div class="wrap updbar-in"><span class="ui"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg></span><div class="ut"><b>App update available</b><span id="updText">The new version adds the barcode scanner.</span></div><a class="btn primary" id="updBtn" href="#" target="_blank" rel="noopener">Update now</a><button class="ux" type="button" id="updLater" aria-label="Remind me later">×</button></div><p class="wrap updhow" id="updHow" hidden>Chrome is downloading <b>deal-sheet.apk</b>. When it finishes, tap <b>Open</b> (or find it in Downloads), then tap <b>Update</b>. Your list and watch words are kept.</p></div>
-<header class="top"><div class="wrap top-in">
+<div class="topbar" id="topbar"><div class="wrap topbar-in">
+  <h1 class="mark"><a href="#stores" id="homeLink"><span class="logo" aria-hidden="true">&frac12;</span><span class="mark-t"><span class="mark-n">Adelaide Deal Sheet</span><span class="mark-w" id="weekMini"></span></span></a></h1>
+  <nav class="jump" aria-label="Sections"><div class="jump-in">
+  <a href="#stores"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-store"/></svg></span><span class="jl-long">Stores</span><span class="jl-short">Stores</span></a>
+  <a href="#deals"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-tag"/></svg></span><span class="jl-long">All deals</span><span class="jl-short">Deals</span></a>
+  <a href="#best"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="jl-long">Best deals</span><span class="jl-short">Best</span></a>
+  <a href="#promos"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-megaphone"/></svg></span><span class="jl-long">Offers &amp; dates</span><span class="jl-short">Offers</span></a>
+  <a href="#whatson"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-ticket"/></svg></span><span class="jl-long">What's on</span><span class="jl-short">Events</span></a>
+  <a href="#saved"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></span><span class="jl-long">My list</span><span class="jl-short">List</span><b class="jb" id="listBadge" hidden></b></a>
+</div></nav>
+  <div class="top-acts">
+    <button class="tbtn" type="button" id="findBtn" aria-label="Search deals" title="Search deals"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg></button>
+    <button class="tbtn" type="button" id="scanBtn3" aria-label="Scan a barcode" title="Scan a barcode"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M8 8v8M12 8v8M16 8v8"/></svg></button>
+  </div>
+</div></div>
+<header class="top" id="hero"><div class="wrap top-in">
   <div class="brand">
-    <h1 class="mark"><span>Adelaide</span><span>Deal Sheet</span></h1>
     <p class="week" id="week"></p>
-    <p class="facts" id="facts"></p>
+    <dl class="hstats" id="facts"></dl>
+    <p class="facts" id="factsNote"></p>
     <div class="hdr-links">
       <a class="btn-ink" href="https://likku2019.github.io/Adelaide-deals/history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8"/><path d="M15 7h5v5"/></svg>Price tracker</a>
       <button class="btn-ink btn-install" id="scanBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg>Scan a barcode</button>
@@ -675,15 +778,6 @@ details.so-group{margin:0 0 18px}
     <ol id="events"></ol>
   </aside>
 </div></header>
-
-<nav class="jump" aria-label="Sections"><div class="wrap jump-in">
-  <a href="#stores"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-store"/></svg></span><span class="jl-long">Stores</span><span class="jl-short">Stores</span></a>
-  <a href="#deals"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-tag"/></svg></span><span class="jl-long">All deals</span><span class="jl-short">Deals</span></a>
-  <a href="#best"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="jl-long">Best deals</span><span class="jl-short">Best</span></a>
-  <a href="#promos"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-megaphone"/></svg></span><span class="jl-long">Offers &amp; dates</span><span class="jl-short">Offers</span></a>
-  <a href="#whatson"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-ticket"/></svg></span><span class="jl-long">What's on</span><span class="jl-short">Events</span></a>
-  <a href="#saved"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></span><span class="jl-long">My list</span><span class="jl-short">List</span><b class="jb" id="listBadge" hidden></b></a>
-</div></nav>
 
 <main class="wrap">
   <section id="best" aria-labelledby="bs-h">
@@ -719,17 +813,20 @@ details.so-group{margin:0 0 18px}
       <div class="row1">
         <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
           <input type="search" id="q" placeholder="Search deals, e.g. coffee or Samba" aria-label="Search deals" autocomplete="off"><button type="button" class="scanmini" id="scanBtn2" aria-label="Scan a barcode" title="Scan a barcode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg></button></label>
-        <select class="sel" id="grpSel" aria-label="Type of store"></select>
+        <select class="sel fx" id="grpSel" aria-label="Type of store"></select>
         <select class="sel" id="storeSel" aria-label="Store"></select>
         <button type="button" class="clear" id="clear" disabled>Clear filters</button>
       </div>
       <div class="controls">
+        <div class="togs">
         <label class="tog"><input type="checkbox" id="half"><span class="box" aria-hidden="true"></span>½ price or better</label>
         <label class="tog"><input type="checkbox" id="low"><span class="box" aria-hidden="true"></span>Record lows</label>
         <label class="tog"><input type="checkbox" id="fresh"><span class="box" aria-hidden="true"></span>New for you</label>
         <label class="tog"><input type="checkbox" id="soon"><span class="box" aria-hidden="true"></span>Ending soon</label>
-        <select class="sel" id="cat" aria-label="Category"></select>
-        <select class="sel" id="price" aria-label="Price">
+        </div>
+        <button type="button" class="tog fmore" id="fmore" aria-expanded="false" aria-controls="bar"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M7 12h10M10 17h4"/></svg><span id="fmoreT">More filters</span></button>
+        <select class="sel fx" id="cat" aria-label="Category"></select>
+        <select class="sel fx" id="price" aria-label="Price">
           <option value="All">Any price</option><option value="10">Under $10</option><option value="25">Under $25</option><option value="50">Under $50</option>
           <option value="100">Under $100</option><option value="250">Under $250</option><option value="500">Under $500</option><option value="500+">$500 and up</option>
         </select>
@@ -744,6 +841,7 @@ details.so-group{margin:0 0 18px}
     </div></div>
     <div id="storeOffers"></div>
     <div class="grid" id="grid"></div>
+    <div class="more-row" id="gridMoreRow" hidden><button class="btn" type="button" id="gridMore"></button></div>
   </section>
 
   <section id="promos" aria-labelledby="pr-h">
@@ -1986,8 +2084,8 @@ function pic(d){
   const h = CAT_HUE[d.cat] ?? 45;
   const emo = `<span class="emo" aria-hidden="true">${emojiFor(d)}</span>`;
   const st = d.I && STICKER[d.I.v] ? `<span class="sticker s-${d.I.v}">${ICON[d.I.v]}${STICKER[d.I.v]}</span>` : "";
-  if (d.img) return `<div class="pic" style="--h:${h}" data-fb='${emo.replace(/'/g,"&#39;")}'>${st}<img src="${esc(d.img)}" alt="" loading="lazy" onerror="this.outerHTML=this.parentNode.dataset.fb"></div>`;
-  return `<div class="pic" style="--h:${h}">${st}${emo}</div>`;
+  if (d.img) return `<div class="pic" style="--h:${h}" data-fb='${emo.replace(/'/g,"&#39;")}'>${st}<img src="${esc(d.img)}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('pic-e');this.outerHTML=this.parentNode.dataset.fb"></div>`;
+  return `<div class="pic pic-e" style="--h:${h}">${emo}</div>`;
 }
 function priceHTML(v){
   const [a, b] = v.toFixed(2).split(".");
@@ -2020,7 +2118,7 @@ function card(d){
   return `<article class="deal" style="--c:${c}">
     ${addBtn(d)}${pic(d)}
     <div class="body">
-      <div class="meta"><span class="pill">${esc(d.r)}${d.isNew ? `<span class="newb">NEW</span>` : ""}</span><span class="cat">${esc(d.cat)}</span></div>
+      ${!d.img && d.I && STICKER[d.I.v] ? `<span class="sticker inl s-${d.I.v}">${ICON[d.I.v]}${STICKER[d.I.v]}</span>` : ""}<div class="meta"><span class="pill">${esc(d.r)}${d.isNew ? `<span class="newb">NEW</span>` : ""}</span><span class="cat">${esc(d.cat)}</span></div>
       <h3><button class="nm" type="button" data-i="${d.i}" aria-haspopup="dialog">${esc(d.n)}</button></h3>
       ${d.note ? `<p class="note">${esc(d.note)}</p>` : ""}
     </div>
@@ -2085,17 +2183,37 @@ function render(){
   list.sort(by);
   VIS = list.map(d => d.i);
   const promoOnly = state.r !== "All" && !DEALS.some(d => d.r === state.r);
-  $("#grid").innerHTML = list.length ? list.map(card).join("")
+  SHOWN = Math.min(list.length, PAGE);
+  $("#grid").innerHTML = list.length ? list.slice(0, SHOWN).map(card).join("")
     : promoOnly ? `<div class="empty"><p>${esc(state.r)} has no individual deals listed this week. Its store-wide offers are shown above.</p></div>`
     : q && !DEALS.some(d => qHit(d, q)) ? `<div class="empty">${searchMore(state.q, false)}</div>`
     : q ? `<div class="empty"><p>${plural(DEALS.filter(d => qHit(d, q)).length, "deal")} for "${esc(state.q.trim())}" are hidden by your other filters.</p><button class="btn" type="button" data-qonly>Show them</button>${searchMore(state.q, true)}</div>`
     : `<div class="empty"><p>No deals match these filters.</p><button class="btn" type="button" data-clear>Clear filters</button></div>`;
-  if (list.length && q.length >= 2) $("#grid").insertAdjacentHTML("beforeend", `<div class="empty smore-wrap">${searchMore(state.q, true)}</div>`);
+  if (list.length && q.length >= 2) $("#grid").insertAdjacentHTML("beforeend", `<div class="empty smore-wrap" id="gridTail">${searchMore(state.q, true)}</div>`);
+  syncMore();
   renderStoreOffers();
   $("#count").textContent = list.length === DEALS.length ? `${DEALS.length} deals` : `${list.length} of ${DEALS.length} deals`;
   const active = isActive();
   $("#clear").disabled = !active;
   persist();
+}
+// the grid is drawn a screenful at a time; the rest is added as you scroll (or with the button)
+const PAGE = 36;
+let SHOWN = 0;
+function syncMore(){
+  const left = VIS.length - SHOWN;
+  $("#gridMoreRow").hidden = left <= 0;
+  if (left > 0) $("#gridMore").textContent = `Show ${Math.min(PAGE, left)} more · ${left} left`;
+  const n = [state.g !== "All", state.cat !== "All", state.price !== "All"].filter(Boolean).length;
+  $("#fmoreT").textContent = n ? `More filters (${n})` : "More filters";
+}
+function showMore(){
+  if (SHOWN >= VIS.length) return;
+  const html = VIS.slice(SHOWN, SHOWN + PAGE).map(i => card(DEALS[i])).join("");
+  const tail = $("#gridTail");
+  if (tail) tail.insertAdjacentHTML("beforebegin", html); else $("#grid").insertAdjacentHTML("beforeend", html);
+  SHOWN = Math.min(VIS.length, SHOWN + PAGE);
+  syncMore();
 }
 function clearAll(){
   state = {...state, g:"All", r:"All", half:false, low:false, fresh:false, soon:false, cat:"All", price:"All", q:""};
@@ -2107,15 +2225,12 @@ const TABS = {stores:["stores"], deals:["deals"], best:["best","trending","stand
 function showTab(t, scroll = true){
   if (!TABS[t]) t = "stores";
   state.tab = t; persist();
+  document.body.dataset.tab = TABS[t][0] === "stores" ? "home" : "page";
   document.querySelectorAll("main > section").forEach(sec => sec.toggleAttribute("data-off", !TABS[t].includes(sec.id)));
   const navT = t === "next" ? "promos" : t === "places" ? "whatson" : t;
   document.querySelectorAll(".jump a").forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + navT));
   if (t === "saved") renderSaved(true);
-  if (scroll){
-    const off = matchMedia("(max-width:719px)").matches ? 0 : 56;
-    const top = $("main").getBoundingClientRect().top + scrollY - off;
-    if (scrollY > top) scrollTo({top});
-  }
+  if (scroll) scrollTo({top:0});
 }
 function selectStore(n){
   if (!DEALS.some(d => d.r === n)) return openOffer(n);
@@ -2241,7 +2356,9 @@ function renderStatic(){
   const end = new Date(WEEK.end + "T23:59:00+10:30");
   const days = Math.max(0, Math.ceil((end - new Date()) / 86400000));
   $("#week").textContent = `Week of ${WEEK.label}`;
-  $("#facts").innerHTML = `<b>${DEALS.length}</b> deals from <b>${stores}</b> stores and centres, <b>${half}</b> of them half price or better. Coles and Woolworths specials end ${esc(WEEK.ends)}${days ? `, <b>${days}</b> ${days === 1 ? "day" : "days"} from now` : ""}. Updated ${esc(WEEK.updated)}.${NEW_COUNT ? ` <button class="factbtn" type="button" id="seeNew">${plural(NEW_COUNT, "new deal")} since you last looked</button>` : ""}`;
+  $("#weekMini").textContent = WEEK.label.replace(/ \d{4}$/, "");
+  $("#facts").innerHTML = [[DEALS.length, "deals"], [stores, "stores & centres"], [half, "half price or better"]].map(([v, l]) => `<div><dt>${l}</dt><dd>${v}</dd></div>`).join("");
+  $("#factsNote").innerHTML = `Coles and Woolworths specials end ${esc(WEEK.ends)}${days ? `, <b>${days}</b> ${days === 1 ? "day" : "days"} from now` : ""}. Updated ${esc(WEEK.updated)}.${NEW_COUNT ? ` <button class="factbtn" type="button" id="seeNew">${plural(NEW_COUNT, "new deal")} since you last looked</button>` : ""}`;
   $("#stand").innerHTML = PICKS.map(([r, p, t, x, e]) => {
     const m = DEALS.filter(d => d.r === r).map(d => [d, alike({t:toks(t), sz:[]}, {...d, sz:[]})]).sort((a,b) => b[1] - a[1])[0];
     const di = m && m[1] >= .3 ? m[0].i : null;
@@ -2390,7 +2507,7 @@ function openDeal(i, push = true){
     </div>
     <div class="sh-body" style="--c:${c}">
       <div class="sh-hero">${pic({...d, I:null})}<div><div class="meta"><span class="pill">${esc(d.r)}</span><span class="cat">${esc(d.cat)}</span></div><h2 id="sh-title">${esc(d.n)}</h2>${d.note ? `<p class="note">${esc(d.note)}</p>` : ""}</div></div>
-      <div class="sh-tkt">${flagOf(d)}${priceHTML(d.now)}${d.was ? `<span class="was"><s>was ${money(d.was)}</s><br>save ${money(d.save)}</span>` : "<span></span>"}<span class="end">${d.unit ? esc(d.unit) + " · " : ""}${d.left != null && d.left <= 6 ? leftText(d.left) + " · " : ""}${esc(d.end)}</span></div>
+      <div class="sh-tkt">${flagOf(d)}${priceHTML(d.now)}${d.was ? `<span class="was"><s>was ${money(d.was)}</s><br>save ${money(d.save)}</span>` : "<span></span>"}<span class="end">${d.unit ? esc(d.unit) + " · " : ""}${d.left != null && d.left <= 6 ? leftText(d.left) + " · " : ""}${esc(String(d.end).replace(/^ends\s+/i, d.left != null && d.left <= 6 ? "" : "Ends "))}</span></div>
       <div class="verdict v-${vd.v}"><span class="vi">${ICON[vd.v] || ICON.none}</span><strong>${esc(vd.h)}</strong><p>${esc(vd.p)}</p></div>
       ${chart}
       ${HIST_OK && I.tracked ? statsHTML(d, I) : ""}
@@ -2683,7 +2800,7 @@ function regCard(r, i){
 }
 function renderRegs(){
   const box = $("#regList"); if (!box) return;
-  box.innerHTML = REGS.length ? `<ol class="rgs">${REGS.map(regCard).join("")}</ol>` : `<div class="lempty">Add the things you buy every week or month. Try one: ${["Milk","Sugar","Rice","Eggs","Bread","Atta"].map(n => `<button class="linkbtn" type="button" data-reg-try="${n}">${n}</button>`).join(", ")}</div>`;
+  box.innerHTML = REGS.length ? `<ol class="rgs">${REGS.map(regCard).join("")}</ol>` : `<div class="lempty"><p>Add the things you buy every week or month. Try one:</p><div class="try">${["Milk","Sugar","Rice","Eggs","Bread","Atta"].map(n => `<button class="btn sm" type="button" data-reg-try="${n}">${n}</button>`).join("")}</div></div>`;
   $("#regSub").textContent = REGS.length ? `${plural(REGS.length, "item")} · checked against every deal on the sheet, every time it updates` : "Tell the sheet how much you use. It finds the cheapest place each week and tells you when a deal is worth stocking up on.";
   $("#regShare").hidden = !REGS.length;
 }
@@ -2901,6 +3018,9 @@ const RECENT_KEY = "ads-scans";
 function saveRecent(code, name){ const r = LS.get(RECENT_KEY, []).filter(x => x.c !== code); r.unshift({c:code, n:name}); LS.set(RECENT_KEY, r.slice(0, 6)); }
 function recentHTML(){ const r = LS.get(RECENT_KEY, []); return r.length ? `<p class="scan-recent">Recent: ${r.map(x => `<button type="button" data-rescan="${esc(x.c)}">${esc(x.n.length > 28 ? x.n.slice(0, 27) + "…" : x.n)}</button>`).join("")}</p>` : ""; }
 $("#scanBtn").addEventListener("click", openScan);
+$("#scanBtn3").addEventListener("click", openScan);
+$("#homeLink").addEventListener("click", e => { e.preventDefault(); showTab("stores"); });
+$("#findBtn").addEventListener("click", () => { showTab("deals"); const q = $("#q"); q.focus({preventScroll:true}); q.scrollIntoView({block:"center"}); });
 $("#scanBtn2").addEventListener("click", e => { e.preventDefault(); openScan(); });
 $("#scanForm").addEventListener("submit", e => { e.preventDefault(); stopCam(); scanBusy = true; lookup($("#scanCode").value); });
 scanDlg.addEventListener("close", stopCam);
@@ -2997,7 +3117,12 @@ $("#shareTop").addEventListener("click", () => shareOut(topDealsText(), "https:/
 document.addEventListener("click", e => { if (e.target.closest("#seeNew")){ clearAll(); state.fresh = true; $("#fresh").checked = true; render(); showTab("deals"); } });
 $("#price").addEventListener("change", e => { state.price = e.target.value; render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
-$("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+let qTimer = 0;
+$("#q").addEventListener("input", e => { state.q = e.target.value; clearTimeout(qTimer); qTimer = setTimeout(render, 140); });
+$("#gridMore").addEventListener("click", showMore);
+if ("IntersectionObserver" in window) new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) showMore(); }, {rootMargin:"900px 0px"}).observe($("#gridMoreRow"));
+$("#fmore").addEventListener("click", () => { const open = $("#bar").classList.toggle("open"); $("#fmore").setAttribute("aria-expanded", String(open)); });
+if (state.g !== "All" || state.cat !== "All" || state.price !== "All"){ $("#bar").classList.add("open"); $("#fmore").setAttribute("aria-expanded", "true"); }
 $("#clear").addEventListener("click", () => { clearAll(); $("#deals").scrollIntoView({block:"start"}); });
 $("#grid").addEventListener("click", e => { const b = e.target.closest(".nm"); if (b) return openDeal(+b.dataset.i); if (e.target.closest("[data-clear]")) clearAll(); if (e.target.closest("[data-qonly]")){ const q = state.q; clearAll(); state.q = q; $("#q").value = q; render(); } });
 $("#stand").addEventListener("click", e => { const b = e.target.closest("button.pick"); if (b) openDeal(+b.dataset.i); });
