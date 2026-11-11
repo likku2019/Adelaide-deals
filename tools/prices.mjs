@@ -2,7 +2,8 @@
 // Usage: node tools/prices.mjs <update.json> [YYYY-MM-DD]
 // update.json may hold any of these (dates are YYYY-MM-DD, prices are numbers):
 //   {"fuel":{"daily":{"ulp":{date:c}}, "weekly":{"ulp":{date:c},"dsl":{date:c}}, "tgp":{"ulp":{date:c},"dsl":{date:c}}, "tip":{"d":date,"t":"text"}},
-//    "markets":{"gold":{date:v},"silver":{},"btc":{},"eth":{},"asx":{},"spx":{},"ndq":{}}}
+//    "markets":{"gold":{date:v},"silver":{},"btc":{},"eth":{},"asx":{},"spx":{},"ndq":{}},
+//    "phase":{"title":"", "points":["", ...], "housing":"", "watch":""}}
 // Existing dates are overwritten with the new value, other dates are kept. Old points are thinned so the files stay small.
 import { readFileSync, writeFileSync } from "node:fs";
 const [file, asofArg] = process.argv.slice(2);
@@ -36,6 +37,16 @@ if (upd.fuel){
   if (upd.fuel.tip && upd.fuel.tip.t){ F.tip = {d:isDate(upd.fuel.tip.d) ? upd.fuel.tip.d : asof, t:String(upd.fuel.tip.t).slice(0, 160)}; changed++; }
   F.asof = asof;
   writeFileSync("data/fuel.json", JSON.stringify(F));
+}
+if (upd.phase){
+  // the written market summary shown above the markets table: {"title":"", "points":["",...], "housing":"", "watch":""}
+  const M = JSON.parse(readFileSync("data/markets.json", "utf8"));
+  const txt = (v, n) => String(v || "").replace(/[<>]/g, "").replace(/\s+/g, " ").trim().slice(0, n);
+  const P = {d:asof, title:txt(upd.phase.title, 70), points:(upd.phase.points || []).slice(0, 5).map(x => txt(x, 260)).filter(Boolean), housing:txt(upd.phase.housing, 320), watch:txt(upd.phase.watch, 320)};
+  if (!P.title || P.points.length < 2) throw new Error("phase: needs a title and at least 2 points");
+  M.phase = P; M.asof = M.asof || asof;
+  writeFileSync("data/markets.json", JSON.stringify(M));
+  changed++;
 }
 if (upd.markets){
   const M = JSON.parse(readFileSync("data/markets.json", "utf8"));

@@ -50,6 +50,25 @@ Put the results under `{"fuel":{"weekly":{"ulp":{...},"dsl":{...}}}}`. Each date
    buying tip and add it in your own words (one short sentence, under 160 characters) as
    `{"fuel":{"tip":{"d":"date the tip was updated","t":"..."}}}`.
 
+## 5. Market phase summary (Wednesdays, or any day something big happens)
+
+The box at the top of the markets section has a short written summary above a table. The table is worked out by the page
+from the prices. The summary is yours to rewrite, about once a week, as
+`{"phase":{"title":"...","points":["...","..."],"housing":"...","watch":"..."}}` in `update.json`:
+
+- `title`: one plain line naming the phase (under 70 characters), e.g. "Rates are rising, so money is moving to cash".
+- `points`: 3 to 5 short sentences on what is happening and where money is moving. Base them on the page's own numbers
+  (1 month, 1 year and distance from the 12-month high for each market — compute them from `data/markets.json`) and on
+  this week's facts: the Reserve Bank cash rate and latest decision (rba.gov.au media releases), the latest inflation
+  figure, and any major event moving markets. Search for these; never state a rate, date or figure from memory.
+- `housing`: one or two sentences on Adelaide and national home values from the latest Cotality (or PropTrack) monthly
+  report, with the figures as published.
+- `watch`: one or two sentences on what would signal a change of phase.
+
+Write for a family reader: plain words, no jargon, no predictions stated as certain, and no advice to buy or sell
+anything. Describe what is happening and what usually follows; the page adds "not financial advice" itself. If the facts
+can't be checked this week, leave the summary as it is.
+
 ## After updating
 
 Commit `data/fuel.json` and `data/markets.json` with the rest of the day's changes. A change in these two files alone is
