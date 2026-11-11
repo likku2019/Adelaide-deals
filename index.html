@@ -134,7 +134,7 @@ body[data-tab="page"] .top{display:none}
 .search input{flex:1;min-width:0;border:0;background:transparent;font-size:16px;outline:none}
 .controls{display:flex;flex-wrap:wrap;gap:8px}
 @media (min-width:720px){.bar-in{gap:8px;padding-block:8px}.tog,.sel,.clear{min-height:44px;font-size:14.5px}.search{height:44px}.controls .sel{flex:0 1 auto}.row1 .clear{flex:none}}
-@media (max-width:1139px){.bar{position:static;backdrop-filter:none;-webkit-backdrop-filter:none;background:transparent;border-bottom:0}}
+@media (max-width:1399px){.bar{position:static;backdrop-filter:none;-webkit-backdrop-filter:none;background:transparent;border-bottom:0}}
 .tog,.sel{min-height:46px;border:1.5px solid var(--line-2);border-radius:var(--r-md);background:var(--card);font-weight:600;font-size:15px;transition:background var(--t-fast),border-color var(--t-fast),color var(--t-fast)}
 .tog:hover,.sel:hover{border-color:var(--ink-2)}
 .tog{display:inline-flex;align-items:center;gap:8px;padding:0 12px;cursor:pointer;user-select:none;white-space:nowrap}
@@ -381,7 +381,7 @@ section#next .sec-head{margin-top:40px}
 .jump a .ji .ico{width:20px;height:20px}
 .jump a .jl-short{display:none}
 .jump a[aria-current="true"]{background:var(--ticket-ink);color:var(--ticket)}
-@media (min-width:720px) and (max-width:1139px){.topbar-in{flex-wrap:wrap}.jump{order:3;flex:1 0 100%;padding-bottom:8px}}
+@media (min-width:720px) and (max-width:1399px){.topbar-in{flex-wrap:wrap}.jump{order:3;flex:1 0 100%;padding-bottom:8px}}
 main section{scroll-margin-top:64px}
 main>section[data-off]{display:none}
 main>section:first-of-type .sec-head,main>section:not([data-off]) .sec-head{margin-top:26px}
@@ -755,9 +755,80 @@ h1.mark a{gap:12px}
 .bar{top:72px}
 .app-e2e body::before{content:"";display:block;height:40px;background:var(--ticket)}
 @media (max-width:719px){.topbar-in{min-height:72px;gap:0 8px}h1.mark{flex:0 1 auto;min-width:0}.mark-n{font-size:clamp(18px,5.6vw,23px)}.top-acts{margin-right:-6px}.tbtn{width:44px;height:48px}}
+
+/* ---------- prices tab: fuel and markets ---------- */
+:root{--px-fuel:#C2410C;--px-muted:#7C879B;--mk-gold:#eda100;--mk-silver:#2a78d6;--mk-btc:#eb6834;--mk-eth:#6250d6;--mk-asx:#1baf7a;--mk-spx:#008300;--mk-ndq:#e87ba4}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--px-fuel:#FF9248;--px-muted:#8C98AD;--mk-gold:#c98500;--mk-silver:#3987e5;--mk-btc:#d95926;--mk-eth:#9085e9;--mk-asx:#199e70;--mk-spx:#008300;--mk-ndq:#d55181}}
+:root[data-theme="dark"]{--px-fuel:#FF9248;--px-muted:#8C98AD;--mk-gold:#c98500;--mk-silver:#3987e5;--mk-btc:#d95926;--mk-eth:#9085e9;--mk-asx:#199e70;--mk-spx:#008300;--mk-ndq:#d55181}
+.px-verdict{display:grid;grid-template-columns:44px 1fr;gap:4px 14px;align-items:start;padding:16px 18px;border-radius:var(--r-lg);margin:0 0 12px;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--muted);box-shadow:var(--shadow-1)}
+.px-verdict strong{display:block;font:800 clamp(21px,3vw,26px)/1.2 var(--display);letter-spacing:-.01em}
+.px-verdict p{margin:4px 0 0;font-size:15.5px;line-height:1.5;color:var(--ink-2)}
+.px-vi{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--paper);color:var(--ink)}
+.px-vi .ico{width:24px;height:24px}
+.px-verdict.v-up{border-left-color:var(--sale-bg);background:color-mix(in srgb,var(--sale-bg) 7%,var(--card))}
+.px-verdict.v-up .px-vi{background:var(--sale-bg);color:var(--sale-on)}
+.px-verdict.v-down{border-left-color:var(--good);background:color-mix(in srgb,var(--good-bg) 55%,var(--card))}
+.px-verdict.v-down .px-vi{background:var(--good);color:var(--card)}
+.px-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:0 0 12px}
+.px-stats div{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px;box-shadow:var(--shadow-1)}
+.px-stats dt{font-size:13px;font-weight:700;color:var(--muted)}
+.px-stats dd{margin:4px 0 2px;font:800 32px/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.px-stats small{font-size:13px;color:var(--ink-2)}
+.px-tipline{display:flex;gap:8px;align-items:flex-start;margin:0 0 12px;font-size:14.5px;color:var(--ink-2)}
+.px-tipline .ico{width:18px;height:18px;margin-top:2px}
+.px-box{padding:16px}
+.px-ctl{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin:0 0 12px}
+.px-ctl .wo-chips{margin:0}
+.px-seg{max-width:100%;overflow-x:auto;scrollbar-width:none;flex:none}
+.px-seg::-webkit-scrollbar{display:none}
+.px-seg button{white-space:nowrap}
+.px-chart{position:relative;min-height:250px}
+.px-chart svg{display:block;width:100%;height:auto;touch-action:pan-y;overflow:visible}
+.px-grid{stroke:var(--line);stroke-width:1}
+.px-zero{stroke:var(--line-2);stroke-width:1.5}
+.px-now{stroke:var(--line-2);stroke-width:1.5;stroke-dasharray:3 4}
+.px-cross{stroke:var(--muted);stroke-width:1}
+.px-ax{fill:var(--muted);font:600 12px var(--body);font-variant-numeric:tabular-nums}
+.px-band{fill:var(--px-fuel);opacity:.13}
+.px-tip{position:absolute;top:6px;z-index:2;pointer-events:none;display:flex;flex-direction:column;gap:3px;min-width:132px;background:var(--ink);color:var(--paper);border-radius:10px;padding:8px 11px;font-size:13px;line-height:1.35;box-shadow:var(--shadow-2)}
+.px-tip[hidden]{display:none}
+.px-tip span{display:flex;align-items:center;gap:7px;white-space:nowrap}
+.px-tip span b{margin-left:auto;padding-left:12px;font-variant-numeric:tabular-nums}
+.px-tip i,.px-legend i,.mk-n i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--c)}
+.px-legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.px-legend span{display:inline-flex;align-items:center;gap:7px}
+.px-legend i.dash{width:18px;height:0;border-radius:0;background:none;border-top:3px dotted var(--px-fuel)}
+.px-note{margin:12px 0 0;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.px-empty{margin:0;padding:28px 16px;text-align:center;color:var(--muted)}
+.px-title{font:700 18px/1.3 var(--display);margin:0 0 10px}
+.mk-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0 0 12px}
+.mk-card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:4px;padding:12px 14px;border-radius:var(--r-md);background:var(--card);border:1.5px solid var(--line);box-shadow:var(--shadow-1);min-width:0;transition:border-color var(--t-fast),box-shadow var(--t-fast)}
+.mk-card:hover{box-shadow:var(--shadow-2)}
+.mk-card:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+.mk-card[aria-pressed="true"]{border-color:var(--ink);box-shadow:0 0 0 1.5px var(--ink)}
+.mk-n{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:700;color:var(--ink-2)}
+.mk-card b{font:800 22px/1.1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.mk-p{font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums}
+.mk-p.up{color:var(--good)}
+.mk-p.dn{color:var(--sale)}
+.mk-p small{font-weight:500;color:var(--muted);font-size:12.5px}
+#mkCmp[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+@media (max-width:719px){
+  .px-box{padding:12px}
+  .px-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .px-stats div:first-child{grid-column:1/-1}
+  .px-stats dd{font-size:28px}
+  .mk-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mk-card b{font-size:20px}
+  .px-seg{width:100%;justify-content:space-between}
+  .px-seg button{padding:0 9px;font-size:13.5px;flex:1;justify-content:center}
+  #mkCmp{width:100%;justify-content:center;box-sizing:border-box}
+  .jump a{font-size:11.5px}
+  .jump a .ji{padding:4px 10px}
+}
 </style>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol><symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l3.5-4 3 2.5L19 8"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M4 11v9h16v-9"/><path d="M2.5 11 5 4h14l2.5 7"/><path d="M2.5 11a3.2 3.2 0 0 0 6.3 0 3.2 3.2 0 0 0 6.4 0 3.2 3.2 0 0 0 6.3 0"/><path d="M10 20v-5h4v5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-3.5-2.2-5.6-3.6-7.5-.4 1.6-1.3 2.8-2.4 3.3C13.4 7.3 11.8 4.4 9 2c.3 3-1.2 5-2.6 6.8C5 10.6 5 12.6 5 15c0 4.2 3 7 7 7z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l6 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17.1 6.6 20l1-6.1-4.4-4.3 6.1-.9z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6"/></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5c0-1.5 1.2-2 1.2-3.5M12 8.5c0-1.5 1.2-2 1.2-3.5M16 8.5c0-1.5 1.2-2 1.2-3.5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9.5 21v-5h5v5"/><path d="M9 11h.01M15 11h.01"/></symbol><symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 0 1-1c0-1.7-1.3-2.9-3-3.3l-4.2-1L12 7.5 8.5 8.5 6.5 6.5 3 7.5z"/><path d="M3 17v2.5h19V17"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 5 3-1v11h8V10l3 1 2-5-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M21 7.5 12 3 3 7.5v9L12 21l9-4.5z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12M4 10h10"/><path d="M14 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol><symbol id="i-city" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4h8v17"/><path d="M17 11h3v10"/><path d="M12 8h2M12 12h2M12 16h2"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17h.01"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></symbol></svg>
 <a class="skip" href="#deals">Skip to the deals</a>
 <div class="updbar" id="appUpdate" hidden><div class="wrap updbar-in"><span class="ui"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg></span><div class="ut"><b>App update available</b><span id="updText">The new version adds the barcode scanner.</span></div><a class="btn primary" id="updBtn" href="#" target="_blank" rel="noopener">Update now</a><button class="ux" type="button" id="updLater" aria-label="Remind me later">×</button></div><p class="wrap updhow" id="updHow" hidden>Chrome is downloading <b>deal-sheet.apk</b>. When it finishes, tap <b>Open</b> (or find it in Downloads), then tap <b>Update</b>. Your list and watch words are kept.</p></div>
 <div class="topbar" id="topbar"><div class="wrap topbar-in">
@@ -768,6 +839,7 @@ h1.mark a{gap:12px}
   <a href="#best"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="jl-long">Best deals</span><span class="jl-short">Best</span></a>
   <a href="#promos"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-megaphone"/></svg></span><span class="jl-long">Offers &amp; dates</span><span class="jl-short">Offers</span></a>
   <a href="#whatson"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-ticket"/></svg></span><span class="jl-long">What's on</span><span class="jl-short">Events</span></a>
+  <a href="#fuel"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><span class="jl-long">Prices</span><span class="jl-short">Prices</span></a>
   <a href="#saved"><span class="ji"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></span><span class="jl-long">My list</span><span class="jl-short">List</span><b class="jb" id="listBadge" hidden></b></a>
 </div></nav>
   <div class="top-acts">
@@ -899,6 +971,29 @@ h1.mark a{gap:12px}
         </ul>
       </div>
     </details>
+  </section>
+
+  <section id="fuel" aria-labelledby="fu-h">
+    <div class="sec-head"><h2 id="fu-h">Fuel prices in Adelaide</h2><p>Average pump price, the trend and a rough guide to the week ahead</p></div>
+    <div id="fuelNow"><p class="px-empty">Loading prices…</p></div>
+    <div class="box2 px-box">
+      <div class="px-ctl"><div class="wo-chips" id="fuelTypes" role="group" aria-label="Fuel type"></div><div class="seg px-seg" id="fuelRanges" role="group" aria-label="Period"></div></div>
+      <div class="px-chart" id="fuelChart"></div>
+      <div class="px-legend" id="fuelLegend"></div>
+      <p class="px-note" id="fuelNote"></p>
+    </div>
+  </section>
+
+  <section id="markets" aria-labelledby="mk-h">
+    <div class="sec-head"><h2 id="mk-h">Gold, silver, crypto &amp; shares</h2><p>Tap a market to see its graph</p></div>
+    <div class="px-ctl"><div class="seg px-seg" id="mkRanges" role="group" aria-label="Period"></div><button class="tog" type="button" id="mkCmp" aria-pressed="false">Compare all</button></div>
+    <div class="mk-cards" id="mkCards"></div>
+    <div class="box2 px-box">
+      <h3 class="px-title" id="mkTitle"></h3>
+      <div class="px-chart" id="mkChart"></div>
+      <div class="px-legend" id="mkLegend"></div>
+      <p class="px-note" id="mkNote"></p>
+    </div>
   </section>
 
   <section id="saved" aria-labelledby="sv-h">
@@ -2237,13 +2332,14 @@ function clearAll(){
   renderSelects(); render();
 }
 // ---- tabs: each section of the bar is its own screen
-const TABS = {stores:["stores"], deals:["deals"], best:["best","trending","standouts"], promos:["promos","next"], next:["promos","next"], whatson:["whatson","places"], places:["whatson","places"], saved:["saved"]};
+const TABS = {stores:["stores"], deals:["deals"], best:["best","trending","standouts"], promos:["promos","next"], next:["promos","next"], whatson:["whatson","places"], places:["whatson","places"], fuel:["fuel","markets"], markets:["fuel","markets"], saved:["saved"]};
 function showTab(t, scroll = true){
   if (!TABS[t]) t = "stores";
   state.tab = t; persist();
   document.body.dataset.tab = TABS[t][0] === "stores" ? "home" : "page";
   document.querySelectorAll("main > section").forEach(sec => sec.toggleAttribute("data-off", !TABS[t].includes(sec.id)));
-  const navT = t === "next" ? "promos" : t === "places" ? "whatson" : t;
+  const navT = t === "next" ? "promos" : t === "places" ? "whatson" : t === "markets" ? "fuel" : t;
+  if (TABS[t][0] === "fuel"){ state.tab = "fuel"; loadPrices(); }
   document.querySelectorAll(".jump a").forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + navT));
   if (t === "saved") renderSaved(true);
   if (scroll) scrollTo({top:0});
@@ -3120,6 +3216,182 @@ renderSaved();
 renderRegs();
 renderWhatsOn();
 renderTrending();
+// ---- Prices tab: Adelaide fuel (with a short forecast) and gold, silver, crypto and share markets
+// data/fuel.json and data/markets.json are refreshed with the sheet; nothing here needs editing week to week
+const PX = {fuel:null, mk:null, ft:"ulp", fr:90, mr:365, ma:"gold", cmp:false, err:false, loading:false};
+const DAY = 864e5;
+const dms = s => { const [y, m, d] = s.split("-").map(Number); return Date.UTC(y, m - 1, d); };
+const pxDay = ms => { const d = new Date(ms); return `${d.getUTCDate()} ${MON[d.getUTCMonth()]}`; };
+const pxDow = ms => DOW[new Date(ms).getUTCDay()] + " " + pxDay(ms);
+const pxPts = o => Object.keys(o || {}).sort().map(k => [dms(k), o[k]]);
+const pxToday = () => { const t = new Date(); return Date.UTC(t.getFullYear(), t.getMonth(), t.getDate()); };
+const cents = v => v.toFixed(1) + "c";
+const FUELS = {ulp:["Unleaded 91", 0], dsl:["Diesel", 0], p95:["Premium 95", 15], p98:["Premium 98", 23]};
+const FUEL_RANGES = [[30, "1 month"], [90, "3 months"], [365, "1 year"]];
+const MK = {gold:["Gold", "var(--mk-gold)", "$", " an ounce"], silver:["Silver", "var(--mk-silver)", "$", " an ounce"], btc:["Bitcoin", "var(--mk-btc)", "$", ""], eth:["Ethereum", "var(--mk-eth)", "$", ""], asx:["ASX 200", "var(--mk-asx)", "", " points"], spx:["S&P 500", "var(--mk-spx)", "", " points"], ndq:["Nasdaq", "var(--mk-ndq)", "", " points"]};
+const MK_RANGES = [[7, "1 week"], [30, "1 month"], [90, "3 months"], [365, "1 year"], [1830, "5 years"]];
+const mkVal = (k, v) => MK[k][2] + (v >= 1000 ? Math.round(v).toLocaleString("en-AU") : v.toLocaleString("en-AU", {minimumFractionDigits:2, maximumFractionDigits:2}));
+const pctTxt = p => (p > 0 ? "+" : p < 0 ? "−" : "") + Math.abs(p).toFixed(1) + "%";
+
+// a small line chart: one y-axis, hover (or touch) for the values on a day
+function lineChart(host, cfg){
+  const W = Math.max(280, host.clientWidth || 600), H = cfg.h || (W < 520 ? 250 : 320);
+  const m = {l:48, r:14, t:12, b:28}, iw = W - m.l - m.r, ih = H - m.t - m.b;
+  const x0 = cfg.x0, x1 = cfg.x1;
+  const ser = cfg.series.map(s => ({...s, p:s.p.filter(q => q[0] >= x0 && q[0] <= x1)})).filter(s => s.p.length);
+  const band = (cfg.band || []).filter(q => q[0] >= x0 && q[0] <= x1);
+  let lo = Infinity, hi = -Infinity;
+  ser.forEach(s => s.p.forEach(q => { lo = Math.min(lo, q[1]); hi = Math.max(hi, q[1]); }));
+  band.forEach(q => { lo = Math.min(lo, q[1]); hi = Math.max(hi, q[2]); });
+  if (!isFinite(lo)){ host.innerHTML = `<p class="px-empty">No prices recorded for this period yet.</p>`; return; }
+  if (hi - lo < 1e-9){ hi += 1; lo -= 1; }
+  const pad = (hi - lo) * .08; lo -= pad; hi += pad;
+  const step0 = (hi - lo) / 4, mag = Math.pow(10, Math.floor(Math.log10(step0))), step = [1, 2, 2.5, 5, 10].map(f => f * mag).find(s => s >= step0) || step0;
+  const ticks = []; for (let v = Math.ceil(lo / step) * step; v <= hi + 1e-9; v += step) ticks.push(v);
+  const X = x => m.l + (x - x0) / (x1 - x0 || 1) * iw, Y = v => m.t + (1 - (v - lo) / (hi - lo)) * ih;
+  const path = p => p.map((q, i) => (i ? "L" : "M") + X(q[0]).toFixed(1) + " " + Y(q[1]).toFixed(1)).join("");
+  const nx = W < 520 ? 4 : 6, long = x1 - x0 > 300 * DAY;
+  const xt = []; for (let i = 0; i < nx; i++){ const x = x0 + (x1 - x0) * i / (nx - 1); xt.push(Math.round(x / DAY) * DAY); }
+  const xl = x => { const d = new Date(x); return long ? `${MON[d.getUTCMonth()]} ${String(d.getUTCFullYear()).slice(2)}` : pxDay(x); };
+  const yf = cfg.yf || (v => String(v));
+  let svg = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(cfg.label || "Price chart")}">`;
+  ticks.forEach(v => svg += `<line class="px-grid" x1="${m.l}" x2="${W - m.r}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}"/><text class="px-ax" x="${m.l - 8}" y="${(Y(v) + 4).toFixed(1)}" text-anchor="end">${esc(yf(v))}</text>`);
+  xt.forEach((x, i) => svg += `<text class="px-ax" x="${X(x).toFixed(1)}" y="${H - 8}" text-anchor="${i === 0 ? "start" : i === nx - 1 ? "end" : "middle"}">${xl(x)}</text>`);
+  if (band.length > 1) svg += `<path class="px-band" d="${band.map((q, i) => (i ? "L" : "M") + X(q[0]).toFixed(1) + " " + Y(q[2]).toFixed(1)).join("")}${band.slice().reverse().map(q => "L" + X(q[0]).toFixed(1) + " " + Y(q[1]).toFixed(1)).join("")}Z"/>`;
+  if (cfg.nowX && cfg.nowX > x0 && cfg.nowX < x1) svg += `<line class="px-now" x1="${X(cfg.nowX).toFixed(1)}" x2="${X(cfg.nowX).toFixed(1)}" y1="${m.t}" y2="${m.t + ih}"/><text class="px-ax" x="${(X(cfg.nowX) - 5).toFixed(1)}" y="${m.t + 11}" text-anchor="end">Today</text>`;
+  if (cfg.zero != null && cfg.zero > lo && cfg.zero < hi) svg += `<line class="px-zero" x1="${m.l}" x2="${W - m.r}" y1="${Y(cfg.zero).toFixed(1)}" y2="${Y(cfg.zero).toFixed(1)}"/>`;
+  ser.forEach(s => svg += `<path d="${path(s.p)}" fill="none" stroke="${s.c}" stroke-width="${s.w || 2.5}" stroke-linejoin="round" stroke-linecap="round"${s.dash ? ` stroke-dasharray="${s.dash}"` : ""}/>`);
+  ser.filter(s => s.end).forEach(s => { const q = s.p[s.p.length - 1]; svg += `<circle cx="${X(q[0]).toFixed(1)}" cy="${Y(q[1]).toFixed(1)}" r="4.5" fill="${s.c}" stroke="var(--card)" stroke-width="2"/>`; });
+  svg += `<line class="px-cross" id="pxc" y1="${m.t}" y2="${m.t + ih}" hidden/><g id="pxdots"></g><rect class="px-hit" x="${m.l}" y="${m.t}" width="${iw}" height="${ih}" fill="transparent"/></svg><div class="px-tip" hidden></div>`;
+  host.innerHTML = svg;
+  const tip = host.querySelector(".px-tip"), cross = host.querySelector("#pxc"), dots = host.querySelector("#pxdots"), el = host.querySelector("svg");
+  const near = (p, x) => { let b = p[0]; for (const q of p) if (Math.abs(q[0] - x) < Math.abs(b[0] - x)) b = q; return b; };
+  const move = e => {
+    const r = el.getBoundingClientRect(), px = (e.clientX - r.left) * W / r.width;
+    const x = x0 + Math.min(1, Math.max(0, (px - m.l) / iw)) * (x1 - x0);
+    const main = ser.reduce((a, s) => { const q = near(s.p, x); return !a || Math.abs(q[0] - x) < Math.abs(a[0] - x) ? q : a; }, null);
+    const rows = ser.map(s => { const q = near(s.p, main[0]); return Math.abs(q[0] - main[0]) <= (cfg.snap || 4) * DAY ? [s, q] : null; }).filter(Boolean);
+    cross.removeAttribute("hidden"); cross.setAttribute("x1", X(main[0])); cross.setAttribute("x2", X(main[0]));
+    dots.innerHTML = rows.map(([s, q]) => `<circle cx="${X(q[0]).toFixed(1)}" cy="${Y(q[1]).toFixed(1)}" r="4.5" fill="${s.c}" stroke="var(--card)" stroke-width="2"/>`).join("");
+    tip.hidden = false;
+    tip.innerHTML = `<b>${pxDow(main[0])}${long ? " " + new Date(main[0]).getUTCFullYear() : ""}</b>` + rows.map(([s, q]) => `<span><i style="background:${s.c}"></i>${esc(s.n)} <b>${esc((s.tf || yf)(q[1]))}</b></span>`).join("");
+    const tx = X(main[0]) * r.width / W; tip.style.left = Math.min(r.width - tip.offsetWidth - 4, Math.max(4, tx + (tx > r.width * .6 ? -tip.offsetWidth - 12 : 12))) + "px";
+  };
+  const hit = host.querySelector(".px-hit");
+  hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move);
+  hit.addEventListener("pointerleave", () => { tip.hidden = true; cross.setAttribute("hidden", ""); dots.innerHTML = ""; });
+}
+
+// fuel: what we know, plus a rough guide to the next two weeks.
+// Pump prices follow wholesale (terminal gate) prices with a lag: over the past year about half of a week's
+// wholesale move reached Adelaide pumps the week after, and the gap to wholesale drifts back to its usual size.
+function fuelModel(k){
+  const F = PX.fuel, base = k === "dsl" ? "dsl" : "ulp", off = FUELS[k][1];
+  const tg = pxPts(F.tgp[base]), wk = pxPts(F.weekly[base]), dl = pxPts((F.daily || {})[base]);
+  const tgAt = x => { let v = tg.length ? tg[0][1] : null; for (const q of tg){ if (q[0] > x) break; v = q[1]; } return v; };
+  const mar = wk.map(([x, v]) => { let s = 0, n = 0; for (let d = 0; d < 7; d++){ const t = tgAt(x - d * DAY); if (t != null){ s += t; n++; } } return n ? v - s / n : null; }).filter(v => v != null).sort((a, b) => a - b);
+  const margin = mar.length ? mar[Math.floor(mar.length / 2)] : 8;
+  // history: weekly averages (plotted mid-week) until the daily series starts
+  const d0 = dl.length ? dl[0][0] : Infinity;
+  const dEnd = dl.length ? dl[dl.length - 1][0] : -Infinity, wkMid = wk.map(([x, v]) => [x - 3 * DAY, v]);
+  const hist = [...wkMid.filter(q => q[0] < d0), ...dl, ...wkMid.filter(q => q[0] > dEnd)].map(q => [q[0], q[1] + off]);
+  const last = hist[hist.length - 1];
+  const tgNow = tg[tg.length - 1], w7 = tgAt(last[0] - 7 * DAY);
+  // never forecast past the point where the pump price is back to wholesale plus its usual gap
+  const gap = tgNow[1] + margin - (last[1] - off), raw = .5 * (tgNow[1] - w7) + .15 * gap;
+  const d7 = raw * gap > 0 ? Math.sign(raw) * Math.min(Math.abs(raw), Math.abs(gap)) : raw * .3;
+  const g = h => (1 - Math.exp(-h / 4)) / (1 - Math.exp(-7 / 4));
+  const today = pxToday(), endX = Math.max(today, last[0]) + 14 * DAY;
+  const fc = [], band = [];
+  for (let x = last[0]; x <= endX; x += DAY){ const h = (x - last[0]) / DAY, v = last[1] + d7 * g(h), e = h ? 1 + .7 * h : 0; fc.push([x, v]); band.push([x, v - Math.min(e, 14), v + Math.min(e, 14)]); }
+  const at = x => { const q = fc.find(p => p[0] >= x) || fc[fc.length - 1]; return q[1]; };
+  const now = today > last[0] ? at(today) : last[1], in7 = at(Math.max(today, last[0]) + 7 * DAY);
+  const wkAgo = hist.filter(q => q[0] <= last[0] - 6.5 * DAY).pop();
+  return {k, hist, tgp:off || !tg.length ? [] : tg, fc, band, last, now, in7, chg:in7 - now, wkAgo, daily:dl.length > 0 && base === "ulp" && dEnd >= last[0], est:off > 0, today};
+}
+function renderFuel(){
+  const F = PX.fuel; if (!F) return;
+  const M = fuelModel(PX.ft), U = PX.ft === "ulp" ? M : fuelModel("ulp");
+  const up = U.chg >= 4, down = U.chg <= -4;
+  const stale = (U.today - U.last[0]) / DAY;
+  $("#fuelNow").innerHTML = `<div class="px-verdict ${up ? "v-up" : down ? "v-down" : "v-flat"}">
+      <span class="px-vi">${ico(up ? "flame" : down ? "check" : "help")}</span>
+      <div><strong>${up ? "Fill up today" : down ? "No rush: prices are falling" : "No rush either way"}</strong>
+      <p>${up ? `Unleaded looks set to rise about ${Math.round(U.chg)}c a litre over the next week.` : down ? `Unleaded looks set to drop about ${Math.round(-U.chg)}c a litre over the next week. Buy only what you need for now.` : `Unleaded should stay within a few cents of today's price over the next week.`} This is an estimate, not a promise.</p></div></div>
+    <dl class="px-stats">
+      <div><dt>${esc(FUELS[M.k][0])} · Adelaide average${M.est ? " (estimate)" : ""}</dt><dd>${cents(M.daily || M.est ? M.last[1] : M.now)}</dd><small>${M.daily || M.est ? pxDow(M.last[0]) : "Estimate for today"}${M.wkAgo && (M.daily || M.est) ? ` · ${M.last[1] - M.wkAgo[1] >= 0 ? "up" : "down"} ${Math.abs(M.last[1] - M.wkAgo[1]).toFixed(1)}c in a week` : ""}</small></div>
+      <div><dt>Likely in 7 days</dt><dd>${cents(M.in7)}</dd><small>${M.chg >= 0 ? "+" : "−"}${Math.abs(M.chg).toFixed(1)}c · rough guide</small></div>
+      ${M.tgp.length ? `<div><dt>Wholesale price</dt><dd>${cents(M.tgp[M.tgp.length - 1][1])}</dd><small>${pxDow(M.tgp[M.tgp.length - 1][0])} · what servos pay</small></div>` : ""}
+    </dl>
+    ${F.tip && F.tip.t ? `<p class="px-tipline">${ico("megaphone")}<span><b>ACCC buying tip${F.tip.d ? ` (${pxDay(dms(F.tip.d))})` : ""}:</b> ${esc(F.tip.t)}</span></p>` : ""}
+    ${stale > 4 ? `<p class="px-note">The last recorded price is from ${pxDow(U.last[0])}, so today's figure is an estimate.</p>` : ""}`;
+  $("#fuelTypes").innerHTML = Object.keys(FUELS).map(k => `<button class="wo-chip" type="button" data-ft="${k}" aria-pressed="${k === PX.ft}">${esc(FUELS[k][0])}</button>`).join("");
+  $("#fuelRanges").innerHTML = FUEL_RANGES.map(([d, l]) => `<button type="button" data-fr="${d}" aria-pressed="${d === PX.fr}">${l}</button>`).join("");
+  const x1 = M.fc[M.fc.length - 1][0], x0 = M.last[0] - PX.fr * DAY;
+  lineChart($("#fuelChart"), {x0, x1, nowX:M.today, yf:v => Math.round(v) + "c", label:`${FUELS[M.k][0]} price in Adelaide, cents a litre`,
+    band:M.band, series:[
+      ...(M.tgp.length ? [{n:"Wholesale", c:"var(--px-muted)", w:1.75, p:M.tgp, tf:cents}] : []),
+      {n:"Pump price", c:"var(--px-fuel)", p:M.hist, tf:cents, end:true},
+      {n:"Forecast", c:"var(--px-fuel)", p:M.fc.slice(1), dash:"2 6", tf:cents}]});
+  $("#fuelLegend").innerHTML = `<span><i style="background:var(--px-fuel)"></i>Pump price (average)</span><span><i class="dash"></i>Forecast, with likely range</span>${M.tgp.length ? `<span><i style="background:var(--px-muted)"></i>Wholesale price</span>` : ""}`;
+  $("#fuelNote").innerHTML = (M.est ? `No public Adelaide average exists for premium fuels, so ${esc(FUELS[M.k][0])} is shown as unleaded plus ${FUELS[M.k][1]}c, the usual gap. ` : M.k === "dsl" ? "Diesel averages are published weekly, so the line moves in weekly steps. " : "") +
+    `The forecast follows the wholesale price: when it moves, pump prices usually follow within a week or two. Sudden jumps can't be predicted, so treat it as a guide. ${esc(F.src || "")} Updated ${pxDay(dms(F.asof))}.`;
+}
+function mkRange(k, days){
+  const p = pxPts(PX.mk.s[k]); if (!p.length) return {p:[], all:p};
+  const end = p[p.length - 1][0], cut = p.filter(q => q[0] >= end - days * DAY);
+  return {p:cut.length > 1 ? cut : p.slice(-2), all:p};
+}
+function renderMarkets(){
+  const Mk = PX.mk; if (!Mk) return;
+  const keys = Object.keys(MK).filter(k => Mk.s[k]);
+  if (!keys.includes(PX.ma)) PX.ma = keys[0];
+  const R = {}; keys.forEach(k => { const r = mkRange(k, PX.mr).p; R[k] = {p:r, last:r[r.length - 1], pct:r.length > 1 ? (r[r.length - 1][1] / r[0][1] - 1) * 100 : 0}; });
+  const rl = (MK_RANGES.find(r => r[0] === PX.mr) || [0, ""])[1];
+  $("#mkRanges").innerHTML = MK_RANGES.map(([d, l]) => `<button type="button" data-mr="${d}" aria-pressed="${d === PX.mr}">${l}</button>`).join("");
+  $("#mkCards").innerHTML = keys.map(k => { const r = R[k], up = r.pct >= 0;
+    return `<button class="mk-card" type="button" data-ma="${k}" aria-pressed="${!PX.cmp && k === PX.ma}" style="--c:${MK[k][1]}"><span class="mk-n"><i></i>${esc(MK[k][0])}</span><b>${mkVal(k, r.last[1])}</b><span class="mk-p ${up ? "up" : "dn"}">${up ? "▲" : "▼"} ${pctTxt(r.pct)}<small> in ${rl}</small></span></button>`; }).join("");
+  $("#mkCmp").setAttribute("aria-pressed", String(PX.cmp));
+  const host = $("#mkChart");
+  if (PX.cmp){
+    const x0 = Math.min(...keys.map(k => R[k].p[0][0])), x1 = Math.max(...keys.map(k => R[k].last[0]));
+    lineChart(host, {x0, x1, zero:0, yf:v => (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(Math.round(v)) + "%", label:`Change in each market over ${rl}`,
+      series:keys.map(k => ({n:MK[k][0], c:MK[k][1], w:2, p:R[k].p.map(q => [q[0], (q[1] / R[k].p[0][1] - 1) * 100]), tf:pctTxt, end:true}))});
+    $("#mkTitle").textContent = `All seven compared: change over ${rl}`;
+    $("#mkLegend").innerHTML = keys.map(k => `<span><i style="background:${MK[k][1]}"></i>${esc(MK[k][0])}</span>`).join("");
+  } else {
+    const k = PX.ma, r = R[k];
+    lineChart(host, {x0:r.p[0][0], x1:r.last[0], yf:v => MK[k][2] + (v >= 1000 ? Math.round(v).toLocaleString("en-AU") : v >= 100 ? v.toFixed(0) : v.toFixed(2)), label:`${MK[k][0]} over ${rl}`,
+      series:[{n:MK[k][0], c:MK[k][1], p:r.p, tf:v => mkVal(k, v), end:true}]});
+    $("#mkTitle").textContent = `${MK[k][0]}: ${mkVal(k, r.last[1])}${MK[k][3]} · ${pctTxt(r.pct)} in ${rl}`;
+    $("#mkLegend").innerHTML = "";
+  }
+  $("#mkNote").textContent = `Gold, silver, Bitcoin and Ethereum are in Australian dollars. Share indexes are in points. Closing prices, not live: last updated ${pxDay(dms(Mk.asof))}. Information only, not financial advice.`;
+}
+function renderPrices(){
+  if (PX.err){ $("#fuelNow").innerHTML = `<p class="px-empty">Prices couldn't be loaded. Check your connection and open this tab again.</p>`; return; }
+  renderFuel(); renderMarkets();
+}
+async function loadPrices(){
+  if (PX.loading) return; if (PX.fuel && PX.mk) return renderPrices();
+  PX.loading = true; PX.err = false;
+  try {
+    const [f, m] = await Promise.all(["data/fuel.json", "data/markets.json"].map(u => fetch(u, {cache:"no-cache"}).then(r => { if (!r.ok) throw 0; return r.json(); }).catch(() => fetch("https://likku2019.github.io/Adelaide-deals/" + u).then(r => { if (!r.ok) throw 0; return r.json(); }))));
+    PX.fuel = f; PX.mk = m;
+  } catch(e){ PX.err = true; }
+  PX.loading = false; renderPrices();
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-ft],[data-fr],[data-mr],[data-ma],#mkCmp"); if (!b) return;
+  if (b.dataset.ft){ PX.ft = b.dataset.ft; renderFuel(); }
+  else if (b.dataset.fr){ PX.fr = +b.dataset.fr; renderFuel(); }
+  else if (b.dataset.mr){ PX.mr = +b.dataset.mr; renderMarkets(); }
+  else if (b.dataset.ma){ PX.ma = b.dataset.ma; PX.cmp = false; renderMarkets(); }
+  else { PX.cmp = !PX.cmp; renderMarkets(); }
+});
+let pxResize = 0;
+window.addEventListener("resize", () => { clearTimeout(pxResize); pxResize = setTimeout(() => { if (state.tab === "fuel" && PX.fuel) renderPrices(); }, 200); });
+
 showTab(state.tab, false);
 sharedIn();
 regsIn();
