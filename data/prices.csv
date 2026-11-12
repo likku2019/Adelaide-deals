@@ -1462,6 +1462,10 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,amazon--pepsi-max-sunkist-or-solo-zero-sugar-cans-24-375ml,Amazon,Online,"Pepsi Max, Sunkist or Solo Zero Sugar Cans 24 × 375mL",Drinks,22.5,,,"Price when you buy 2 cases, $45 delivered · Mountain Dew also included"
 2026-11-11,amazon--versace-pour-homme-men-s-fragrance-100ml,Amazon,Online,Versace Pour Homme Men's Fragrance 100ml,Health & beauty,69.99,,,Not delivered to TAS or NT
 2026-11-11,ebay--dyson-v15-detect-absolute-vacuum-floor-dok,eBay,Online,Dyson V15 Detect Absolute Vacuum + Floor Dok,Home,718.2,,,Delivered · sold by Dyson on eBay
+2026-11-11,target--playstation-5-dualsense-wireless-controller,Target,Department stores,PlayStation 5 DualSense Wireless Controller,Gaming,99,134.95,27,Various colours · same price at Amazon
+2026-11-11,amazon--bedsure-sherpa-fleece-throw-blanket,Amazon,Online,Bedsure Sherpa Fleece Throw Blanket,Home,19.99,,,Price after 50% off at checkout · sold by Bedsure on Amazon
+2026-11-11,amazon--sensodyne-daily-care-whitening-toothpaste-100g,Amazon,Online,Sensodyne Daily Care Whitening Toothpaste 100g,Health & beauty,4.5,,,$4.05 with Subscribe & Save
+2026-11-11,ebay--devanti-k7-cordless-stick-vacuum-sandwich-panini-press,eBay,Online,Devanti K7 Cordless Stick Vacuum + Sandwich Panini Press,Home,112.85,,,Sold by Ozplaza.living · free delivery to most areas
 2026-11-11,coles--huggies-baby-wipes-70-80-pack,Coles,Groceries,Huggies Baby Wipes 70–80 pack,Baby,2.75,5.5,50,
 2026-11-11,coles--huggies-bulk-nappy-pants-22-36-pack,Coles,Groceries,Huggies Bulk Nappy Pants 22–36 pack,Baby,11,22,50,
 2026-11-11,coles--tip-top-english-muffins-6-pack-400g,Coles,Groceries,Tip Top English Muffins 6 pack 400g,Pantry,3.3,6.6,50,
@@ -1597,6 +1601,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,costco--narwal-freo-z10-robot-vacuum-mop,Costco,Groceries,Narwal Freo Z10 Robot Vacuum & Mop,Home,599.99,,,"Usually $1,000+ elsewhere · membership required"
 2026-11-11,costco--apple-airpods-pro-3,Costco,Groceries,Apple AirPods Pro 3,Electronics,299.99,,,Delivered · membership required · Amazon has them for $299
 2026-11-11,costco--dji-mini-4-pro-fly-more-combo-plus,Costco,Groceries,DJI Mini 4 Pro Fly More Combo Plus,Electronics,999.99,,,Delivered · membership required
+2026-11-11,costco--hisense-634l-pureflat-french-door-fridge-hrfd634bw,Costco,Groceries,Hisense 634L PureFlat French Door Fridge HRFD634BW,Home,1399.99,,,Delivered · membership required
+2026-11-11,costco--swann-3k-wired-nvr-security-system-6-dome-cameras-1tb,Costco,Groceries,Swann 3K Wired NVR Security System + 6 Dome Cameras 1TB,Electronics,439.98,,,Membership required
 2026-11-11,nike--nike-sb-dunk-low-pro-skate-shoes,Nike,Shoes & sportswear,Nike SB Dunk Low Pro Skate Shoes,Footwear,108,180,40,
 2026-11-11,nike--nike-air-force-1-older-kids-shoes,Nike,Shoes & sportswear,Nike Air Force 1 Older Kids' Shoes,Footwear,90,150,40,
 2026-11-11,nike--air-jordan-4-toro-men-s,Nike,Shoes & sportswear,Air Jordan 4 'Toro' Men's,Footwear,174,290,40,Further markdown
@@ -1615,6 +1621,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,adidas--runfalcon-5-men-s-running-shoes,adidas,Shoes & sportswear,Runfalcon 5 Men's Running Shoes,Footwear,80,100,20,
 2026-11-11,adidas--ultimashow-shoes-men-s,adidas,Shoes & sportswear,Ultimashow Shoes Men's,Footwear,56,80,30,
 2026-11-11,adidas--adilette-comfort-slides,adidas,Shoes & sportswear,Adilette Comfort Slides,Footwear,40,50,20,
+2026-11-11,adidas--adidas-apwr-backpack,adidas,Shoes & sportswear,adidas APWR Backpack,Bags,28.8,,,Free delivery for adiClub members or on $120+
+2026-11-11,adidas--adidas-performance-cushioned-low-socks-3-pairs,adidas,Shoes & sportswear,adidas Performance Cushioned Low Socks 3 pairs,Clothing,8.4,,,Free delivery for adiClub members or on $120+
 2026-11-11,myer--dyson-wash-g1-2-in-1-hard-floor-cleaner,Myer,Department stores,Dyson Wash G1 2-in-1 Hard Floor Cleaner,Home,399,999,60,
 2026-11-11,myer--the-cooks-collective-acacia-end-grain-cutting-board-50-35cm,Myer,Department stores,The Cooks Collective Acacia End Grain Cutting Board 50 × 35cm,Home,74.97,,,About half price · free click & collect or in-store
 2026-11-11,myer--tefal-ingenio-cook-eat-induction-non-stick-15-piece-set,Myer,Department stores,Tefal Ingenio Cook Eat Induction Non-Stick 15-Piece Set,Home,199,,,Delivered or free click & collect
@@ -1636,7 +1644,6 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,target--jinxo-board-game,Target,Department stores,JinxO Board Game,Kids & toys,39,,,
 2026-11-11,target--nintendo-talking-flower,Target,Department stores,Nintendo Talking Flower,Gaming,25,,,Down from $29 last week
 2026-11-11,target--sandisk-256gb-microsd-express-card-for-switch-2,Target,Department stores,SanDisk 256GB microSD Express Card for Switch 2,Gaming,59,,,$49 with the $10 newsletter voucher
-2026-11-11,target--playstation-5-dualsense-wireless-controller,Target,Department stores,PlayStation 5 DualSense Wireless Controller,Gaming,99,134.95,27,Various colours · same price at Amazon
 2026-11-11,target--anko-mini-digital-camera-black,Target,Department stores,Anko Mini Digital Camera (black),Electronics,10,,,"Keychain-size camera, a popular stocking filler"
 2026-11-11,target--pikmin-4-dandori-academy-switch-2,Target,Department stores,Pikmin 4 + Dandori Academy (Switch 2),Gaming,79,,,$69 with Target's $10 newsletter voucher
 2026-11-11,big-w--cadbury-variety-jumbo-chocolate-box-1-56kg-110-pieces,BIG W,Department stores,Cadbury Variety Jumbo Chocolate Box 1.56kg (110 pieces),Snacks,29,58,50,
@@ -1653,6 +1660,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,big-w--somersault-rotating-craft-tray,BIG W,Department stores,Somersault Rotating Craft Tray,Kids & toys,4,16,75,Free click & collect or in-store
 2026-11-11,big-w--star-wars-9-millennium-falcon,BIG W,Department stores,"Star Wars 9"" Millennium Falcon",Kids & toys,20,,,Mandalorian & Grogu interactive Action Buddy $22.25
 2026-11-11,big-w--lavazza-a-modo-mio-tiny-coffee-machine-64-capsules,BIG W,Department stores,Lavazza A Modo Mio Tiny Coffee Machine + 64 Capsules,Home,39,,,Delivery free on $59+ metro orders
+2026-11-11,big-w--nintendo-switch-2-sports-resort-bundle,BIG W,Department stores,Nintendo Switch 2 Sports Resort Bundle,Gaming,739,,,Officeworks will Price Beat it to $702.05
 2026-11-11,jb-hi-fi--blaupunkt-55-4k-uhd-smart-tv,JB Hi-Fi,"Home, hardware & tech","Blaupunkt 55"" 4K UHD Smart TV",Electronics,399,,,
 2026-11-11,jb-hi-fi--tcl-98-p7k-4k-qled-google-tv,JB Hi-Fi,"Home, hardware & tech","TCL 98"" P7K 4K QLED Google TV",Electronics,2488,,,
 2026-11-11,jb-hi-fi--jbl-tune-520bt-on-ear-headphones,JB Hi-Fi,"Home, hardware & tech",JBL Tune 520BT On-Ear Headphones,Electronics,39.95,,,
@@ -1666,6 +1674,8 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,jb-hi-fi--nintendo-switch-2-console,JB Hi-Fi,"Home, hardware & tech",Nintendo Switch 2 Console,Gaming,688,,,Officeworks will Price Beat it to $653.60
 2026-11-11,jb-hi-fi--blink-outdoor-4-security-camera-5-pack,JB Hi-Fi,"Home, hardware & tech",Blink Outdoor 4 Security Camera 5 pack,Electronics,95,,,$19 a camera
 2026-11-11,jb-hi-fi--roborock-qrevo-2-breeze-robot-vacuum,JB Hi-Fi,"Home, hardware & tech",Roborock Qrevo 2 Breeze Robot Vacuum,Home,594,,,
+2026-11-11,jb-hi-fi--ring-outdoor-security-camera-plus-2k-plug-in-black,JB Hi-Fi,"Home, hardware & tech",Ring Outdoor Security Camera Plus 2K Plug-In (black),Electronics,49,,,
+2026-11-11,jb-hi-fi--alienware-27-240hz-qd-oled-gaming-monitor-aw2726dm,JB Hi-Fi,"Home, hardware & tech","Alienware 27"" 240Hz QD-OLED Gaming Monitor AW2726DM",Electronics,419,,,
 2026-11-11,uniqlo--men-s-pufftech-parka,Uniqlo,Clothes & fashion,Men's PUFFTECH Parka,Clothing,59.9,99.9,40,Free click & collect or $75+ delivery
 2026-11-11,cotton-on-typo--typo-metro-tote-river-gum,Cotton On / Typo,Clothes & fashion,Typo Metro Tote (River Gum),Home,25,59.99,58,
 2026-11-11,cotton-on-typo--typo-cloud-lamp,Cotton On / Typo,Clothes & fashion,Typo Cloud Lamp,Home,30,69.99,57,
@@ -1707,6 +1717,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,harris-scarfe--nordic-portable-ice-maker,Harris Scarfe,Department stores,Nordic Portable Ice Maker,Home,99.99,199.99,50,HS Friends price
 2026-11-11,harris-scarfe--smith-nobel-digital-4-5l-air-fryer,Harris Scarfe,Department stores,Smith + Nobel Digital 4.5L Air Fryer,Home,39,139.99,72,HS Friends price
 2026-11-11,harris-scarfe--dunlopillo-latex-classic-profile-pillow,Harris Scarfe,Department stores,Dunlopillo Latex Classic Profile Pillow,Home,77,179.99,57,HS Friends price
+2026-11-11,harris-scarfe--ninja-double-stack-xl-air-fryer-9-5l,Harris Scarfe,Department stores,Ninja Double Stack XL Air Fryer 9.5L,Home,239,,,Advertised as 60% off · delivered
 2026-11-11,strandbags--laura-jones-scarf-tote-bag,Strandbags,Bags & accessories,Laura Jones Scarf Tote Bag,Bags,39.99,79.99,50,
 2026-11-11,strandbags--laura-jones-embossed-large-clutch-wallet,Strandbags,Bags & accessories,Laura Jones Embossed Large Clutch Wallet,Bags,24.99,34.99,29,Further markdown
 2026-11-11,strandbags--cabrelli-3-compartment-tote-bag,Strandbags,Bags & accessories,Cabrelli 3 Compartment Tote Bag,Bags,29.99,59.99,50,
@@ -1766,9 +1777,9 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,harvey-norman--dreame-swiftblade-electric-shaver,Harvey Norman,"Home, hardware & tech",Dreame SwiftBlade Electric Shaver,Health & beauty,128,,,
 2026-11-11,harvey-norman--mova-fresh-20-vision-electric-toothbrush,Harvey Norman,"Home, hardware & tech",Mova Fresh 20 Vision Electric Toothbrush,Health & beauty,197,,,Free click & collect or in-store
 2026-11-11,harvey-norman--acer-swift-air-14-laptop-core-5-8gb-512gb-pink,Harvey Norman,"Home, hardware & tech","Acer Swift Air 14"" Laptop Core 5 8GB/512GB (Pink)",Electronics,788,,,
+2026-11-11,harvey-norman--google-tv-streamer-4k,Harvey Norman,"Home, hardware & tech",Google TV Streamer 4K,Electronics,158,,,Officeworks will Price Beat it from $150.10
 2026-11-11,amazon--breville-barista-express-coffee-machine-bes870-charcoal,Amazon,Online,Breville Barista Express Coffee Machine BES870 (Charcoal),Home,585,999,41,Delivered · not sent to NT
 2026-11-11,amazon--david-beckham-men-s-fragrance-100ml,Amazon,Online,David Beckham Men's Fragrance 100ml,Health & beauty,14.99,,,Delivered · not sent to TAS or NT · Versace Pour Homme 100ml $69.99
-2026-11-11,amazon--bedsure-sherpa-fleece-throw-blanket,Amazon,Online,Bedsure Sherpa Fleece Throw Blanket,Home,19.99,,,Price after 50% off at checkout · sold by Bedsure on Amazon
 2026-11-11,amazon--oral-b-essential-dental-floss-50m-2-pack,Amazon,Online,Oral-B Essential Dental Floss 50m 2 pack,Health & beauty,3.5,,,$3.15 with Subscribe & Save
 2026-11-11,amazon--ecovacs-deebot-t30s-pro-robot-vacuum-mop,Amazon,Online,Ecovacs Deebot T30s Pro Robot Vacuum & Mop,Home,549,,,"Delivered · sold by ECOVACS on Amazon · list price $1,999"
 2026-11-11,amazon--lego-star-wars-boba-fett-figure-75455,Amazon,Online,LEGO Star Wars Boba Fett Figure 75455,Kids & toys,179,279.99,36,Delivered · same price at Kmart
@@ -1785,20 +1796,21 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,amazon--amazon-fire-tv-stick-4k-plus,Amazon,Online,Amazon Fire TV Stick 4K Plus,Electronics,54,139,61,Free delivery with Prime or $59+
 2026-11-11,amazon--apple-airpods-pro-3,Amazon,Online,Apple AirPods Pro 3,Electronics,299,429,30,Delivered
 2026-11-11,amazon--xbox-wireless-controller-white-or-black,Amazon,Online,Xbox Wireless Controller (white or black),Gaming,69,,,"Delivered · red, green, blue or pink $74 · same at BIG W (metro)"
-2026-11-11,amazon--sensodyne-daily-care-whitening-toothpaste-100g,Amazon,Online,Sensodyne Daily Care Whitening Toothpaste 100g,Health & beauty,4.5,,,$4.05 with Subscribe & Save
 2026-11-11,amazon--uncle-tobys-quick-or-traditional-oats-1kg,Amazon,Online,Uncle Tobys Quick or Traditional Oats 1kg,Pantry,3.25,,,$2.92 with Subscribe & Save · same as Woolworths' half price
+2026-11-11,amazon--ninja-slushi-professional-frozen-drink-maker,Amazon,Online,Ninja SLUSHi Professional Frozen Drink Maker,Home,255,599.99,57,Delivered · Harris Scarfe's Smith + Nobel slushie maker is $179.99 (HS Friends price)
+2026-11-11,amazon--braun-series-3-m30-travel-shaver,Amazon,Online,Braun Series 3 M30 Travel Shaver,Health & beauty,10.5,,,Free delivery with Prime or $59+
 2026-11-11,kogan--samsung-galaxy-s25-ultra-256gb,Kogan,Online,Samsung Galaxy S25 Ultra 256GB,Electronics,1399,,,Free delivery with Kogan First
 2026-11-11,kogan--kogan-mobile-family-bundle-2-365-day-prepaid-900gb,Kogan,Online,Kogan Mobile Family Bundle 2 × 365-day Prepaid 900GB,Phone & SIM,394.5,,,$197.25 per plan · eSIM · delivered
 2026-11-11,kogan--kogan-24-full-hd-300hz-gaming-monitor,Kogan,Online,"Kogan 24"" Full HD 300Hz Gaming Monitor",Electronics,159,,,Kogan First price · delivered
-2026-11-11,kogan--kogan-mobile-365-day-prepaid-sim-900gb,Kogan,Online,Kogan Mobile 365-day Prepaid SIM 900GB,Phone & SIM,199,,,400GB plan $179 · 365 days
+2026-11-11,kogan--kogan-mobile-365-day-prepaid-sim-900gb,Kogan,Online,Kogan Mobile 365-day Prepaid SIM 900GB,Phone & SIM,199,,,"400GB plan $159, 240GB $149 · 365 days"
 2026-11-11,ebay--dyson-supersonic-travel-hair-dryer,eBay,Online,Dyson Supersonic Travel Hair Dryer,Health & beauty,389,,,Sold by Dyson's eBay store · $369 for some eBay Plus members
 2026-11-11,ebay--just-wines-red-white-mixed-wine-12-bottles,eBay,Online,Just Wines Red & White Mixed Wine 12 bottles,Liquor,89,235.94,62,Sold by Just Wines · plus delivery
 2026-11-11,ebay--maxell-aa-alkaline-batteries-144-pack,eBay,Online,Maxell AA Alkaline Batteries 144 pack,Household,28.45,,,Delivered · sold by Tapesplus
-2026-11-11,ebay--devanti-k7-cordless-stick-vacuum-sandwich-panini-press,eBay,Online,Devanti K7 Cordless Stick Vacuum + Sandwich Panini Press,Home,112.85,,,Sold by Ozplaza.living · free delivery to most areas
 2026-11-11,ebay--razer-basilisk-v4-hyperspeed-wireless-gaming-mouse,eBay,Online,Razer Basilisk V4 HyperSpeed Wireless Gaming Mouse,Gaming,152.15,,,Sold by Razer · $148.57 for eBay Plus
 2026-11-11,ebay--kogan-gentlecare-steam-generator-iron,eBay,Online,Kogan GentleCare Steam Generator Iron,Home,50,,,Delivered · sold by Kogan
 2026-11-11,ebay--ottocast-mini-wireless-carplay-android-auto-adapter,eBay,Online,Ottocast Mini Wireless CarPlay & Android Auto Adapter,Electronics,36,,,Delivered · sold by Ottocast on eBay
 2026-11-11,ebay--gooloo-gt160-dual-cylinder-portable-tyre-inflator,eBay,Online,GOOLOO GT160 Dual Cylinder Portable Tyre Inflator,Tools & garden,80.74,,,Delivered · $78.84 with eBay Plus · sold by gooloo-direct
+2026-11-11,ebay--aoc-u27g4xm-27-4k-mini-led-gaming-monitor,eBay,Online,"AOC U27G4XM 27"" 4K Mini LED Gaming Monitor",Electronics,449.1,,,Delivered · sold by Computer Alliance · not sent to TAS or NT
 2026-11-11,appliances-online--roborock-qrevo-edge-2-robot-vacuum-mop,Appliances Online,Online,Roborock Qrevo Edge 2 Robot Vacuum & Mop,Home,939,,,"Delivered, with free removal of your old vacuum"
 2026-11-11,indian-plaza--fresh-coriander-3-bunches,Indian PLAZA,Indian grocers,Fresh Coriander 3 bunches,Pantry,3,,,From the store's Facebook specials
 2026-11-11,indian-plaza--kp-mangoes-per-tray,Indian PLAZA,Indian grocers,KP Mangoes (per tray),Pantry,45,,,From the store's Facebook specials
@@ -1829,6 +1841,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,officeworks--logitech-g-powerplay-2-wireless-charging-system,Officeworks,"Home, hardware & tech",Logitech G PowerPlay 2 Wireless Charging System,Electronics,98,,,
 2026-11-11,officeworks--studymate-warren-hutch-desk-with-cork-pinboard-1100mm,Officeworks,"Home, hardware & tech",Studymate Warren Hutch Desk with Cork Pinboard 1100mm,Furniture,5,,,Spotted in-store; Norby chair and Kallis study desk also seen at $5
 2026-11-11,officeworks--apple-watch-series-12,Officeworks,"Home, hardware & tech",Apple Watch Series 12,Electronics,517,,,From $517 · same price at Amazon
+2026-11-11,officeworks--playstation-5-dualsense-charging-station,Officeworks,"Home, hardware & tech",PlayStation 5 DualSense Charging Station,Gaming,29,,,Same price at JB Hi-Fi
 2026-11-11,the-reject-shop--quilton-3-ply-toilet-paper-36-pack,The Reject Shop,Department stores,Quilton 3 Ply Toilet Paper 36 pack,Household,19,,,53c a roll
 2026-11-11,the-reject-shop--glen-20-disinfectant-spray-300g,The Reject Shop,Department stores,Glen 20 Disinfectant Spray 300g,Household,5,,,Woolworths has the same can at this price this week
 2026-11-11,the-reject-shop--ozkleen-multi-purpose-power-lemon-500ml,The Reject Shop,Department stores,OzKleen Multi-Purpose Power Lemon 500mL,Household,3.5,,,
@@ -1855,6 +1868,7 @@ week,id,retailer,store_type,item,category,price,was,pct_off,note
 2026-11-11,the-good-guys--philips-2000-series-airfryer-4-2l-na220-00,The Good Guys,"Home, hardware & tech",Philips 2000 Series Airfryer 4.2L NA220/00,Home,83,,,Price shown with The Good Guys' Price Check button
 2026-11-11,the-good-guys--samsung-65-s95h-4k-oled-smart-tv-2026,The Good Guys,"Home, hardware & tech","Samsung 65"" S95H 4K OLED Smart TV (2026)",Electronics,3431,,,"77"" $5,173 · 83"" $6,581"
 2026-11-11,the-good-guys--eufy-robovac-e25-omni-robot-vacuum,The Good Guys,"Home, hardware & tech",eufy Robovac E25 Omni Robot Vacuum,Home,595,,,
+2026-11-11,the-good-guys--eufy-robovac-omni-c28-robot-vacuum,The Good Guys,"Home, hardware & tech",eufy Robovac Omni C28 Robot Vacuum,Home,495,,,$100 less than the eufy E25 Omni
 2026-11-11,ikea--medga-ng-fridge-freezer-219-83l,IKEA,"Home, hardware & tech",MEDGÅNG Fridge/Freezer 219/83L,Home,599,1099,45,IKEA Family is free to join
 2026-11-11,ikea--mattradition-forced-air-oven-300-stainless-steel,IKEA,"Home, hardware & tech",MATTRADITION Forced Air Oven 300 Stainless Steel,Home,399,699,43,IKEA Family is free to join
 2026-11-11,ikea--mattradition-microwave-oven-300-black,IKEA,"Home, hardware & tech",MATTRADITION Microwave Oven 300 Black,Home,399,649,39,IKEA Family is free to join

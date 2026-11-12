@@ -1106,7 +1106,7 @@ h1.mark a{gap:12px}
 
 <script>
 // ---- this week (the Wednesday-to-Tuesday catalogue week)
-const WEEK = {start:"2026-11-11", end:"2026-11-17", label:"Wed 11 – Tue 17 Nov 2026", ends:"Tue 17 Nov", updated:"Thu 12 Nov 2026"};
+const WEEK = {start:"2026-11-11", end:"2026-11-17", label:"Wed 11 – Tue 17 Nov 2026", ends:"Tue 17 Nov", updated:"Fri 13 Nov 2026"};
 
 const RETAILERS = {
   "Coles":{c:"var(--coles)"}, "Woolworths":{c:"var(--woolies)"}, "ALDI":{c:"var(--aldi)"},
@@ -1261,6 +1261,8 @@ const DEALS = [
  {r:"Costco",n:"Narwal Freo Z10 Robot Vacuum & Mop",now:599.99,cat:"Home",end:"Ends 6 Dec · delivered",note:"Usually $1,000+ elsewhere · membership required"},
  {r:"Costco",n:"Apple AirPods Pro 3",now:299.99,cat:"Electronics",end:"Online · price can change any time",note:"Delivered · membership required · Amazon has them for $299"},
  {r:"Costco",n:"DJI Mini 4 Pro Fly More Combo Plus",now:999.99,cat:"Electronics",end:"Online · price can change any time",note:"Delivered · membership required"},
+ {r:"Costco",n:"Hisense 634L PureFlat French Door Fridge HRFD634BW",now:1399.99,cat:"Home",end:"Online · price can change any time",note:"Delivered · membership required"},
+ {r:"Costco",n:"Swann 3K Wired NVR Security System + 6 Dome Cameras 1TB",now:439.98,cat:"Electronics",end:"While stocks last",note:"Membership required"},
  // ---- Nike (online sale, further markdowns)
  {r:"Nike",n:"Nike SB Dunk Low Pro Skate Shoes",now:108,was:180,cat:"Footwear",end:"Online sale · while stocks last"},
  {r:"Nike",n:"Nike Air Force 1 Older Kids' Shoes",now:90,was:150,cat:"Footwear",end:"Online sale · while stocks last"},
@@ -1281,6 +1283,8 @@ const DEALS = [
  {r:"adidas",n:"Runfalcon 5 Men's Running Shoes",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/aa0bd45abac541d29ff40b492e15cfa4_9366/Runfalcon_5_Running_Shoes_Black_IH7758_HM1.jpg",now:80,was:100,cat:"Footwear",end:"Outlet · while stocks last"},
  {r:"adidas",n:"Ultimashow Shoes Men's",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/e6441ada336a4355a403ab5000fc1917_9366/Ultimashow_Shoes_White_FX3631_00_plp_standard.jpg",now:56,was:80,cat:"Footwear",end:"Outlet · while stocks last"},
  {r:"adidas",n:"Adilette Comfort Slides",img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/48134fdf23014575a617ad6e00cbe74a_9366/Adilette_Comfort_Slides_Blue_GZ5892_00_plp_standard.jpg",now:40,was:50,cat:"Footwear",end:"Outlet · while stocks last"},
+ {r:"adidas",n:"adidas APWR Backpack",now:28.8,cat:"Bags",end:"Online · while stocks last",note:"Free delivery for adiClub members or on $120+"},
+ {r:"adidas",n:"adidas Performance Cushioned Low Socks 3 pairs",now:8.4,cat:"Clothing",end:"Online · while stocks last",note:"Free delivery for adiClub members or on $120+"},
  // ---- Myer
  {r:"Myer",n:"Dyson Wash G1 2-in-1 Hard Floor Cleaner",now:399,was:999,cat:"Home",end:"While stocks last"},
  {r:"Myer",n:"The Cooks Collective Acacia End Grain Cutting Board 50 × 35cm",now:74.97,cat:"Home",end:"While stocks last",note:"About half price · free click & collect or in-store"},
@@ -1305,7 +1309,6 @@ const DEALS = [
  {r:"Target",n:"JinxO Board Game",now:39,cat:"Kids & toys",end:"While stocks last"},
  {r:"Target",n:"Nintendo Talking Flower",now:25,cat:"Gaming",end:"Click & collect · while stocks last",note:"Down from $29 last week"},
  {r:"Target",n:"SanDisk 256GB microSD Express Card for Switch 2",now:59,cat:"Gaming",end:"Free click & collect",note:"$49 with the $10 newsletter voucher"},
- {r:"Target",n:"PlayStation 5 DualSense Wireless Controller",now:99,was:134.95,cat:"Gaming",end:"Delivered or click & collect",note:"Various colours · same price at Amazon"},
  {r:"Target",n:"Anko Mini Digital Camera (black)",now:10,cat:"Electronics",end:"Click & collect · while stocks last",note:"Keychain-size camera, a popular stocking filler"},
  {r:"Target",n:"Pikmin 4 + Dandori Academy (Switch 2)",now:79,cat:"Gaming",end:"Delivered or click & collect",note:"$69 with Target's $10 newsletter voucher"},
  // ---- BIG W
@@ -1323,6 +1326,7 @@ const DEALS = [
  {r:"BIG W",n:"Somersault Rotating Craft Tray",now:4,was:16,cat:"Kids & toys",end:"While stocks last",note:"Free click & collect or in-store"},
  {r:"BIG W",n:"Star Wars 9\" Millennium Falcon",now:20,cat:"Kids & toys",end:"While stocks last",note:"Mandalorian & Grogu interactive Action Buddy $22.25"},
  {r:"BIG W",n:"Lavazza A Modo Mio Tiny Coffee Machine + 64 Capsules",now:39,cat:"Home",end:"Free click & collect or in-store",note:"Delivery free on $59+ metro orders"},
+ {r:"BIG W",n:"Nintendo Switch 2 Sports Resort Bundle",now:739,cat:"Gaming",end:"Delivered, click & collect or in-store",note:"Officeworks will Price Beat it to $702.05"},
  // ---- JB Hi-Fi
  {r:"JB Hi-Fi",n:"Blaupunkt 55\" 4K UHD Smart TV",now:399,cat:"Electronics",end:"While stocks last"},
  {r:"JB Hi-Fi",n:"TCL 98\" P7K 4K QLED Google TV",now:2488,cat:"Electronics",end:"Delivered, select areas"},
@@ -1337,6 +1341,8 @@ const DEALS = [
  {r:"JB Hi-Fi",n:"Nintendo Switch 2 Console",now:688,cat:"Gaming",end:"Free click & collect or in-store",note:"Officeworks will Price Beat it to $653.60"},
  {r:"JB Hi-Fi",n:"Blink Outdoor 4 Security Camera 5 pack",now:95,cat:"Electronics",end:"Free click & collect or in-store",note:"$19 a camera"},
  {r:"JB Hi-Fi",n:"Roborock Qrevo 2 Breeze Robot Vacuum",now:594,cat:"Home",end:"Free click & collect"},
+ {r:"JB Hi-Fi",n:"Ring Outdoor Security Camera Plus 2K Plug-In (black)",now:49,cat:"Electronics",end:"Free click & collect or in-store"},
+ {r:"JB Hi-Fi",n:"Alienware 27\" 240Hz QD-OLED Gaming Monitor AW2726DM",now:419,cat:"Electronics",end:"Free click & collect or in-store"},
  // ---- Uniqlo
  {r:"Uniqlo",n:"Men's PUFFTECH Parka",now:59.9,was:99.9,cat:"Clothing",end:"While stocks last",note:"Free click & collect or $75+ delivery"},
  // ---- Typo (Cotton On Group)
@@ -1383,6 +1389,7 @@ const DEALS = [
  {r:"Harris Scarfe",n:"Nordic Portable Ice Maker",now:99.99,was:199.99,cat:"Home",img:"https://www.harrisscarfe.com.au/medias/BP659655-nc.jpg",note:"HS Friends price"},
  {r:"Harris Scarfe",n:"Smith + Nobel Digital 4.5L Air Fryer",now:39,was:139.99,cat:"Home",note:"HS Friends price"},
  {r:"Harris Scarfe",n:"Dunlopillo Latex Classic Profile Pillow",now:77,was:179.99,cat:"Home",note:"HS Friends price"},
+ {r:"Harris Scarfe",n:"Ninja Double Stack XL Air Fryer 9.5L",now:239,cat:"Home",end:"While stocks last",note:"Advertised as 60% off · delivered"},
  // ---- Strandbags (incl. Laura Jones)
  {r:"Strandbags",n:"Laura Jones Scarf Tote Bag",now:39.99,was:79.99,cat:"Bags",img:"https://cdn.shopify.com/s/files/1/0556/2643/2670/files/3229556_1_400x.png?v=1786895398"},
  {r:"Strandbags",n:"Laura Jones Embossed Large Clutch Wallet",now:24.99,was:34.99,cat:"Bags",note:"Further markdown"},
@@ -1450,10 +1457,10 @@ const DEALS = [
  {r:"Harvey Norman",n:"Dreame SwiftBlade Electric Shaver",now:128,cat:"Health & beauty",end:"While stocks last"},
  {r:"Harvey Norman",n:"Mova Fresh 20 Vision Electric Toothbrush",now:197,cat:"Health & beauty",end:"Ends 2 Dec",note:"Free click & collect or in-store"},
  {r:"Harvey Norman",n:"Acer Swift Air 14\" Laptop Core 5 8GB/512GB (Pink)",now:788,cat:"Electronics",end:"Free click & collect or in-store"},
+ {r:"Harvey Norman",n:"Google TV Streamer 4K",now:158,cat:"Electronics",end:"Free click & collect or in-store",note:"Officeworks will Price Beat it from $150.10"},
  // ---- Amazon (amazon.com.au, prices as posted 4–12 Nov)
  {r:"Amazon",n:"Breville Barista Express Coffee Machine BES870 (Charcoal)",now:585,was:999,cat:"Home",end:"Online · price can change any time",note:"Delivered · not sent to NT"},
  {r:"Amazon",n:"David Beckham Men's Fragrance 100ml",now:14.99,cat:"Health & beauty",end:"Online · price can change any time",note:"Delivered · not sent to TAS or NT · Versace Pour Homme 100ml $69.99"},
- {r:"Amazon",n:"Bedsure Sherpa Fleece Throw Blanket",now:19.99,cat:"Home",end:"Online · price can change any time",note:"Price after 50% off at checkout · sold by Bedsure on Amazon"},
  {r:"Amazon",n:"Oral-B Essential Dental Floss 50m 2 pack",now:3.5,cat:"Health & beauty",end:"Online · price can change any time",note:"$3.15 with Subscribe & Save"},
  {r:"Amazon",n:"Ecovacs Deebot T30s Pro Robot Vacuum & Mop",now:549,cat:"Home",end:"Online · price can change any time",note:"Delivered · sold by ECOVACS on Amazon · list price $1,999"},
  {r:"Amazon",n:"LEGO Star Wars Boba Fett Figure 75455",now:179,was:279.99,cat:"Kids & toys",end:"Online · price can change any time",note:"Delivered · same price at Kmart"},
@@ -1470,21 +1477,22 @@ const DEALS = [
  {r:"Amazon",n:"Amazon Fire TV Stick 4K Plus",now:54,was:139,cat:"Electronics",end:"Online · price can change any time",note:"Free delivery with Prime or $59+"},
  {r:"Amazon",n:"Apple AirPods Pro 3",now:299,was:429,cat:"Electronics",end:"Online · price can change any time",note:"Delivered"},
  {r:"Amazon",n:"Xbox Wireless Controller (white or black)",now:69,cat:"Gaming",end:"Online · price can change any time",note:"Delivered · red, green, blue or pink $74 · same at BIG W (metro)"},
- {r:"Amazon",n:"Sensodyne Daily Care Whitening Toothpaste 100g",now:4.5,cat:"Health & beauty",end:"Online · price can change any time",note:"$4.05 with Subscribe & Save"},
  {r:"Amazon",n:"Uncle Tobys Quick or Traditional Oats 1kg",now:3.25,cat:"Pantry",end:"Online · price can change any time",note:"$2.92 with Subscribe & Save · same as Woolworths' half price"},
+ {r:"Amazon",n:"Ninja SLUSHi Professional Frozen Drink Maker",now:255,was:599.99,cat:"Home",end:"Online · price can change any time",note:"Delivered · Harris Scarfe's Smith + Nobel slushie maker is $179.99 (HS Friends price)"},
+ {r:"Amazon",n:"Braun Series 3 M30 Travel Shaver",now:10.5,cat:"Health & beauty",end:"Online · price can change any time",note:"Free delivery with Prime or $59+"},
  // ---- Kogan
  {r:"Kogan",n:"Samsung Galaxy S25 Ultra 256GB",now:1399,cat:"Electronics",end:"Online · price can change any time",note:"Free delivery with Kogan First"},
  {r:"Kogan",n:"Kogan Mobile Family Bundle 2 × 365-day Prepaid 900GB",now:394.5,cat:"Phone & SIM",end:"Ends 31 Dec",note:"$197.25 per plan · eSIM · delivered"},
  {r:"Kogan",n:"Kogan 24\" Full HD 300Hz Gaming Monitor",now:159,cat:"Electronics",end:"Online · price can change any time",note:"Kogan First price · delivered"},
- {r:"Kogan",n:"Kogan Mobile 365-day Prepaid SIM 900GB",now:199,cat:"Phone & SIM",end:"Online · price can change any time",note:"400GB plan $179 · 365 days"},
+ {r:"Kogan",n:"Kogan Mobile 365-day Prepaid SIM 900GB",now:199,cat:"Phone & SIM",end:"Online · price can change any time",note:"400GB plan $159, 240GB $149 · 365 days"},
  {r:"eBay",n:"Dyson Supersonic Travel Hair Dryer",now:389,cat:"Health & beauty",end:"Online · price can change any time",note:"Sold by Dyson's eBay store · $369 for some eBay Plus members"},
  {r:"eBay",n:"Just Wines Red & White Mixed Wine 12 bottles",now:89,was:235.94,cat:"Liquor",end:"Online · price can change any time",note:"Sold by Just Wines · plus delivery"},
  {r:"eBay",n:"Maxell AA Alkaline Batteries 144 pack",now:28.45,cat:"Household",end:"Online · price can change any time",note:"Delivered · sold by Tapesplus"},
- {r:"eBay",n:"Devanti K7 Cordless Stick Vacuum + Sandwich Panini Press",now:112.85,cat:"Home",end:"Code PLOCT · ends 12 Nov",note:"Sold by Ozplaza.living · free delivery to most areas"},
  {r:"eBay",n:"Razer Basilisk V4 HyperSpeed Wireless Gaming Mouse",now:152.15,cat:"Gaming",end:"Online · price can change any time",note:"Sold by Razer · $148.57 for eBay Plus"},
  {r:"eBay",n:"Kogan GentleCare Steam Generator Iron",now:50,cat:"Home",end:"Online · price can change any time",note:"Delivered · sold by Kogan"},
  {r:"eBay",n:"Ottocast Mini Wireless CarPlay & Android Auto Adapter",now:36,cat:"Electronics",end:"Online · price can change any time",note:"Delivered · sold by Ottocast on eBay"},
  {r:"eBay",n:"GOOLOO GT160 Dual Cylinder Portable Tyre Inflator",now:80.74,cat:"Tools & garden",end:"Online · price can change any time",note:"Delivered · $78.84 with eBay Plus · sold by gooloo-direct"},
+ {r:"eBay",n:"AOC U27G4XM 27\" 4K Mini LED Gaming Monitor",now:449.1,cat:"Electronics",end:"Online · price can change any time",note:"Delivered · sold by Computer Alliance · not sent to TAS or NT"},
  {r:"Appliances Online",n:"Roborock Qrevo Edge 2 Robot Vacuum & Mop",now:939,cat:"Home",end:"Online · price can change any time",note:"Delivered, with free removal of your old vacuum"},
  {r:"Indian PLAZA",n:"Fresh Coriander 3 bunches",now:3,cat:"Pantry",end:"Recent Facebook flyer · while stocks last",note:"From the store's Facebook specials"},
  {r:"Indian PLAZA",n:"KP Mangoes (per tray)",now:45,cat:"Pantry",end:"Recent Facebook flyer · while stocks last",note:"From the store's Facebook specials"},
@@ -1516,6 +1524,7 @@ const DEALS = [
  {r:"Officeworks",n:"Logitech G PowerPlay 2 Wireless Charging System",now:98,cat:"Electronics",end:"While stocks last"},
  {r:"Officeworks",n:"Studymate Warren Hutch Desk with Cork Pinboard 1100mm",now:5,cat:"Furniture",end:"Clearance · selected stores",note:"Spotted in-store; Norby chair and Kallis study desk also seen at $5"},
  {r:"Officeworks",n:"Apple Watch Series 12",now:517,cat:"Electronics",end:"Free delivery metro, OnePass or click & collect",note:"From $517 · same price at Amazon"},
+ {r:"Officeworks",n:"PlayStation 5 DualSense Charging Station",now:29,cat:"Gaming",end:"Free click & collect or in-store",note:"Same price at JB Hi-Fi"},
  // ---- The Reject Shop (everyday prices)
  {r:"The Reject Shop",n:"Quilton 3 Ply Toilet Paper 36 pack",now:19,cat:"Household",end:"Everyday price · stores & online",note:"53c a roll"},
  {r:"The Reject Shop",n:"Glen 20 Disinfectant Spray 300g",now:5,cat:"Household",end:"Everyday price · stores & online",note:"Woolworths has the same can at this price this week"},
@@ -1545,6 +1554,7 @@ const DEALS = [
  {r:"The Good Guys",n:"Philips 2000 Series Airfryer 4.2L NA220/00",now:83,cat:"Home",end:"Free click & collect",note:"Price shown with The Good Guys' Price Check button"},
  {r:"The Good Guys",n:"Samsung 65\" S95H 4K OLED Smart TV (2026)",now:3431,cat:"Electronics",end:"Free click & collect",note:"77\" $5,173 · 83\" $6,581"},
  {r:"The Good Guys",n:"eufy Robovac E25 Omni Robot Vacuum",now:595,cat:"Home",end:"Free click & collect or in-store"},
+ {r:"The Good Guys",n:"eufy Robovac Omni C28 Robot Vacuum",now:495,cat:"Home",end:"Free click & collect or in-store",note:"$100 less than the eufy E25 Omni"},
  // ---- IKEA (IKEA Family prices)
  {r:"IKEA",n:"MEDGÅNG Fridge/Freezer 219/83L",now:599,was:1099,cat:"Home",end:"IKEA Family price · Kidman Park",note:"IKEA Family is free to join"},
  {r:"IKEA",n:"MATTRADITION Forced Air Oven 300 Stainless Steel",now:399,was:699,cat:"Home",end:"IKEA Family price until 23 Nov · Kidman Park",note:"IKEA Family is free to join"},
@@ -1669,7 +1679,6 @@ const PROMOS = [
  {r:"eBay",where:"ebay.com.au · delivered to Adelaide",items:[
    ["5%","Price match promise on new fixed-price items","Capped at $150; claim within 48 hours with a lower price from an approved retailer"],
    ["$5","Off a $50 order every month for eBay Plus members","Annual membership; 30-day free trial available"],
-   ["15%","Off eligible items, 17% with eBay Plus","Code PGIFT15 (PGIFT17 for Plus) · until 12 Nov","sel"],
    ["15%","Off eligible items when you pay with Zip, up to $50 off","Code BFXZIP · limited time","sel"],
    ["20%","Off eligible items for eBay Plus members","Code SUMDEAL · until 18 Nov","sel"],
    ["25%","Off eligible items, up to $25 off","Code NEW25 · until 31 Dec · up to 5 uses","sel"]]},
@@ -1700,7 +1709,6 @@ const PROMOS = [
    ["Free","Delivery, plus 130-day returns","Delivery conditions apply"]]},
  {r:"Amazon",where:"amazon.com.au · delivered to Adelaide",items:[
    ["20%","Off everyday essentials for Prime members","Applied at checkout · $20 cap · until 18 Nov · selected accounts, check your email","sel"],
-   ["$12","Off a $22+ spend on eligible Amazon Haul items","Code HAUL12 · until 12 Nov","sel"],
    ["40%","Off Amazon Haul items, $20 minimum spend","Code HAUL40 · until 13 Nov","sel"],
    ["$10","Off $200 spend on eligible items with Mastercard","Code MCAMZ10 · one transaction · until 30 Nov"],
    ["$20","Promo credit with $200 of Apple eGift cards",""],
@@ -1893,7 +1901,7 @@ const PICS = [
  [/outdoor lights/i,"💡"],[/camera case/i,"💼"],[/camera/i,"📷"],[/hair dryer/i,"💨"],[/charger/i,"🔌"],[/headset/i,"🎧"],[/gigabit/i,"🔌"],[/speaker/i,"🔊"],[/espresso/i,"☕"],[/frypan/i,"🍳"],[/microsd/i,"💾"],[/washing machine/i,"🫧"],[/nitro/i,"💻"],[/motorola|nxtpaper/i,"📱"],[/airtag/i,"🏷️"],
  [/bacon dog|hot dog/i,"🌭"],[/krispy|doughnut/i,"🍩"],[/eat slice/i,"🍰"],[/kamado/i,"🔥"],[/briquettes/i,"🔥"],[/fryer/i,"🍳"],[/trimmer/i,"🌿"],
  [/power station/i,"🔋"],[/floodlight/i,"📹"],[/wi-fi|router/i,"📶"],[/bbq tough wipes/i,"🧽"],[/moisture absorber/i,"💧"],
- [/whey|protein/i,"💪"],[/sinus/i,"👃"],[/razor/i,"🪒"],[/onesies/i,"👶"],[/robotic vacuum/i,"🤖"],[/slushie|ice maker/i,"🧊"],[/cookware/i,"🍳"],[/topper/i,"🛏️"],
+ [/whey|protein/i,"💪"],[/sinus/i,"👃"],[/razor/i,"🪒"],[/onesies/i,"👶"],[/robotic vacuum/i,"🤖"],[/slushie|slushi\b|ice maker/i,"🧊"],[/cookware/i,"🍳"],[/topper/i,"🛏️"],
  [/suitcase/i,"🧳"],[/backpack/i,"🎒"],[/wallet/i,"👛"],[/sandal/i,"🩴"],[/bag\b|tote/i,"👜"],
  [/abzorb|ellipse|880v15|204l|world 70|classic az|match prime|floatzig|ultra flex|go walk|cushioning/i,"👟"],
  [/clogs/i,"👡"],[/bakeware/i,"🥧"],[/airer/i,"👕"],[/casserole|stock pot/i,"🍲"],[/ballpoint|pens/i,"🖊️"],[/badminton/i,"🏸"],
@@ -1990,7 +1998,6 @@ const WO_CATS = {motor:["Motorsport","#C2410C"], cricket:["Cricket","#15803D"], 
 const WHATSON = [
  {n:"Feast Festival",c:"fest",s:"2026-11-01",e:"2026-11-22",t:"",w:"Venues across Adelaide",x:"Queer arts festival: drag, cabaret, theatre, film. Free Picnic in the Park closes it on Sun 22 Nov",u:"https://feast.org.au/"},
  {n:"Adelaide Italian Festival",c:"fest",s:"2026-11-01",e:"2026-11-22",t:"",w:"Venues across Adelaide",x:"Three weeks, 60+ events: food, wine, music, film",u:"https://southaustralia.com/whats-on"},
- {n:"5 Seconds of Summer",c:"music",s:"2026-11-04",e:"2026-11-04",t:"",w:"Adelaide Entertainment Centre",x:"",u:"https://www.adelaideentertainmentcentre.com.au/events"},
  {n:"Urban Wine Walk Port Adelaide",c:"fest",s:"2026-11-07",e:"2026-11-07",t:"",w:"Port Adelaide",x:"Tastings along the Port's streets with a pop-up wine bar · $79",u:"https://southaustralia.com/whats-on"},
  {n:"Adelaide 36ers v Illawarra Hawks",c:"basket",s:"2026-11-07",e:"2026-11-07",t:"5:00pm",w:"Adelaide Entertainment Centre",x:"NBL",u:"https://www.adelaide36ers.com.au/"},
  {n:"Adelaide United v Melbourne Victory",c:"football",s:"2026-11-08",e:"2026-11-08",t:"4:30pm",w:"Coopers Stadium, Hindmarsh",x:"A-League Men",u:"https://www.adelaideunited.com.au/"},
