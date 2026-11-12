@@ -57,7 +57,6 @@ h1{font-size:clamp(40px,7vw,76px);font-weight:800;line-height:.95;letter-spacing
 .bar select,.bar input[type=search]{font:500 16px var(--body);color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:0 12px;min-height:44px;min-width:0}
 .bar input[type=search]{flex:1 1 200px}
 .toggle{display:inline-flex;align-items:center;gap:6px;min-height:44px;font:700 14px var(--body);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:0 12px;cursor:pointer}
-.dl{margin-left:auto;display:inline-flex;align-items:center;min-height:44px;font:700 14px var(--body);text-decoration:none;border:1.5px solid var(--ink);border-radius:10px;padding:0 14px}
 .notice{margin:18px 0 0;background:var(--card);border:1.5px dashed var(--line);border-radius:8px;padding:10px 14px;font-size:14px}
 .head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:22px 0 10px;flex-wrap:wrap}
 h2{font-size:26px;font-weight:700;box-shadow:inset 0 -.38em 0 #FFE27A;padding:0 .1em;display:inline}
@@ -92,7 +91,6 @@ h2{font-size:26px;font-weight:700;box-shadow:inset 0 -.38em 0 #FFE27A;padding:0 
   .row{grid-template-columns:1fr auto;grid-template-areas:"nm pr" "chg lo" "tm sp";row-gap:8px}
   .row>.c1{grid-area:nm}.row>.c2{grid-area:pr;text-align:right}.row>.c3{grid-area:chg}
   .row>.c4{grid-area:lo;text-align:right}.row>.c5{grid-area:tm}.row>.c6{grid-area:sp;justify-self:end}
-  .dl{margin-left:0}
   .bar select{flex:1 1 140px}
 }
 </style>
@@ -117,7 +115,6 @@ h2{font-size:26px;font-weight:700;box-shadow:inset 0 -.38em 0 #FFE27A;padding:0 
     <option value="az">A–Z</option>
   </select>
   <label class="toggle"><input type="checkbox" id="now"> On special this week</label>
-  <a class="dl" href="data/prices.csv" download="adelaide-prices.csv">⬇ Download all prices</a>
 </div></div>
 
 <main class="wrap">
