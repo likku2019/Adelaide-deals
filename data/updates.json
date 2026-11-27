@@ -1,8 +1,8 @@
 {
  "ALDI": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "4/7 Nov drops removed; 18 & 21 Nov highlights, 25 Nov Black Wednesday and 28 Nov added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "11 Nov drop removed; 25 Nov items now on sale; 6 Sat 28 Nov items added"
  },
  "Amart": {
   "checked": "2026-11-24",
@@ -10,14 +10,14 @@
   "note": "No change"
  },
  "Amazon": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Older deals removed; 16 new from 23–24 Nov; Black Friday sale page live; HAUL40 & Prime 20% ended"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "6 Black Friday deals added (26–27 Nov); Haul 50% off"
  },
  "BIG W": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Cadbury box, kettle, Napisan ended; moto g37, Shark vacuums, EKO TV/slushie, PS5 2 for $89 added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Switch 2 bundle $649, Nespresso, books $10, portable monitor, pitcher added"
  },
  "Best&Less": {
   "checked": "2026-11-24",
@@ -25,9 +25,9 @@
   "note": "No change"
  },
  "Bunnings": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Spit roaster, eero, 2 Ryobi deals ended; mini tool box $2, chainsaw kit, Starlink Mini added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "OMO 8kg, DeWALT combo, Ozito kit, Ryobi garden kit, Reolink doorbell added"
  },
  "Burnside Village": {
   "checked": "2026-11-24",
@@ -35,14 +35,14 @@
   "note": "Sunglass Hut offer ended"
  },
  "Chemist Warehouse": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Issey Miyake 125ml added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Musashi $2.02 and extra 10% off selected added"
  },
  "Coles": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "11–17 Nov ½-price ended; next catalogue Wed 25 Nov"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "New ½-price week 25 Nov–1 Dec: 42 items added"
  },
  "Converse": {
   "checked": "2026-11-12",
@@ -50,9 +50,9 @@
   "note": "No change"
  },
  "Costco": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "10 ended (incl. 16/22/23 Nov end dates); Sony XM4, MacBook Air, Philips airfryer added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Dyson V8, iPad mini, GTA VI, Roborock Saros added"
  },
  "Cotton On / Typo": {
   "checked": "2026-11-24",
@@ -85,9 +85,9 @@
   "note": "No change"
  },
  "Harvey Norman": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "SwiftBlade, Nitro V 15, Watch Ultra ended; Razr 60 Swarovski $747, S25 FE, Airwrap added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Ninja Swirl, eufy L60, Dual Boiler, F&P washer added"
  },
  "IKEA": {
   "checked": "2026-11-24",
@@ -95,14 +95,14 @@
   "note": "Family appliance prices ended 23 Nov; $35 off $150 in-store to 30 Nov"
  },
  "JB Hi-Fi": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Switch 2 $688, Alienware, Nothing Phone ended; LG OLED monitor, S90H TV, Vivoactive 5 added; 30% off movies to 29 Nov"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "TCL 65\" P8LS, KitchenAid, Barista Express Impress, Nubia, S25 added"
  },
  "Kmart": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Switch 2 + MKW bundle $629 (from 25 Nov), Finish 100 pack $18, Roborock H60 added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Philips air fryer $79, PS5 Slim, CREAMi, Havaianas & more added; Switch 2 bundle in-store"
  },
  "Lovisa": {
   "checked": "2026-11-24",
@@ -120,9 +120,9 @@
   "note": ""
  },
  "Myer": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Ninja CREAMi, KitchenAid baker, LEGO aquarium, wok added; new home & fashion offers"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Men's clothing ≤50% and Christmas Shop 50% off added"
  },
  "New Balance": {
   "checked": "2026-11-24",
@@ -130,9 +130,9 @@
   "note": "2002R $114 added"
  },
  "Nike": {
-  "checked": "2026-11-24",
+  "checked": "2026-11-27",
   "changed": "2026-11-24",
-  "note": "Black Friday up to 30% off to 30 Nov"
+  "note": "No change"
  },
  "OTR": {
   "checked": "2026-11-24",
@@ -140,9 +140,9 @@
   "note": "No change"
  },
  "Officeworks": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "5 expired deals removed; AirPods Pro 3 $284, Fire TV Stick 4K Max, Pencil Pro, TV Streamer added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Switch 2 bundle, soundbar, Switch OLED, Nest Cam added"
  },
  "Onitsuka Tiger": {
   "checked": "2026-10-22",
@@ -190,9 +190,9 @@
   "note": "No change"
  },
  "Target": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Mario Kart World & microSD ended; Hot Wheels $9, Zelda OoT $85, Joy-Con 2 added; LEGO up to 40% off"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Pokémon Legends Z-A $39, Star Wars Outlaws, air fryer, Catan added"
  },
  "TerryWhite Chemmart": {
   "checked": "2026-11-12",
@@ -200,9 +200,9 @@
   "note": "No change"
  },
  "The Good Guys": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Kettle, airfryer, S95H ended; split system, portable monitor, dishwasher, fridge added; $30 off $150 voucher"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Philips kettle, DualSense, 9L airfryer, JBL Go 5, pizza oven added"
  },
  "The Reject Shop": {
   "checked": "2026-11-24",
@@ -230,9 +230,9 @@
   "note": "Win offer ended 31 Oct"
  },
  "Woolworths": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "11–17 Nov ½-price ended; next catalogue Wed 25 Nov"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "New ½-price week 25 Nov–1 Dec: 40 items added"
  },
  "Zara": {
   "checked": "2026-11-11",
@@ -240,19 +240,19 @@
   "note": "No change"
  },
  "adidas": {
-  "checked": "2026-11-24",
+  "checked": "2026-11-27",
   "changed": "2026-11-24",
-  "note": "Extra 40% outlet offer ended 13 Nov"
+  "note": "No change"
  },
  "Kogan": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Vivoactive 5 and bar fridge added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "43\" Mini-LED TV (Kogan eBay) added"
  },
  "eBay": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "AOC ended, SUMDEAL ended; BFSVE15/20 codes to 30 Nov; 2 deals added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Dyson V8, Sony XM5 seconds, DJI Neo, shelves added"
  },
  "THE ICONIC": {
   "checked": "2026-11-24",
@@ -270,19 +270,19 @@
   "note": "No change"
  },
  "Golden Star Spices Supermarket": {
-  "checked": "2026-11-24",
+  "checked": "2026-11-27",
   "changed": "2026-11-24",
-  "note": "5 Nov veg post now old; latest post 24 Nov (Christmas cakes, no prices)"
+  "note": "No change"
  },
  "Indian PLAZA": {
-  "checked": "2026-11-24",
-  "changed": "2026-10-29",
-  "note": "Only a 'No Onion No Garlic' post (20 Nov) since; produce flyer left"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Black Friday flyer 27 Nov: basmati 5kg $9.95, mangoes, chikki, produce"
  },
  "Ekam Indian Groceries": {
-  "checked": "2026-11-24",
-  "changed": "2026-11-24",
-  "note": "Vermicelli & ginger paste gone; Maggi, Jivraj tea, Tata salt, jaggery added"
+  "checked": "2026-11-27",
+  "changed": "2026-11-27",
+  "note": "Diwali clearance ended; Black Friday sale video 27 Nov; specials unchanged"
  },
  "Shiels": {
   "checked": "2026-11-06",
